@@ -1,124 +1,131 @@
 ---
+import NavMobile from "./NavMobile.astro";
+
+
+
 ---
 
 <header>
     <section class="section-header">
-        <img src="../public/logo.png" alt="logo" width="230px">
-        <nav class="bar-vavegation">
-            <div class="content-services">
-                <ul class="list-nav-style">
-                    <li class="list-nav-content-style">
-                        <a class="list-nav-select" href="/">Inicio</a>
-                        <div class="content-services">
-                            <a id="Servicesid" onclick="Selected('servicios')">Servicios</a>
-                            <!-- Modal servicios -->
-                            <div class="modal" id="Services-modal-id">
-                                <h2 class="title-services">Personas</h2>
-                                <ul class="list-person">
-                                    <li>
-                                        <a>Protec Vida</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Salud</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Exequias</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Mascotas</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Vida en Grupo</a> 
-                                    </li>
-                                    <li>
-                                        <a> Accidentes Personales</a> 
-                                    </li>
-                                    <li>
-                                        <a> Enfermedades Graves</a> 
-                                    </li>
-                                    <li>
-                                        <a> Educación Juvenil</a> 
-                                    </li>
-                                </ul>
-                                <!-- division -->
-                                <hr>
-                                <!-- division -->
-
-                                <h2 class="title-services">Empresariales</h2>
-                                <ul class="list-person">
-                                    <li>
-                                        <a>Protec Empresas</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Transporte</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Pymes</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Cumplimiento</a> 
-                                    </li>
-                                    <li>
-                                        <a>Responsabilidad Civil</a> 
-                                    </li>
-                                    
-                                </ul>
-                                <!-- division -->
-                                <hr>
-                                <!-- division -->
-
-                                <h2 class="title-services">Especializados</h2>
-                                <ul class="list-person">
-                                    <li>
-                                        <a>Protec Autos</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Hogar</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Renta Educativa</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Arrendamiento</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Todo Riesgo PIM Integral</a> 
-                                    </li>
-                                    <li>
-                                        <a>Protec Zonas Comunes</a> 
-                                    </li>
-                                    
-                                </ul>
-
+        <img src="../public/logo.png" class="logo" alt="logo" width="230px">
+        <div class="bar-navegation-descktop">
+            <nav class="bar-navegation">
+                <div class="content-services">
+                    <ul class="list-nav-style">
+                        <li class="list-nav-content-style">
+                            <a class="list-nav-select" href="/">Inicio</a>
+                            <div class="content-services">
+                                <a id="Servicesid" onclick="Selected('servicios')">Servicios</a>
+                                <!-- Modal servicios -->
+                                <div class="modal" id="Services-modal-id">
+                                    <h2 class="title-services">Personas</h2>
+                                    <ul class="list-person">
+                                        <li>
+                                            <a>Protec Vida</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Salud</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Exequias</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Mascotas</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Vida en Grupo</a> 
+                                        </li>
+                                        <li>
+                                            <a> Accidentes Personales</a> 
+                                        </li>
+                                        <li>
+                                            <a> Enfermedades Graves</a> 
+                                        </li>
+                                        <li>
+                                            <a> Educación Juvenil</a> 
+                                        </li>
+                                    </ul>
+                                    <!-- division -->
+                                    <hr>
+                                    <!-- division -->
+    
+                                    <h2 class="title-services">Empresariales</h2>
+                                    <ul class="list-person">
+                                        <li>
+                                            <a>Protec Empresas</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Transporte</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Pymes</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Cumplimiento</a> 
+                                        </li>
+                                        <li>
+                                            <a>Responsabilidad Civil</a> 
+                                        </li>
+                                        
+                                    </ul>
+                                    <!-- division -->
+                                    <hr>
+                                    <!-- division -->
+    
+                                    <h2 class="title-services">Especializados</h2>
+                                    <ul class="list-person">
+                                        <li>
+                                            <a>Protec Autos</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Hogar</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Renta Educativa</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Arrendamiento</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Todo Riesgo PIM Integral</a> 
+                                        </li>
+                                        <li>
+                                            <a>Protec Zonas Comunes</a> 
+                                        </li>
+                                        
+                                    </ul>
+    
+                                </div>
+    
                             </div>
-
-                        </div>
-                        <div class="content-services">
-                            <a onclick="Selected('pagos')">Pagos</a>
-                            <!-- Modal servicios -->
-                            <div class="modal-payment" id="Pagos-modal-id">
-                                <h2 class="title-services">Formas de pago</h2>
-                                <ul class="list-payment">
-                                    <li class="buton-sura">
-                                        <a>Sura</a> 
-                                    </li>
-                                    <li class="buton-maphre">
-                                        <a>Maphre</a> 
-                                    </li>
-                                    <li class="buton-axa">
-                                        <a>AXA Colpatria</a> 
-                                    </li>
-                                    <li class="buton-exquial">
-                                        <a>Maphre exquial</a> 
-                                    </li>
-                                </ul>
+                            <div class="content-services">
+                                <a onclick="Selected('pagos')">Pagos</a>
+                                <!-- Modal servicios -->
+                                <div class="modal-payment" id="Pagos-modal-id">
+                                    <h2 class="title-services">Formas de pago</h2>
+                                    <ul class="list-payment">
+                                        <li class="buton-sura">
+                                            <a>Sura</a> 
+                                        </li>
+                                        <li class="buton-maphre">
+                                            <a>Maphre</a> 
+                                        </li>
+                                        <li class="buton-axa">
+                                            <a>AXA Colpatria</a> 
+                                        </li>
+                                        <li class="buton-exquial">
+                                            <a>Maphre exquial</a> 
+                                        </li>
+                                    </ul>
+                                </div>
+    
                             </div>
-
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <NavMobile/>
         <div class="content-contact">
             <button class="button-contact">¡Contáctanos!</button>
         </div>
@@ -157,6 +164,7 @@
                 document.getElementById('link-pagos')?.classList.add('list-nav-select');
             }
         });
+
     </script>
 </header>
 
@@ -164,6 +172,17 @@
 
 
 <style>
+
+ 
+    .content-contact{
+        display: block;
+    }
+    .bar-navegation-descktop{
+        display: flex;
+        grid-column: 3 / 8;
+        display: block;
+    }
+ 
     .list-person{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -201,9 +220,7 @@
 		font-weight: 700;
 		text-decoration-line: underline !important;
 	}
-	.bar-vavegation{
-		grid-column: 3 / 8
-	}
+	
     .content-services{
         position: relative;
     }
@@ -275,5 +292,17 @@
     }
     .buton-exquial::marker {
         color: #ff00e6 !important; /* Cambia el color de los puntos */
+    }
+
+    @media (max-width: 768px) {
+        .logo{
+            width: 150px;
+        }
+        .bar-navegation-descktop{
+            display: none;
+        }
+        .content-contact{
+        display: none;
+        }
     }
 </style>
