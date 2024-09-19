@@ -13,10 +13,18 @@
                     <ul class="list-nav-style-mobile">
                         <li class="list-nav-content-style-mobile">
                             <a class="list-nav-select-mobile" href="/">Inicio</a>
+                            <hr>
+
                             <div class="content-services">
-                                <a id="Servicesid" onclick="SelectedMobile('servicios')">Servicios</a>
+                                <div class="content-services-title"  onclick="SelectedMobile('servicios')">
+                                    <a id="Servicesid">Servicios</a>
+                                    <span class="material-symbols-outlined" id="arrow_drop-servicios">
+                                        arrow_drop_down
+                                    </span>
+                                </div>
+                                <hr>
                                 <!-- Modal servicios -->
-                                <div class="modal" id="Services-modal-id-mobile">
+                                <div class="modal-mobile" id="Services-modal-id-mobile">
                                     <h2 class="title-services-mobile">Personas</h2>
                                     <ul class="list-person-mobile">
                                         <li>
@@ -98,7 +106,14 @@
     
                             </div>
                             <div class="content-services">
-                                <a onclick="SelectedMobile('pagos')">Pagos</a>
+                                <div class="content-services-title"  onclick="SelectedMobile('pagos')">
+                                    <a id="Servicesid">Pagos</a>
+                                    <span class="material-symbols-outlined" id="arrow_drop-pagos">
+                                        arrow_drop_down
+                                    </span>
+                                </div>
+                                <hr>
+
                                 <!-- Modal servicios -->
                                 <div class="modal-payment" id="Pagos-modal-id-mobile">
                                     <h2 class="title-services-mobile">Formas de pago</h2>
@@ -129,19 +144,43 @@
 <script type="text/javascript">
 
     function SelectedMobile(action){
+        const modalServicios = document.getElementById("Services-modal-id-mobile");
+        const flechaServicios = document.getElementById("arrow_drop-servicios")
+        const modalPagos = document.getElementById("Pagos-modal-id-mobile");
+        const flechaPagos = document.getElementById("arrow_drop-pagos")
         if (action === "servicios") {
-                const modal = document.getElementById("Services-modal-id-mobile");
-                if (modal) modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+            if (modalServicios) {
+                if(modalServicios.style.display === 'block') {
+                    flechaServicios.classList.add("arrow-drop-animation-close-services");
+                    flechaServicios.classList.remove("arrow-drop-animation-open-services");
+                    modalServicios.style.display ='none' 
+                } else{
+                    flechaServicios.classList.add("arrow-drop-animation-open-services");
+                    flechaServicios.classList.remove("arrow-drop-animation-close-services");
+                    modalServicios.style.display = "block"
+                }
+            };
             } else {
-                const modal = document.getElementById("Services-modal-id-mobile");
-                if (modal) modal.style.display = 'none'; // Cierra el modal si el evento no es "servicios"
+                if (modalServicios){ 
+                    modalServicios.style.display = 'none'
+                    // flechaServicios.classList.add("arrow-drop-animation-close");
+
+                }; // Cierra el modal si el evento no es "servicios"
             }
             if (action === "pagos") {
-                const modal = document.getElementById("Pagos-modal-id-mobile");
-                if (modal) modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+                if (modalPagos) {
+                    if(modalPagos.style.display === 'block') {
+                        flechaPagos.classList.add("arrow-drop-animation-close-pay");
+                        flechaPagos.classList.remove("arrow-drop-animation-open-pay");
+                        modalPagos.style.display ='none' 
+                    } else{
+                        flechaPagos.classList.add("arrow-drop-animation-open-pay");
+                        flechaPagos.classList.remove("arrow-drop-animation-close-pay");
+                        modalPagos.style.display = "block"
+                    }
+                };
             } else {
-                const modal = document.getElementById("Pagos-modal-id-mobile");
-                if (modal) modal.style.display = 'none'; // Cierra el modal si el evento no es "servicios"
+                if (modalPagos) modal.style.display = 'none'; // Cierra el modal si el evento no es "servicios"
             }
     }
 
@@ -150,11 +189,13 @@
         let checkbox = document.getElementById("toggle-animation");
         checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
-            navMobile.classList.remove("nav-close");
-            document.getElementById("toggle-content").classList.add("content-animation-revert");
-            navMobile.style.display = 'block';
+                navMobile.classList.remove("nav-close");
+                document.getElementById("toggle-content").classList.add("content-animation-revert");
+                navMobile.style.display = 'block';
             } else {
                 // Realizar acciones si el checkbox no está marcado
+                document.getElementById("Services-modal-id-mobile").style.display = 'none'
+                document.getElementById("Pagos-modal-id-mobile").style.display = 'none'
                 navMobile.classList.add("nav-close");
                 setTimeout(function(){
                     navMobile.style.display = 'none';
@@ -186,6 +227,10 @@
 
 <style>
 
+.content-services-title{
+    display: flex;
+    justify-content: space-between;
+}
     .title-services-mobile{
         color: #172052;
         font-size: 18px;
@@ -206,12 +251,14 @@
     }
     .modal-payment {
         display: none;
+        margin: 5% 0%;
+
     }
     .modal-payment li {
         list-style-type: disc;
     }
     .modal-payment li a{
-        font-size: 18px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -240,25 +287,26 @@
 		text-decoration-line: underline !important;
 	}
 
-    .modal{
+    .modal-mobile {
         display: none;
-    }
-    .modal li {
-        list-style-type: disc;
-    }
+        margin: 5% 0%;
 
-    
-    .modal li {
+    }
+    .modal-mobile li {
         list-style-type: disc;
     }
-    .modal li a{
+    
+    .modal-mobile li {
+        list-style-type: disc;
+    }
+    .modal-mobile li a{
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         margin: 0%;
     }
-    .modal li::marker {
+    .modal-mobile li::marker {
         color: #5ABEAA; /* Cambia el color de los puntos */
     }
 
@@ -278,7 +326,12 @@
     .nav-close {
         animation: nav-mobile-close .9s forwards;
     }
-
+    .arrow-drop-animation-open-pay, .arrow-drop-animation-open-services {
+        animation: arrow_drop-open .5s forwards;
+    }
+    .arrow-drop-animation-close-pay, .arrow-drop-animation-close-services {
+        animation: arrow_drop-close .5s forwards;
+    }
    
 
     
@@ -369,6 +422,24 @@
         }
     }
 
+    @keyframes arrow_drop-open {
+        0% {
+            transform:rotate(0);
+        }
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+    @keyframes arrow_drop-close {
+        0% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform:rotate(0deg);
+        }
+    }
+
     @keyframes lineAnimationOne {
         0% {
             transform: translateY(0);
@@ -450,6 +521,14 @@
             display: block;
             grid-column: 10 / 12;
 
+        }
+    }
+    @media (max-width: 425px) {
+        .modal-mobile, .modal-payment{
+            margin-left: 15%;
+        }
+        .list-person-mobile{
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 </style>
