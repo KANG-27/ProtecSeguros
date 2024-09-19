@@ -1,0 +1,279 @@
+---
+---
+
+<header>
+    <section class="section-header">
+        <img src="../public/logo.png" alt="logo" width="230px">
+        <nav class="bar-vavegation">
+            <div class="content-services">
+                <ul class="list-nav-style">
+                    <li class="list-nav-content-style">
+                        <a class="list-nav-select" href="/">Inicio</a>
+                        <div class="content-services">
+                            <a id="Servicesid" onclick="Selected('servicios')">Servicios</a>
+                            <!-- Modal servicios -->
+                            <div class="modal" id="Services-modal-id">
+                                <h2 class="title-services">Personas</h2>
+                                <ul class="list-person">
+                                    <li>
+                                        <a>Protec Vida</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Salud</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Exequias</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Mascotas</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Vida en Grupo</a> 
+                                    </li>
+                                    <li>
+                                        <a> Accidentes Personales</a> 
+                                    </li>
+                                    <li>
+                                        <a> Enfermedades Graves</a> 
+                                    </li>
+                                    <li>
+                                        <a> Educación Juvenil</a> 
+                                    </li>
+                                </ul>
+                                <!-- division -->
+                                <hr>
+                                <!-- division -->
+
+                                <h2 class="title-services">Empresariales</h2>
+                                <ul class="list-person">
+                                    <li>
+                                        <a>Protec Empresas</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Transporte</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Pymes</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Cumplimiento</a> 
+                                    </li>
+                                    <li>
+                                        <a>Responsabilidad Civil</a> 
+                                    </li>
+                                    
+                                </ul>
+                                <!-- division -->
+                                <hr>
+                                <!-- division -->
+
+                                <h2 class="title-services">Especializados</h2>
+                                <ul class="list-person">
+                                    <li>
+                                        <a>Protec Autos</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Hogar</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Renta Educativa</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Arrendamiento</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Todo Riesgo PIM Integral</a> 
+                                    </li>
+                                    <li>
+                                        <a>Protec Zonas Comunes</a> 
+                                    </li>
+                                    
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <div class="content-services">
+                            <a onclick="Selected('pagos')">Pagos</a>
+                            <!-- Modal servicios -->
+                            <div class="modal-payment" id="Pagos-modal-id">
+                                <h2 class="title-services">Formas de pago</h2>
+                                <ul class="list-payment">
+                                    <li class="buton-sura">
+                                        <a>Sura</a> 
+                                    </li>
+                                    <li class="buton-maphre">
+                                        <a>Maphre</a> 
+                                    </li>
+                                    <li class="buton-axa">
+                                        <a>AXA Colpatria</a> 
+                                    </li>
+                                    <li class="buton-exquial">
+                                        <a>Maphre exquial</a> 
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-contact">
+            <button class="button-contact">¡Contáctanos!</button>
+        </div>
+    </section>
+
+    
+
+    <script type="text/javascript">
+        // Definir la función Selected en el ámbito global
+        function Selected(action) {
+            if (action === "servicios") {
+                const modal = document.getElementById("Services-modal-id");
+                if (modal) modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+            } else {
+                const modal = document.getElementById("Services-modal-id");
+                if (modal) modal.style.display = 'none'; // Cierra el modal si el evento no es "servicios"
+            }
+            if (action === "pagos") {
+                const modal = document.getElementById("Pagos-modal-id");
+                if (modal) modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+            } else {
+                const modal = document.getElementById("Pagos-modal-id");
+                if (modal) modal.style.display = 'none'; // Cierra el modal si el evento no es "servicios"
+            }
+        }
+
+        // Asegurarse de que el script se ejecute después de que el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.pathname;  // Obtener la ruta de la URL actual
+            // Añadir clase "list-nav-select" al enlace que coincide con la URL actual
+            if (currentUrl === '/') {
+                document.getElementById('link-inicio')?.classList.add('list-nav-select');
+            } else if (currentUrl.startsWith('/services')) {
+                document.getElementById('Servicesid')?.classList.add('list-nav-select');
+            } else if (currentUrl.startsWith('/payments')) {
+                document.getElementById('link-pagos')?.classList.add('list-nav-select');
+            }
+        });
+    </script>
+</header>
+
+
+
+
+<style>
+    .list-person{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .title-services{
+        color: #172052;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .list-nav-content-style{
+        display: flex;
+    }
+    .section-header{
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		align-items: center;
+	}
+    .list-nav-style{
+		list-style: none;
+	}
+	.list-nav-style a{
+        font-size: larger;
+		text-decoration: none;
+        margin: 0 10px;
+		color:#172052;
+        cursor: pointer;
+	}
+	.list-nav-select {
+        margin: 0 10px;
+		font-weight: 700;
+		text-decoration-line: underline !important;
+	}
+	.bar-vavegation{
+		grid-column: 3 / 8
+	}
+    .content-services{
+        position: relative;
+    }
+	.content-contact{
+		grid-column: 10 / 12;	
+	}
+    .button-contact{
+        font-size: larger;
+        color: white;
+        border: 0;
+        background-color: #5ABEAA;
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+    }
+    .modal-payment {
+        top: 130%;
+        left: 50%;
+        border-radius: 15px;
+        border: 1px solid rgba(23, 32, 82, 0.25);
+        background: var(--Color-Basic-Color-white, #FFF);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        width: 300px;
+        display: none;
+        position: absolute;
+        padding: 20px 20px;
+    }
+    .modal-payment li {
+        list-style-type: disc;
+    }
+    .modal-payment li a{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .modal {
+        top: 130%;
+        left: 50%;
+        border-radius: 15px;
+        border: 1px solid rgba(23, 32, 82, 0.25);
+        background: var(--Color-Basic-Color-white, #FFF);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        width: 500px;
+        display: none;
+        position: absolute;
+        padding: 20px 20px;
+    }
+    .modal li {
+        list-style-type: disc;
+    }
+    .modal li a{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .modal li::marker {
+        color: #5ABEAA; /* Cambia el color de los puntos */
+    }
+    .buton-sura::marker {
+        color: #001aff !important; /* Cambia el color de los puntos */
+    }
+    .buton-maphre::marker {
+        color: #ff0000 !important; /* Cambia el color de los puntos */
+    }
+    .buton-axa::marker {
+        color: #d4ff00 !important; /* Cambia el color de los puntos */
+    }
+    .buton-exquial::marker {
+        color: #ff00e6 !important; /* Cambia el color de los puntos */
+    }
+</style>
