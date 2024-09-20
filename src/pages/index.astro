@@ -3,31 +3,116 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 
-
-
-
-
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<Header/>
 		<div class="nosotros">
-			<span>hiii</span>
+			<h1 class="title">Tu Protección, Nuestra Prioridad</h1>
+			<p class="description">Somos una agencia, encaminada a orientar profesionalmente en el sector asegurador a nuestros clientes ofreciendo soluciones que garanticen la protección de sus familias y pa - trimonio; brindando acompañamiento en la gestión de sus riesgos, tanto personales como empresariales; avaladas por la expe - riencia de mas de 30 años de su fundadora LUZ MARINA RODRIGUEZ A.</p>
+			<div class="content-contact">
+                <button class="button-contact-more">Conoce más sobre nosotros</button>
+            </div>
+		</div>
+		<div class="servicios">
+			<h1 class="title">Nuestros servicios</h1>
+			<div class="content-services">
+				<div class="service-card">
+	
+				</div>
+
+			</div>
+
+		</div>
+		<div class="aliados">
+			<h1 class="title">Nuestros aliados</h1>
+			<div class="content-aliados">
+
+			</div>
+
+
 		</div>
 		
 	</main>
 </Layout>
 
 <style>
+
+	.content-services{
+		display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+	}
+
+	.service-card{
+		
+	}
+	.button-contact-more{
+        font-size: larger;
+        color: white;
+        border: 0;
+        background-color: #5ABEAA;
+        width: 50%;
+        height: 50px;
+        border-radius: 30px;
+		margin-top: 2%;
+        margin-bottom: 10%;
+		cursor: pointer;
+    }
 	body{
 		margin: 0;
 	}
+	.title{
+		font-size: 60px;
+		/* width: 70%; */
+	}
 
 	.nosotros{
+		padding-left: 5%;
+		padding-right: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		background-color: #172052;
-		
-		height: 750px;
+		color: white;
+		height: auto;
+		padding-top: 7%;
+		padding-bottom: 7%;
+
 	}
+	.servicios {
+		color: #172052;
+		display: flex;
+		justify-content: center;
+	}
+	.aliados{
+		display: flex;
+		justify-content: center;
+		background-color: #172052;
+        color: white;
+
+	}
+	.content-aliados{
+
+	}
+
+	@media (max-width: 768px) {
+        .title{
+            font-size: 24px;
+        }
+        .description{
+            font-size: 12px;
+        }
+		.nosotros{
+			text-align: center;
+			padding-right: 5%;
+		}
+		.button-contact-more{
+			font-size: 15px;
+		}
+
+		
+    }
 	
 </style>
