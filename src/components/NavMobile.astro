@@ -138,8 +138,11 @@
                     </ul>
                 </div>
             </nav>
-       
+            <div class="content-contact">
+                <button class="button-contact">¡Contáctanos!</button>
+            </div>
     </div>
+    
 </div>
 <script type="text/javascript">
 
@@ -151,29 +154,46 @@
         if (action === "servicios") {
             if (modalServicios) {
                 if(modalServicios.style.display === 'block') {
+                    // animacion modal
+                    modalServicios.classList.add("modalServis-animation-close");
+                    modalServicios.classList.remove("modalServis-animation-open");
+                    // animacion flechas
                     flechaServicios.classList.add("arrow-drop-animation-close-services");
                     flechaServicios.classList.remove("arrow-drop-animation-open-services");
                     modalServicios.style.display ='none' 
+
+                   
                 } else{
+                    // animacion flechas
                     flechaServicios.classList.add("arrow-drop-animation-open-services");
                     flechaServicios.classList.remove("arrow-drop-animation-close-services");
+                    // animacion modal
+                    modalServicios.classList.add("modalServis-animation-open");
+                    modalServicios.classList.remove("modalServis-animation-close");
                     modalServicios.style.display = "block"
                 }
             };
             } else {
                 if (modalServicios){ 
                     modalServicios.style.display = 'none'
-                    // flechaServicios.classList.add("arrow-drop-animation-close");
-
                 }; // Cierra el modal si el evento no es "servicios"
             }
             if (action === "pagos") {
                 if (modalPagos) {
                     if(modalPagos.style.display === 'block') {
+                        // animacion modal
+                        modalPagos.classList.add("modalpay-animation-close");
+                        modalPagos.classList.remove("modalpay-animation-open");
+                        // animacion flechas
                         flechaPagos.classList.add("arrow-drop-animation-close-pay");
                         flechaPagos.classList.remove("arrow-drop-animation-open-pay");
+
                         modalPagos.style.display ='none' 
                     } else{
+                         // animacion modal
+                        modalPagos.classList.add("modalpay-animation-open");
+                        modalPagos.classList.remove("modalpay-animation-close");
+                        // animacion flechas
                         flechaPagos.classList.add("arrow-drop-animation-open-pay");
                         flechaPagos.classList.remove("arrow-drop-animation-close-pay");
                         modalPagos.style.display = "block"
@@ -191,7 +211,7 @@
             if (checkbox.checked) {
                 navMobile.classList.remove("nav-close");
                 document.getElementById("toggle-content").classList.add("content-animation-revert");
-                navMobile.style.display = 'block';
+                navMobile.style.display = 'flex';
             } else {
                 // Realizar acciones si el checkbox no está marcado
                 document.getElementById("Services-modal-id-mobile").style.display = 'none'
@@ -226,11 +246,21 @@
 
 
 <style>
-
-.content-services-title{
-    display: flex;
-    justify-content: space-between;
-}
+  
+.button-contact{
+        font-size: larger;
+        color: white;
+        border: 0;
+        background-color: #5ABEAA;
+        width: 100%;
+        height: 50px;
+        border-radius: 30px;
+        margin-bottom: 20%;
+    }
+    .content-services-title{
+        display: flex;
+        justify-content: space-between;
+    }
     .title-services-mobile{
         color: #172052;
         font-size: 18px;
@@ -314,12 +344,14 @@
 
     .nav-mobile {
         display: none;
+        flex-direction: column;
+        justify-content: space-between;
         position: absolute;
         background-color: #FFF;
         right: 0%;
         top: 12%;
         width: auto;
-        height: 100%;
+        height: 88%;
         padding: 0 10% 0 5%;
         animation: nav-mobile .7s forwards;
     }
@@ -331,6 +363,14 @@
     }
     .arrow-drop-animation-close-pay, .arrow-drop-animation-close-services {
         animation: arrow_drop-close .5s forwards;
+    }
+    
+    .modalServis-animation-open, .modalpay-animation-open{
+        animation: modal-servis-animation-open .5s forwards;
+        
+    }
+    .modalServis-animation-close, .modalpay-animation-close {
+        animation: modal-servis-animation-close .5s forwards;
     }
    
 
@@ -368,14 +408,14 @@
     .content {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 5px;
         cursor: pointer;  
     }
     .line {
         background-color: #5ABEAA;
         border-radius: 5px;
-        width: 40px;
-        height: 4px;
+        width: 35px;
+        height: 3px;
     }
 
     .toggle-checkbox:checked ~ .content > .line-one {
@@ -399,9 +439,35 @@
         animation: lineAnimationThreeRevert .7s forwards;
     }
 
+    @keyframes modal-servis-animation-open {
+        0% {
+            height: 0%;
+            opacity: 0;
+
+        }
+        100% {
+            height: 100%;
+            opacity: 1;
+
+        }
+    }
+    
+    @keyframes modal-servis-animation-close {
+        0% {
+            height: 100%;
+            opacity: 1;
+
+        }
+        100% {
+            height: 0%;
+            opacity: 0;
+
+        }
+    }
+
     @keyframes nav-mobile {
         0% {
-            width: 15%;
+            width: 21%;
             opacity: 0;
         }
         100% {
@@ -416,7 +482,7 @@
 
         }
         100% {
-            width: 15%; ;
+            width: 21%; ;
             opacity: 0;
 
         }
@@ -448,7 +514,7 @@
             transform: translateY(14.5px);   
         }
         100% {
-            transform: translateY(12.5px) rotate(45deg);
+            transform: translateY(3.5px) rotate(45deg);
         }
     }
 
@@ -487,7 +553,7 @@
             transform: translateY(14.5px);   
         }
         0% {
-            transform: translateY(12.5px) rotate(45deg);
+            transform: translateY(2.5px) rotate(45deg);
         }
     }
 
@@ -513,7 +579,7 @@
             transform: translateY(-14.5px);  
         }
         0% {
-            transform: translateY(-12.5px) rotate(-45deg)
+            transform: translateY(-2.5px) rotate(-45deg)
     }
     }
     @media (max-width: 768px) {
