@@ -50,12 +50,12 @@ interface Service {
                   backgroundImage: `linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(${servis.data.img})`,
                 }}
               >
-                <h2>{servis.data.categoria}</h2>
+                <h2 transition:name={servis.data.categoria}>{servis.data.categoria}</h2>
                 <p>{servis.data.descripcion}</p>
 
                 {/* El contenido hover con animación */}
                 <div class="card-hover">
-                  <h2>{servis.data.categoria}</h2>
+                  <h2 >{servis.data.categoria}</h2>
                   <p>Conoce más dando click acá</p>
                 </div>
               </div>

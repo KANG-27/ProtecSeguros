@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
+import Carousel from "../../components/Carousel.astro";
 
 export async function getStaticPaths() {
   const services = await getCollection("descripciones");
@@ -20,6 +21,47 @@ const { categoria, descripcion, img } = data;
 <Layout title={categoria}>
   <main>
     <Header />
-    <h1>{categoria}</h1>
+    <div class="categoria">
+        <h1 transition:name={categoria} class="title">{categoria}</h1>
+    </div>
+    <section class="section-services">
+        <h3 class="descripcion-servicio">{descripcion}</h3>
+        <div class="carousel-servcios">
+            <Carousel/>
+        </div>
+    </section>
   </main>
 </Layout>
+
+
+
+<style>
+    body{
+        margin: 0%;
+    }
+    .descripcion-servicio{
+        width: 50%;
+        text-align: center;
+    }
+    .carousel-servcios{
+        margin-top: 5%;
+    }
+    .categoria{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #172052;
+        color: white;
+    }
+    .section-services{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+    }
+    .title {
+    font-size: 60px;
+    /* width: 70%; */
+  }
+</style>
