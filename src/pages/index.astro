@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import { getCollection } from "astro:content";
 import Carousel from "../components/Carousel.astro";
+import Footer from "../components/Footer.astro";
 
 const services = await getCollection("descripciones");
 
@@ -66,6 +67,7 @@ interface Service {
         <Carousel />
       </div>
     </div>
+	<Footer/>
   </main>
 </Layout>
 
@@ -177,6 +179,7 @@ interface Service {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	margin: 5% 0%;
   }
   .aliados {
     display: flex;
@@ -186,9 +189,11 @@ interface Service {
     background-color: #172052;
     color: white;
     padding: 5% 0%;
+	padding-bottom: 10%;
   }
   .content-aliados {
     width: 90%;
+	margin-top: 5%;
   }
 
   @media (max-width: 768px) {

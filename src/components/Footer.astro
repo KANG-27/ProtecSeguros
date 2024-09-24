@@ -1,0 +1,113 @@
+<footer>
+  <section class="section-contact">
+    <div class="contact">
+      <h3>Habla con nosotros</h3>
+      <p>Atencion al cliente</p>
+      <p>Lunes a Viernes - 8AM a 6PM</p>
+      <div class="type-contact">
+        <div class="numbers">
+          <span class="material-symbols-outlined custom-icon"> call </span>
+          <ul>
+            <li>601-6753621</li>
+            <li>315 2244871</li>
+            <li>315 2256143</li>
+          </ul>
+        </div>
+        <div class="mails">
+          <span class="material-symbols-outlined custom-icon"> mail </span>
+          <ul>
+            <li>lmrodriguez@protecsegurosltda.com.co</li>
+            <li>jerodriguez@protecsegurosltda.com.co</li>
+          </ul>
+        </div>
+        <a
+          href="https://wa.me/57315 2256143"
+          target="_blank"
+          class="whatsapp-button"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            class="whatsapp-icon"
+          />
+          <span class="whatsapp-number">+57 315 2256143</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<style>
+    h3{
+        color: #172052;
+    }
+  .type-contact li::marker {
+    color: #5abeaa; /* Cambia el color de los puntos */
+  }
+
+  .custom-icon {
+    color: #5abeaa;
+    font-size: 24px;
+  }
+  .whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #25d366; /* Color del borde de WhatsApp */
+    border-radius: 30px; /* Borde redondeado */
+    text-decoration: none;
+    color: #25d366; /* Color del texto de WhatsApp */
+    font-size: 16px;
+    height: min-content;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .whatsapp-button:hover {
+    background-color: #25d366; /* Fondo verde en hover */
+    color: white; /* Cambia el color del texto a blanco en hover */
+  }
+
+  .whatsapp-button:hover .whatsapp-icon {
+    filter: brightness(0) invert(1); /* Cambia el color del ícono a blanco en hover */
+  }
+
+  .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transition: filter 0.3s ease;
+  }
+
+  .whatsapp-number {
+    font-family: Arial, sans-serif;
+  }
+
+  .type-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .mails {
+    display: flex;
+    align-items: center;
+  }
+
+  .numbers {
+    display: flex;
+    align-items: center;
+  }
+
+  .section-contact {
+    display: flex;
+    margin: 5% 10%;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact p {
+    margin: 0%;
+  }
+</style>
