@@ -1,12 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Header from '../components/Header.astro';
-import { getCollection } from 'astro:content';
-import Carousel from '../components/Carousel.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import { getCollection } from "astro:content";
+import Carousel from "../components/Carousel.astro";
 
-
-const services = await getCollection('descripciones')
+const services = await getCollection("descripciones");
 
 // Define la interfaz para un servicio
 interface Service {
@@ -16,180 +15,223 @@ interface Service {
     img: string; // Asegúrate de que el tipo coincida con tu estructura de datos
   };
 }
-
-
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<Header/>
-		<div class="nosotros">
-			<h1 class="title">Tu Protección, Nuestra Prioridad</h1>
-			<p class="description">Somos una agencia, encaminada a orientar profesionalmente en el sector asegurador a nuestros clientes ofreciendo soluciones que garanticen la protección de sus familias y pa - trimonio; brindando acompañamiento en la gestión de sus riesgos, tanto personales como empresariales; avaladas por la expe - riencia de mas de 30 años de su fundadora LUZ MARINA RODRIGUEZ A.</p>
-			<div class="content-contact">
-                <button class="button-contact-more">Conoce más sobre nosotros</button>
+  <main>
+    <Header />
+    <div class="nosotros">
+      <h1 class="title">Tu Protección, Nuestra Prioridad</h1>
+      <p class="description">
+        Somos una agencia, encaminada a orientar profesionalmente en el sector
+        asegurador a nuestros clientes ofreciendo soluciones que garanticen la
+        protección de sus familias y pa - trimonio; brindando acompañamiento en
+        la gestión de sus riesgos, tanto personales como empresariales; avaladas
+        por la expe - riencia de mas de 30 años de su fundadora LUZ MARINA
+        RODRIGUEZ A.
+      </p>
+      <div class="content-contact">
+        <button class="button-contact-more">Conoce más sobre nosotros</button>
+      </div>
+    </div>
+    <div class="servicios">
+      <h1 class="title">Nuestros servicios</h1>
+      <div class="content-services">
+        {
+          services.map((servis: Service) => (
+            <div class="content-services-cards">
+              <div
+                class="service-card"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(${servis.data.img})`,
+                }}
+              >
+                <h2>{servis.data.categoria}</h2>
+                <p>{servis.data.descripcion}</p>
+
+                {/* El contenido hover con animación */}
+                <div class="card-hover">
+                  <h2>{servis.data.categoria}</h2>
+                  <p>Conoce más dando click acá</p>
+                </div>
+              </div>
             </div>
-		</div>
-		<div class="servicios">
-			<h1 class="title">Nuestros servicios</h1>
-			<div class="content-services">
-				{services.map((servis:Service)=>(
-					<div class="service-card" style={`background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(${servis.data.img});`}>
-						{/* <div class="icon-services">
-							<svg xmlns="http://www.w3.org/2000/svg" width="104" height="100" viewBox="0 0 104 161" fill="none">
-								<path d="M40.9841 82.6401C42.8698 87.574 44.5808 92.0489 46.7488 97.7194C47.4132 94.8269 47.5879 93.0183 48.2707 91.4293C48.7986 90.2008 49.9633 89.2472 50.8458 88.1712C51.7006 89.3064 52.8312 90.331 53.342 91.6056C53.9802 93.2011 54.1102 95.0005 54.6893 97.847C56.8809 92.2159 58.697 87.549 60.5905 82.6822C66.9566 84.3093 71.1954 88.0041 73.2714 93.897C74.7474 98.089 74.4992 101.946 71.0575 105.631C58.3267 119.269 38.006 117.279 28.7011 101.066C27.6887 99.3018 27.5718 96.458 28.1575 94.4415C29.963 88.2212 34.3292 84.3843 40.9828 82.6388L40.9841 82.6401Z" fill="#5DBCAA" stroke="#5DBCAA" stroke-miterlimit="10"/>
-								<path d="M50.9469 82.0113C42.2199 82.0942 35.125 75.1162 35.1578 66.4835C35.192 57.8179 41.8049 51.0228 50.3691 50.8557C59.1894 50.6847 66.216 57.3852 66.3907 66.135C66.564 74.8268 59.6556 81.9285 50.9469 82.0113Z" fill="#22274E" stroke="#22274E" stroke-miterlimit="10"/>
-								</svg>
-						</div> */}
-						<h2>{servis.data.categoria}</h2>
-						<p>{servis.data.descripcion}</p>
-					</div>
-				))}
-			</div>
-		</div>
-		<div class="aliados">
-			<h1 class="title">Nuestros aliados</h1>
-			<div class="content-aliados">
-				<Carousel/>
-
-			</div>
-
-
-		</div>
-		
-	</main>
+          ))
+        }
+      </div>
+    </div>
+    <div class="aliados">
+      <h1 class="title">Nuestros aliados</h1>
+      <div class="content-aliados">
+        <Carousel />
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	
-	.icon-services{
-		background-color: white;
-		position: absolute;
-		bottom: 85%;
-		left: 5%;
-		width: min-content;
-		height: min-content;
-		border-radius: 20%;
-	}
+  .card-hover {
+    opacity: 0; /* Inicia invisible */
+    transform: translateY(20px); /* Inicia desplazado hacia abajo */
+    top: 0;
+    left: 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease; /* Transiciones suaves */
+  }
 
-	.content-services{
-		margin: 5% 0%;
-		display: grid;
-        grid-template-columns: repeat(3, 1fr);
-		width: 100%;
-		justify-items: center;
+  .service-card:hover .card-hover {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(0); /* Se desliza hacia su posición original */
+    background-color: #5abeaa;
+    cursor: pointer;
+  }
 
-	}
+  .service-card:hover {
+    background-image: none;
+  }
+  .content-services-cards {
+    display: flex;
+    justify-content: center;
+  }
+  .icon-services {
+    background-color: white;
+    position: absolute;
+    bottom: 85%;
+    left: 5%;
+    width: min-content;
+    height: min-content;
+    border-radius: 20%;
+  }
 
-	.service-card {
-    	--opacidad-negro: 0.5;
-		background-repeat: no-repeat;
-		color: white;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding: 0% 10%;
-		width: 320px;
-		height: 200px;
-		border-radius: 5%;
-		padding: 5% 10%;
-		
-	}
-	.button-contact-more{
-        font-size: larger;
-        color: white;
-        border: 0;
-        background-color: #5ABEAA;
-        width: 50%;
-        height: 50px;
-        border-radius: 30px;
-		margin-top: 2%;
-        margin-bottom: 10%;
-		cursor: pointer;
+  .content-services {
+    margin: 5% 0%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .service-card {
+    --opacidad-negro: 0.5;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 10%;
+    width: 70%;
+    height: 200px;
+    border-radius: 5%;
+    padding: 5% 10%;
+  }
+
+  .button-contact-more {
+    font-size: larger;
+    color: white;
+    border: 0;
+    background-color: #5abeaa;
+    width: 50%;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    cursor: pointer;
+  }
+  body {
+    margin: 0;
+  }
+  .title {
+    font-size: 60px;
+    /* width: 70%; */
+  }
+
+  .nosotros {
+    padding-left: 5%;
+    padding-right: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #172052;
+    color: white;
+    height: auto;
+    padding-top: 7%;
+    padding-bottom: 7%;
+  }
+  .servicios {
+    color: #172052;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aliados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #172052;
+    color: white;
+    padding: 5% 0%;
+  }
+  .content-aliados {
+    width: 90%;
+  }
+
+  @media (max-width: 768px) {
+    .service-card p {
+      font-size: small;
     }
-	body{
-		margin: 0;
-	}
-	.title{
-		font-size: 60px;
-		/* width: 70%; */
-	}
-
-	.nosotros{
-		padding-left: 5%;
-		padding-right: 50%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		background-color: #172052;
-		color: white;
-		height: auto;
-		padding-top: 7%;
-		padding-bottom: 7%;
-
-	}
-	.servicios {
-		color: #172052;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.aliados{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		background-color: #172052;
-        color: white;
-		padding: 5% 0%;
-
-	}
-	.content-aliados{
-		width: 90%;
-	}
-
-	@media (max-width: 768px) {
-		.service-card p {
-			font-size: small;
-		}
-		.servicios {
-			margin-top: 5%;
-		}
-		.service-card {
-			width: 60%;
-		}
-		.content-services {
-			grid-template-columns: repeat(1, 1fr);
-			gap: 20px
-		}
-        .title{
-            font-size: 24px;
-        }
-        .description{
-            font-size: 12px;
-        }
-		.nosotros{
-			text-align: center;
-			padding-right: 5%;
-		}
-		.button-contact-more{
-			font-size: 15px;
-		}
+    .servicios {
+      margin-top: 5%;
     }
-	@media (max-width: 768px) {
-		.service-card {
-			width: 70%;
-		}
-	}
+    .service-card {
+      width: 60%;
+    }
+    .content-services {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+    .title {
+      font-size: 24px;
+    }
+    .description {
+      font-size: 12px;
+    }
+    .nosotros {
+      text-align: center;
+      padding-right: 5%;
+    }
+    .button-contact-more {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 768px) {
+    .service-card {
+      width: 70%;
+    }
+  }
 
-	@media (min-width: 1024px) and (max-width: 1240px) {
-		.content-services {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 20px
-		}
-}
-
-	
+  @media (min-width: 1024px) and (max-width: 1240px) {
+    .content-services {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      width: 70%;
+    }
+  }
 </style>
