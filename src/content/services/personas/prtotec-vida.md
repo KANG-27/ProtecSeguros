@@ -13,5 +13,6 @@ use-service:
 images:
     - Indemnización por fallecimiento
     - Cobertura por enfermedades terminales
+category: Personas
 
 ---
