@@ -1,8 +1,6 @@
 ---
 import NavMobile from "./NavMobile.astro";
 
-
-
 ---
 
 <header>
@@ -172,6 +170,13 @@ import NavMobile from "./NavMobile.astro";
 
 
 <style>
+    header{
+        position: sticky;
+        background-color: white;
+        top: 0px;
+        z-index: 50;
+        border-bottom: #172052;
+    }
     .content-contact{
         display: block;
     }
@@ -296,6 +301,9 @@ import NavMobile from "./NavMobile.astro";
     @media (max-width: 768px) {
         .logo{
             width: 150px;
+        }
+        header{
+            position: static;
         }
         .bar-navegation-descktop{
             display: none;
