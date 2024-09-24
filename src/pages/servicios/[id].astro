@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const services = await getCollection("descripciones");
+
+  return services.map((service) => ({
+    params: { id: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const { data } = service;
+const { categoria, descripcion, img } = data;
+---
+
+<Layout title={categoria}>
+  <main>
+    <Header />
+    <h1>{categoria}</h1>
+  </main>
+</Layout>

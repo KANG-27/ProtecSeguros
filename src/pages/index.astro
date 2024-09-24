@@ -40,7 +40,7 @@ interface Service {
       <div class="content-services">
         {
           services.map((servis: Service) => (
-            <div class="content-services-cards">
+            <a class="content-services-cards" href={`/servicios/${servis.data.categoria.toLowerCase()}`}>
               <div
                 class="service-card"
                 style={{
@@ -56,7 +56,7 @@ interface Service {
                   <p>Conoce más dando click acá</p>
                 </div>
               </div>
-            </div>
+            </a>
           ))
         }
       </div>
