@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import { getCollection } from 'astro:content';
+import Carousel from '../components/Carousel.astro';
 
 
 const services = await getCollection('descripciones')
@@ -49,6 +50,7 @@ interface Service {
 		<div class="aliados">
 			<h1 class="title">Nuestros aliados</h1>
 			<div class="content-aliados">
+				<Carousel/>
 
 			</div>
 
@@ -136,13 +138,16 @@ interface Service {
 	}
 	.aliados{
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
 		background-color: #172052;
         color: white;
+		padding: 5% 0%;
 
 	}
 	.content-aliados{
-
+		width: 90%;
 	}
 
 	@media (max-width: 768px) {
