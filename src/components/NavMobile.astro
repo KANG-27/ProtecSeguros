@@ -211,11 +211,13 @@
             if (checkbox.checked) {
                 navMobile.classList.remove("nav-close");
                 document.getElementById("toggle-content").classList.add("content-animation-revert");
+                document.body.style.overflow = 'hidden';
                 navMobile.style.display = 'flex';
             } else {
                 // Realizar acciones si el checkbox no está marcado
                 document.getElementById("Services-modal-id-mobile").style.display = 'none'
                 document.getElementById("Pagos-modal-id-mobile").style.display = 'none'
+                document.body.style.overflow = ''; 
                 navMobile.classList.add("nav-close");
                 setTimeout(function(){
                     navMobile.style.display = 'none';
@@ -586,7 +588,7 @@
         .bar-navegation-mobile-content{
             display: block;
             grid-column: 10 / 12;
-
+            z-index: 100;
         }
     }
     @media (max-width: 425px) {
