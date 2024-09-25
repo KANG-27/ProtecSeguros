@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
-import Carousel from "../../components/Carousel.astro";
+// import Carousel from "../../components/Carousel.astro";
 
 export async function getStaticPaths() {
   const services = await getCollection("descripciones");
@@ -27,7 +27,7 @@ const { categoria, descripcion, img } = data;
     <section class="section-services">
         <h3 class="descripcion-servicio">{descripcion}</h3>
         <div class="carousel-servcios">
-            <Carousel/>
+            <!-- <Carousel/> -->
         </div>
     </section>
   </main>

@@ -3,8 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import { getCollection } from "astro:content";
-import Carousel from "../components/Carousel.astro";
+import Carousel from "../components/CarouselAliados.astro";
 import Footer from "../components/Footer.astro";
+import CarouselInicio from "../components/CarouselInicio.astro";
 
 const services = await getCollection("descripciones");
 
@@ -37,10 +38,8 @@ interface Service {
         </div>
       </div>
       <div class="imagenes-carrusel">
-        <!-- <Carousel /> -->
+        <CarouselInicio/>
       </div>
-
-      <!-- <img src="./public/saludDos.png" alt="" class="imagen-carrousel" /> -->
     </div>
     <div class="servicios">
       <h1 class="title">Nuestros servicios</h1>
@@ -254,6 +253,9 @@ interface Service {
       padding-top: 20%;
       padding-bottom: 20%;
     }
+    .imagenes-carrusel{
+      width:80%;
+    }
     .service-card p {
       font-size: small;
     }
@@ -274,23 +276,20 @@ interface Service {
       font-size: 12px;
     }
     .nosotros {
+      flex-direction: column;
       text-align: center;
-      padding-right: 5%;
+      padding: 25% 0%;
+      justify-content: center;
+      align-items: center;
+    }
+    .nosotros-content{
+      width: 80%;
     }
     .button-contact-more {
       font-size: 15px;
     }
   }
-  @media (max-width: 768px) {
-    .service-card {
-      width: 70%;
-    }
-    .nosotros {
-      padding-top: 50%;
-      padding-bottom: 50%;
-    }
-  }
-
+  
   @media (min-width: 1024px) and (max-width: 1240px) {
     .content-services {
       grid-template-columns: repeat(2, 1fr);
