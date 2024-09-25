@@ -97,16 +97,16 @@ import NavMobile from "./NavMobile.astro";
     
                             </div>
                             <div class="content-services">
-                                <a onclick="Selected('pagos')">Pagos</a>
+                                <a onclick="Selected('pagos')">Paga tu poliza</a>
                                 <!-- Modal servicios -->
                                 <div class="modal-payment" id="Pagos-modal-id">
-                                    <h2 class="title-services">Formas de pago</h2>
+                                    <h2 class="title-services">Botones de pago</h2>
                                     <ul class="list-payment">
                                         <li class="buton-sura">
-                                            <a>Sura</a> 
+                                            <a href="https://www.segurossura.com.co/paginas/pago-express.aspx#/Pagos">Sura</a> 
                                         </li>
-                                        <li class="buton-maphre">
-                                            <a>Maphre</a> 
+                                        <li class="buton-mapre">
+                                            <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublico.jsf">Mapre</a> 
                                         </li>
                                         <li class="buton-axa">
                                             <a>AXA Colpatria</a> 
@@ -288,7 +288,7 @@ import NavMobile from "./NavMobile.astro";
     .buton-sura::marker {
         color: #001aff !important; /* Cambia el color de los puntos */
     }
-    .buton-maphre::marker {
+    .buton-mapre::marker {
         color: #ff0000 !important; /* Cambia el color de los puntos */
     }
     .buton-axa::marker {
