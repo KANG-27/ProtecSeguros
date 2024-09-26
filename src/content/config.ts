@@ -10,6 +10,10 @@ const descripcionesCollection = defineCollection({
       nombre: z.string(),
       subcategoria: z.array(z.string()),
     })),
+    imagenes: z.array(z.object({
+      src: z.string(),
+      alt: z.string()
+    }))
   }),
 });
 

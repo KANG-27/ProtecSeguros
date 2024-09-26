@@ -11,4 +11,23 @@ servicios:
       - Seguro de Motos
       - Seguro Obligatorio (SOAT)
       - Seguro de Viaje
+imagenes:
+    - src: ../public/enfermeros.png
+      alt: "imagen3"
+    - src: ../public/PATINETAS.png
+      alt: "imagen5"
+    - src: ../public/PATINETAS.png
+      alt: "imagen5"
+    - src: ../public/PATINETAS.png
+      alt: "imagen5"
+    - src: ../public/PATINETAS.png
+      alt: "imagen5"
+    - src: ../public/PATINETAS.png
+      alt: "imagen5"
+    - src: ../public/PATINETAS.png
+      alt: "imagen5"
+    - src: ../public/PATINETAS.png
+      alt: "imagen5"
+    - src: ../public/PATINETAS.png
+      alt: "imagen5"
 ---

@@ -14,14 +14,14 @@ export async function getStaticPaths() {
 
 const { service } = Astro.props;
 const { data } = service;
-const { categoria, descripcion, img } = data;
+const { descripcion, titulo } = data;
 ---
 
-<Layout title={categoria}>
+<Layout title={titulo}>
   <main>
     <Header />
     <div class="categoria">
-        <h1 transition:name={categoria} class="title">{categoria}</h1>
+        <h1 transition:name={titulo} class="title">{titulo}</h1>
     </div>
     <section class="section-services">
         <h3 class="descripcion-servicio">{descripcion}</h3>

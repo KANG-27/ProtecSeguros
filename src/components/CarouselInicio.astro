@@ -1,56 +1,64 @@
 ---
-const imagesHome = [
-  { src: "./public/saludDos.png", alt: "imagen1" },
-  { src: "./public/familia.png", alt: "imagen2" },
-  { src: "./public/enfermeros.png", alt: "imagen3" },
-  { src: "./public/familia2.png", alt: "imagen4" },
-  { src: "./public/PATINETAS.png", alt: "imagen5" },
-];
-
+const { data } = Astro.props;
+const totalItems = data.length; // Calcula el número total de imágenes
 ---
 
-<div class="carousel-imagesHome" data-content={imagesHome}>
+<div class="carousel-imagesHome" data-content={totalItems}>
   <div class="carousel-inner-imagesHome">
     {
-      imagesHome.map((image) => (
+      data.map((image: any) => (
         <div class="carousel-item-imagesHome">
-          <img  src={image.src} alt={image.alt} />
+          <img src={image.src} alt={image.alt} />
         </div>
       ))
     }
   </div>
   <div class="carousel-dots-imagesHome">
-    {imagesHome.map((x,index) => (
-        <span class="dot-imagesHome" onclick={`showSlideimagesHome(${index})`}></span>
+    {
+      data.map((x: string, index: number) => (
+        <span
+          class="dot-imagesHome"
+          onclick={`showSlideimagesHome(${index})`}
+        />
       ))
     }
   </div>
 </div>
 
 <script type="text/javascript">
-document.addEventListener("DOMContentLoaded", () => {
-    // Tu código aquí
-    showSlideimagesHome(0); // Inicializa el carrusel
-});
+
+let carousel = document.querySelector(".carousel-imagesHome");
+let totalIndexCarrousel = carousel.getAttribute("data-content")
+
+
+  document.addEventListener('astro:after-swap', () => {
+    carousel = document.querySelector(".carousel-imagesHome");
+    totalIndexCarrousel = carousel.getAttribute("data-content")
+    console.log(carousel.getAttribute('data-content'))
+  })
+
+
+
 
   let currentIndeximagesHome = 0;
 
-  const carousel = document.querySelector('.carousel-imagesHome');
-  carousel.setAttribute('data-content', JSON.stringify(carousel));
-
+   // Astro pasará aquí el valor del total de imágenes
   function showSlideimagesHome(index) {
-    const slidesimagesHome = document.querySelector(".carousel-inner-imagesHome");
+    const slidesimagesHome = document.querySelector(
+      ".carousel-inner-imagesHome"
+    );
     const visibleItemsimagesHome = 1;
 
     if (index < 0) {
-      currentIndeximagesHome = 5 + visibleItemsimagesHome;
-    } else if (index >= 5) {
+      currentIndeximagesHome = totalIndexCarrousel + visibleItemsimagesHome;
+    } else if (index >= totalIndexCarrousel) {
       currentIndeximagesHome = 0;
     } else {
       currentIndeximagesHome = index;
     }
 
-    const offsetimagesHome = -currentIndeximagesHome * (100 / visibleItemsimagesHome);
+    const offsetimagesHome =
+      -currentIndeximagesHome * (100 / visibleItemsimagesHome);
     slidesimagesHome.style.transform = `translateX(${offsetimagesHome}%)`;
 
     // Actualiza los puntos de navegación
@@ -66,44 +74,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Movimiento automático
   setInterval(nextSlideimagesHome, 3000); // Cambia cada 3 segundos
-
-  
 </script>
 
 <style>
-.carousel-imagesHome {
+  .carousel-imagesHome {
     display: flex;
     flex-direction: column;
     overflow: hidden;
     width: 100%;
     position: relative;
-}
+  }
 
-.carousel-inner-imagesHome {
+  .carousel-inner-imagesHome {
     display: flex;
     transition: transform 0.5s ease;
-}
+  }
 
-.carousel-item-imagesHome {
+  .carousel-item-imagesHome {
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%; /* Puedes ajustar esta altura */
     min-width: 100%; /* Asegúrate de que cada imagen ocupe el 100% */
-}
+  }
 
-.carousel-imagesHome img {
+  .carousel-imagesHome img {
     width: 60%;
     height: auto; /* Permite que la altura sea automática */
-}
+  }
 
-.carousel-dots-imagesHome {
+  .carousel-dots-imagesHome {
     text-align: center;
     margin-top: 10px;
-}
+  }
 
-.dot-imagesHome {
+  .dot-imagesHome {
     height: 10px;
     width: 10px;
     margin: 0 5px;
@@ -111,30 +117,30 @@ document.addEventListener("DOMContentLoaded", () => {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-}
+  }
 
-.dot-imagesHome.active {
+  .dot-imagesHome.active {
     background-color: #5abeaa;
-}
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .carousel-item-imagesHome {
-        min-width: 100%; /* Mostrar 1 imagen en pantallas pequeñas */
+      min-width: 100%; /* Mostrar 1 imagen en pantallas pequeñas */
     }
-    .carousel-imagesHome img{
+    .carousel-imagesHome img {
       width: 100%;
     }
-}
+  }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
     .carousel-item-imagesHome {
-        min-width: 100%; /* Mostrar 1 imagen en pantallas medianas */
+      min-width: 100%; /* Mostrar 1 imagen en pantallas medianas */
     }
-}
+  }
 
-@media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     .carousel-item-imagesHome {
-        min-width: 100%; /* Mostrar 1 imagen en pantallas grandes */
+      min-width: 100%; /* Mostrar 1 imagen en pantallas grandes */
     }
-}
+  }
 </style>

@@ -38,4 +38,12 @@ servicios:
       - Seguro de Arrendamiento
       - Seguro de Arrendamiento Digital
       - Plan Inversión Protegida
+imagenes:
+  - src: ../public/saludDos.png
+    alt: "imagen1"
+  - src: ../public/familia.png
+    alt: "imagen2"
+  - src: ../public/familia2.png
+    alt: "imagen4"
+
 ---
