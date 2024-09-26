@@ -1,0 +1,296 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import { getCollection } from "astro:content";
+import Carousel from "../components/CarouselAliados.astro";
+import Footer from "../components/Footer.astro";
+import CarouselInicio from "../components/CarouselInicio.astro";
+
+const services = await getCollection("descripciones");
+
+// Define la interfaz para un servicio
+interface Service {
+  data: {
+    categoria: string;
+    descripcion: string;
+    img: string; // Asegúrate de que el tipo coincida con tu estructura de datos
+  };
+}
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <Header />
+    <div class="nosotros">
+      <div class="nosotros-content">
+        <h1 class="title">Siempre estamos contigo</h1>
+        <p class="description">
+          Somos una agencia, encaminada a orientar profesionalmente en el sector
+          asegurador a nuestros clientes ofreciendo soluciones que garanticen la
+          protección de sus familias y pa - trimonio; brindando acompañamiento
+          en la gestión de sus riesgos, tanto personales como empresariales;
+          avaladas por la expe - riencia de mas de 30 años de su fundadora LUZ
+          MARINA RODRIGUEZ A.
+        </p>
+        <div class="content-contact">
+          <button class="button-contact-more">Conoce más sobre nosotros</button>
+        </div>
+      </div>
+      <div class="imagenes-carrusel">
+        <CarouselInicio/>
+      </div>
+    </div>
+    <div class="servicios">
+      <h1 class="title">Nuestros servicios</h1>
+      <div class="content-services">
+        {
+          services.map((servis: Service) => (
+            <a
+              class="content-services-cards"
+              href={`/servicios/${servis.data.categoria.toLowerCase()}`}
+            >
+              <div
+                class="service-card"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(${servis.data.img})`,
+                }}
+              >
+                <h2>
+                  {servis.data.categoria}
+                </h2>
+                <p>{servis.data.descripcion}</p>
+
+                {/* El contenido hover con animación */}
+                <div class="card-hover">
+                  <h2 transition:name={servis.data.categoria}>{servis.data.categoria}</h2>
+                  <p>Conoce más dando click acá</p>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="aliados">
+      <div class="aliados-full">
+        <h1 class="title">Nuestros aliados</h1>
+        <div class="content-aliados">
+          <Carousel />
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .imagenes-carrusel{
+    width: 50%;
+    height: 100%;
+    margin: 0% 5%;
+
+  }
+
+  .nosotros-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 5%;
+  }
+  .card-hover {
+    opacity: 0; /* Inicia invisible */
+    transform: translateY(20px); /* Inicia desplazado hacia abajo */
+    top: 0;
+    left: 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease; /* Transiciones suaves */
+  }
+
+  .service-card:hover .card-hover {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(0); /* Se desliza hacia su posición original */
+    background-color: #5abeaa;
+    cursor: pointer;
+  }
+
+  .service-card:hover {
+    background-image: none;
+  }
+  .content-services-cards {
+    display: flex;
+    justify-content: center;
+  }
+  .icon-services {
+    background-color: white;
+    position: absolute;
+    bottom: 85%;
+    left: 5%;
+    width: min-content;
+    height: min-content;
+    border-radius: 20%;
+  }
+
+  .content-services {
+    margin: 5% 0%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .service-card {
+    --opacidad-negro: 0.5;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 10%;
+    width: 70%;
+    height: 200px;
+    border-radius: 5%;
+    padding: 5% 10%;
+  }
+
+  .button-contact-more {
+    font-size: larger;
+    color: white;
+    border: 0;
+    background-color: #5abeaa;
+    width: 50%;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    cursor: pointer;
+  }
+  
+
+  .nosotros {
+    justify-content: space-between;
+    display: flex;
+    background-color: #172052;
+    color: white;
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+  }
+  .servicios {
+    color: #172052;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0%;
+  }
+  .aliados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #172052;
+    color: white;
+    padding: 5% 0%;
+    padding-bottom: 10%;
+  }
+  .content-aliados {
+    width: 90%;
+    margin-top: 5%;
+  }
+  .aliados-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .servicios,
+  .aliados-full {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 25% cover 35%;
+  }
+
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      translate: 0 100px;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .aliados {
+      padding-top: 20%;
+      padding-bottom: 20%;
+    }
+    .imagenes-carrusel{
+      width:80%;
+    }
+    .service-card p {
+      font-size: small;
+    }
+    .servicios {
+      margin-top: 5%;
+    }
+    .service-card {
+      width: 60%;
+    }
+    .content-services {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+    .title {
+      font-size: 24px;
+    }
+    .description {
+      font-size: 12px;
+    }
+    .nosotros {
+      flex-direction: column;
+      text-align: center;
+      padding: 25% 0%;
+      justify-content: center;
+      align-items: center;
+    }
+    .nosotros-content{
+      width: 80%;
+    }
+    .button-contact-more {
+      font-size: 15px;
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1240px) {
+    .content-services {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      width: 70%;
+    }
+  }
+</style>

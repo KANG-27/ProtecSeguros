@@ -28,6 +28,11 @@ const imagesHome = [
 </div>
 
 <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", () => {
+    // Tu código aquí
+    showSlideimagesHome(0); // Inicializa el carrusel
+});
+
   let currentIndeximagesHome = 0;
 
   const carousel = document.querySelector('.carousel-imagesHome');
@@ -62,8 +67,7 @@ const imagesHome = [
   // Movimiento automático
   setInterval(nextSlideimagesHome, 3000); // Cambia cada 3 segundos
 
-  // Inicializar el carrusel
-  showSlideimagesHome(0);
+  
 </script>
 
 <style>
