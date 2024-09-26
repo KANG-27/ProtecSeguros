@@ -1,13 +1,31 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Header from "../components/Header.astro";
-import { getCollection } from "astro:content";
-import Carousel from "../components/CarouselAliados.astro";
-import Footer from "../components/Footer.astro";
-import CarouselInicio from "../components/CarouselInicio.astro";
 
-const services = await getCollection("descripciones");
+import Header from "../../components/Header.astro";
+import { getCollection } from "astro:content";
+import Carousel from "../../components/CarouselAliados.astro";
+import Footer from "../../components/Footer.astro";
+import CarouselInicio from "../../components/CarouselInicio.astro";
+import Layout from "../../layouts/Layout.astro";
+
+
+
+export async function getStaticPaths() {
+  const services = await getCollection("descripciones");
+  return services.map((service) => ({
+    params: { id: service.slug },
+    props: { service }
+  }));
+  
+ 
+}
+
+
+const { service } = Astro.props;
+const { data } = service;
+
+console.log(data)
+
+
 
 // Define la interfaz para un servicio
 interface Service {
@@ -44,7 +62,7 @@ interface Service {
     <div class="servicios">
       <h1 class="title">Nuestros servicios</h1>
       <div class="content-services">
-        {
+        <!-- {
           services.map((servis: Service) => (
             <a
               class="content-services-cards"
@@ -69,7 +87,7 @@ interface Service {
               </div>
             </a>
           ))
-        }
+        } -->
       </div>
     </div>
     <div class="aliados">

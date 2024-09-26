@@ -1,5 +1,14 @@
 ---
-categoria: Empresas
-descripcion: Esta categoría ofrece seguros diseñados para proteger a tu negocio y empleados ante riesgos operativos, legales y laborales, garantizando la continuidad y estabilidad de tu empresa.
-img: https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/5D5B/production/_99199832_edificios.jpg.webp
+titulo: Empresas
+descripcion: Esta categoría está diseñada para proteger y garantizar el bienestar individual y familiar ante imprevistos que puedan afectar tu salud, seguridad o futuro financiero.
+servicios:
+  - nombre: Protec movilidad
+    subcategoria:
+      - Plan Muévete Libre
+      - Plan Utilitarios y Pesados
+      - Seguro de Autos
+      - Seguro de Bicis y Patinetas
+      - Seguro de Motos
+      - Seguro Obligatorio (SOAT)
+      - Seguro de Viaje
 ---

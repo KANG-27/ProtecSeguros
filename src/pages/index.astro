@@ -1,22 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
-import { getCollection } from "astro:content";
-import Carousel from "../components/CarouselAliados.astro";
 import Footer from "../components/Footer.astro";
-import CarouselInicio from "../components/CarouselInicio.astro";
 
-const services = await getCollection("descripciones");
 
-// Define la interfaz para un servicio
-interface Service {
-  data: {
-    categoria: string;
-    descripcion: string;
-    img: string; // Asegúrate de que el tipo coincida con tu estructura de datos
-  };
-}
 ---
 
 <Layout title="Welcome to Astro.">
@@ -46,12 +33,13 @@ interface Service {
           <button
             class="button-contact color-blue"
             onmouseover="outBodyBtn('personas')"
-            onmouseout="outBodyBtn('salio')">Personas</button
+            onmouseout="outBodyBtn('salio')"><a href="./inicio/personas">Personas</a></button
           >
           <button
+            
             class="button-contact color-white"
             onmouseover="outBodyBtn('empresas')"
-            onmouseout="outBodyBtn('salio')">Empresas</button
+            onmouseout="outBodyBtn('salio')"><a href="./inicio/empresas">Empresas</a></button
           >
         </div>
       </div>
