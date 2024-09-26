@@ -30,17 +30,19 @@ import Footer from "../components/Footer.astro";
       <div class="content-index-text">
         <h1 class="title">Te damos la bienvenida a Protec Seguros</h1>
         <div class="content-contact">
-          <button
-            class="button-contact color-blue"
-            onmouseover="outBodyBtn('personas')"
-            onmouseout="outBodyBtn('salio')"><a href="./inicio/personas">Personas</a></button
-          >
-          <button
-            
-            class="button-contact color-white"
-            onmouseover="outBodyBtn('empresas')"
-            onmouseout="outBodyBtn('salio')"><a href="./inicio/empresas">Empresas</a></button
-          >
+          <a class="buton-content" href="./inicio/personas">
+            <button
+              class="button-contact color-blue"
+              onmouseover="outBodyBtn('personas')"
+              onmouseout="outBodyBtn('salio')">Personas</button
+            >
+          </a>
+          <a class="buton-content" href="./inicio/empresas">
+            <button   
+              class="button-contact color-white"
+              onmouseover="outBodyBtn('empresas')"
+              onmouseout="outBodyBtn('salio')">Empresas</button>
+          </a>
         </div>
       </div>
     </div>
@@ -80,6 +82,11 @@ import Footer from "../components/Footer.astro";
 </script>
 
 <style>
+
+  .buton-content{
+    width: 100%;
+
+  }
 
 .color-content {
     position: absolute;
@@ -138,6 +145,7 @@ import Footer from "../components/Footer.astro";
   .content-contact {
     display: flex;
     justify-content: center;
+    width: 35%;
     gap: 100px;
   }
   .button-contact {
@@ -146,7 +154,7 @@ import Footer from "../components/Footer.astro";
     width: 100%;
     height: 50px;
     border-radius: 30px;
-    padding: 0% 20%;
+    /* padding: 0% 20%; */
     cursor: pointer;
   }
   .title {
