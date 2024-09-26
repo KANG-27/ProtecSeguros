@@ -1,605 +1,583 @@
+---
+const { data } = Astro.props;
+---
+
 <div class="bar-navegation-mobile-content">
-    <div class="container" onclick="ButonNav()">
-        <input type="checkbox" id="toggle-animation" class="toggle-checkbox"/>
-        <label id="toggle-content" for="toggle-animation" class="content">
-          <div class="line line-one"></div>
-          <div class="line line-two"></div>
-          <div class="line line-three"></div>
-        </label>
-    </div>
-    <div class="nav-mobile" id="nav-mobile">
-            <nav class="bar-navegation-mobile">
-                <div class="content-services">
-                    <ul class="list-nav-style-mobile">
-                        <li class="list-nav-content-style-mobile">
-                            <a class="list-nav-select-mobile" href="/">Inicio</a>
-                            <hr>
+  <div class="container" onclick="ButonNav()">
+    <input type="checkbox" id="toggle-animation" class="toggle-checkbox" />
+    <label id="toggle-content" for="toggle-animation" class="content">
+      <div class="line line-one"></div>
+      <div class="line line-two"></div>
+      <div class="line line-three"></div>
+    </label>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <nav class="bar-navegation-mobile">
+      <div class="content-services">
+        <ul class="list-nav-style-mobile">
+          <li class="list-nav-content-style-mobile">
+            <a class="list-nav-select-mobile" href="/">Inicio</a>
+            <hr />
 
-                            <div class="content-services">
-                                <div class="content-services-title"  onclick="SelectedMobile('servicios')">
-                                    <a id="Servicesid">Servicios</a>
-                                    <span class="material-symbols-outlined" id="arrow_drop-servicios">
-                                        arrow_drop_down
-                                    </span>
-                                </div>
-                                <hr>
-                                <!-- Modal servicios -->
-                                <div class="modal-mobile" id="Services-modal-id-mobile">
-                                    <h2 class="title-services-mobile">Personas</h2>
-                                    <ul class="list-person-mobile">
-                                        <li>
-                                            <a>Protec Vida</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Salud</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Exequias</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Mascotas</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Vida en Grupo</a> 
-                                        </li>
-                                        <li>
-                                            <a> Accidentes Personales</a> 
-                                        </li>
-                                        <li>
-                                            <a> Enfermedades Graves</a> 
-                                        </li>
-                                        <li>
-                                            <a> Educación Juvenil</a> 
-                                        </li>
-                                    </ul>
-                                    <!-- division -->
-                                    <hr>
-                                    <!-- division -->
-    
-                                    <h2 class="title-services-mobile">Empresariales</h2>
-                                    <ul class="list-person-mobile">
-                                        <li>
-                                            <a>Protec Empresas</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Transporte</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Pymes</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Cumplimiento</a> 
-                                        </li>
-                                        <li>
-                                            <a>Responsabilidad Civil</a> 
-                                        </li>
-                                        
-                                    </ul>
-                                    <!-- division -->
-                                    <hr>
-                                    <!-- division -->
-    
-                                    <h2 class="title-services-mobile">Especializados</h2>
-                                    <ul class="list-person-mobile">
-                                        <li>
-                                            <a>Protec Autos</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Hogar</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Renta Educativa</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Arrendamiento</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Todo Riesgo PIM Integral</a> 
-                                        </li>
-                                        <li>
-                                            <a>Protec Zonas Comunes</a> 
-                                        </li>
-                                        
-                                    </ul>
-    
-                                </div>
-    
-                            </div>
-                            <div class="content-services">
-                                <div class="content-services-title"  onclick="SelectedMobile('pagos')">
-                                    <a id="Servicesid">Pagos</a>
-                                    <span class="material-symbols-outlined" id="arrow_drop-pagos">
-                                        arrow_drop_down
-                                    </span>
-                                </div>
-                                <hr>
+            <div class="content-services">
+              <div
+                class="content-services-title"
+                onclick="SelectedMobile('servicios')"
+              >
+                <a id="Servicesid">Servicios</a>
+                <span
+                  class="material-symbols-outlined"
+                  id="arrow_drop-servicios"
+                >
+                  arrow_drop_down
+                </span>
+              </div>
+              <hr />
+              <!-- Modal servicios -->
+              <div class="modal-mobile" id="Services-modal-id-mobile">
+                {
+                  data?.servicios.map((element: any, index: number) => (
+                    <ul class="services-contet">
+                      <li class="content-servis">
+                        <h2 class="title-services-mobile">{element.nombre}</h2>
+                      </li>
+                      <div class="service-content">
 
-                                <!-- Modal servicios -->
-                                <div class="modal-payment" id="Pagos-modal-id-mobile">
-                                    <h2 class="title-services-mobile">Formas de pago</h2>
-                                    <ul class="list-payment">
-                                        <li class="buton-sura">
-                                            <a>Sura</a> 
-                                        </li>
-                                        <li class="buton-maphre">
-                                            <a>Maphre</a> 
-                                        </li>
-                                        <li class="buton-axa">
-                                            <a>AXA Colpatria</a> 
-                                        </li>
-                                        <li class="buton-exquial">
-                                            <a>Maphre exquial</a> 
-                                        </li>
-                                    </ul>
-                                </div>
+                      {element.subcategoria.map((categorias:string)=>(
+                        <ul class="list-person-mobile">
+                            <li>
+                                <a>{categorias}</a>
+                            </li>
+                        </ul>
 
-                            </div>
-                        </li>
+                      ))}
+                      </div>
                     </ul>
-                </div>
-            </nav>
-            <div class="content-contact">
-                <button class="button-contact">¡Contáctanos!</button>
-            </div>
-    </div>
-    
-</div>
-<script type="text/javascript">
+                <hr/>
 
-    function SelectedMobile(action){
-        const modalServicios = document.getElementById("Services-modal-id-mobile");
-        const flechaServicios = document.getElementById("arrow_drop-servicios")
-        const modalPagos = document.getElementById("Pagos-modal-id-mobile");
-        const flechaPagos = document.getElementById("arrow_drop-pagos")
-        if (action === "servicios") {
-            if (modalServicios) {
-                if(modalServicios.style.display === 'block') {
-                    // animacion modal
-                    modalServicios.classList.add("modalServis-animation-close");
-                    modalServicios.classList.remove("modalServis-animation-open");
-                    // animacion flechas
-                    flechaServicios.classList.add("arrow-drop-animation-close-services");
-                    flechaServicios.classList.remove("arrow-drop-animation-open-services");
-                    modalServicios.style.display ='none' 
-
-                   
-                } else{
-                    // animacion flechas
-                    flechaServicios.classList.add("arrow-drop-animation-open-services");
-                    flechaServicios.classList.remove("arrow-drop-animation-close-services");
-                    // animacion modal
-                    modalServicios.classList.add("modalServis-animation-open");
-                    modalServicios.classList.remove("modalServis-animation-close");
-                    modalServicios.style.display = "block"
+                  ))
                 }
-            };
-            } else {
-                if (modalServicios){ 
-                    modalServicios.style.display = 'none'
-                }; // Cierra el modal si el evento no es "servicios"
-            }
-            if (action === "pagos") {
-                if (modalPagos) {
-                    if(modalPagos.style.display === 'block') {
-                        // animacion modal
-                        modalPagos.classList.add("modalpay-animation-close");
-                        modalPagos.classList.remove("modalpay-animation-open");
-                        // animacion flechas
-                        flechaPagos.classList.add("arrow-drop-animation-close-pay");
-                        flechaPagos.classList.remove("arrow-drop-animation-open-pay");
+                
+            
 
-                        modalPagos.style.display ='none' 
-                    } else{
-                         // animacion modal
-                        modalPagos.classList.add("modalpay-animation-open");
-                        modalPagos.classList.remove("modalpay-animation-close");
-                        // animacion flechas
-                        flechaPagos.classList.add("arrow-drop-animation-open-pay");
-                        flechaPagos.classList.remove("arrow-drop-animation-close-pay");
-                        modalPagos.style.display = "block"
-                    }
-                };
-            } else {
-                if (modalPagos) modal.style.display = 'none'; // Cierra el modal si el evento no es "servicios"
-            }
+              </div>
+            </div>
+
+
+
+
+            <div class="content-services">
+              <div
+                class="content-services-title"
+                onclick="SelectedMobile('pagos')"
+              >
+                <a id="Servicesid">Pagos</a>
+                <span class="material-symbols-outlined" id="arrow_drop-pagos">
+                  arrow_drop_down
+                </span>
+              </div>
+              <hr />
+
+              <!-- Modal servicios -->
+              <div class="modal-payment" id="Pagos-modal-id-mobile">
+                <h2 class="title-services-mobile">Formas de pago</h2>
+                <ul class="list-payment">
+                  <li class="buton-sura">
+                    <a>Sura</a>
+                  </li>
+                  <li class="buton-maphre">
+                    <a>Maphre</a>
+                  </li>
+                  <li class="buton-axa">
+                    <a>AXA Colpatria</a>
+                  </li>
+                  <li class="buton-exquial">
+                    <a>Maphre exquial</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content-contact">
+      <button class="button-contact">¡Contáctanos!</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  function SelectedMobile(action) {
+    const modalServicios = document.getElementById("Services-modal-id-mobile");
+    const flechaServicios = document.getElementById("arrow_drop-servicios");
+    const modalPagos = document.getElementById("Pagos-modal-id-mobile");
+    const flechaPagos = document.getElementById("arrow_drop-pagos");
+    if (action === "servicios") {
+      if (modalServicios) {
+        if (modalServicios.style.display === "block") {
+          // animacion modal
+          modalServicios.classList.add("modalServis-animation-close");
+          modalServicios.classList.remove("modalServis-animation-open");
+          // animacion flechas
+          flechaServicios.classList.add("arrow-drop-animation-close-services");
+          flechaServicios.classList.remove(
+            "arrow-drop-animation-open-services"
+          );
+          modalServicios.style.display = "none";
+        } else {
+          // animacion flechas
+          flechaServicios.classList.add("arrow-drop-animation-open-services");
+          flechaServicios.classList.remove(
+            "arrow-drop-animation-close-services"
+          );
+          // animacion modal
+          modalServicios.classList.add("modalServis-animation-open");
+          modalServicios.classList.remove("modalServis-animation-close");
+          modalServicios.style.display = "block";
+        }
+      }
+    } else {
+      if (modalServicios) {
+        modalServicios.style.display = "none";
+      } // Cierra el modal si el evento no es "servicios"
     }
+    if (action === "pagos") {
+      if (modalPagos) {
+        if (modalPagos.style.display === "block") {
+          // animacion modal
+          modalPagos.classList.add("modalpay-animation-close");
+          modalPagos.classList.remove("modalpay-animation-open");
+          // animacion flechas
+          flechaPagos.classList.add("arrow-drop-animation-close-pay");
+          flechaPagos.classList.remove("arrow-drop-animation-open-pay");
 
-     function ButonNav(){        
-        const navMobile = document.getElementById("nav-mobile");
-        let checkbox = document.getElementById("toggle-animation");
-        checkbox.addEventListener("change", function() {
-            if (checkbox.checked) {
-                navMobile.classList.remove("nav-close");
-                document.getElementById("toggle-content").classList.add("content-animation-revert");
-                document.body.style.overflow = 'hidden';
-                navMobile.style.display = 'flex';
-            } else {
-                // Realizar acciones si el checkbox no está marcado
-                document.getElementById("Services-modal-id-mobile").style.display = 'none'
-                document.getElementById("Pagos-modal-id-mobile").style.display = 'none'
-                document.body.style.overflow = ''; 
-                navMobile.classList.add("nav-close");
-                setTimeout(function(){
-                    navMobile.style.display = 'none';
-                    document.getElementById("toggle-content").classList.remove("content-animation-revert")
-                    
-                },[1000])
-            }
-        })
+          modalPagos.style.display = "none";
+        } else {
+          // animacion modal
+          modalPagos.classList.add("modalpay-animation-open");
+          modalPagos.classList.remove("modalpay-animation-close");
+          // animacion flechas
+          flechaPagos.classList.add("arrow-drop-animation-open-pay");
+          flechaPagos.classList.remove("arrow-drop-animation-close-pay");
+          modalPagos.style.display = "block";
+        }
+      }
+    } else {
+      if (modalPagos) modal.style.display = "none"; // Cierra el modal si el evento no es "servicios"
     }
+  }
 
-   
+  function ButonNav() {
+    const navMobile = document.getElementById("nav-mobile");
+    let checkbox = document.getElementById("toggle-animation");
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        navMobile.classList.remove("nav-close");
+        document
+          .getElementById("toggle-content")
+          .classList.add("content-animation-revert");
+        document.body.style.overflow = "hidden";
+        navMobile.style.display = "flex";
+      } else {
+        // Realizar acciones si el checkbox no está marcado
+        document.getElementById("Services-modal-id-mobile").style.display =
+          "none";
+        document.getElementById("Pagos-modal-id-mobile").style.display = "none";
+        document.body.style.overflow = "";
+        navMobile.classList.add("nav-close");
+        setTimeout(
+          function () {
+            navMobile.style.display = "none";
+            document
+              .getElementById("toggle-content")
+              .classList.remove("content-animation-revert");
+          },
+          [1000]
+        );
+      }
+    });
+  }
 
-     // Asegurarse de que el script se ejecute después de que el DOM esté cargado
-     document.addEventListener('DOMContentLoaded', () => {
-            const currentUrl = window.location.pathname;  // Obtener la ruta de la URL actual
-            // Añadir clase "list-nav-select-mobile" al enlace que coincide con la URL actual
-            if (currentUrl === '/') {
-                document.getElementById('link-inicio')?.classList.add('list-nav-select-mobile');
-            } else if (currentUrl.startsWith('/services')) {
-                document.getElementById('Servicesid')?.classList.add('list-nav-select-mobile');
-            } else if (currentUrl.startsWith('/payments')) {
-                document.getElementById('link-pagos')?.classList.add('list-nav-select-mobile');
-            }
-        });
-
+  // Asegurarse de que el script se ejecute después de que el DOM esté cargado
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentUrl = window.location.pathname; // Obtener la ruta de la URL actual
+    // Añadir clase "list-nav-select-mobile" al enlace que coincide con la URL actual
+    if (currentUrl === "/") {
+      document
+        .getElementById("link-inicio")
+        ?.classList.add("list-nav-select-mobile");
+    } else if (currentUrl.startsWith("/services")) {
+      document
+        .getElementById("Servicesid")
+        ?.classList.add("list-nav-select-mobile");
+    } else if (currentUrl.startsWith("/payments")) {
+      document
+        .getElementById("link-pagos")
+        ?.classList.add("list-nav-select-mobile");
+    }
+  });
 </script>
 
-
-
 <style>
+.service-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-contet{
+    list-style-type: none; /* Elimina los puntos */
+    padding-left: 0; /* Elimina el padding izquierdo predeterminado */
+    margin-left: 2%; /* Opcional, para eliminar márgenes */
+    margin-bottom: 2%;
+
+  }
+  .button-contact {
+    font-size: larger;
+    color: white;
+    border: 0;
+    background-color: #5abeaa;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    margin-bottom: 20%;
+  }
+  .content-services-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title-services-mobile {
+    color: #172052;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .list-person-mobile {
+    padding: 0%;
+    padding-left: 8%;
+  }
+  .list-person-mobile li {
+    width: 90%;
+  }
+  .modal-payment {
+    display: none;
+    margin: 5% 0%;
+  }
+  .modal-payment li {
+    list-style-type: disc;
+  }
+  .modal-payment li a {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .list-nav-content-style-mobile a {
+    margin: 0% !important;
+  }
+  .list-nav-style-mobile {
+    list-style: none;
+  }
+  .list-nav-style-mobile {
+    padding: 0%;
+    padding-left: 0% !important;
+  }
+  .list-nav-style-mobile a {
+    font-size: larger;
+    text-decoration: none;
+    margin: 0 10px;
+    color: #172052;
+    cursor: pointer;
+  }
+  .list-nav-select {
+    margin: 0 10px;
+    font-weight: 700;
+    text-decoration-line: underline !important;
+  }
+
+  .modal-mobile {
+    display: none;
+    margin: 5% 0%;
+  }
+
   
-.button-contact{
-        font-size: larger;
-        color: white;
-        border: 0;
-        background-color: #5ABEAA;
-        width: 100%;
-        height: 50px;
-        border-radius: 30px;
-        margin-bottom: 20%;
+  .modal-mobile li a {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0%;
+  }
+
+  .list-person-mobile li {
+    list-style: none; /* Eliminar puntos predeterminados */
+    position: relative; /* Permitir posicionamiento relativo */
+    padding-left: 25px; /* Espacio a la izquierda para el ícono */
+    background-image: url("../../public/logosintexto.png");
+    background-size: 25px 20px;
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position: left center; /* Posicionar la imagen a la izquierda y centrada verticalmente */
+    margin: 0%;
+  }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    background-color: #fff;
+    right: 0%;
+    top: 12%;
+    width: auto;
+    height: 88%;
+    padding: 0 10% 0 5%;
+    animation: nav-mobile 0.7s forwards;
+  }
+  .nav-close {
+    animation: nav-mobile-close 0.9s forwards;
+  }
+  .arrow-drop-animation-open-pay,
+  .arrow-drop-animation-open-services {
+    animation: arrow_drop-open 0.5s forwards;
+  }
+  .arrow-drop-animation-close-pay,
+  .arrow-drop-animation-close-services {
+    animation: arrow_drop-close 0.5s forwards;
+  }
+
+  .modalServis-animation-open,
+  .modalpay-animation-open {
+    animation: modal-servis-animation-open 0.5s forwards;
+  }
+  .modalServis-animation-close,
+  .modalpay-animation-close {
+    animation: modal-servis-animation-close 0.5s forwards;
+  }
+
+  .bar-navegation-mobile-content {
+    background-color: white;
+  }
+
+  .buton-sura::marker {
+    color: #001aff !important; /* Cambia el color de los puntos */
+  }
+  .buton-maphre::marker {
+    color: #ff0000 !important; /* Cambia el color de los puntos */
+  }
+  .buton-axa::marker {
+    color: #d4ff00 !important; /* Cambia el color de los puntos */
+  }
+  .buton-exquial::marker {
+    color: #ff00e6 !important; /* Cambia el color de los puntos */
+  }
+  .bar-navegation-mobile-content {
+    display: none;
+  }
+
+  /* Menu hamburguesa */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggle-checkbox {
+    display: none;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .line {
+    background-color: #5abeaa;
+    border-radius: 5px;
+    width: 35px;
+    height: 3px;
+  }
+
+  .toggle-checkbox:checked ~ .content > .line-one {
+    animation: lineAnimationOne 0.7s forwards;
+  }
+  .toggle-checkbox:checked ~ .content > .line-two {
+    animation: lineAnimationTwo 0.7s forwards;
+  }
+  .toggle-checkbox:checked ~ .content > .line-three {
+    animation: lineAnimationThree 0.7s forwards;
+  }
+
+  /* revert */
+  .toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-one {
+    animation: lineAnimationOneRevert 0.7s forwards;
+  }
+  .toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-two {
+    animation: lineAnimationTwoRevert 0.7s forwards;
+  }
+  .toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-three {
+    animation: lineAnimationThreeRevert 0.7s forwards;
+  }
+
+  @keyframes modal-servis-animation-open {
+    0% {
+      height: 0%;
+      opacity: 0;
     }
-    .content-services-title{
-        display: flex;
-        justify-content: space-between;
+    100% {
+      height: 100%;
+      opacity: 1;
     }
-    .title-services-mobile{
-        color: #172052;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin: 0;
-        margin-bottom: 10px;
+  }
+
+  @keyframes modal-servis-animation-close {
+    0% {
+      height: 100%;
+      opacity: 1;
     }
-    .list-person-mobile{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0% ;
-        padding-left: 8%;
+    100% {
+      height: 0%;
+      opacity: 0;
     }
-    .list-person-mobile li{
-        width: 90%;
+  }
+
+  @keyframes nav-mobile {
+    0% {
+      width: 21%;
+      opacity: 0;
     }
+    100% {
+      width: 50%;
+      opacity: 1;
+    }
+  }
+  @keyframes nav-mobile-close {
+    0% {
+      width: 50%;
+      opacity: 1;
+    }
+    100% {
+      width: 21%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes arrow_drop-open {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+
+  @keyframes arrow_drop-close {
+    0% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes lineAnimationOne {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(14.5px);
+    }
+    100% {
+      transform: translateY(3.5px) rotate(45deg);
+    }
+  }
+
+  @keyframes lineAnimationTwo {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes lineAnimationThree {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14.5px);
+    }
+    100% {
+      transform: translateY(-12.5px) rotate(-45deg);
+    }
+  }
+
+  @keyframes lineAnimationOneRevert {
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(14.5px);
+    }
+    0% {
+      transform: translateY(2.5px) rotate(45deg);
+    }
+  }
+
+  @keyframes lineAnimationTwoRevert {
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  @keyframes lineAnimationThreeRevert {
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14.5px);
+    }
+    0% {
+      transform: translateY(-2.5px) rotate(-45deg);
+    }
+  }
+  @media (max-width: 768px) {
+    .bar-navegation-mobile-content {
+      display: block;
+      grid-column: 10 / 12;
+      z-index: 100;
+    }
+  }
+  @media (max-width: 425px) {
+    .service-content{
+    grid-template-columns: repeat(1, 1fr);
+
+    }
+    .modal-mobile,
     .modal-payment {
-        display: none;
-        margin: 5% 0%;
-
+      margin-left: 0%;
     }
-    .modal-payment li {
-        list-style-type: disc;
+    .list-person-mobile {
+      grid-template-columns: repeat(1, 1fr);
     }
-    .modal-payment li a{
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
-    .list-nav-content-style-mobile a{
-        margin: 0% !important;
-    }
-    .list-nav-style-mobile{
-		list-style: none;
-	}
-    .list-nav-style-mobile{
-        padding: 0%;
-        padding-left: 0% !important;
-    }
-	.list-nav-style-mobile a{
-        font-size: larger;
-		text-decoration: none;
-        margin: 0 10px;
-		color:#172052;
-        cursor: pointer;
-	}
-	.list-nav-select {
-        margin: 0 10px;
-		font-weight: 700;
-		text-decoration-line: underline !important;
-	}
-
-    .modal-mobile {
-        display: none;
-        margin: 5% 0%;
-
-    }
-    .modal-mobile li {
-        list-style-type: disc;
-    }
-    
-    .modal-mobile li {
-        list-style-type: disc;
-    }
-    .modal-mobile li a{
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin: 0%;
-    }
-    .modal-mobile li::marker {
-        color: #5ABEAA; /* Cambia el color de los puntos */
-    }
-
-
-
-    .nav-mobile {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        position: absolute;
-        background-color: #FFF;
-        right: 0%;
-        top: 12%;
-        width: auto;
-        height: 88%;
-        padding: 0 10% 0 5%;
-        animation: nav-mobile .7s forwards;
-    }
-    .nav-close {
-        animation: nav-mobile-close .9s forwards;
-    }
-    .arrow-drop-animation-open-pay, .arrow-drop-animation-open-services {
-        animation: arrow_drop-open .5s forwards;
-    }
-    .arrow-drop-animation-close-pay, .arrow-drop-animation-close-services {
-        animation: arrow_drop-close .5s forwards;
-    }
-    
-    .modalServis-animation-open, .modalpay-animation-open{
-        animation: modal-servis-animation-open .5s forwards;
-        
-    }
-    .modalServis-animation-close, .modalpay-animation-close {
-        animation: modal-servis-animation-close .5s forwards;
-    }
-   
-
-    .bar-navegation-mobile-content{
-        background-color: white;
-    }
-    
-
-    
-
-    .buton-sura::marker {
-        color: #001aff !important; /* Cambia el color de los puntos */
-    }
-    .buton-maphre::marker {
-        color: #ff0000 !important; /* Cambia el color de los puntos */
-    }
-    .buton-axa::marker {
-        color: #d4ff00 !important; /* Cambia el color de los puntos */
-    }
-    .buton-exquial::marker {
-        color: #ff00e6 !important; /* Cambia el color de los puntos */
-    }
-     .bar-navegation-mobile-content{
-        display: none;
-    }
-
-
-    /* Menu hamburguesa */
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .toggle-checkbox{
-        display:none;
-    }
-    .content {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;  
-    }
-    .line {
-        background-color: #5ABEAA;
-        border-radius: 5px;
-        width: 35px;
-        height: 3px;
-    }
-
-    .toggle-checkbox:checked ~ .content > .line-one {
-        animation: lineAnimationOne .7s forwards;
-    }
-    .toggle-checkbox:checked ~ .content > .line-two {
-        animation: lineAnimationTwo .7s forwards;
-    }
-    .toggle-checkbox:checked ~ .content > .line-three {
-        animation: lineAnimationThree .7s forwards;
-    }
-
-    /* revert */
-    .toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-one {
-        animation: lineAnimationOneRevert .7s forwards;
-    }
-    .toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-two {
-        animation: lineAnimationTwoRevert .7s forwards;
-    }
-    .toggle-checkbox:not(:checked) ~ .content-animation-revert > .line-three {
-        animation: lineAnimationThreeRevert .7s forwards;
-    }
-
-    @keyframes modal-servis-animation-open {
-        0% {
-            height: 0%;
-            opacity: 0;
-
-        }
-        100% {
-            height: 100%;
-            opacity: 1;
-
-        }
-    }
-    
-    @keyframes modal-servis-animation-close {
-        0% {
-            height: 100%;
-            opacity: 1;
-
-        }
-        100% {
-            height: 0%;
-            opacity: 0;
-
-        }
-    }
-
-    @keyframes nav-mobile {
-        0% {
-            width: 21%;
-            opacity: 0;
-        }
-        100% {
-            width: 50%; ;
-            opacity: 1;
-        }
-    }
-    @keyframes nav-mobile-close {
-        0% {
-            width: 50%;
-            opacity: 1;
-
-        }
-        100% {
-            width: 21%; ;
-            opacity: 0;
-
-        }
-    }
-
-    @keyframes arrow_drop-open {
-        0% {
-            transform:rotate(0);
-        }
-        100% {
-            transform: rotate(180deg);
-        }
-    }
-
-    @keyframes arrow_drop-close {
-        0% {
-            transform: rotate(180deg);
-        }
-        100% {
-            transform:rotate(0deg);
-        }
-    }
-
-    @keyframes lineAnimationOne {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(14.5px);   
-        }
-        100% {
-            transform: translateY(3.5px) rotate(45deg);
-        }
-    }
-
-    @keyframes lineAnimationTwo {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        50% {
-            transform: scale(0.5);
-            opacity: 0.5;
-        }
-        100% {
-            transform: scale(0);
-            opacity: 0;
-    }
-    }
-
-    @keyframes lineAnimationThree {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-14.5px);
-        }
-        100% {
-            transform: translateY(-12.5px) rotate(-45deg);
-        }
-    }
-
-    @keyframes lineAnimationOneRevert {
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(14.5px);   
-        }
-        0% {
-            transform: translateY(2.5px) rotate(45deg);
-        }
-    }
-
-    @keyframes lineAnimationTwoRevert {
-        100%{
-            transform: scale(1);
-            opacity: 1
-        }  
-        50% {
-            transform: scale(0.5);
-            opacity: 0.5;
-        }
-        0% {
-            transform: scale(0);
-            opacity: 0;
-        } 
-    }
-    @keyframes lineAnimationThreeRevert {
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-14.5px);  
-        }
-        0% {
-            transform: translateY(-2.5px) rotate(-45deg)
-    }
-    }
-    @media (max-width: 768px) {
-        .bar-navegation-mobile-content{
-            display: block;
-            grid-column: 10 / 12;
-            z-index: 100;
-        }
-    }
-    @media (max-width: 425px) {
-        .modal-mobile, .modal-payment{
-            margin-left: 15%;
-        }
-        .list-person-mobile{
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
+  }
 </style>

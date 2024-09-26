@@ -9,72 +9,69 @@ const { data } = Astro.props;
     <a href="/">
       <img src="../public/logo.png" class="logo" alt="logo" width="230px" />
     </a>
-    {data&&
-    
-    <div class="bar-navegation-descktop">
-      <nav class="bar-navegation">
-        <ul class="list-nav-style">
-          <li class="list-nav-content-style">
-            <a class="list-nav-select" href="/inicio/personas">Inicio</a>
-          </li>
-          <li class="list-nav-content-style titulo-servicios">
-            <a>Servicios</a>
-            <!-- Modal servicios -->
-            <div class="modal" id="Services-modal-id">
-              <div class="list-service">
-                {
-                  data?.servicios.map((element: any, index: number) => (
-                    <ul
-                      class={`list-service-content ${index === data.servicios.length - 1 ? "" : "list-service-content-line"}`}
-                    >
-                      <li class="content-servis">
-                        <h1 class="title-services">{element.nombre}</h1>
-                        {element.subcategoria.map((categoria: string) => (
-                          <ul class="services-list">
-                            <li class="categoria-services">
-                              <a href="">{categoria}</a>
-                            </li>
-                          </ul>
-                        ))}
-                      </li>
-                    </ul>
-                  ))
-                }
-              </div>
-            </div>
-          </li>
+    {data &&
+        <div class="bar-navegation-descktop">
+        <nav class="bar-navegation">
+            <ul class="list-nav-style">
+            <li class="list-nav-content-style">
+                <a class="list-nav-select" href="/inicio/personas">Inicio</a>
+            </li>
+            <li class="list-nav-content-style titulo-servicios">
+                <a>Servicios</a>
+                <div class="modal" id="Services-modal-id">
+                <div class="list-service">
+                    {
+                    data?.servicios.map((element: any, index: number) => (
+                        <ul
+                        class={`list-service-content ${index === data.servicios.length - 1 ? "" : "list-service-content-line"}`}
+                        >
+                        <li class="content-servis">
+                            <h1 class="title-services">{element.nombre}</h1>
+                                {element.subcategoria.map((categoria: string) => (
+                                <ul class="services-list">
+                                    <li class="categoria-services">
+                                    <a href="">{categoria}</a>
+                                    </li>
+                                </ul>
+                                ))}
+                        </li>
+                        </ul>
+                    ))
+                    }
+                </div>
+                </div>
+            </li>
 
-          <li class="list-nav-content-style titulo-pagos">
-            <a class="">Paga tu póliza</a>
-            <!-- Modal servicios -->
-            <div class="modal-payment" id="Pagos-modal-id">
-              <h2 class="title-pagos">Botones de pago</h2>
-              <ul class="list-payment">
-                <li class="buton-sura">
-                  <a
-                    href="https://www.segurossura.com.co/paginas/pago-express.aspx#/Pagos"
-                    >Sura</a>
-                </li>
-                <li class="buton-mapre">
-                  <a
-                    href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublico.jsf"
-                    >Mapfre</a>
-                </li>
-                <li class="buton-axa">
-                  <a>AXA Colpatria</a>
-                </li>
-                <li class="buton-exquial">
-                  <a>Mapfre Exquial</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
+            <li class="list-nav-content-style titulo-pagos">
+                <a class="">Paga tu póliza</a>
+                <div class="modal-payment" id="Pagos-modal-id">
+                <h2 class="title-pagos">Botones de pago</h2>
+                <ul class="list-payment">
+                    <li class="buton-sura">
+                    <a
+                        href="https://www.segurossura.com.co/paginas/pago-express.aspx#/Pagos"
+                        >Sura</a>
+                    </li>
+                    <li class="buton-mapre">
+                    <a
+                        href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublico.jsf"
+                        >Mapfre</a>
+                    </li>
+                    <li class="buton-axa">
+                    <a>AXA Colpatria</a>
+                    </li>
+                    <li class="buton-exquial">
+                    <a>Mapfre Exquial</a>
+                    </li>
+                </ul>
+                </div>
+            </li>
+            </ul>
+        </nav>
+        </div>
     }
 
-    <NavMobile />
+    <NavMobile data={data}/>
     <div class="content-contact">
       <button class="button-contact">¡Contáctanos!</button>
     </div>
@@ -147,7 +144,7 @@ const { data } = Astro.props;
     margin: 0% 5%;
   }
   .list-service-content-line {
-    border-right: solid #172052;
+    border-right: 1.5px solid #172052;
   }
   .title-services {
     color: #172052;
@@ -157,10 +154,10 @@ const { data } = Astro.props;
     flex-direction: column;
   }
 
-  .services-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0; /* Asegúrate de que no haya padding en la lista */
+  ul.list-service{
+    list-style-type: none; /* Elimina los puntos */
+    padding-left: 0; /* Elimina el padding izquierdo predeterminado */
+    margin-left: 0; /* Opcional, para eliminar márgenes */
   }
 
   .services-list li {
