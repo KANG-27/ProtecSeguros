@@ -18,22 +18,23 @@ const descripcionesCollection = defineCollection({
 });
 
 const serviciosCollection = defineCollection({
-    schema: z.object({
-      title: z.string(),
+  schema: z.object({
+    titulo: z.string(),
+    descripcion: z.string(),
+    necesito: z.string().optional(),
+    prestaciones: z.array(z.string()).optional(),
+    uso_servicio: z.array(z.object({
+      paso: z.string(),
       descripcion: z.string(),
-      // need: z.string(),
-      // cover: z.array(z.string()),
-      // use_service: z.array(z.object({
-      //   paso: z.string(),
-      //   descripcion: z.string()
-      // })),
-      // category: z.string(),
-      // image: z.array(z.string()),
-    }),
-  });
+    })).optional(),
+    imagenes: z.array(z.string()).optional(),
+    categoria: z.string(),
+  }),
+});
+
 
 
   export const collections = {
-    servicios: serviciosCollection,
-    descripciones: descripcionesCollection,
+    'descripciones': descripcionesCollection,
+    'services': serviciosCollection,
   }

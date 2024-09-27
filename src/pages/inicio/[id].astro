@@ -10,28 +10,25 @@ import Layout from "../../layouts/Layout.astro";
 
 
 export async function getStaticPaths() {
-  const services = await getCollection("descripciones");
-  return services.map((service) => ({
-    params: { id: service.slug },
-    props: { service }
-  }));
+  const servicios = await getCollection("services");
+  const descripciones = await getCollection("descripciones");
   
- 
+  console.log("Servicios:", servicios);
+  console.log("Descripciones:", descripciones);
+  
+  return descripciones.map((descripcion) => ({
+    params: { id: descripcion.slug },
+    props: { descripcion, servicios }
+  }));
 }
 
 
-const { service } = Astro.props;
-const { data } = service;
+const { descripcion, servicios } = Astro.props;
+const { data } = descripcion;
+// console.log(servicios)
 
 
-// Define la interfaz para un servicio
-interface Service {
-  data: {
-    categoria: string;
-    descripcion: string;
-    img: string; // Asegúrate de que el tipo coincida con tu estructura de datos
-  };
-}
+
 ---
 
 <Layout title="Welcome to Astro.">
@@ -58,34 +55,16 @@ interface Service {
     </div>
     <div class="servicios">
       <h1 class="title">Nuestros servicios</h1>
-      <div class="content-services">
-        <!-- {
-          services.map((servis: Service) => (
-            <a
-              class="content-services-cards"
-              href={`/servicios/${servis.data.categoria.toLowerCase()}`}
-            >
-              <div
-                class="service-card"
-                style={{
-                  backgroundImage: `linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(${servis.data.img})`,
-                }}
-              >
-                <h2>
-                  {servis.data.categoria}
-                </h2>
-                <p>{servis.data.descripcion}</p>
 
-                {/* El contenido hover con animación */}
-                <div class="card-hover">
-                  <h2 transition:name={servis.data.categoria}>{servis.data.categoria}</h2>
-                  <p>Conoce más dando click acá</p>
-                </div>
-              </div>
-            </a>
-          ))
-        } -->
+
+      <div class="content-services">
+        <!-- <Carousel /> -->
+        
       </div>
+
+
+
+
     </div>
     <div class="aliados">
       <div class="aliados-full">
