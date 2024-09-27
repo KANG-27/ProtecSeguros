@@ -12,7 +12,9 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - /ruta/a/la-imagen1.jpg
-  - /ruta/a/la-imagen2.jpg
+  - ../../public/saludDos.png
+  - ../../public/saludDos.png
+  - ../../public/saludDos.png
+  - ../../public/saludDos.png
 categoria: Personas
 ---

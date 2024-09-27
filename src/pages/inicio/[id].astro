@@ -13,8 +13,6 @@ export async function getStaticPaths() {
   const servicios = await getCollection("services");
   const descripciones = await getCollection("descripciones");
   
-  console.log("Servicios:", servicios);
-  console.log("Descripciones:", descripciones);
   
   return descripciones.map((descripcion) => ({
     params: { id: descripcion.slug },
@@ -25,7 +23,14 @@ export async function getStaticPaths() {
 
 const { descripcion, servicios } = Astro.props;
 const { data } = descripcion;
-// console.log(servicios)
+
+
+const images = [
+  "https://reclamodeterceros.com/wp-content/uploads/2023/04/Sura-Reclamo-de-Terceros-.webp",
+  "https://1000marcas.net/wp-content/uploads/2019/12/Logo-Mapfre-tumb.png",
+  "https://serviciospluss.com/wp-content/uploads/2022/01/logo-colpatria.png",
+  "https://seeklogo.com/images/A/aseguradora-solidario-de-colombia-logo-0285B0DF5D-seeklogo.com.png",
+];
 
 
 
@@ -58,7 +63,7 @@ const { data } = descripcion;
 
 
       <div class="content-services">
-        <!-- <Carousel /> -->
+        <Carousel data={servicios} type="servicios"/>
         
       </div>
 
@@ -70,7 +75,7 @@ const { data } = descripcion;
       <div class="aliados-full">
         <h1 class="title">Nuestros aliados</h1>
         <div class="content-aliados">
-          <Carousel />
+          <Carousel data={images} type="aliados"/>
         </div>
       </div>
     </div>
