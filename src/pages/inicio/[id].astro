@@ -65,8 +65,10 @@ const images = [
     <div class="servicios">
       <h1 class="title">Nuestros servicios</h1>
       <div class="content-services">
-        <button onclick="filtroservicios('movilidad')">movilidad</button>
-        <button onclick="filtroservicios('salud')">salud</button>
+        <div class="content-butons">
+          <button class="line-leter" id="button-movilidad" onclick="filtroservicios('movilidad')">Movilidad</button>
+          <button  id="button-salud" onclick="filtroservicios('salud')">Salud</button>
+        </div>
     
         <div id="movilidad" >
             <Carousel data={serviciosMovilidad} type="servicios" />
@@ -89,8 +91,7 @@ const images = [
 <script type="text/javascript">
     function filtroservicios(categoria) {
         // Oculta todos los carruseles
-    const carruseles = ['movilidad', 'salud'];
-
+      const carruseles = ['movilidad', 'salud'];
 
       carruseles.forEach(id => {
           const carrusel = document.getElementById(id);
@@ -100,18 +101,20 @@ const images = [
               carrusel.style.opacity = 0; 
               setTimeout(() => {
                 carrusel.style.opacity = 1; // Cambia a opacidad 1 para mostrar
-                  carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
+                carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
               }, 10); 
           } else {
               // Oculta el carrusel actual
-
               carrusel.style.opacity = 0; // Comienza a ocultar
               carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
               // Espera a que termine la transición de opacidad antes de cambiar a display: none
-            
-                  carrusel.style.display = 'none'; // Oculta el carrusel
-            
+              carrusel.style.display = 'none'; // Oculta el carrusel
             }
+         // Cambiar el estado de los botones
+          const botones = document.querySelectorAll('.content-butons button');
+          botones.forEach(b => b.classList.remove('selected')); // Quita la clase de todos
+          const botonSeleccionado = document.getElementById(`button-${categoria}`);
+          botonSeleccionado.classList.add('selected'); 
       });
     }
 </script>
@@ -122,9 +125,38 @@ const images = [
 
 <style>
 
+.selected {
+  color: #5abeaa !important;
+  border-bottom: 2px solid #5abeaa !important; /* Añade la línea debajo del botón */
+}
+.content-butons button:hover {
+  color: #5abeaa;
+}
+.content-butons button {
+  font-size: larger;
+  background-color: #5abeaa00;
+  border: 0;
+  color: #172052;
+  width: min-content;
+  cursor: pointer;
+}
+.content-butons button:hover {
+  color: #5abeaa;
+}
 
+.content-butons{
+  margin: 0% 0% 5% 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
   .content-services{
-    width: 100%;
+    width: 90%;
+    margin: 0% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
   }
   .imagenes-carrusel{
     width: 50%;
@@ -132,7 +164,6 @@ const images = [
     margin: 0% 5%;
 
   }
-
   .nosotros-content {
     display: flex;
     justify-content: center;
