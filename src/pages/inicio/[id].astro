@@ -1,5 +1,4 @@
 ---
-
 import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
 import Carousel from "../../components/CarouselAliados.astro";
@@ -7,12 +6,9 @@ import Footer from "../../components/Footer.astro";
 import CarouselInicio from "../../components/CarouselInicio.astro";
 import Layout from "../../layouts/Layout.astro";
 
-
-
 export async function getStaticPaths() {
   const servicios = await getCollection("services");
   const descripciones = await getCollection("descripciones");
-  
   
   return descripciones.map((descripcion) => ({
     params: { id: descripcion.slug },
@@ -20,10 +16,14 @@ export async function getStaticPaths() {
   }));
 }
 
-
 const { descripcion, servicios } = Astro.props;
-const { data } = descripcion;
 
+// Check that 'descripcion' and 'servicios' are not null
+if (!descripcion || !servicios) {
+  throw new Error("Descripcion or servicios data is missing");
+}
+
+const { data } = descripcion;
 
 const images = [
   "https://reclamodeterceros.com/wp-content/uploads/2023/04/Sura-Reclamo-de-Terceros-.webp",
@@ -33,21 +33,25 @@ const images = [
 ];
 
 
+   // Filtra los servicios según el elemento seleccionado
+   const serviciosMovilidad = servicios.filter(servicio => servicio.data.categoria === 'movilidad');
+   const serviciosSalud = servicios.filter(servicio => servicio.data.categoria === 'salud');
+
 
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <Header data={data}/>
+    <Header data={data} />
     <div class="nosotros">
       <div class="nosotros-content">
         <h1 class="title">Siempre estamos contigo</h1>
         <p class="description">
           Somos una agencia, encaminada a orientar profesionalmente en el sector
           asegurador a nuestros clientes ofreciendo soluciones que garanticen la
-          protección de sus familias y pa - trimonio; brindando acompañamiento
+          protección de sus familias y patrimonio; brindando acompañamiento
           en la gestión de sus riesgos, tanto personales como empresariales;
-          avaladas por la expe - riencia de mas de 30 años de su fundadora LUZ
+          avaladas por la experiencia de más de 30 años de su fundadora LUZ
           MARINA RODRIGUEZ A.
         </p>
         <div class="content-contact">
@@ -55,35 +59,70 @@ const images = [
         </div>
       </div>
       <div class="imagenes-carrusel">
-        <CarouselInicio data={data.imagenes}/>
+        <CarouselInicio data={data.imagenes} />
       </div>
     </div>
     <div class="servicios">
       <h1 class="title">Nuestros servicios</h1>
-
-
       <div class="content-services">
-        <Carousel data={servicios} type="servicios"/>
-        
-      </div>
-
-
-
-
+        <button onclick="filtroservicios('movilidad')">movilidad</button>
+        <button onclick="filtroservicios('salud')">salud</button>
+    
+        <div id="movilidad" >
+            <Carousel data={serviciosMovilidad} type="servicios" />
+        </div>
+        <div id="salud" style="display: none;">
+            <Carousel data={serviciosSalud} type="servicios" />
+        </div>
+      
+    </div>
     </div>
     <div class="aliados">
       <div class="aliados-full">
         <h1 class="title">Nuestros aliados</h1>
         <div class="content-aliados">
-          <Carousel data={images} type="aliados"/>
+          <Carousel data={images} type="aliados" />
         </div>
       </div>
     </div>
     <Footer />
-  </main>
+<script type="text/javascript">
+    function filtroservicios(categoria) {
+        // Oculta todos los carruseles
+    const carruseles = ['movilidad', 'salud'];
+
+
+      carruseles.forEach(id => {
+          const carrusel = document.getElementById(id);
+          if (id === categoria) {
+              carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
+              carrusel.style.display = 'block';
+              carrusel.style.opacity = 0; 
+              setTimeout(() => {
+                carrusel.style.opacity = 1; // Cambia a opacidad 1 para mostrar
+                  carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
+              }, 10); 
+          } else {
+              // Oculta el carrusel actual
+
+              carrusel.style.opacity = 0; // Comienza a ocultar
+              carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
+              // Espera a que termine la transición de opacidad antes de cambiar a display: none
+            
+                  carrusel.style.display = 'none'; // Oculta el carrusel
+            
+            }
+      });
+    }
+</script>
+
 </Layout>
 
+
+
 <style>
+
+
   .content-services{
     width: 100%;
   }
