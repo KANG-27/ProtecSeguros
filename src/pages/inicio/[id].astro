@@ -80,7 +80,7 @@ const images = [
 
         {data.servicios.map((servicio, index)=>(
           <div style={index == 0 ? "":"display: none;"} id={servicio.nombre.replace(" ","-").toLowerCase()}>
-            <Carousel data={servicio} type="servicios" />
+            <Carousel data={servicio.subcategoria} type="servicios" />
           </div>
         ))}
     

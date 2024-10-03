@@ -2,15 +2,15 @@
 
 const {data, type}= Astro.props
 
-console.log(data.subcategoria) 
+console.log(data) 
 // console.log(type)
 
 ---
 
-<div class="carousel" data-content={`{"tipo": "${type}", "tamaño": "${data.subcategoria?.length}"}`}>
+<div class="carousel" data-content={`{"tipo": "${type}", "tamaño": "${data?.length}"}`}>
   <div class="carousel-inner">
     {type === "servicios" &&
-      data.subcategoria.map((element:any)=>(
+      data.map((element:any)=>(
       <div class="card-services">
           <img class="imagen-card-services" src={element.imagenes} alt="imagen"/>
           <div class="content-card-services">
@@ -52,7 +52,8 @@ console.log(data.subcategoria)
       // Función para obtener la cantidad de ítems visibles en función del tamaño del viewport
       function getVisibleItems() {
         const carouselWidth = carousel.offsetWidth;
-        const itemWidth = 350; // Ancho de cada tarjeta
+        const itemWidth = carouselData.tipo == "servicios" ? 520:350; // Ancho de cada tarjeta
+        // const itemWidth = 520; // Ancho de cada tarjeta
         return Math.floor(carouselWidth / itemWidth);
       }
 
@@ -63,16 +64,18 @@ console.log(data.subcategoria)
         const visibleItems = getVisibleItems(); // Obtener el número de ítems visibles según el ancho del contenedor
 
         // Limitar el índice para no pasar más allá del último set de ítems
+
         if (index < 0) {
-          currentIndex = 0; // Evitar ir antes del primer ítem
-        } else if (index > totalSlides - visibleItems) {
+          console.log(index)
+          currentIndex = totalSlides; // Evitar ir antes del primer ítem
+        } else if (index > totalSlides-visibleItems) {
           currentIndex = 0; // Evitar mostrar más allá del último ítem visible
         } else {
           currentIndex = index;
         }
 
         // Calcular el desplazamiento (offset) en función del índice actual y el número de ítems visibles
-        const offset = -currentIndex * (350 + 20); // 350px de ancho + 20px de gap (ajusta el gap si es necesario)
+        const offset = -currentIndex * ( (carouselData.tipo == "servicios" ? 520:350) + 50); // 350px de ancho + 20px de gap (ajusta el gap si es necesario)
         slides.style.transform = `translateX(${offset}px)`;
       }
 
@@ -146,7 +149,7 @@ console.log(data.subcategoria)
     box-sizing: border-box;
     margin: 5px;
     box-shadow: 3px 3px 3px 3px grey;
-    width: 350px;
+    width: 520px;
     height: 500px;
     display: flex;
     justify-content: space-between;
