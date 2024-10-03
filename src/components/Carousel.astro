@@ -12,7 +12,7 @@ console.log(data)
     {type === "servicios" &&
       data.map((element:any)=>(
       <div class="card-services">
-          <img class="imagen-card-services" src={element.imagenes} alt="imagen"/>
+          <img class="imagen-card-services" src={element.imagen} alt="imagen"/>
           <div class="content-card-services">
            
             <h3 class="protec-card">Protec</h3>
@@ -68,7 +68,7 @@ console.log(data)
         if (index < 0) {
           console.log(index)
           currentIndex = totalSlides; // Evitar ir antes del primer ítem
-        } else if (index > totalSlides-visibleItems) {
+        } else if (index > (totalSlides-visibleItems == 0? totalSlides-visibleItems+1:totalSlides-visibleItems)) {
           currentIndex = 0; // Evitar mostrar más allá del último ítem visible
         } else {
           currentIndex = index;
@@ -179,7 +179,6 @@ console.log(data)
     justify-content: center;
     background-color: white;
     height: 100%;
-    flex: 0 0 calc(100% / 3);
   }
 
   .carousel .card-services img {
