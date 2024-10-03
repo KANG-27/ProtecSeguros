@@ -1,29 +1,33 @@
 ---
 import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
-import Carousel from "../../components/CarouselAliados.astro";
+import Carousel from "../../components/Carousel.astro";
 import Footer from "../../components/Footer.astro";
 import CarouselInicio from "../../components/CarouselInicio.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const servicios = await getCollection("services");
+  // const servicios = await getCollection("services");
   const descripciones = await getCollection("descripciones");
   
   return descripciones.map((descripcion) => ({
     params: { id: descripcion.slug },
-    props: { descripcion, servicios }
+    props: { descripcion }
   }));
 }
 
-const { descripcion, servicios } = Astro.props;
+const { descripcion} = Astro.props;
+
+// const serviceSelected = servicios.filter((elemet => elemet.data.subcategoria === descripcion.slug))
 
 // Check that 'descripcion' and 'servicios' are not null
-if (!descripcion || !servicios) {
-  throw new Error("Descripcion or servicios data is missing");
-}
+// if (!descripcion || !serviceSelected) {
+//   throw new Error("Descripcion or servicios data is missing");
+// }
 
 const { data } = descripcion;
+
+
 
 const images = [
   "https://reclamodeterceros.com/wp-content/uploads/2023/04/Sura-Reclamo-de-Terceros-.webp",
@@ -34,8 +38,9 @@ const images = [
 
 
    // Filtra los servicios según el elemento seleccionado
-   const serviciosMovilidad = servicios.filter(servicio => servicio.data.categoria === 'movilidad');
-   const serviciosSalud = servicios.filter(servicio => servicio.data.categoria === 'salud');
+  //  const serviciosMovilidad = serviceSelected.filter(servicio => servicio.data.categoria === 'movilidad');
+  //  const serviciosSalud = serviceSelected.filter(servicio => servicio.data.categoria === 'salud');
+  //  console.log(servicios)
 
 
 ---
@@ -66,16 +71,25 @@ const images = [
       <h1 class="title">Nuestros servicios</h1>
       <div class="content-services">
         <div class="content-butons">
-          <button class="line-leter" id="button-movilidad" onclick="filtroservicios('movilidad')">Movilidad</button>
-          <button  id="button-salud" onclick="filtroservicios('salud')">Salud</button>
+          {data.servicios.map((element,index)=>(
+            <button class={index == 0 ? "selected":""} id={`button-${element.nombre.replace(" ","-").toLowerCase()}`} onclick={`filtroservicios('${element.nombre.replace(" ","-").toLowerCase()}')`} >{element.nombre}</button>
+          ))}
+          <!-- <button  id="button-salud" onclick="filtroservicios('salud')">Salud</button> -->
         </div>
+
+
+        {data.servicios.map((servicio, index)=>(
+          <div style={index == 0 ? "":"display: none;"} id={servicio.nombre.replace(" ","-").toLowerCase()}>
+            <Carousel data={servicio} type="servicios" />
+          </div>
+        ))}
     
-        <div id="movilidad" >
+        <!-- <div id="movilidad" >
             <Carousel data={serviciosMovilidad} type="servicios" />
         </div>
         <div id="salud" style="display: none;">
             <Carousel data={serviciosSalud} type="servicios" />
-        </div>
+        </div> -->
       
     </div>
     </div>
@@ -88,13 +102,17 @@ const images = [
       </div>
     </div>
     <Footer />
+
 <script type="text/javascript">
     function filtroservicios(categoria) {
+      console.log(categoria)
+      console.log("hi")
         // Oculta todos los carruseles
-      const carruseles = ['movilidad', 'salud'];
+      const carruseles = ['protec-movilidad', 'protec-salud','protec-personas', 'protec-patrimonio'];
 
       carruseles.forEach(id => {
           const carrusel = document.getElementById(id);
+          console.log(carrusel)
           if (id === categoria) {
               carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
               carrusel.style.display = 'block';

@@ -20,9 +20,11 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
+  - https://integraldesegurosejecafetero.com/wp-content/uploads/2018/08/seguros-para-vehiculos-de-carga.jpg
   - ../../public/saludDos.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
-  - ../../public/saludDos.png
-categoria: movilidad
+categoria: Protec movilidad
+subcategoria: personas
+
 ---

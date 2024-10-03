@@ -4,13 +4,35 @@ descripcion: Esta categoría está diseñada para proteger y garantizar el biene
 servicios:
   - nombre: Protec movilidad
     subcategoria:
-      - Plan Muévete Libre
-      - Plan Utilitarios y Pesados
-      - Seguro de Autos
-      - Seguro de Bicis y Patinetas
-      - Seguro de Motos
-      - Seguro Obligatorio (SOAT)
-      - Seguro de Viaje
+      - nombre: Plan Muévete Libre
+        descripcion: lore
+        imagen: ../public/saludDos.png
+      - nombre: Plan Utilitarios y Pesados
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Autos
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Bicis y Patinetas
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Motos
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro Obligatorio (SOAT)
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Viaje
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+  - nombre: Mercado
+    subcategoria:
+      - nombre: Agro-acuicola
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Agro-avicola
+        descripcion: lorem
+        imagen: ../public/saludDos.png
 imagenes:
     - src: ../public/enfermeros.png
       alt: "imagen3"

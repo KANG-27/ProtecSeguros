@@ -2,22 +2,22 @@
 
 const {data, type}= Astro.props
 
-// console.log(data) 
+console.log(data.subcategoria) 
 // console.log(type)
 
 ---
 
-<div class="carousel" data-content={`{"tipo": "${type}", "tamaño": "${data.length}"}`}>
+<div class="carousel" data-content={`{"tipo": "${type}", "tamaño": "${data.subcategoria?.length}"}`}>
   <div class="carousel-inner">
     {type === "servicios" &&
-      data.map((element:any)=>(
+      data.subcategoria.map((element:any)=>(
       <div class="card-services">
-          <img class="imagen-card-services" src={element.data.imagenes[0]} alt="imagen"/>
+          <img class="imagen-card-services" src={element.imagenes} alt="imagen"/>
           <div class="content-card-services">
            
             <h3 class="protec-card">Protec</h3>
-            <h3>{element.data.titulo}</h3>
-            <p class="description-card-services">{element.data.descripcion}</p>
+            <h3>{element.nombre}</h3>
+            <p class="description-card-services">{element.descripcion}</p>
             <div class="content-contact">
               <button class="button-contact-more">Conoce más</button>
             </div>
@@ -42,38 +42,38 @@ const {data, type}= Astro.props
 </div>
 
 <script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("astro:page-load", function() {
     const carousels = document.querySelectorAll(".carousel");
 
-    carousels.forEach((carousel, carouselIndex) => {
+    carousels.forEach((carousel) => {
       const carouselData = JSON.parse(carousel.getAttribute("data-content"));
       let currentIndex = 0;
 
+      // Función para obtener la cantidad de ítems visibles en función del tamaño del viewport
       function getVisibleItems() {
-        if (window.innerWidth < 768) {
-          return 1;
-        } else if (window.innerWidth < 1024) {
-          return 2;
-        } else {
-          return 3;
-        }
+        const carouselWidth = carousel.offsetWidth;
+        const itemWidth = 350; // Ancho de cada tarjeta
+        return Math.floor(carouselWidth / itemWidth);
       }
 
+      // Función para mostrar un slide específico
       function showSlide(index) {
         const slides = carousel.querySelector(".carousel-inner");
         const totalSlides = carouselData.tamaño;
-        const visibleItems = getVisibleItems();
+        const visibleItems = getVisibleItems(); // Obtener el número de ítems visibles según el ancho del contenedor
 
+        // Limitar el índice para no pasar más allá del último set de ítems
         if (index < 0) {
-          currentIndex = totalSlides - visibleItems;
-        } else if (index >= totalSlides) {
-          currentIndex = 0;
+          currentIndex = 0; // Evitar ir antes del primer ítem
+        } else if (index > totalSlides - visibleItems) {
+          currentIndex = 0; // Evitar mostrar más allá del último ítem visible
         } else {
           currentIndex = index;
         }
 
-        const offset = -currentIndex * (90 / visibleItems);
-        slides.style.transform = `translateX(${offset}%)`;
+        // Calcular el desplazamiento (offset) en función del índice actual y el número de ítems visibles
+        const offset = -currentIndex * (350 + 20); // 350px de ancho + 20px de gap (ajusta el gap si es necesario)
+        slides.style.transform = `translateX(${offset}px)`;
       }
 
       function nextSlide() {
@@ -97,7 +97,8 @@ const {data, type}= Astro.props
       // Actualizar el carrusel al cambiar el tamaño de la ventana
       window.addEventListener("resize", () => showSlide(currentIndex));
     });
-  });
+});
+
 </script>
 
 
@@ -138,16 +139,17 @@ const {data, type}= Astro.props
     width: 90%;
     height: 50px;
     border-radius: 30px;
-    margin-top: 2%;
-    margin-bottom: 10%;
+    margin: 2%;
     cursor: pointer;
   }
   .card-services{
+    box-sizing: border-box;
     margin: 5px;
     box-shadow: 3px 3px 3px 3px grey;
     width: 350px;
     height: 500px;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;``
     justify-content: center;
     border-radius: 5%;
@@ -161,7 +163,7 @@ const {data, type}= Astro.props
 
   .carousel-inner {
     display: flex;
-    gap: 100px;
+    gap: 50px;
     align-items: center;
     transition: transform 0.5s ease;
   }
@@ -174,11 +176,13 @@ const {data, type}= Astro.props
     justify-content: center;
     background-color: white;
     height: 100%;
+    flex: 0 0 calc(100% / 3);
   }
 
   .carousel .card-services img {
+    border-radius: 20px 20px 0px 0px;
     width: 100% !important;
-    height: 300px ;
+    height: 280px ;
   }
   .carousel img {
     width: 60%;

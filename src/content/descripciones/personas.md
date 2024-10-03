@@ -4,40 +4,96 @@ descripcion: Esta categoría está diseñada para proteger y garantizar el biene
 servicios:
   - nombre: Protec movilidad
     subcategoria:
-      - Plan Muévete Libre
-      - Plan Utilitarios y Pesados
-      - Seguro de Autos
-      - Seguro de Bicis y Patinetas
-      - Seguro de Motos
-      - Seguro Obligatorio (SOAT)
-      - Seguro de Viaje
+      - nombre: Plan Muévete Libre
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Plan Utilitarios y Pesados
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Autos
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Bicis y Patinetas
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Motos
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro Obligatorio (SOAT)
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Viaje
+        descripcion: lorem
+        imagen: ../public/saludDos.png
   - nombre: Protec salud
     subcategoria:
-      - Póliza de Salud
-      - Póliza de Enfermedades Graves
-      - Póliza Plan Renta Diaria
-      - Salud Para Todos
+      - nombre: Póliza de Salud
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Póliza de Enfermedades Graves
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Póliza Plan Renta Diaria
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Salud Para Todos
+        descripcion: lorem
+        imagen: ../public/saludDos.png
   - nombre: Protec personas
     subcategoria:
-      - Fondo de Ahorros
-      - Mascotas
-      - RC Familiar
-      - RC Profesional
-      - RC Profesionales de la Salud
-      - RC Profesionales Veterinarios
-      - Seguro de Accidentes
-      - Seguro Colectivo de Vida
-      - Seguro de Educación
-      - Seguro de Exequias
-      - Seguro de Pensión
-      - Seguro de Renta Vitalicia
-      - Seguro de Vida
+      - nombre: Fondo de Ahorros
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Mascotas
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: RC Familiar
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: RC Profesional
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: RC Profesionales de la Salud
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: RC Profesionales Veterinarios
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Accidentes
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro Colectivo de Vida
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Educación
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Exequias
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Pensión
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Renta Vitalicia
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Vida
+        descripcion: lorem
+        imagen: ../public/saludDos.png
   - nombre: Protec patrimonio
     subcategoria:
-      - Seguro de Hogar
-      - Seguro de Arrendamiento
-      - Seguro de Arrendamiento Digital
-      - Plan Inversión Protegida
+      - nombre: Seguro de Hogar
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Arrendamiento
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Seguro de Arrendamiento Digital
+        descripcion: lorem
+        imagen: ../public/saludDos.png
+      - nombre: Plan Inversión Protegida
+        descripcion: lorem
+        imagen: ../public/saludDos.png
 imagenes:
   - src: ../public/saludDos.png
     alt: "imagen1"

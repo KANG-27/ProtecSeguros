@@ -14,9 +14,11 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - ../../public/saludDos.png
+  - https://www.susegurosb.com/wp-content/uploads/2024/04/salud_para_todos_sura.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
 categoria: salud
+subcategoria: personas
+
 ---

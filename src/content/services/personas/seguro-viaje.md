@@ -13,9 +13,11 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
+  - https://sfestaticos.blob.core.windows.net/regional/assets/1103x711_BN_principal_21d83d7966.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
-  - ../../public/saludDos.png
-categoria: movilidad
+categoria: Protec movilidad
+subcategoria: personas
+
 ---

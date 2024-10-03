@@ -29,9 +29,11 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
+  - https://i.ytimg.com/vi/xdp7eJWOPBY/maxresdefault.jpg
   - ../../public/saludDos.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
-  - ../../public/saludDos.png
-categoria: movilidad
+categoria: Protec movilidad
+subcategoria: personas
+
 ---

@@ -12,9 +12,11 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - ../../public/saludDos.png
+  - https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/caa0fde4-11c7-41d0-80c1-55c8d11e66b2/Educativo-2001.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-caa0fde4-11c7-41d0-80c1-55c8d11e66b2-oWR4dRq
   - ../../public/saludDos.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
 categoria: salud
+subcategoria: personas
+
 ---

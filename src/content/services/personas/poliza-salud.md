@@ -59,4 +59,6 @@ imagenes:
   - ../../public/saludDos.png
   - ../../public/saludDos.png
 categoria: salud
+subcategoria: personas
+
 ---

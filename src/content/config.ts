@@ -8,7 +8,11 @@ const descripcionesCollection = defineCollection({
     descripcion: z.string(),
     servicios: z.array(z.object({
       nombre: z.string(),
-      subcategoria: z.array(z.string()),
+      subcategoria: z.array(z.object({
+        nombre: z.string(),
+        descripcion: z.string(),
+        imagen: z.string()
+      })),
     })),
     imagenes: z.array(z.object({
       src: z.string(),
@@ -29,6 +33,7 @@ const serviciosCollection = defineCollection({
     })).optional(),
     imagenes: z.array(z.string()).optional(),
     categoria: z.string(),
+    subcategoria: z.string()
   }),
 });
 

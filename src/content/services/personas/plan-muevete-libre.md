@@ -21,5 +21,6 @@ imagenes:
   - ../../public/familia.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
-categoria: movilidad
+categoria: Protec movilidad
+subcategoria: personas
 ---

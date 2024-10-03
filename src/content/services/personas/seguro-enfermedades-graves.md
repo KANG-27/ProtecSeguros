@@ -31,9 +31,11 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - ../../public/saludDos.png
+  - https://i.ytimg.com/vi/zfexD9aWkOs/maxresdefault.jpg
   - ../../public/saludDos.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
 categoria: salud
+subcategoria: personas
+
 ---

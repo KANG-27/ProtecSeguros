@@ -14,9 +14,11 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
+  - https://roams.es/images/post/es_ES_insurance/aseguradoras-mapfre-seguro-bicicleta.jpg
   - ../../public/saludDos.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
-  - ../../public/saludDos.png
-categoria: movilidad
+categoria: Protec movilidad
+subcategoria: personas
+
 ---

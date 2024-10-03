@@ -16,9 +16,11 @@ uso_servicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
+  - https://www.comparaonline.cl/blog-statics/cl/uploads/2011/02/cuanto-vale-el-soap-de-moto-442x280.jpg
   - ../../public/saludDos.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
-  - ../../public/saludDos.png
-categoria: movilidad
+categoria: Protec movilidad
+subcategoria: personas
+
 ---
