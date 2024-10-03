@@ -1,4 +1,5 @@
 ---
+id: plan-muevete-libre
 titulo: Plan muévete libre
 descripcion: Caminando, en transporte público masivo, taxi, bici, patineta o moto, con el Plan Muévete Libre estás tranquilo porque te protegemos a ti como persona. Muévete como más te guste con el respaldo de un seguro que te permite sentirte acompañado y ahorrar tiempo y dinero. Además de que estás asegurado cuando salgas a pasear con tu mascota, pues cubrimos los daños que tanto tú como ella pueden ocasionar a otros. De esa manera, y porque sabemos que necesitas moverte, cuidamos tu vida y tu salud en cada trayecto para que siempre, con SURA, te asegures de vivir.
 necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.

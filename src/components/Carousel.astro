@@ -2,8 +2,7 @@
 
 const {data, type}= Astro.props
 
-console.log(data) 
-// console.log(type)
+console.log(data)
 
 ---
 
@@ -18,9 +17,11 @@ console.log(data)
             <h3 class="protec-card">Protec</h3>
             <h3>{element.nombre}</h3>
             <p class="description-card-services">{element.descripcion}</p>
-            <div class="content-contact">
-              <button class="button-contact-more">Conoce más</button>
-            </div>
+            <a href={`/servicio/${element.referencia}`}>
+              <div class="content-contact">
+                <button class="button-contact-more">Conoce más</button>
+              </div>
+            </a>
 
           </div>
         </div>

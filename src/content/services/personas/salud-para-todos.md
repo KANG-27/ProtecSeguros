@@ -1,4 +1,5 @@
 ---
+id: salud-para-todos
 titulo: Salud para todos
 descripcion: Es un seguro de salud que cuenta con diferentes planes que puedes elegir según tus necesidades y capacidad de pago. De acuerdo al que elijas podrás o no compartirlo con quien prefieras y acceder a diferentes coberturas y beneficios.
 prestaciones: 

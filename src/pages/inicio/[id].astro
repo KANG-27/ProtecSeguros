@@ -9,40 +9,20 @@ import Layout from "../../layouts/Layout.astro";
 export async function getStaticPaths() {
   // const servicios = await getCollection("services");
   const descripciones = await getCollection("descripciones");
-  
+
   return descripciones.map((descripcion) => ({
     params: { id: descripcion.slug },
     props: { descripcion }
   }));
 }
-
-const { descripcion} = Astro.props;
-
-// const serviceSelected = servicios.filter((elemet => elemet.data.subcategoria === descripcion.slug))
-
-// Check that 'descripcion' and 'servicios' are not null
-// if (!descripcion || !serviceSelected) {
-//   throw new Error("Descripcion or servicios data is missing");
-// }
-
+const { descripcion } = Astro.props;
 const { data } = descripcion;
-
-
-
 const images = [
   "https://reclamodeterceros.com/wp-content/uploads/2023/04/Sura-Reclamo-de-Terceros-.webp",
   "https://1000marcas.net/wp-content/uploads/2019/12/Logo-Mapfre-tumb.png",
   "https://serviciospluss.com/wp-content/uploads/2022/01/logo-colpatria.png",
   "https://seeklogo.com/images/A/aseguradora-solidario-de-colombia-logo-0285B0DF5D-seeklogo.com.png",
 ];
-
-
-   // Filtra los servicios según el elemento seleccionado
-  //  const serviciosMovilidad = serviceSelected.filter(servicio => servicio.data.categoria === 'movilidad');
-  //  const serviciosSalud = serviceSelected.filter(servicio => servicio.data.categoria === 'salud');
-  //  console.log(servicios)
-
-
 ---
 
 <Layout title="Welcome to Astro.">
@@ -54,8 +34,8 @@ const images = [
         <p class="description">
           Somos una agencia, encaminada a orientar profesionalmente en el sector
           asegurador a nuestros clientes ofreciendo soluciones que garanticen la
-          protección de sus familias y patrimonio; brindando acompañamiento
-          en la gestión de sus riesgos, tanto personales como empresariales;
+          protección de sus familias y patrimonio; brindando acompañamiento en
+          la gestión de sus riesgos, tanto personales como empresariales;
           avaladas por la experiencia de más de 30 años de su fundadora LUZ
           MARINA RODRIGUEZ A.
         </p>
@@ -71,27 +51,27 @@ const images = [
       <h1 class="title">Nuestros servicios</h1>
       <div class="content-services">
         <div class="content-butons">
-          {data.servicios.map((element,index)=>(
-            <button class={index == 0 ? "selected":""} id={`button-${element.nombre.replace(" ","-").toLowerCase()}`} onclick={`filtroservicios('${element.nombre.replace(" ","-").toLowerCase()}')`} >{element.nombre}</button>
-          ))}
-          <!-- <button  id="button-salud" onclick="filtroservicios('salud')">Salud</button> -->
+          {data.servicios.map((element, index) => (
+              <button
+                class={index == 0 ? "selected" : ""}
+                id={`button-${element.nombre.replace(" ", "-").toLowerCase()}`}
+                onclick={`filtroservicios('${element.nombre.replace(" ", "-").toLowerCase()}')`}
+              >
+                {element.nombre}
+              </button>
+            ))
+          }
         </div>
-
-
-        {data.servicios.map((servicio, index)=>(
-          <div style={index == 0 ? "":"display: none;"} id={servicio.nombre.replace(" ","-").toLowerCase()}>
-            <Carousel data={servicio.subcategoria} type="servicios" />
-          </div>
-        ))}
-    
-        <!-- <div id="movilidad" >
-            <Carousel data={serviciosMovilidad} type="servicios" />
-        </div>
-        <div id="salud" style="display: none;">
-            <Carousel data={serviciosSalud} type="servicios" />
-        </div> -->
-      
-    </div>
+        {data.servicios.map((servicio, index) => (
+            <div
+              style={index == 0 ? "" : "display: none;"}
+              id={servicio.nombre.replace(" ", "-").toLowerCase()}
+            >
+              <Carousel data={servicio.subcategoria} type="servicios" />
+            </div>
+          ))
+        }
+      </div>
     </div>
     <div class="aliados">
       <div class="aliados-full">
@@ -103,84 +83,88 @@ const images = [
     </div>
     <Footer />
 
-<script type="text/javascript">
-    function filtroservicios(categoria) {
-      console.log(categoria)
-      console.log("hi")
+    <script type="text/javascript">
+      function filtroservicios(categoria) {
+        console.log(categoria);
+        console.log("hi");
         // Oculta todos los carruseles
-      const carruseles = ['protec-movilidad', 'protec-salud','protec-personas', 'protec-patrimonio'];
+        const carruseles = [
+          "protec-movilidad",
+          "protec-salud",
+          "protec-personas",
+          "protec-patrimonio",
+        ];
 
-      carruseles.forEach(id => {
+        carruseles.forEach((id) => {
           const carrusel = document.getElementById(id);
-          console.log(carrusel)
+          console.log(carrusel);
           if (id === categoria) {
+            carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
+            carrusel.style.display = "block";
+            carrusel.style.opacity = 0;
+            setTimeout(() => {
+              carrusel.style.opacity = 1; // Cambia a opacidad 1 para mostrar
               carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
-              carrusel.style.display = 'block';
-              carrusel.style.opacity = 0; 
-              setTimeout(() => {
-                carrusel.style.opacity = 1; // Cambia a opacidad 1 para mostrar
-                carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
-              }, 10); 
+            }, 10);
           } else {
-              // Oculta el carrusel actual
-              carrusel.style.opacity = 0; // Comienza a ocultar
-              carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
-              // Espera a que termine la transición de opacidad antes de cambiar a display: none
-              carrusel.style.display = 'none'; // Oculta el carrusel
-            }
-         // Cambiar el estado de los botones
-          const botones = document.querySelectorAll('.content-butons button');
-          botones.forEach(b => b.classList.remove('selected')); // Quita la clase de todos
-          const botonSeleccionado = document.getElementById(`button-${categoria}`);
-          botonSeleccionado.classList.add('selected'); 
-      });
-    }
-</script>
+            // Oculta el carrusel actual
+            carrusel.style.opacity = 0; // Comienza a ocultar
+            carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
+            // Espera a que termine la transición de opacidad antes de cambiar a display: none
+            carrusel.style.display = "none"; // Oculta el carrusel
+          }
+          // Cambiar el estado de los botones
+          const botones = document.querySelectorAll(".content-butons button");
+          botones.forEach((b) => b.classList.remove("selected")); // Quita la clase de todos
+          const botonSeleccionado = document.getElementById(
+            `button-${categoria}`
+          );
+          botonSeleccionado.classList.add("selected");
+        });
+      }
+    </script>
+  </main>
+
 
 </Layout>
-
-
-
 <style>
+  .selected {
+    color: #5abeaa !important;
+    border-bottom: 2px solid #5abeaa !important; /* Añade la línea debajo del botón */
+  }
+  .content-butons button:hover {
+    color: #5abeaa;
+  }
+  .content-butons button {
+    font-size: larger;
+    background-color: #5abeaa00;
+    border: 0;
+    color: #172052;
+    width: max-content;
+    cursor: pointer;
+  }
+  .content-butons button:hover {
+    color: #5abeaa;
+  }
 
-.selected {
-  color: #5abeaa !important;
-  border-bottom: 2px solid #5abeaa !important; /* Añade la línea debajo del botón */
-}
-.content-butons button:hover {
-  color: #5abeaa;
-}
-.content-butons button {
-  font-size: larger;
-  background-color: #5abeaa00;
-  border: 0;
-  color: #172052;
-  width: min-content;
-  cursor: pointer;
-}
-.content-butons button:hover {
-  color: #5abeaa;
-}
-
-.content-butons{
-  margin: 0% 0% 5% 0%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-  .content-services{
+  .content-butons {
+    margin: 0% 0% 5% 0%;
+    width: 100%;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .content-services {
     width: 90%;
     margin: 0% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
   }
-  .imagenes-carrusel{
+  .imagenes-carrusel {
     width: 50%;
     height: 100%;
     margin: 0% 5%;
-
   }
   .nosotros-content {
     display: flex;
@@ -234,8 +218,6 @@ const images = [
     border-radius: 20%;
   }
 
-  
-
   .service-card {
     --opacidad-negro: 0.5;
     background-repeat: no-repeat;
@@ -263,7 +245,6 @@ const images = [
     margin-bottom: 10%;
     cursor: pointer;
   }
-  
 
   .nosotros {
     justify-content: space-between;
@@ -311,7 +292,6 @@ const images = [
     animation-range: entry 25% cover 35%;
   }
 
-
   @keyframes reveal {
     from {
       opacity: 0;
@@ -330,8 +310,8 @@ const images = [
       padding-top: 20%;
       padding-bottom: 20%;
     }
-    .imagenes-carrusel{
-      width:80%;
+    .imagenes-carrusel {
+      width: 80%;
     }
     .service-card p {
       font-size: small;
@@ -359,14 +339,14 @@ const images = [
       justify-content: center;
       align-items: center;
     }
-    .nosotros-content{
+    .nosotros-content {
       width: 80%;
     }
     .button-contact-more {
       font-size: 15px;
     }
   }
-  
+
   @media (min-width: 1024px) and (max-width: 1240px) {
     .content-services {
       grid-template-columns: repeat(2, 1fr);

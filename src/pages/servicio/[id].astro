@@ -1,31 +1,32 @@
 ---
-import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const services = await getCollection("descripciones");
+  // const servicios = await getCollection("services");
+  const services = await getCollection("services");
 
   return services.map((service) => ({
-    params: { id: service.slug },
+    params: { id: service.slug.split('/').pop() },
     props: { service },
   }));
 }
-
 const { service } = Astro.props;
-const { data } = service;
-const { descripcion, titulo } = data;
+
+
 ---
 
-<Layout title={titulo}>
+
+<Layout title={"titulo"}>
   <main>
     <Header />
-    <div class="categoria">
+    <!-- <div class="categoria">
         <h1 transition:name={titulo} class="title">{titulo}</h1>
     </div>
     <section class="section-services">
         <h3 class="descripcion-servicio">{descripcion}</h3>
-    </section>
+    </section> -->
   </main>
 </Layout>
 

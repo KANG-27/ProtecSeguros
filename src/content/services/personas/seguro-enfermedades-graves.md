@@ -1,4 +1,5 @@
 ---
+id: seguro-enfermedades-graves
 titulo: Seguro de Enfermedades Graves
 descripcion: Adquiere este respaldo por el valor que elijas y a​​segura también a tu grupo familiar para que obtengas un descuento por incluir a tu pareja, padres e hijos. Con este seguro consolidas el capital necesario para no perder tu calidad de vida en caso de sufrir alguna enfermedad grave como cáncer, alzhéimer, párkinson, entre otras​ que son parte de la cobertura, por eso te sientes protegido y tranquilo​.
 prestaciones: 

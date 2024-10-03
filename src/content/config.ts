@@ -10,6 +10,7 @@ const descripcionesCollection = defineCollection({
       nombre: z.string(),
       subcategoria: z.array(z.object({
         nombre: z.string(),
+        referencia: z.string(),
         descripcion: z.string(),
         imagen: z.string()
       })),
@@ -23,6 +24,7 @@ const descripcionesCollection = defineCollection({
 
 const serviciosCollection = defineCollection({
   schema: z.object({
+    id: z.string(),
     titulo: z.string(),
     descripcion: z.string(),
     necesito: z.string().optional(),

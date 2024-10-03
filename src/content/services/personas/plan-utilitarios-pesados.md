@@ -1,4 +1,5 @@
 ---
+id: plan-utilitarios-pesados
 titulo: Plan Utilitarios y Pesados
 descripcion: ​Si usas tu vehículo como una fuente de ingresos y transportas productos o personas, te recomendamos tener el Plan Utilitarios y Pesados de SURA. Con este seguro, diseñado para carros utilitarios livianos (capacidad de carga inferior a 2.5 toneladas) y pesados (capacidad de carga superior a 2.5 toneladas), te proteges frente a los daños que se puedan generar en carretera o mientras desarrollas tu actividad económica.Con nosotros recibes acompañamiento permanente no solo en caso de accidentes o robos, sino también en temas de asistencia y prevención, facilitándote la operación en el día a día y ahorrando tiempo y dinero.
 necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.
