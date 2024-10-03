@@ -1,8 +1,5 @@
 ---
-
 const {data, type}= Astro.props
-
-console.log(data)
 
 ---
 
@@ -13,7 +10,6 @@ console.log(data)
       <div class="card-services">
           <img class="imagen-card-services" src={element.imagen} alt="imagen"/>
           <div class="content-card-services">
-           
             <h3 class="protec-card">Protec</h3>
             <h3>{element.nombre}</h3>
             <p class="description-card-services">{element.descripcion}</p>
@@ -109,18 +105,20 @@ console.log(data)
 
 
 <style>
-
-.protec-card{
-  color:#5abeaa
-}
-.description-card-services{
-    width: 100%; /* Ancho fijo */
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Límite de líneas */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+  .protec-card{
+    color:#5abeaa
+  }
+  .description-card-services{
+      width: 100%; /* Ancho fijo */
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* Límite de líneas */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  .content-card-services a {
+    text-decoration: none;
+  }
   .content-card-services h3{
     margin: 0%;
   }
