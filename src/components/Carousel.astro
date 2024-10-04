@@ -49,7 +49,8 @@ const {data, type}= Astro.props
       // Función para obtener la cantidad de ítems visibles en función del tamaño del viewport
       function getVisibleItems() {
         const carouselWidth = carousel.offsetWidth;
-        const itemWidth = carouselData.tipo == "servicios" ? 520:350; // Ancho de cada tarjeta
+        console.log(carousel.offsetWidth)
+        const itemWidth = carouselData.tipo == "servicios" ? window.screen.width <= 425 ? 350: 520 : 350; // Ancho de cada tarjeta
         // const itemWidth = 520; // Ancho de cada tarjeta
         return Math.floor(carouselWidth / itemWidth);
       }
@@ -71,7 +72,7 @@ const {data, type}= Astro.props
         }
 
         // Calcular el desplazamiento (offset) en función del índice actual y el número de ítems visibles
-        const offset = -currentIndex * ( (carouselData.tipo == "servicios" ? 520:350) + 50); // 350px de ancho + 20px de gap (ajusta el gap si es necesario)
+        const offset = -currentIndex * ( (carouselData.tipo == "servicios" ? window.screen.width <= 425 ? 350: 520:350) + 50); // 350px de ancho + 20px de gap (ajusta el gap si es necesario)
         slides.style.transform = `translateX(${offset}px)`;
       }
 
@@ -203,6 +204,13 @@ const {data, type}= Astro.props
     border: none;
     padding: 10px;
     cursor: pointer;
+  }
+
+  @media (max-width: 425px) {
+    .card-services {
+      width: 350px; /* Mostrar 1 imagen en pantallas pequeñas */
+    }
+    
   }
 
   @media (max-width: 768px) {
