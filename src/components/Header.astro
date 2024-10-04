@@ -9,68 +9,73 @@ const { data } = Astro.props;
     <a href="/">
       <img src="../public/logo.png" class="logo" alt="logo" width="230px" />
     </a>
-    {data &&
+    {
+      data && (
         <div class="bar-navegation-descktop">
-        <nav class="bar-navegation">
+          <nav class="bar-navegation">
             <ul class="list-nav-style">
-            <li class="list-nav-content-style">
-                <a class="list-nav-select" href="/inicio/personas">Inicio</a>
-            </li>
-            <li class="list-nav-content-style titulo-servicios">
-                <a>Servicios</a> 
+              <li class="list-nav-content-style">
+                <a class="list-nav-select" href="/inicio/personas">
+                  Inicio
+                </a>
+              </li>
+              <li class="list-nav-content-style titulo-servicios">
+                <a>Servicios</a>
                 <div class="modal" id="Services-modal-id">
-                <div class="list-service">
+                  <div class="list-service">
                     {data?.servicios.map((element: any, index: number) => (
-                        <ul
+                      <ul
                         class={`list-service-content ${index === data.servicios.length - 1 ? "" : "list-service-content-line"}`}
-                        >
+                      >
                         <li class="content-servis">
-                            <h1 class="title-services">{element.nombre}</h1>
-                                {element.subcategoria.map((categoria: any) => (
-                                <ul class="services-list">
-                                    <li class="categoria-services">
-                                    <a href={`/servicio/${categoria.referencia}`}>{categoria.nombre}</a>
-                                    </li>
-                                </ul>
-                                ))}
+                          <h1 class="title-services">{element.nombre}</h1>
+                          {element.subcategoria.map((categoria: any) => (
+                            <ul class="services-list">
+                              <li class="categoria-services">
+                                <a href={`/servicio/${categoria.referencia}`}>
+                                  {categoria.nombre}
+                                </a>
+                              </li>
+                            </ul>
+                          ))}
                         </li>
-                        </ul>
-                    ))
-                    }
+                      </ul>
+                    ))}
+                  </div>
                 </div>
-                </div>
-            </li>
+              </li>
 
-            <li class="list-nav-content-style titulo-pagos">
+              <li class="list-nav-content-style titulo-pagos">
                 <a class="">Paga tu póliza</a>
                 <div class="modal-payment" id="Pagos-modal-id">
-                <h2 class="title-pagos">Botones de pago</h2>
-                <ul class="list-payment">
+                  <h2 class="title-pagos">Botones de pago</h2>
+                  <ul class="list-payment">
                     <li class="buton-sura">
-                    <a
-                        href="https://www.segurossura.com.co/paginas/pago-express.aspx#/Pagos"
-                        >Sura</a>
+                      <a href="https://www.segurossura.com.co/paginas/pago-express.aspx#/Pagos">
+                        Sura
+                      </a>
                     </li>
                     <li class="buton-mapre">
-                    <a
-                        href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublico.jsf"
-                        >Mapfre</a>
+                      <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublico.jsf">
+                        Mapfre
+                      </a>
                     </li>
                     <li class="buton-axa">
-                    <a>AXA Colpatria</a>
+                      <a>AXA Colpatria</a>
                     </li>
                     <li class="buton-exquial">
-                    <a>Mapfre Exquial</a>
+                      <a>Mapfre Exquial</a>
                     </li>
-                </ul>
+                  </ul>
                 </div>
-            </li>
+              </li>
             </ul>
-        </nav>
+          </nav>
         </div>
+      )
     }
 
-    <NavMobile data={data?.servicios}/>
+    <NavMobile data={data?.servicios} />
     <div class="content-contact">
       <button class="button-contact">¡Contáctanos!</button>
     </div>
@@ -80,12 +85,24 @@ const { data } = Astro.props;
   data && (
     <div class="content-butons-selection-section">
       <a class="buton-content" href="/inicio/personas">
-        <button class="butons-selection-section">
+        <button
+          class={`${
+            Astro.url.pathname.split("/").pop() === "personas"
+              ? "butons-selection-section"
+              : "butons-selection-section-empresas"
+          }`}
+        >
           <p class="text-butons-selection-section">Personas</p>
         </button>
       </a>
       <a class="buton-content" href="/inicio/empresas">
-        <button class="butons-selection-section-empresas">
+        <button
+          class={`${
+            Astro.url.pathname.split("/").pop() === "empresas"
+              ? "butons-selection-section"
+              : "butons-selection-section-empresas"
+          }`}
+        >
           <p class="text-butons-selection-section-empresas">Empresas</p>
         </button>
       </a>
@@ -153,7 +170,7 @@ const { data } = Astro.props;
     flex-direction: column;
   }
 
-  ul.list-service{
+  ul.list-service {
     list-style-type: none; /* Elimina los puntos */
     padding-left: 0; /* Elimina el padding izquierdo predeterminado */
     margin-left: 0; /* Opcional, para eliminar márgenes */
