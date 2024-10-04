@@ -2,7 +2,6 @@
 import NavMobile from "./NavMobile.astro";
 
 const { data } = Astro.props;
-// console.log(data)
 ---
 
 <header>
@@ -18,7 +17,7 @@ const { data } = Astro.props;
                 <a class="list-nav-select" href="/inicio/personas">Inicio</a>
             </li>
             <li class="list-nav-content-style titulo-servicios">
-                <a>Servicios</a>
+                <a>Servicios</a> 
                 <div class="modal" id="Services-modal-id">
                 <div class="list-service">
                     {data?.servicios.map((element: any, index: number) => (
@@ -30,7 +29,7 @@ const { data } = Astro.props;
                                 {element.subcategoria.map((categoria: any) => (
                                 <ul class="services-list">
                                     <li class="categoria-services">
-                                    <a href="">{categoria.nombre}</a>
+                                    <a href={`/servicio/${categoria.referencia}`}>{categoria.nombre}</a>
                                     </li>
                                 </ul>
                                 ))}
@@ -71,7 +70,7 @@ const { data } = Astro.props;
         </div>
     }
 
-    <!-- <NavMobile data={data}/> -->
+    <NavMobile data={data?.servicios}/>
     <div class="content-contact">
       <button class="button-contact">¡Contáctanos!</button>
     </div>
@@ -80,12 +79,12 @@ const { data } = Astro.props;
 {
   data && (
     <div class="content-butons-selection-section">
-      <a class="buton-content" href="./personas">
+      <a class="buton-content" href="/inicio/personas">
         <button class="butons-selection-section">
           <p class="text-butons-selection-section">Personas</p>
         </button>
       </a>
-      <a class="buton-content" href="./empresas">
+      <a class="buton-content" href="/inicio/empresas">
         <button class="butons-selection-section-empresas">
           <p class="text-butons-selection-section-empresas">Empresas</p>
         </button>

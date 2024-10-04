@@ -63,7 +63,6 @@ const {data, type}= Astro.props
         // Limitar el índice para no pasar más allá del último set de ítems
 
         if (index < 0) {
-          console.log(index)
           currentIndex = totalSlides; // Evitar ir antes del primer ítem
         } else if (index > (totalSlides-visibleItems == 0? totalSlides-visibleItems+1:totalSlides-visibleItems)) {
           currentIndex = 0; // Evitar mostrar más allá del último ítem visible

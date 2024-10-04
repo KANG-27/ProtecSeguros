@@ -35,37 +35,26 @@ const { data } = Astro.props;
               <hr />
               <!-- Modal servicios -->
               <div class="modal-mobile" id="Services-modal-id-mobile">
-                {
-                  data?.servicios.map((element: any, index: number) => (
+                {data?.map((element: any) => (
                     <ul class="services-contet">
-                      <li class="content-servis">
+                      <li class="content-servis" onclick={'openService('+element.nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "")+')'}>
                         <h2 class="title-services-mobile">{element.nombre}</h2>
                       </li>
-                      <div class="service-content">
-
-                      {element.subcategoria.map((categorias:string)=>(
-                        <ul class="list-person-mobile">
-                            <li>
-                                <a>{categorias}</a>
-                            </li>
-                        </ul>
-
-                      ))}
+                      <div id={element.nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "")} class="service-content" style="display: none;">
+                        {element.subcategoria.map((categorias:any)=>(
+                          <ul class="list-person-mobile" >
+                              <li>
+                                  <a href={`/servicio/${categorias.referencia}`}>{categorias.nombre}</a>
+                              </li>
+                          </ul>
+                        ))}
                       </div>
                     </ul>
                 <hr/>
-
                   ))
                 }
-                
-            
-
               </div>
             </div>
-
-
-
-
             <div class="content-services">
               <div
                 class="content-services-title"
@@ -110,6 +99,15 @@ const { data } = Astro.props;
 
 
 <script type="text/javascript">
+  function openService(id){
+    
+    if(id.style.display=="block"){
+      id.style.display="none"
+    }else{
+      id.style.display="block"
+    }
+
+  }
   function SelectedMobile(action) {
     const modalServicios = document.getElementById("Services-modal-id-mobile");
     const flechaServicios = document.getElementById("arrow_drop-servicios");
@@ -118,6 +116,7 @@ const { data } = Astro.props;
     if (action === "servicios") {
       if (modalServicios) {
         if (modalServicios.style.display === "block") {
+
           // animacion modal
           modalServicios.classList.add("modalServis-animation-close");
           modalServicios.classList.remove("modalServis-animation-open");
@@ -136,6 +135,7 @@ const { data } = Astro.props;
           // animacion modal
           modalServicios.classList.add("modalServis-animation-open");
           modalServicios.classList.remove("modalServis-animation-close");
+
           modalServicios.style.display = "block";
         }
       }
@@ -180,13 +180,13 @@ const { data } = Astro.props;
           .getElementById("toggle-content")
           .classList.add("content-animation-revert");
         document.body.style.overflow = "hidden";
+
         navMobile.style.display = "flex";
       } else {
         // Realizar acciones si el checkbox no está marcado
-        document.getElementById("Services-modal-id-mobile").style.display =
-          "none";
+        document.getElementById("Services-modal-id-mobile").style.display = "none";
         document.getElementById("Pagos-modal-id-mobile").style.display = "none";
-        document.body.style.overflow = "";
+        document.body.style.overflow = "visible";
         navMobile.classList.add("nav-close");
         setTimeout(
           function () {

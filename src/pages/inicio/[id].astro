@@ -51,7 +51,7 @@ const images = [
       <h1 class="title">Nuestros servicios</h1>
       <div class="content-services">
         <div class="content-butons">
-          {data.servicios.map((element, index) => (
+          {data.servicios.map((element:any, index:number) => (
               <button
                 class={index == 0 ? "selected" : ""}
                 id={`button-${element.nombre.replace(" ", "-").toLowerCase()}`}
@@ -62,7 +62,7 @@ const images = [
             ))
           }
         </div>
-        {data.servicios.map((servicio, index) => (
+        {data.servicios.map((servicio:any, index:number) => (
             <div
               style={index == 0 ? "" : "display: none;"}
               id={servicio.nombre.replace(" ", "-").toLowerCase()}
@@ -85,8 +85,6 @@ const images = [
 
     <script type="text/javascript">
       function filtroservicios(categoria) {
-        console.log(categoria);
-        console.log("hi");
         // Oculta todos los carruseles
         const carruseles = [
           "protec-movilidad",
@@ -97,7 +95,6 @@ const images = [
 
         carruseles.forEach((id) => {
           const carrusel = document.getElementById(id);
-          console.log(carrusel);
           if (id === categoria) {
             carrusel.style.transition = "opacity 0.3s linear"; // Añade la transición
             carrusel.style.display = "block";
