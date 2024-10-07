@@ -10,55 +10,104 @@ export async function getStaticPaths() {
 
   return services.map((service) => ({
     params: {
-      id: `${service.slug.split('/').pop()}`, // Agregamos la categoría al ID
+      id: `${service.slug.split("/").pop()}`, // Agregamos la categoría al ID
     },
     props: { service, descripciones },
   }));
 }
 const { service, descripciones } = Astro.props;
 
-const prueba = descripciones.filter(element => service.slug.split('/')[0] === element.slug)
+const servicioSelected = descripciones.filter(
+  (element) => service.slug.split("/")[0] === element.slug
+);
 
-console.log(descripciones)
+// const {data} = descripciones
 
-
-// console.log(descripciones)
+console.log(service);
 ---
 
-
-<Layout title={"titulo"}>
+<Layout title="Protec Seguros">
   <main>
-    <Header data={prueba[0].data}/>
-    <!-- <div class="categoria">
-        <h1 transition:name={titulo} class="title">{titulo}</h1>
+    <Header data={servicioSelected[0].data} />
+    <div class="categoria">
+      <img src={service.data.imagenes[0]} alt="" />
+      <div class="content-service">
+        <h1 transition:name={service.data.id} class="title">
+          {service.data.titulo}
+        </h1>
+        <p>{service.data.descripcion}</p>
+      </div>
     </div>
-    <section class="section-services">
-        <h3 class="descripcion-servicio">{descripcion}</h3>
-    </section> -->
+    <div class="necesito">
+      <div class="content-necesito">
+        <h1 class="title">¿Lo necesito?</h1>
+        <p>{service.data.necesito}</p>
+      </div>
+      <img src={service.data.imagenes[1]} alt="" />
+    </div>
+    <div class="cubrimos">
+      <h1 class="title">¿Que cubrimos?</h1>
+
+
+    </div>
   </main>
 </Layout>
 
-
-
 <style>
-    .descripcion-servicio{
-        width: 50%;
-        text-align: center;
-    }
-  
-    .categoria{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #172052;
-        color: white;
-    }
-    .section-services{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2%;
-    }
-    
+
+  .cubrimos {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding: 5%;
+    background-color: #172052;
+    color: white;
+  }
+  .necesito img{
+    width: 30%;
+  }
+  .content-necesito{
+    width: 40%;
+    padding-right: 3%;
+    border-right: solid 0.4rem #5abeaa;
+    height: 300px;
+  }
+  .necesito {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5% 0%;
+    color: #172052;
+  }
+  .categoria img {
+    border-radius: 100%;
+    width: 500px;
+    height: 500px;
+  }
+  .content-service {
+    width: 40%;
+    padding-left: 3%;
+    border-left: solid 0.4rem #5abeaa;
+  }
+  .descripcion-servicio {
+    width: 50%;
+    text-align: center;
+  }
+  .categoria {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding: 5%;
+    background-color: #172052;
+    color: white;
+  }
+  .section-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+  }
 </style>

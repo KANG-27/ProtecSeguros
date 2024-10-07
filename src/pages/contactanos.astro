@@ -1,0 +1,112 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+
+---
+
+
+<Layout title="Protec Seguros">
+    <Header/>
+    <section id="redes-sociales" class="social-section">
+        <h2>Síguenos en Nuestras Redes Sociales</h2>
+        <div class="social-icons">
+          <a href="https://facebook.com/tuempresa" target="_blank" class="facebook">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://instagram.com/tuempresa" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com/company/tuempresa" target="_blank" class="linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/tuempresa" target="_blank" class="twitter">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+        </div>
+      </section>
+      
+</Layout>
+
+
+
+<style>
+    .cantactanos{
+        background-color: #172052;
+        color: white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    /* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.social-section {
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Social Icons styles */
+.social-icons a {
+  text-decoration: none;
+  font-size: 40px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Icon color and hover effect */
+.facebook {
+  color: #4267B2;
+}
+
+.facebook:hover {
+  color: #365899;
+  transform: scale(1.2);
+}
+
+.instagram {
+  color: #C13584;
+}
+
+.instagram:hover {
+  color: #e1306c;
+  transform: scale(1.2);
+}
+
+.linkedin {
+  color: #0077B5;
+}
+
+.linkedin:hover {
+  color: #005983;
+  transform: scale(1.2);
+}
+
+.twitter {
+  color: #1DA1F2;
+}
+
+.twitter:hover {
+  color: #1a91da;
+  transform: scale(1.2);
+}
+
+</style>

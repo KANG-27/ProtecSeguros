@@ -1,0 +1,128 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Protec Seguros">
+    <Header/>
+    <div class="nosotros-quienes-somos">
+        <div class="content-quienes-somos">
+            <h1 class="title">¿Quiénes somos?</h1>
+            <p>Somos una agencia, encaminada a orientar profesionalmente en el sector asegurador a nuestros clientes ofreciendo soluciones que garanticen la protección de sus familias y pa - trimonio; brindando acompañamiento en la gestión de sus riesgos, tanto personales como empresariales; avaladas por la expe - riencia de mas de 30 años de su fundadora LUZ MARINA RODRIGUEZ A.</p>
+            <h2>Más de 30 años de experiencia</h2>
+        </div>
+    </div>
+    <div class="nosotros-mision-vision">
+        <div class="nosotros-content-card">
+            <h1 class="title">Nuestra visión</h1>
+            <p>Ser una de las mejores agencias colocadoras en el sector asegurador con procesos totalmente optimizados y certificados que den total certeza de obtener un asesoramiento asertivo al final de la gestion. Líderes en servicio honorabilidad y cumplimiento a ordenes de nuestros clientes observando siempre los principios y valores que soportan nuestra filosofia corporativa</p>
+        </div>
+        <div class="nosotros-content-card">
+            <h1 class="title">Nuestra misión</h1>
+            <p>Cumplir con las exigencias y expectativas de cada una de las entidades aseguradoras que han puesto en nuestras manos el asesoramiento y colocacion de las soluciones para brindar un soporte idoneo a cada uno de nuestros clientes</p>
+        </div>
+    </div>
+    <div class="nosotros-logros">
+        <h1 class="title">Nuestros Logros</h1>
+        <div class="content-logros">
+            <div class="content-unico-logro">
+                <h2 class="title-logro">+30</h2>
+                <h2 class="second-title-logro">Años de historia</h2>
+                <p class="descripcion-logro">Asegurandonos de darte binestar y dandote seguridad por medio de serivicio seguro</p>
+            </div>
+            <div class="content-unico-logro">
+                <h2 class="title-logro">+500</h2>
+                <h2 class="second-title-logro">Cliestes satisfechos</h2>
+                <p class="descripcion-logro">Asegurandonos de darte binestar y dandote seguridad por medio de serivicio seguro</p>
+            </div>
+            <div class="content-unico-logro">
+                <h2 class="title-logro">+20</h2>
+                <h2 class="second-title-logro">Productos diferentes</h2>
+                <p class="descripcion-logro">Asegurandonos de darte binestar y dandote seguridad por medio de serivicio seguro</p>
+            </div>
+        </div>
+
+    </div>
+</Layout>
+
+
+<style>
+    .second-title-logro{
+        color: #5ABEAA;
+    }
+    .content-unico-logro h2{
+        color: #5ABEAA;
+        margin: 0%;
+        font-size: 30px;
+    }
+    .content-unico-logro{
+        text-align: center;
+        width: 25%;
+    }
+    .content-logros{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1%;
+        gap: 30px;
+        width: 100%;
+    }
+    .nosotros-logros h1{
+        margin-top: 0%;
+    }
+    .nosotros-logros{
+        padding: 7% 0%;
+        margin: 5% 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #172052;
+        color: white;
+    }
+    .nosotros-quienes-somos{
+        display: flex;
+        width: 100%;
+        background-color: #172052;
+        color: white;
+    }
+    .nosotros-content-card h1{
+        margin-top: 0%;
+    }
+    p{
+        font-size: 20px;
+    }
+    .nosotros-content-card{
+        padding: 5%;
+        margin: 5% 5% 0% 5%;
+        width: 50%;
+        color: #172052;
+        border-radius: 20px;
+        border: 1rem solid #5ABEAA;
+    }
+    .nosotros-mision-vision{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content-quienes-somos{
+        margin-top: 8%;
+        margin-bottom: 8%;
+        text-align: center;
+        margin-left: 5%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-quienes-somos h2 {
+        color: #5ABEAA;
+    }
+    .title {
+      font-size: 60px;
+    }
+
+</style>
