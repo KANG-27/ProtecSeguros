@@ -1,112 +1,246 @@
 ---
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-
-
 ---
 
-
 <Layout title="Protec Seguros">
-    <Header/>
-    <section id="redes-sociales" class="social-section">
-        <h2>Síguenos en Nuestras Redes Sociales</h2>
-        <div class="social-icons">
-          <a href="https://facebook.com/tuempresa" target="_blank" class="facebook">
-            <i class="fab fa-facebook-square"></i>
-          </a>
-          <a href="https://instagram.com/tuempresa" target="_blank" class="instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://linkedin.com/company/tuempresa" target="_blank" class="linkedin">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://twitter.com/tuempresa" target="_blank" class="twitter">
-            <i class="fab fa-twitter-square"></i>
-          </a>
+  <Header />
+  <section class="title-section">
+    <h1 class="title">Contactanos</h1>
+    <p class="descripcion">
+      Estamos aquí para ayudarte o Si tienes alguna duda, estamos disponibles
+    </p>
+  </section>
+  <section class="linea-atencion">
+    <h1 class="title-sub">Líneas de atención Ayudas Diagnósticas</h1>
+    <div class="contact-number">
+      <a href="https://wa.me/57315 2256143" target="_blank" class="whatsapp">
+        <div class="content-number">
+          <i class="fab fa-whatsapp whatsapp"></i>
+          +57 3102488475
         </div>
-      </section>
-      
+      </a>
+      <a href="https://wa.me/57315 2256143" target="_blank" class="whatsapp">
+        <div class="content-number">
+          <i class="fab fa-whatsapp whatsapp"></i>
+          +57 3102488475
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="email-contac">
+    <div class="contact-number">
+      <div class="content-number">protec@gmail.com</div>
+      <div class="content-number">protec@gmail.com</div>
+    </div>
+    <h1 class="title-sub">Atención por Correo Electrónico</h1>
+  </section>
+  <section id="redes-sociales" class="social-section">
+    <h1 class="title-sub">Síguenos en Nuestras Redes Sociales</h1>
+    <div class="social-icons">
+      <a
+        href="https://www.facebook.com/protecseguros.ltda.37"
+        target="_blank"
+        class="facebook"
+      >
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/protecsegurosltda/"
+        target="_blank"
+        class="instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.youtube.com/@protecseguros7005"
+        target="_blank"
+        class="youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </section>
 </Layout>
 
-
-
 <style>
-    .cantactanos{
-        background-color: #172052;
-        color: white;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+  .content-number:hover .whatsapp {
+    color: white;
+  }
+  .content-number:hover {
+    color: white;
+    background-color: #5abeaa;
+  }
+  .title-sub {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .descripcion {
+    font-size: large;
+  }
+  .title-section h1 {
+    margin-top: 0%;
+  }
+  .email-contac h1 {
+    width: 40%;
+    color: white;
+    text-align: center;
+  }
+
+  .email-contac {
+    background-color: #172052;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    padding: 7% 0%;
+  }
+
+  .contact-number {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 30px;
+    width: 35%;
+  }
+
+  .content-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    width: 85%;
+    color: #5abeaa;
+    padding: 5%;
+    border: 0.5rem solid #5abeaa;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .linea-atencion h1 {
+    width: 40%;
+    text-align: center;
+  }
+  .linea-atencion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 7% 0%;
+  }
+  .title-section {
+    background-color: #172052;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7% 0%;
+  }
+  .cantactanos {
+    background-color: #172052;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .social-section {
+    background-color: #fff;
+    padding: 7% 0%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Social Icons styles */
+  .social-icons a {
+    text-decoration: none;
+    font-size: 70px;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+  }
+
+  /* Icon color and hover effect */
+  .facebook {
+    color: #4267b2;
+  }
+
+  .facebook:hover {
+    color: #223e71;
+    transform: scale(1.2);
+  }
+
+  .instagram {
+    color: #e00f85;
+  }
+
+  .instagram:hover {
+    color: #a82853;
+    transform: scale(1.2);
+  }
+
+  .youtube {
+    color: red;
+  }
+
+  .youtube:hover {
+    color: #960202;
+    transform: scale(1.2);
+  }
+  .whatsapp {
+    text-decoration: none;
+    margin-right: 2%;
+  }
+
+  @media (max-width: 768px) {
+    .linea-atencion {
+      display: flex;
+      flex-direction: column;
     }
-    /* General styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.social-section {
-  background-color: #fff;
-  padding: 40px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.social-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Social Icons styles */
-.social-icons a {
-  text-decoration: none;
-  font-size: 40px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Icon color and hover effect */
-.facebook {
-  color: #4267B2;
-}
-
-.facebook:hover {
-  color: #365899;
-  transform: scale(1.2);
-}
-
-.instagram {
-  color: #C13584;
-}
-
-.instagram:hover {
-  color: #e1306c;
-  transform: scale(1.2);
-}
-
-.linkedin {
-  color: #0077B5;
-}
-
-.linkedin:hover {
-  color: #005983;
-  transform: scale(1.2);
-}
-
-.twitter {
-  color: #1DA1F2;
-}
-
-.twitter:hover {
-  color: #1a91da;
-  transform: scale(1.2);
-}
-
+    .email-contac {
+      display: flex;
+      flex-direction: column;
+      flex-direction: column-reverse;
+    }
+    .contact-number {
+      width: 60%;
+    }
+    .email-contac h1 {
+      width: 70%;
+    }
+    .linea-atencion h1 {
+      width: 70%;
+      text-align: center;
+    }
+  }
+  @media (max-width: 600px) {
+    .title {
+      font-size: 35px;
+    }
+    .title-sub {
+      font-size: 35px;
+    }
+    .descripcion {
+      text-align: center;
+    }
+    .contact-number {
+      font-size: large;
+    }
+  }
 </style>
