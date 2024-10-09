@@ -29,7 +29,7 @@ console.log(service);
 
 <Layout title="Protec Seguros">
   <main>
-    <Header data={servicioSelected[0].data} type={service.slug.split("/")[0]}/>
+    <Header data={servicioSelected[0].data} type={service.slug.split("/")[0]} />
     <div class="categoria">
       <img src={service.data.imagenes[0]} alt="" />
       <div class="content-service">
@@ -48,13 +48,12 @@ console.log(service);
     </div>
     <div class="cubrimos">
       <h1 class="title">¿Que cubrimos?</h1>
-      <CarrouselCubrimos data={service.data.prestaciones}/>
+      <CarrouselCubrimos data={service.data.prestaciones} />
     </div>
   </main>
 </Layout>
 
 <style>
-
   .cubrimos {
     display: flex;
     flex-direction: column;
@@ -65,10 +64,10 @@ console.log(service);
     background-color: #172052;
     color: white;
   }
-  .necesito img{
+  .necesito img {
     width: 30%;
   }
-  .content-necesito{
+  .content-necesito {
     width: 40%;
     padding-right: 3%;
     border-right: solid 0.4rem #5abeaa;
@@ -111,5 +110,63 @@ console.log(service);
     justify-content: center;
     align-items: center;
     margin-top: 2%;
+  }
+  @media (max-width: 1024px) {
+    .categoria img {
+      width: 350px;
+      height: 350px;
+    }
+    .title {
+      font-size: 40px;
+    }
+    .categoria {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media (max-width: 768px) {
+    .categoria img {
+      width: 250px;
+      height: 250px;
+    }
+    .title {
+      font-size: 30px;
+    }
+    .categoria {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+  @media (max-width: 468px) {
+
+    .title {
+      font-size: 30px;
+    }
+    .necesito{
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+    .necesito img {
+      width: 50%;
+    }
+    .categoria {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .content-service, .content-necesito{
+      text-align: center;
+      width: 100%;
+      border: none;
+    }
+    .content-necesito{
+      width: 80%;
+    }
+    .categoria img {
+      border-radius: 10%;
+      width: 90%;
+    }
   }
 </style>
