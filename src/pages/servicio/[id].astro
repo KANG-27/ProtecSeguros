@@ -2,6 +2,7 @@
 import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import CarrouselCubrimos from "../../components/CarrouselCubrimos.astro";
 
 export async function getStaticPaths() {
   // const servicios = await getCollection("services");
@@ -28,7 +29,7 @@ console.log(service);
 
 <Layout title="Protec Seguros">
   <main>
-    <Header data={servicioSelected[0].data} />
+    <Header data={servicioSelected[0].data} type={service.slug.split("/")[0]}/>
     <div class="categoria">
       <img src={service.data.imagenes[0]} alt="" />
       <div class="content-service">
@@ -47,8 +48,7 @@ console.log(service);
     </div>
     <div class="cubrimos">
       <h1 class="title">¿Que cubrimos?</h1>
-
-
+      <CarrouselCubrimos data={service.data.prestaciones}/>
     </div>
   </main>
 </Layout>
@@ -57,9 +57,11 @@ console.log(service);
 
   .cubrimos {
     display: flex;
-    gap: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
     justify-content: center;
-    padding: 5%;
+    padding: 2%;
     background-color: #172052;
     color: white;
   }

@@ -1,7 +1,7 @@
 ---
 import NavMobile from "./NavMobile.astro";
 
-const { data } = Astro.props;
+const { data, type } = Astro.props;
 ---
 
 <header>
@@ -87,7 +87,7 @@ const { data } = Astro.props;
       <a class="buton-content" href="/inicio/personas">
         <button
           class={`${
-            Astro.url.pathname.split("/").pop() === "personas"
+            Astro.url.pathname.split("/").pop() === "personas" || type =="personas"
               ? "butons-selection-section"
               : "butons-selection-section-empresas"
           }`}
@@ -98,7 +98,7 @@ const { data } = Astro.props;
       <a class="buton-content" href="/inicio/empresas">
         <button
           class={`${
-            Astro.url.pathname.split("/").pop() === "empresas"
+            Astro.url.pathname.split("/").pop() === "empresas"  || type =="empresas"
               ? "butons-selection-section"
               : "butons-selection-section-empresas"
           }`}

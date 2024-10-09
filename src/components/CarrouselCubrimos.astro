@@ -1,0 +1,130 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
+
+<section class="carousel" data-content={data.length}>
+  <div class="carousel-inner">
+    {
+      data.map((element: any, index: number) => (
+        <div class="content-carrousel">
+          <h2 class="number">{index + 1}</h2>
+          <div class="descripcion">
+            <span>{element}</span>
+
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="carousel-controls">
+    <span class="arrow material-symbols-outlined prev"> arrow_back </span>
+    <span class="arrow material-symbols-outlined next"> arrow_forward </span>
+  </div>
+</section>
+
+<script type="text/javascript">
+  document.addEventListener("astro:page-load", function () {
+    const carousels = document.querySelectorAll(".carousel");
+
+    carousels.forEach((carousel) => {
+      const totalItems = parseInt(carousel.getAttribute("data-content"));
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const slides = carousel.querySelector(".carousel-inner");
+        const carouselWidth = carousel.offsetWidth;
+
+        // Limitar el índice dentro del rango
+        currentIndex = (index + totalItems) % totalItems;
+
+        const offset = -currentIndex * carouselWidth;
+        slides.style.transform = `translateX(${offset}px)`;
+      }
+
+      function nextSlide() {
+        showSlide(currentIndex + 1);
+      }
+
+      function prevSlide() {
+        showSlide(currentIndex - 1);
+      }
+
+      showSlide(0);
+
+      const nextButton = carousel.querySelector(".next");
+      const prevButton = carousel.querySelector(".prev");
+
+      nextButton.addEventListener("click", nextSlide);
+      prevButton.addEventListener("click", prevSlide);
+
+      window.addEventListener("resize", () => showSlide(currentIndex));
+    });
+  });
+</script>
+
+<style>
+  .arrow {
+    font-size: 70px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  .number,
+  .arrow {
+    color: #5abeaa;
+  }
+  .descripcion{
+    max-width: 50%;
+  }
+  .descripcion,
+  .number {
+    font-size: 40px;
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ocultar los ítems que no están en la vista */
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+
+  .content-carrousel {
+    min-width: 100%; /* Asegurar que cada ítem ocupe el 100% del carrusel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 300px;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .control {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+
+  .control:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+</style>
