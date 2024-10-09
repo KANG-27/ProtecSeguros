@@ -9,7 +9,7 @@ prestaciones:
   - Atención médica domiciliaria.
   - Urgencias odontológicas domiciliarias.
 
-uso_servicio:
+usoServicio:
   - paso: Título del paso 1
     descripcion: Descripción detallada del paso.
   - paso: Título del paso 2

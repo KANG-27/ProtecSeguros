@@ -7,7 +7,7 @@ prestaciones:
   - Indemnización por cada cirugía ambulatoria.
   - Indemnización por atención de parto (pago doble del valor contratado).
 
-uso_servicio:
+usoServicio:
   - paso: Título del paso 1
     descripcion: Descripción detallada del paso.
   - paso: Título del paso 2

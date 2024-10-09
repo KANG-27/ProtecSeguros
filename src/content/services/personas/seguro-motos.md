@@ -11,7 +11,7 @@ prestaciones:
   - Asesoría jurídica vía telefónica o en el sitio del accidente.
   - Acompañamiento ante el tránsito o centro de conciliación.
 
-uso_servicio:
+usoServicio:
   - paso: Título del paso 1
     descripcion: Descripción detallada del paso.
   - paso: Título del paso 2

@@ -8,7 +8,7 @@ prestaciones:
   - Cancelacion de vuelos o viaje
   - Gastos por robo de documentos
 
-uso_servicio:
+usoServicio:
   - paso: Título del paso 1
     descripcion: Descripción detallada del paso.
   - paso: Título del paso 2

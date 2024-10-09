@@ -11,7 +11,7 @@ prestaciones:
   - Renta diaria por hospitalización
   - Hurto documentos
 
-uso_servicio:
+usoServicio:
   - paso: Título del paso 1
     descripcion: Descripción detallada del paso.
   - paso: Título del paso 2

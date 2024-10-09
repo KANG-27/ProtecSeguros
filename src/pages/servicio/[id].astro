@@ -50,10 +50,106 @@ console.log(service);
       <h1 class="title">¿Que cubrimos?</h1>
       <CarrouselCubrimos data={service.data.prestaciones} />
     </div>
+    <div class="uso-seguro">
+      <h1 class="title">¿Como hacer uso de mi seguro</h1>
+      <p class="descripcion">
+        Hacer una reclamación de seguro implica seguir un proceso específico
+        para garantizar que recibas la cobertura adecuada. Aquí te explico los
+        pasos generales:
+      </p>
+      <div class="content-uso-seguro">
+        <div class="content-paso">
+          <ol>
+            {
+              service.data.usoServicio.map((element, index) => (
+                <li
+                  class="title-descripcion"
+                  id={`paso-${index + 1}`}
+                >
+                  {element.paso}
+                </li>
+              ))
+            }
+          </ol>
+        </div>
+        <div class="content-absolute-descripcion">
+          {
+            service.data.usoServicio.map((element, index) => (
+              <div
+                class="content-descripcion"
+                id={`paso-${index + 1}`}
+                style={index != 1 ? "" : "display: none;"}
+              >
+                <h2>{element.paso}</h2>
+                <p>{element.descripcion}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>
 
+<script type="text/javascript">
+  document.addEventListener("click", function(event) {
+  // Verifica si el clic ocurrió en un elemento <li> con la clase 'title-descripcion'
+  if (event.target && event.target.classList.contains('title-descripcion')) {
+    const clickedElement = event.target;
+    const clickedId = clickedElement.id; // ID del elemento que fue clicado
+
+    // Selecciona todos los elementos <li> con la clase 'title-descripcion'
+    const allElements = document.querySelectorAll('.content-descripcion');
+
+    // Itera sobre todos los elementos y oculta los que no fueron clicados
+    allElements.forEach(element => {
+      if (element.id !== clickedId) {
+        element.style.display = 'none'; // Oculta otros elementos
+      } else {
+        element.style.display = 'block'; // Muestra el elemento clicado
+      }
+    });
+  }
+});
+
+</script>
+
 <style>
+  .content-absolute-descripcion {
+    width: 100%;
+  }
+  .content-paso {
+    width: 60%;
+  }
+  .content-descripcion {
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    background-color: #172052;
+    border-radius: 30px;
+    padding: 5%;
+    color: white;
+  }
+  .title-descripcion {
+    font-size: 30px;
+    /* padding-left: 20%;
+     */
+  }
+  .uso-seguro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .descripcion {
+    width: 50%;
+  }
+  .content-uso-seguro {
+    margin-top: 5%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+  }
   .cubrimos {
     display: flex;
     flex-direction: column;
@@ -67,7 +163,7 @@ console.log(service);
   .necesito img {
     width: 30%;
   }
-  .content-necesito {
+  .content-pasos {
     width: 40%;
     padding-right: 3%;
     border-right: solid 0.4rem #5abeaa;
@@ -139,11 +235,10 @@ console.log(service);
     }
   }
   @media (max-width: 468px) {
-
     .title {
       font-size: 30px;
     }
-    .necesito{
+    .necesito {
       display: flex;
       flex-direction: column;
       gap: 0px;
@@ -156,12 +251,13 @@ console.log(service);
       flex-direction: column-reverse;
       align-items: center;
     }
-    .content-service, .content-necesito{
+    .content-service,
+    .content-necesito {
       text-align: center;
       width: 100%;
       border: none;
     }
-    .content-necesito{
+    .content-necesito {
       width: 80%;
     }
     .categoria img {
