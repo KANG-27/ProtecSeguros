@@ -13,7 +13,7 @@ servicios:
         descripcion: lorem
         imagen: ""
       - nombre: RC Derivada decumplimiento
-        referencia: rc-derivada-decumplimiento
+        referencia: rc-derivada-cumplimiento
         descripcion: lorem
         imagen: ""
       - nombre: Cumplimiento
@@ -50,7 +50,7 @@ servicios:
         descripcion: lore
         imagen: ""
       - nombre: Salud Colectiva
-        referencia: bienes-patrimonio
+        referencia: salud-colectiva
         descripcion: lorem
         imagen: ""
       - nombre: Hogar Colectiva
@@ -62,7 +62,7 @@ servicios:
         descripcion: lorem
         imagen: ""
       - nombre: Autos Colectivo
-        referencia: responsabilidad-civil
+        referencia: autos-colectivo
         descripcion: lorem
         imagen: ""
       - nombre: Fraude de Empleados
