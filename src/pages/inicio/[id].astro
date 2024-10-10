@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
   return descripciones.map((descripcion) => ({
     params: { id: descripcion.slug },
-    props: { descripcion }
+    props: { descripcion },
   }));
 }
 const { descripcion } = Astro.props;
@@ -51,21 +51,38 @@ const images = [
       <h1 class="title">Nuestros servicios</h1>
       <div class="content-services">
         <div class="content-butons">
-          {data.servicios.map((element:any, index:number) => (
+          {
+            data.servicios.map((element: any, index: number) => (
               <button
                 class={index == 0 ? "selected" : ""}
-                id={`button-${element.nombre.replace(" ", "-").toLowerCase()}`}
-                onclick={`filtroservicios('${element.nombre.replace(" ", "-").toLowerCase()}')`}
+                id={`button-${element.nombre
+                  .trim()
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
+                onclick={`filtroservicios('${element.nombre
+                  .trim()
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}')`}
               >
                 {element.nombre}
               </button>
             ))
           }
         </div>
-        {data.servicios.map((servicio:any, index:number) => (
+        {
+          data.servicios.map((servicio: any, index: number) => (
             <div
               style={index == 0 ? "" : "display: none;"}
-              id={servicio.nombre.replace(" ", "-").toLowerCase()}
+              id={servicio.nombre
+                .trim()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/\s+/g, "-")
+                .toLowerCase()}
             >
               <Carousel data={servicio.subcategoria} type="servicios" />
             </div>
@@ -86,12 +103,29 @@ const images = [
     <script type="text/javascript">
       function filtroservicios(categoria) {
         // Oculta todos los carruseles
-        const carruseles = [
-          "protec-movilidad",
-          "protec-salud",
-          "protec-personas",
-          "protec-patrimonio",
-        ];
+
+        const path = window.location.pathname;
+        const segments = path.split("/").filter(Boolean);
+        const lastSegment = segments[segments.length - 1];
+        let carruseles;
+        console.log(lastSegment)
+        if (lastSegment == "personas") {
+          carruseles = [
+            "protec-movilidad",
+            "protec-salud",
+            "protec-personas",
+            "protec-patrimonio",
+          ];
+        } else {
+          carruseles = [
+            "protec-legal",
+            "protec-modelo-operativo",
+            "protec-talento-humano",
+            "protec-tecnologia",
+          ];
+        }
+
+        console.log(carruseles)
 
         carruseles.forEach((id) => {
           const carrusel = document.getElementById(id);
@@ -121,8 +155,6 @@ const images = [
       }
     </script>
   </main>
-
-
 </Layout>
 <style>
   .selected {
@@ -303,7 +335,7 @@ const images = [
   }
 
   @media (max-width: 768px) {
-    .content-butons{
+    .content-butons {
       gap: 0px;
     }
   }

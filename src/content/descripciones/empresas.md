@@ -2,50 +2,108 @@
 titulo: Empresas
 descripcion: Esta categoría está diseñada para proteger y garantizar el bienestar individual y familiar ante imprevistos que puedan afectar tu salud, seguridad o futuro financiero.
 servicios:
-  - nombre: Protec movilidad
+  - nombre: Protec Legal
     subcategoria:
-      - nombre: Plan Muévete Libre
-        referencia: plan-muevete-libre-empresas
+      - nombre: Protección legal
+        referencia: proteccion-legal
         descripcion: lore
-        imagen: https://www.segurossura.com.co/images/novedades/plan-muevete-libre.png
-      - nombre: Plan Utilitarios y Pesados
-        referencia: plan-utilitarios-pesados-empresas
+        imagen: ""
+      - nombre: Sostenibilidad legal
+        referencia: sostenibilidad-legal
         descripcion: lorem
-        imagen: https://integraldesegurosejecafetero.com/wp-content/uploads/2018/08/seguros-para-vehiculos-de-carga.jpg
-      - nombre: Seguro de Autos
-        referencia: seguro-autos-empresas
+        imagen: ""
+      - nombre: RC Derivada decumplimiento
+        referencia: rc-derivada-decumplimiento
         descripcion: lorem
-        imagen: https://i.ytimg.com/vi/xdp7eJWOPBY/maxresdefault.jpg
-      - nombre: Seguro de Bicis y Patinetas
-        referencia: seguro-bicis-patinetas​​-empresas
+        imagen: ""
+      - nombre: Cumplimiento
+        referencia: cumplimiento
         descripcion: lorem
-        imagen: https://roams.es/images/post/es_ES_insurance/aseguradoras-mapfre-seguro-bicicleta.jpg
-      - nombre: Seguro de Motos
-        referencia: seguro-motos-empresas
+        imagen: ""
+  - nombre: Protec Modelo Operativo
+    subcategoria:
+      - nombre: Transporte
+        referencia: transporte
+        descripcion: lore
+        imagen: ""
+      - nombre: Bienes y patrimonio
+        referencia: bienes-patrimonio
         descripcion: lorem
-        imagen: https://www.comparaonline.cl/blog-statics/cl/uploads/2011/02/cuanto-vale-el-soap-de-moto-442x280.jpg
-      - nombre: Seguro de Viaje
-        referencia: seguro-viaje-empresas
+        imagen: ""
+      - nombre: Ingenieria
+        referencia: ingenieria
         descripcion: lorem
-        imagen: https://sfestaticos.blob.core.windows.net/regional/assets/1103x711_BN_principal_21d83d7966.png
+        imagen: ""
+      - nombre: Cumplimiento
+        referencia: cumplimiento
+        descripcion: lorem
+        imagen: ""
+      - nombre: Responsabilidad Civil
+        referencia: responsabilidad-civil
+        descripcion: lorem
+        imagen: ""
 
+  - nombre: Protec Talento humano
+    subcategoria:
+      - nombre: Asegura tu talento
+        referencia: asegura-talento
+        descripcion: lore
+        imagen: ""
+      - nombre: Salud Colectiva
+        referencia: bienes-patrimonio
+        descripcion: lorem
+        imagen: ""
+      - nombre: Hogar Colectiva
+        referencia: hogar-colectiva
+        descripcion: lorem
+        imagen: ""
+      - nombre: Vida Grupo
+        referencia: vida-grupo
+        descripcion: lorem
+        imagen: ""
+      - nombre: Autos Colectivo
+        referencia: responsabilidad-civil
+        descripcion: lorem
+        imagen: ""
+      - nombre: Fraude de Empleados
+        referencia: fraude-empleados
+        descripcion: lorem
+        imagen: ""
+      - nombre: Pensión
+        referencia: pension
+        descripcion: lorem
+        imagen: ""
+      - nombre: Previsional de invalidez y sobrevivencia
+        referencia: previsional-invalidez-sobrevivencia
+        descripcion: lorem
+        imagen: ""
+      - nombre: Renta
+        referencia: renta
+        descripcion: lorem
+        imagen: ""
+  - nombre: Protec Tecnología
+    subcategoria:
+      - nombre: Seguro de Protección Digital
+        referencia: infidelidad-riesgos-financieros
+        descripcion: lore
+        imagen: ""
 imagenes:
-    - src: ../public/enfermeros.png
-      alt: "imagen3"
-    - src: ../public/PATINETAS.png
-      alt: "imagen5"
-    - src: ../public/PATINETAS.png
-      alt: "imagen5"
-    - src: ../public/PATINETAS.png
-      alt: "imagen5"
-    - src: ../public/PATINETAS.png
-      alt: "imagen5"
-    - src: ../public/PATINETAS.png
-      alt: "imagen5"
-    - src: ../public/PATINETAS.png
-      alt: "imagen5"
-    - src: ../public/PATINETAS.png
-      alt: "imagen5"
-    - src: ../public/PATINETAS.png
-      alt: "imagen5"
+  - src: ../public/enfermeros.png
+    alt: "imagen3"
+  - src: ../public/PATINETAS.png
+    alt: "imagen5"
+  - src: ../public/PATINETAS.png
+    alt: "imagen5"
+  - src: ../public/PATINETAS.png
+    alt: "imagen5"
+  - src: ../public/PATINETAS.png
+    alt: "imagen5"
+  - src: ../public/PATINETAS.png
+    alt: "imagen5"
+  - src: ../public/PATINETAS.png
+    alt: "imagen5"
+  - src: ../public/PATINETAS.png
+    alt: "imagen5"
+  - src: ../public/PATINETAS.png
+    alt: "imagen5"
 ---

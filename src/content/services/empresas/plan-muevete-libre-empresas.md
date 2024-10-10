@@ -22,6 +22,6 @@ imagenes:
   - ../../public/familia.png
   - ../../public/saludDos.png
   - ../../public/saludDos.png
-categoria: Protec movilidad
+categoria: Protec Legal
 subcategoria: empresas
 ---
