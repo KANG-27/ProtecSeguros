@@ -3,6 +3,8 @@ import Header from "../../components/Header.astro";
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import CarrouselCubrimos from "../../components/CarrouselCubrimos.astro";
+import CarouselConjuntoServices from "../../components/CarouselConjuntoServices.astro";
+import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
   // const servicios = await getCollection("services");
@@ -39,82 +41,104 @@ console.log(service);
         <p>{service.data.descripcion}</p>
       </div>
     </div>
-    <div class="necesito">
-      <div class="content-necesito">
-        <h1 class="title">¿Lo necesito?</h1>
-        <p>{service.data.necesito}</p>
-      </div>
-      <img src={service.data.imagenes[1]} alt="" />
-    </div>
-    <div class="cubrimos">
-      <h1 class="title">¿Que cubrimos?</h1>
-      <CarrouselCubrimos data={service.data.prestaciones} />
-    </div>
-    <div class="uso-seguro">
-      <h1 class="title">¿Como hacer uso de mi seguro</h1>
-      <p class="descripcion">
-        Hacer una reclamación de seguro implica seguir un proceso específico
-        para garantizar que recibas la cobertura adecuada. Aquí te explico los
-        pasos generales:
-      </p>
-      <div class="content-uso-seguro">
-        <div class="content-paso">
-          <ol>
-            {
-              service.data.usoServicio.map((element, index) => (
-                <li
-                  class="title-descripcion"
+    <!-- Carrousel cuando es multiple servicio -->
+    <div id="scroll-anchor" class="espacio" style="height: 150px; visibility: hidden;"></div>
+    {
+      service.data.conjuntoServicios && (
+        <div class="conjunto-servicios">
+          <h2 class="">Nuestros servicios</h2>
+          <CarouselConjuntoServices data={service.data.conjuntoServicios} />
+        </div>
+      )
+    }
+    {
+      service.data.necesito && (
+        <div class="necesito">
+          <div class="content-necesito">
+            <h1 class="title">¿Lo necesito?</h1>
+            <p>{service.data.necesito}</p>
+          </div>
+          <img src={service.data.imagenes[1]} alt="" />
+        </div>
+      )
+    }
+    {
+      service.data.prestaciones && (
+        <div class="cubrimos">
+          <h1 class="title">¿Que cubrimos?</h1>
+          <CarrouselCubrimos data={service.data.prestaciones} />
+        </div>
+      )
+    }
+    {
+      service.data.usoServicio && (
+        <div class="uso-seguro">
+          <h1 class="title">¿Como hacer uso de mi seguro</h1>
+          <p class="descripcion">
+            Hacer una reclamación de seguro implica seguir un proceso específico
+            para garantizar que recibas la cobertura adecuada. Aquí te explico
+            los pasos generales:
+          </p>
+          <div class="content-uso-seguro">
+            <div class="content-paso">
+              <ol>
+                {service.data.usoServicio.map((element, index) => (
+                  <li class="title-descripcion" id={`paso-${index + 1}`}>
+                    {element.paso}
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <div class="content-absolute-descripcion">
+              {service.data.usoServicio.map((element, index) => (
+                <div
+                  class="content-descripcion"
                   id={`paso-${index + 1}`}
+                  style={index != 1 ? "" : "display: none;"}
                 >
-                  {element.paso}
-                </li>
-              ))
-            }
-          </ol>
+                  <h2>{element.paso}</h2>
+                  <p>{element.descripcion}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div class="content-absolute-descripcion">
-          {
-            service.data.usoServicio.map((element, index) => (
-              <div
-                class="content-descripcion"
-                id={`paso-${index + 1}`}
-                style={index != 1 ? "" : "display: none;"}
-              >
-                <h2>{element.paso}</h2>
-                <p>{element.descripcion}</p>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </div>
+      )
+    }
+    <Footer/>
   </main>
 </Layout>
 
 <script type="text/javascript">
-  document.addEventListener("click", function(event) {
-  // Verifica si el clic ocurrió en un elemento <li> con la clase 'title-descripcion'
-  if (event.target && event.target.classList.contains('title-descripcion')) {
-    const clickedElement = event.target;
-    const clickedId = clickedElement.id; // ID del elemento que fue clicado
+  document.addEventListener("click", function (event) {
+    // Verifica si el clic ocurrió en un elemento <li> con la clase 'title-descripcion'
+    if (event.target && event.target.classList.contains("title-descripcion")) {
+      const clickedElement = event.target;
+      const clickedId = clickedElement.id; // ID del elemento que fue clicado
 
-    // Selecciona todos los elementos <li> con la clase 'title-descripcion'
-    const allElements = document.querySelectorAll('.content-descripcion');
+      // Selecciona todos los elementos <li> con la clase 'title-descripcion'
+      const allElements = document.querySelectorAll(".content-descripcion");
 
-    // Itera sobre todos los elementos y oculta los que no fueron clicados
-    allElements.forEach(element => {
-      if (element.id !== clickedId) {
-        element.style.display = 'none'; // Oculta otros elementos
-      } else {
-        element.style.display = 'block'; // Muestra el elemento clicado
-      }
-    });
-  }
-});
-
+      // Itera sobre todos los elementos y oculta los que no fueron clicados
+      allElements.forEach((element) => {
+        if (element.id !== clickedId) {
+          element.style.display = "none"; // Oculta otros elementos
+        } else {
+          element.style.display = "block"; // Muestra el elemento clicado
+        }
+      });
+    }
+  });
 </script>
 
 <style>
+  .conjunto-servicios h2{
+    font-size: 50px;
+  }
+  .conjunto-servicios{
+    margin: 5%;
+    margin-top: 0%;
+  }
   .content-absolute-descripcion {
     width: 100%;
   }
@@ -222,9 +246,15 @@ console.log(service);
     }
   }
   @media (max-width: 768px) {
+    .espacio{
+      height: 0% !important;
+    }
     .categoria img {
       width: 250px;
       height: 250px;
+    }
+    .conjunto-servicios h2{
+      font-size: 25px;
     }
     .title {
       font-size: 30px;
@@ -236,9 +266,7 @@ console.log(service);
     }
   }
   @media (max-width: 468px) {
-    .title {
-      font-size: 30px;
-    }
+    
     .necesito {
       display: flex;
       flex-direction: column;

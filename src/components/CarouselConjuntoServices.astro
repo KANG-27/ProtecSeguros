@@ -1,0 +1,224 @@
+---
+const { data } = Astro.props;
+
+console.log(data);
+
+// Agrupa los servicios en grupos de tres
+const groupedServices = [];
+for (let i = 0; i < data.length; i += 3) {
+  groupedServices.push(data.slice(i, i + 3));
+}
+---
+
+<div class="carousel-conjuntoServicios" data-content={groupedServices.length}>
+  <div class="carousel-inner-conjuntoServicios">
+    {
+      groupedServices.map((group) => (
+        <div class="carousel-group-conjuntoServicios">
+          {group.map((service: any) => (
+            <div class="carousel-item-conjuntoServicios">
+              <img src={service.imagen} alt="" />
+              <div class="content-carousel-item">
+                <div class="content-text-carrousel-item">
+                  <h3>{service.nombreConjunto}</h3>
+                  <p>{service.descripcionConjunto}</p>
+                </div>
+                <a href="/contactanos" class="content-contact">
+                  <button class="button-contact">¡Contáctanos!</button>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+  <div class="carousel-dots-conjuntoServicios">
+    {
+      groupedServices.map((_, index) => (
+        <span
+          class={
+            index + 1 == 1
+              ? "active dot-conjuntoServicios"
+              : "dot-conjuntoServicios"
+          }
+          onclick={`showSlideConjuntoServicios(${index})`}
+        />
+      ))
+    }
+  </div>
+</div>
+
+<script type="text/javascript">
+  let currentIndexConjuntoServicios = 0;
+  const totalIndexConjuntoServicios = document
+    .querySelector(".carousel-conjuntoServicios")
+    .getAttribute("data-content");
+
+  function showSlideConjuntoServicios(index) {
+    const slidesConjuntoServicios = document.querySelector(
+      ".carousel-inner-conjuntoServicios"
+    );
+    const scrollAnchor = document.querySelector("#scroll-anchor");
+    const visibleItemsConjuntoServicios = 1; // Mostramos un grupo de tres por vez
+
+    if (index < 0) {
+      currentIndexConjuntoServicios =
+        totalIndexConjuntoServicios + visibleItemsConjuntoServicios;
+    } else if (index >= totalIndexConjuntoServicios) {
+      currentIndexConjuntoServicios = 0;
+    } else {
+      currentIndexConjuntoServicios = index;
+    }
+
+    const offsetConjuntoServicios = -currentIndexConjuntoServicios * 100;
+    slidesConjuntoServicios.style.transform = `translateX(${offsetConjuntoServicios}%)`;
+    scrollAnchor.scrollIntoView({ behavior: 'smooth', block: "start" });
+
+    // Actualiza los puntos de navegación
+    const dots = document.querySelectorAll(".dot-conjuntoServicios");
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === currentIndexConjuntoServicios);
+    });
+  }
+
+  function nextSlideConjuntoServicios() {
+    showSlideConjuntoServicios(currentIndexConjuntoServicios + 1);
+  }
+
+  // Movimiento automático (opcional)
+  //   setInterval(nextSlideConjuntoServicios, 5000); // Cambia cada 5 segundos
+</script>
+
+<style>
+  .content-text-carrousel-item {
+    margin-bottom: 5%;
+  }
+  .content-text-carrousel-item h3 {
+    font-size: 25px;
+  }
+  .content-text-carrousel-item p {
+    font-size: 17px;
+  }
+  .content-contact {
+    width: 100%;
+  }
+  .button-contact {
+    font-size: larger;
+    color: white;
+    border: 0;
+    background-color: #5abeaa;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .content-carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin: 2% 0%;
+  }
+  .carousel-conjuntoServicios {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-inner-conjuntoServicios {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-group-conjuntoServicios {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-width: 100%;
+  }
+
+  .carousel-item-conjuntoServicios img {
+    width: 400px;
+    margin-right: 5%;
+  }
+  .carousel-item-conjuntoServicios {
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+    /* border: 1px solid #ddd; */
+    box-shadow: 10px 10px 10px rgb(188, 186, 186);
+    margin: 0% 7%;
+  }
+
+  .carousel-dots-conjuntoServicios {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .dot-conjuntoServicios {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    margin-top: 2%;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .dot-conjuntoServicios.active {
+    background-color: #5abeaa;
+  }
+
+  /* Estilos responsivos */
+  @media (max-width: 1024px) {
+    .carousel-item-conjuntoServicios {
+      margin: 1%;
+    }
+    .carousel-item-conjuntoServicios img {
+      width: 300px;
+    }
+    .content-text-carrousel-item h3 {
+      font-size: 22px;
+    }
+    .content-text-carrousel-item p {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 768px) {
+    .carousel-item-conjuntoServicios {
+      margin: 0%;
+    }
+    .carousel-item-conjuntoServicios img {
+      width: 200px;
+    }
+    .content-text-carrousel-item h3 {
+      font-size: 20px;
+    }
+    .content-text-carrousel-item p {
+      font-size: 12px;
+    }
+    .carousel-group-conjuntoServicios {
+      flex-direction: column;
+    }
+    .carousel-item-conjuntoServicios {
+      width: 100%;
+    }
+  }
+  @media (max-width: 425px) {
+    .carousel-item-conjuntoServicios {
+      display: flex;
+      flex-direction: column;
+    }
+    .carousel-item-conjuntoServicios img {
+      width: 100%;
+    }
+  }
+
+</style>

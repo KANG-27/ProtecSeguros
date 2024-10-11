@@ -28,6 +28,11 @@ const serviciosCollection = defineCollection({
     titulo: z.string(),
     descripcion: z.string(),
     necesito: z.string().optional(),
+    conjuntoServicios: z.array(z.object({
+      nombreConjunto: z.string(),
+      descripcionConjunto: z.string(),
+      imagen: z.string()
+    })).optional(),
     prestaciones: z.array(z.string()).optional(),
     usoServicio: z.array(z.object({
       paso: z.string(),
