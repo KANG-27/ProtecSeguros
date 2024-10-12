@@ -5,6 +5,7 @@ import Layout from "../../layouts/Layout.astro";
 import CarrouselCubrimos from "../../components/CarrouselCubrimos.astro";
 import CarouselConjuntoServices from "../../components/CarouselConjuntoServices.astro";
 import Footer from "../../components/Footer.astro";
+import FooterAzul from "../../components/FooterAzul.astro";
 
 export async function getStaticPaths() {
   // const servicios = await getCollection("services");
@@ -42,9 +43,15 @@ console.log(service);
       </div>
     </div>
     <!-- Carrousel cuando es multiple servicio -->
-    <div id="scroll-anchor" class="espacio" style="height: 150px; visibility: hidden;"></div>
+
     {
       service.data.conjuntoServicios && (
+      <div
+      id="scroll-anchor"
+      class="espacio"
+      style="height: 150px; visibility: hidden;"
+    >
+    </div>
         <div class="conjunto-servicios">
           <h2 class="">Nuestros servicios</h2>
           <CarouselConjuntoServices data={service.data.conjuntoServicios} />
@@ -66,6 +73,7 @@ console.log(service);
       service.data.prestaciones && (
         <div class="cubrimos">
           <h1 class="title">¿Que cubrimos?</h1>
+          <h4>Nos preocupamos por ti. Por eso, te mostramos las coberturas de cada servicio, asegurando que todo lo que importa esté siempre protegido. A continuación, descubre en detalle lo que incluye este servicio.</h4>
           <CarrouselCubrimos data={service.data.prestaciones} />
         </div>
       )
@@ -105,7 +113,7 @@ console.log(service);
         </div>
       )
     }
-    <Footer/>
+    <FooterAzul />
   </main>
 </Layout>
 
@@ -132,13 +140,19 @@ console.log(service);
 </script>
 
 <style>
-  .content-necesito{
+  .content-necesito {
     width: 50%;
   }
-  .conjunto-servicios h2{
+  h4{
+    text-align: center;
+    margin: 2% 0%;
+    font-weight: 400;
+    width: 50%;
+  }
+  .conjunto-servicios h2 {
     font-size: 50px;
   }
-  .conjunto-servicios{
+  .conjunto-servicios {
     margin: 5%;
     margin-top: 0%;
   }
@@ -160,14 +174,13 @@ console.log(service);
   .title-descripcion {
     font-size: 30px;
     cursor: pointer;
-    /* padding-left: 20%;
-     */
   }
   .uso-seguro {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 7%;
   }
   .descripcion {
     width: 50%;
@@ -182,7 +195,7 @@ console.log(service);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
     justify-content: center;
     padding: 2%;
     background-color: #172052;
@@ -204,7 +217,7 @@ console.log(service);
     justify-content: center;
     justify-content: center;
     width: 100%;
-    padding: 5% 0%;
+    padding: 2% 0%;
     color: #172052;
   }
   .categoria img {
@@ -250,14 +263,14 @@ console.log(service);
     }
   }
   @media (max-width: 768px) {
-    .espacio{
+    .espacio {
       height: 0% !important;
     }
     .categoria img {
       width: 250px;
       height: 250px;
     }
-    .conjunto-servicios h2{
+    .conjunto-servicios h2 {
       font-size: 25px;
     }
     .title {
@@ -270,7 +283,6 @@ console.log(service);
     }
   }
   @media (max-width: 468px) {
-    
     .necesito {
       display: flex;
       flex-direction: column;

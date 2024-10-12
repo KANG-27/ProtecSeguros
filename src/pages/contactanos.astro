@@ -1,10 +1,11 @@
 ---
+import FooterAzul from "../components/FooterAzul.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Protec Seguros">
-  <Header data="non" type={Astro.url.pathname.split("/").pop()}/>
+  <Header data="non" type={Astro.url.pathname.split("/").pop()} />
   <section class="title-section">
     <h1 class="title">Contactanos</h1>
     <p class="descripcion">
@@ -61,6 +62,7 @@ import Layout from "../layouts/Layout.astro";
       </a>
     </div>
   </section>
+  <FooterAzul />
 </Layout>
 
 <style>
@@ -209,6 +211,16 @@ import Layout from "../layouts/Layout.astro";
   }
 
   @media (max-width: 768px) {
+    .title {
+      font-size: 35px;
+    }
+    .title-sub{
+      font-size: 20px !important;
+    }
+
+    p {
+      font-size: medium !important;
+    }
     .linea-atencion {
       display: flex;
       flex-direction: column;
