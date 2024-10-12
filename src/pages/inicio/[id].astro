@@ -20,14 +20,14 @@ const { data } = descripcion;
 const images = [
   "https://reclamodeterceros.com/wp-content/uploads/2023/04/Sura-Reclamo-de-Terceros-.webp",
   "https://1000marcas.net/wp-content/uploads/2019/12/Logo-Mapfre-tumb.png",
-  "https://serviciospluss.com/wp-content/uploads/2022/01/logo-colpatria.png",
+  "https://www.elempleo.com/co/sitio-empresarial/CompanySites/axa-colpatria/resources/images/logo-social.png",
   "https://seeklogo.com/images/A/aseguradora-solidario-de-colombia-logo-0285B0DF5D-seeklogo.com.png",
 ];
 ---
 
 <Layout title="Protec Seguros">
   <main>
-    <Header data={data} />
+    <Header data={data} type={Astro.url.pathname.split("/").pop()}/>
     <div class="nosotros">
       <div class="nosotros-content">
         <h1 class="title">Siempre estamos contigo</h1>

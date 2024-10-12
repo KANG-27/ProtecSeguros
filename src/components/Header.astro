@@ -19,31 +19,33 @@ const { data, type } = Astro.props;
                   Inicio
                 </a>
               </li>
-              <li class="list-nav-content-style titulo-servicios">
-                <a>Servicios</a>
-                <div class="modal" id="Services-modal-id">
-                  <div class="list-service">
-                    {data?.servicios.map((element: any, index: number) => (
-                      <ul
-                        class={`list-service-content ${index === data.servicios.length - 1 ? "" : "list-service-content-line"}`}
-                      >
-                        <li class="content-servis">
-                          <h1 class="title-services">{element.nombre}</h1>
-                          {element.subcategoria.map((categoria: any) => (
-                            <ul class="services-list">
-                              <li class="categoria-services">
-                                <a href={`/servicio/${categoria.referencia}`}>
-                                  {categoria.nombre}
-                                </a>
-                              </li>
-                            </ul>
-                          ))}
-                        </li>
-                      </ul>
-                    ))}
+              {data.servicios && (
+                <li class="list-nav-content-style titulo-servicios">
+                  <a>Servicios</a>
+                  <div class="modal" id="Services-modal-id">
+                    <div class="list-service">
+                      {data?.servicios.map((element: any, index: number) => (
+                        <ul
+                          class={`list-service-content ${index === data.servicios.length - 1 ? "" : "list-service-content-line"}`}
+                        >
+                          <li class="content-servis">
+                            <h1 class="title-services">{element.nombre}</h1>
+                            {element.subcategoria.map((categoria: any) => (
+                              <ul class="services-list">
+                                <li class="categoria-services">
+                                  <a href={`/servicio/${categoria.referencia}`}>
+                                    {categoria.nombre}
+                                  </a>
+                                </li>
+                              </ul>
+                            ))}
+                          </li>
+                        </ul>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              )}
 
               <li class="list-nav-content-style titulo-pagos">
                 <a class="">Paga tu póliza</a>
@@ -82,12 +84,13 @@ const { data, type } = Astro.props;
   </section>
 </header>
 {
-  data && (
+  type && (
     <div class="content-butons-selection-section">
       <a class="buton-content" href="/inicio/personas">
         <button
           class={`${
-            Astro.url.pathname.split("/").pop() === "personas" || type =="personas"
+            Astro.url.pathname.split("/").pop() === "personas" ||
+            type == "personas"
               ? "butons-selection-section"
               : "butons-selection-section-empresas"
           }`}
@@ -98,7 +101,8 @@ const { data, type } = Astro.props;
       <a class="buton-content" href="/inicio/empresas">
         <button
           class={`${
-            Astro.url.pathname.split("/").pop() === "empresas"  || type =="empresas"
+            Astro.url.pathname.split("/").pop() === "empresas" ||
+            type == "empresas"
               ? "butons-selection-section"
               : "butons-selection-section-empresas"
           }`}
