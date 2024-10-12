@@ -2,6 +2,7 @@
 id: seguro-autos
 titulo: Seguro de autos
 descripcion: Por medio de tu movilidad realizas las actividades de tu vida cotidiana. Por eso, estamos contigo para que te desplaces de forma segura sintiéndote acompañado y ahorrando tiempo y dinero. En SURA tenemos soluciones que se adaptan a los medios que escojas para tus re​corridos, reconociendo que, más que asegurar tu vehículo, cuidamos tu vida, la de quienes te encuentras en la vía y el patrimonio que has construido. Todos nuestros planes te brindan el pago a los afectados por los daños que les causes en un choque o accidente (si tuviste alguna responsabilidad).
+necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.
 prestaciones: 
   - Pagar por los gastos necesarios para trámites de defensa judicial
   - Conductor profesional​ cuando no puedas manejar por una enfermedad imprevista

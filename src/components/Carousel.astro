@@ -52,7 +52,6 @@ const {data, type}= Astro.props
       // Función para obtener la cantidad de ítems visibles en función del tamaño del viewport
       function getVisibleItems() {
         const carouselWidth = carousel.offsetWidth;
-        console.log(carousel.offsetWidth)
         const itemWidth = carouselData.tipo == "servicios" ? window.screen.width <= 425 ? 350: 520 : 350; // Ancho de cada tarjeta
         // const itemWidth = 520; // Ancho de cada tarjeta
         return Math.floor(carouselWidth / itemWidth);

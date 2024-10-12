@@ -2,6 +2,7 @@
 id: poliza-salud
 titulo: Poliza de salud
 descripcion: Con un Seguro de Salud permaneces tranquilo porque sabes que tienes acceso ilimitado a servicios que no solo complementan tu Plan Obligatorio, s​​ino que además te permiten disfrutar de atenciones exclusivas como consultar directamente a un médico especialista o realizar exámenes de imagenología o radiología, sin necesidad de esperar una autorización por parte del médico general. ¿Y eso cómo te beneficia?, sencillo. tienes cobertura de alta calidad en ayudas diagnósticas de laboratorio, imagenología o radiología,​ prótesis y trasplantes,  además cuentas con tratamientos ambulatorios en caso de que requieras una diálisis o de que seas diagnosticado con enfermedades de alto costo​.​​
+necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.
 prestaciones: 
   - Hospitalizaciones psiquiátricas
   - Transplantes

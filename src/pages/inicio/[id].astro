@@ -108,7 +108,6 @@ const images = [
         const segments = path.split("/").filter(Boolean);
         const lastSegment = segments[segments.length - 1];
         let carruseles;
-        console.log(lastSegment)
         if (lastSegment == "personas") {
           carruseles = [
             "protec-movilidad",
@@ -124,8 +123,6 @@ const images = [
             "protec-tecnologia",
           ];
         }
-
-        console.log(carruseles)
 
         carruseles.forEach((id) => {
           const carrusel = document.getElementById(id);

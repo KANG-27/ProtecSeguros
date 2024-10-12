@@ -81,7 +81,7 @@ servicios:
         descripcion: Con un Seguro de Vida puedes conservar el bienestar y la tranquilidad tuya y de tu familia, además te brindamos un respaldo ecnonómico inmediato frente a las situaciones inesperadas cubiertas por este seguro. 
         imagen: ../public/saludDos.png
       - nombre: Seguro de Educación
-        referencia: seguro-educación
+        referencia: seguro-educacion
         descripcion: Con el Seguro de Educación estructuras un plan de pagos para construir un capital con el que puedas cubrir los costos del plan educativo q​ue quieras asegurar para ti o para tus seres queridos en el futuro.
         imagen: ../public/saludDos.png
       - nombre: Seguro de Exequias
@@ -97,7 +97,7 @@ servicios:
         descripcion: Sabemos lo importante que ​es tu calidad de vida y la de tus seres queridos, por eso contamos con diferentes alternativas para acompañarte cuando culmines tu etapa laboral o en la realización de tus sueños en cualquier momento​. Ingresa a cada ​plan que te ofrecemos y escoge el que más se acomode a tus necesidades y metas.​​
         imagen: ../public/saludDos.png
       - nombre: Seguro de Vida
-        referencia: Seguro-vida
+        referencia: seguro-vida
         descripcion: Obtener y conservar tu independencia económica ante cualquier imprevisto es importante para ti​, al igual que contar con un ahorro para cumplir tus sueños ​​​y los de tus seres queridos.​
         imagen: ../public/saludDos.png
   - nombre: Protec patrimonio
@@ -108,7 +108,7 @@ servicios:
         imagen: ../public/saludDos.png
       - nombre: Seguro de Arrendamiento
         referencia: seguro-arrendamiento
-        descripcion: Sabemos la tranquilidad que te genera saber que cada mes cuentas con el dinero que te pagan los inquilinos de tu propiedad, pero cuando no sea así, ¡no te preocupes! Tenemos la solución para que nunca dejes de recibir tus ingresos.​​​​​​​​​​
+        descripcion: Sabemos la tranquilidad que te genera saber que cada mes cuentas con el dinero que te pagan los inquilinos de tu propiedad, pero cuando no sea así, ¡no te preocupes! Tenemos la solución para que nunca dejes de recibir tus ingresos.
         imagen: ../public/saludDos.png
       - nombre: Plan Inversión Protegida
         referencia: plan-inversion-protegida
