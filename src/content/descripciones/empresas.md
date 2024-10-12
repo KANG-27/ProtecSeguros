@@ -35,7 +35,7 @@ servicios:
         descripcion: lorem
         imagen: ""
       - nombre: Cumplimiento
-        referencia: cumplimiento
+        referencia: cumplimiento-operativo
         descripcion: lorem
         imagen: ""
       - nombre: Responsabilidad Civil
