@@ -1,7 +1,7 @@
 ---
 id: bienes-patrimonio
 titulo: Bienes y patrimonio
-descripcion: Acompañamos al empresario en la gestión de su talento humano y le damos acceso a servicios que apalancan la productividad de su negocio y el bienestar de sus empleados.
+descripcion: La protección del patrimonio de tu empresa es fundamental para asegurar su continuidad y crecimiento. Nuestras pólizas para bienes y patrimonio están diseñadas para cubrir tus activos más importantes, como instalaciones físicas, mobiliario, equipos tecnológicos y maquinaria, ante riesgos como incendios, explosiones, robos, daños por agua y desastres naturales. Además, ofrecemos coberturas personalizables para que puedas adaptarlas a las necesidades específicas de tu empresa, sin importar su tamaño o sector. Nuestro objetivo es minimizar el impacto financiero de cualquier eventualidad, permitiéndote enfocarte en lo más importante el desarrollo de tu negocio.
 
 conjuntoServicios:
   - nombreConjunto: Seguro Multirriesgo Corporativo

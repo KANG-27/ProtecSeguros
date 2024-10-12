@@ -1,7 +1,7 @@
 ---
 id: cumplimiento
 titulo: Cumplimiento
-descripcion: Acompañamos al empresario en la gestión de su talento humano y le damos acceso a servicios que apalancan la productividad de su negocio y el bienestar de sus empleados.
+descripcion: El seguro de cumplimiento es una garantía esencial en la ejecución de contratos tanto públicos como privados. Ofrecemos una amplia gama de pólizas que cubren el riesgo de incumplimiento por parte de contratistas, proveedores o socios comerciales, protegiendo a las partes involucradas contra posibles pérdidas económicas. Nuestras coberturas incluyen contratos de obra, suministro, prestación de servicios y concesiones, garantizando que las obligaciones pactadas se cumplan en tiempo y forma. Este servicio brinda tranquilidad a las empresas al reducir el riesgo financiero y permitir relaciones comerciales más seguras y transparentes. Además, contamos con soluciones ajustadas a las exigencias legales del mercado local y nacional.
 
 
 conjuntoServicios:

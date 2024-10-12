@@ -24,23 +24,23 @@ servicios:
     subcategoria:
       - nombre: Transporte
         referencia: transporte
-        descripcion: lore
+        descripcion: Ofrecemos seguros diseñados para proteger cargas y mercancías en tránsito, ya sea por vía terrestre, marítima o aérea. Nuestro servicio garantiza la cobertura ante daños, pérdidas o robos, minimizando riesgos y asegurando que tu negocio siga operando sin interrupciones.
         imagen: ""
       - nombre: Bienes y patrimonio
         referencia: bienes-patrimonio
-        descripcion: lorem
+        descripcion: Protege los activos esenciales de tu empresa o negocio con nuestras pólizas personalizadas. Aseguramos tus instalaciones, equipos y propiedades ante riesgos como incendios, robos o desastres naturales, para que puedas enfocarte en crecer sin preocupaciones.
         imagen: ""
       - nombre: Ingenieria
         referencia: ingenieria
-        descripcion: lorem
+        descripcion: Aseguramos proyectos de construcción y obras civiles en todas sus fases. Nuestras coberturas incluyen desde riesgos durante la construcción hasta equipos de maquinaria, garantizando la protección necesaria para evitar pérdidas económicas imprevistas.
         imagen: ""
       - nombre: Cumplimiento
         referencia: cumplimiento-operativo
-        descripcion: lorem
+        descripcion: Ofrecemos seguros de cumplimiento que garantizan la ejecución de contratos públicos y privados. Cubrimos posibles incumplimientos por parte de contratistas o proveedores, brindando tranquilidad tanto a las empresas contratantes como a las contratadas.
         imagen: ""
       - nombre: Responsabilidad Civil
         referencia: responsabilidad-civil
-        descripcion: lorem
+        descripcion: Protege a tu empresa frente a reclamaciones por daños a terceros. Nuestras pólizas de responsabilidad civil cubren incidentes que puedan afectar a personas o propiedades durante la operación de tu negocio, reduciendo riesgos financieros y legales.
         imagen: ""
 
   - nombre: Protec Talento humano

@@ -13,7 +13,10 @@ const {data, type}= Astro.props
             <h3 class="protec-card">Protec</h3>
             <h3>{element.nombre}</h3>
             <p class="description-card-services">{element.descripcion}</p>
-            <a href={`/servicio/${element.referencia}`}>
+            <a href={`/servicio/${element.referencia.trim()
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")
+                  .replace(/\s+/g, "-")}`}>
               <div class="content-contact">
                 <button class="button-contact-more">Conoce más</button>
               </div>

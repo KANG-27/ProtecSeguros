@@ -1,7 +1,7 @@
 ---
 id: transporte
 titulo: Transporte
-descripcion: Acompañamos al empresario en la gestión de su talento humano y le damos acceso a servicios que apalancan la productividad de su negocio y el bienestar de sus empleados.
+descripcion: Nuestro seguro de transporte está diseñado para brindar protección integral a las mercancías y cargas durante su tránsito, ya sea por vía terrestre, aérea o marítima, tanto a nivel nacional como internacional. Sabemos que imprevistos como robos, accidentes, fenómenos naturales o daños en la carga pueden generar grandes pérdidas financieras. Por eso, nuestra cobertura asegura el valor de las mercancías desde el momento de su despacho hasta su destino final. Adicionalmente, ofrecemos pólizas específicas para transporte de mercancías peligrosas, refrigeradas o de alto valor, garantizando tranquilidad para los operadores logísticos y empresas que dependen de la distribución eficiente de sus productos.
 
 conjuntoServicios:
   - nombreConjunto: Seguro de Transporte para Agentes de Carga

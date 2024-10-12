@@ -1,7 +1,7 @@
 ---
 id: ingenieria
 titulo: Ingemiería
-descripcion: Acompañamos al empresario en la gestión de su talento humano y le damos acceso a servicios que apalancan la productividad de su negocio y el bienestar de sus empleados.
+descripcion: En proyectos de construcción y obras civiles, sabemos que los riesgos están presentes en cada etapa. Ofrecemos seguros especializados en ingeniería que cubren desde la fase de planificación hasta la entrega final, protegiendo tanto la infraestructura como los equipos y la maquinaria utilizada. Nuestras pólizas abarcan daños materiales, errores técnicos, robos y responsabilidad civil frente a terceros. También incluimos opciones específicas para construcción de obras civiles, instalaciones industriales y energéticas, y proyectos de ingeniería de alto riesgo. Con nuestras coberturas, aseguramos que puedas completar tus proyectos dentro del tiempo y presupuesto estimado, minimizando imprevistos que puedan afectar su ejecución.
 
 conjuntoServicios:
   - nombreConjunto: Seguro de Montaje

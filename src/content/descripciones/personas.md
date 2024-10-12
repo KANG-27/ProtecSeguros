@@ -17,7 +17,7 @@ servicios:
         descripcion: Por medio de tu movilidad realizas las actividades de tu vida cotidiana. Por eso, estamos contigo para que te desplaces de forma segura sintiéndote acompañado y ahorrando tiempo y dinero.
         imagen: https://i.ytimg.com/vi/xdp7eJWOPBY/maxresdefault.jpg
       - nombre: Seguro de Bicis y Patinetas
-        referencia: seguro-bicis-patinetas​
+        referencia: seguro-bicis-patinetas
         descripcion: Te acompañamos si tu bici o patineta tiene una pérdida total por robo o daños y si tienes un incidente o sufres un accidente estando solo contra un objeto o persona. Para ello, activamos las asistencias que tenemos a tu disposición.
         imagen: https://roams.es/images/post/es_ES_insurance/aseguradoras-mapfre-seguro-bicicleta.jpg
       - nombre: Seguro de Motos
