@@ -36,8 +36,8 @@ const {data, type}= Astro.props
    
   </div>
   <div class="carousel-controls">
-    <button class="control prev">❮</button>
-    <button class="control next">❯</button>
+    <span class="arrow material-symbols-outlined prev"> arrow_back </span>
+    <span class="arrow material-symbols-outlined next"> arrow_forward </span>
   </div>
 </div>
 
@@ -107,6 +107,17 @@ const {data, type}= Astro.props
 
 
 <style>
+  .arrow {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background-color: white;
+    border-radius: 100%;
+    color:#5abeaa;
+  }
   .protec-card{
     color:#5abeaa
   }
@@ -168,6 +179,7 @@ const {data, type}= Astro.props
   .carousel-inner {
     display: flex;
     gap: 50px;
+    margin: 0% 2%;
     align-items: center;
     transition: transform 0.5s ease;
   }
@@ -218,6 +230,9 @@ const {data, type}= Astro.props
   @media (max-width: 768px) {
     .carousel-item {
       min-width: 90%; /* Mostrar 1 imagen en pantallas pequeñas */
+    }
+    .arrow{
+      font-size: 35px;
     }
   }
 

@@ -27,7 +27,7 @@ const images = [
 
 <Layout title="Protec Seguros">
   <main>
-    <Header data={data} type={Astro.url.pathname.split("/").pop()}/>
+    <Header data={data} type={Astro.url.pathname.split("/").pop()} />
     <div class="nosotros">
       <div class="nosotros-content">
         <h1 class="title">Siempre estamos contigo</h1>
@@ -39,9 +39,13 @@ const images = [
           avaladas por la experiencia de más de 30 años de su fundadora LUZ
           MARINA RODRIGUEZ A.
         </p>
-        <a href="/nosotros" class="content-contact">
-          <button class="button-contact-more">Conoce más sobre nosotros</button>
-        </a>
+        <div class="space-content-contact">
+          <a href="/nosotros" class="content-contact">
+            <button class="button-contact-more"
+              >Conoce más sobre nosotros</button
+            >
+          </a>
+        </div>
       </div>
       <div class="imagenes-carrusel">
         <CarouselInicio data={data.imagenes} />
@@ -154,6 +158,12 @@ const images = [
   </main>
 </Layout>
 <style>
+  .description {
+      font-size: 20px;
+    }
+  .space-content-contact{
+    margin-top: 5%;
+  }
   .selected {
     color: #5abeaa !important;
     border-bottom: 2px solid #5abeaa !important; /* Añade la línea debajo del botón */

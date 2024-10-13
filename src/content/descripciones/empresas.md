@@ -55,7 +55,7 @@ servicios:
         imagen: ""
       - nombre: Hogar Colectiva
         referencia: hogar-colectiva
-        descripcion: Ofrezca a sus empleados la oportunidad de contar con un seguro de vida que les permita tener bienestar y tranquilidad.
+        descripcion: Protege las viviendas de grupos o comunidades bajo una misma póliza, brindando cobertura integral para inmuebles y bienes ante imprevistos como daños, robos o desastres, asegurando la tranquilidad de todos los miembros.
         imagen: ""
       - nombre: Vida Grupo
         referencia: vida-grupo
@@ -90,20 +90,6 @@ servicios:
 imagenes:
   - src: ../public/enfermeros.png
     alt: "imagen3"
-  - src: ../public/PATINETAS.png
-    alt: "imagen5"
-  - src: ../public/PATINETAS.png
-    alt: "imagen5"
-  - src: ../public/PATINETAS.png
-    alt: "imagen5"
-  - src: ../public/PATINETAS.png
-    alt: "imagen5"
-  - src: ../public/PATINETAS.png
-    alt: "imagen5"
-  - src: ../public/PATINETAS.png
-    alt: "imagen5"
-  - src: ../public/PATINETAS.png
-    alt: "imagen5"
   - src: ../public/PATINETAS.png
     alt: "imagen5"
 ---

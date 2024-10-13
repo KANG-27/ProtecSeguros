@@ -36,41 +36,51 @@ const servicioSelected = descripciones.filter(
         <h1 transition:name={service.data.id} class="title">
           {service.data.titulo}
         </h1>
-        <p>{service.data.descripcion}</p>
+        <p class="descripcion">{service.data.descripcion}</p>
+        <div class="space-content-contact">
+          <a href="/nosotros" class="content-contact">
+            <button class="button-contact-more"
+              >Contactanos y adquierelo</button
+            >
+          </a>
+        </div>
       </div>
     </div>
     <!-- Carrousel cuando es multiple servicio -->
 
     {
-      service.data.conjuntoServicios && (
-      <div
-      id="scroll-anchor"
-      class="espacio"
-      style="height: 150px; visibility: hidden;"
-    >
-    </div>
+      service.data.conjuntoServicios ?
+      <div id="scroll-anchor" class="espacio" style="height: 150px; visibility: hidden;" > </div>
         <div class="conjunto-servicios">
           <h2 class="">Nuestros servicios</h2>
           <CarouselConjuntoServices data={service.data.conjuntoServicios} />
-        </div>
-      )
+        </div>:
+        <>
+            {service.slug.split("/")[0] == "personas"?
+                <div class="necesito">
+                  <div class="content-necesito">
+                    <h1 class="title">¿Por qué contar con este respaldo?</h1>
+                    <p class="descripcion">Contar con un seguro es una decisión fundamental en el mundo actual. La vida puede sorprenderte con imprevistos, y estar preparado para afrontarlos es crucial para tu tranquilidad. Este seguro está diseñado para proteger tu bienestar y el de tus seres queridos. Desde la cobertura de tu hogar y bienes personales hasta la salud y responsabilidad civil, cada aspecto está pensado para ofrecerte seguridad. En momentos de crisis, tener un respaldo económico puede marcar la diferencia, permitiéndote recuperarte más rápidamente. Elegir este seguro es un paso proactivo hacia un futuro más seguro y estable, asegurando que tú y tu familia estén protegidos frente a cualquier eventualidad.</p>
+                  </div>
+                    <img src="../public/familia.png" alt="" />
+                </div>
+                :
+                <div class="necesito">
+                  <div class="content-necesito">
+                    <h1 class="title">¿Por qué es esencial para tu empresa?</h1>
+                    <p class="descripcion">Contar con un seguro es vital para proteger tu negocio en un entorno incierto. Este respaldo te ayuda a enfrentar imprevistos y a mantener la continuidad de tus operaciones. Además, invertir en un seguro demuestra a tus clientes y socios que valoras la seguridad y estabilidad de tu empresa. Con la protección adecuada, podrás concentrarte en hacer crecer tu negocio con confianza y tranquilidad.</p>
+                  </div>
+                    <img src="../public/enfermeros.png" alt="" />
+                </div>
+            }
+        </>
     }
-    {
-      service.data.necesito && (
-        <div class="necesito">
-          <div class="content-necesito">
-            <h1 class="title">¿Lo necesito?</h1>
-            <p>{service.data.necesito}</p>
-          </div>
-          <img src={service.data.imagenes[1]} alt="" />
-        </div>
-      )
-    }
+
     {
       service.data.prestaciones && (
         <div class="cubrimos">
           <h1 class="title">¿Que cubrimos?</h1>
-          <h4>Nos preocupamos por ti. Por eso, te mostramos las coberturas de cada servicio, asegurando que todo lo que importa esté siempre protegido. A continuación, descubre en detalle lo que incluye este servicio.</h4>
+          <p class="descripcion">Nos preocupamos por ti. Por eso, te mostramos las coberturas de cada servicio, asegurando que todo lo que importa esté siempre protegido. A continuación, descubre en detalle lo que incluye este servicio.</p>
           <CarrouselCubrimos data={service.data.prestaciones} />
         </div>
       )
@@ -137,10 +147,25 @@ const servicioSelected = descripciones.filter(
 </script>
 
 <style>
+  .space-content-contact{
+    margin-top: 5%;
+  }
+  .button-contact-more {
+    font-size: larger;
+    color: white;
+    border: 0;
+    background-color: #5abeaa;
+    width: 50%;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    cursor: pointer;
+  }
   .content-necesito {
     width: 50%;
   }
-  h4{
+  .cubrimos p{
     text-align: center;
     margin: 2% 0%;
     font-weight: 400;
@@ -180,7 +205,7 @@ const servicioSelected = descripciones.filter(
     margin-bottom: 7%;
   }
   .descripcion {
-    width: 50%;
+    font-size: 18px;
   }
   .content-uso-seguro {
     margin-top: 5%;
@@ -214,7 +239,7 @@ const servicioSelected = descripciones.filter(
     justify-content: center;
     justify-content: center;
     width: 100%;
-    padding: 2% 0%;
+    padding: 5% 0%;
     color: #172052;
   }
   .categoria img {
@@ -260,6 +285,10 @@ const servicioSelected = descripciones.filter(
     }
   }
   @media (max-width: 768px) {
+
+    .descripcion{
+      font-size: 15px; 
+    }
     .espacio {
       height: 0% !important;
     }
@@ -278,8 +307,17 @@ const servicioSelected = descripciones.filter(
       align-items: center;
       gap: 50px;
     }
+    .button-contact-more {
+      font-size: 15px;
+    }
   }
   @media (max-width: 468px) {
+    .cubrimos p{
+      width: 80%;
+    }
+    .content-necesito{
+      width: 80% !important;
+    }
     .necesito {
       display: flex;
       flex-direction: column;

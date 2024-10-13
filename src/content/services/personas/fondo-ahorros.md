@@ -3,7 +3,8 @@ id: fondo-ahorros
 titulo: Fondo de Ahorro
 descripcion: ​Respaldamos tu vida y protegemos tu libertad y autonomía. Asimismo, te damos opciones para que ahorres con nosotros y hagas realidad tus sueños por medio de la consolidación de un patrimonio sólido.
 
-necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.
+necesito: Contar con un seguro es una decisión fundamental en el mundo actual. La vida puede sorprenderte con imprevistos, y estar preparado para afrontarlos es crucial para tu tranquilidad. Este seguro está diseñado para proteger tu bienestar y el de tus seres queridos. Desde la cobertura de tu hogar y bienes personales hasta la salud y responsabilidad civil, cada aspecto está pensado para ofrecerte seguridad. En momentos de crisis, tener un respaldo económico puede marcar la diferencia, permitiéndote recuperarte más rápidamente. Elegir este seguro es un paso proactivo hacia un futuro más seguro y estable, asegurando que tú y tu familia estén protegidos frente a cualquier eventualidad.
+
 prestaciones: 
   - Posibilidad de ahorro continuo de bajas cuantías.
   - Capitalización diaria.
