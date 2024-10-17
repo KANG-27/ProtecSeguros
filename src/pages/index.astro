@@ -14,15 +14,17 @@ import Footer from "../components/Footer.astro";
         <img
           class="imagenUno"
           id="imagenUno-id"
-          src="./public/familia2.png"
+          src="/public/personas-3.png"
           alt=""
+          width=""
+          height=""
         />
       </div>
       <div class="content-imagenDos">
         <img
           class="imagenDos"
           id="imagenDos-id"
-          src="./public/familia.png"
+          src="/personas-principal.png"
           alt=""
         />
       </div>
@@ -121,16 +123,10 @@ import Footer from "../components/Footer.astro";
   transition: transform 0.5s ease; /* Duración de la animación */
   transform: scale(1.1); /* Efecto de transformación */
 }
-
-
-
   .animation {
     transform: scale(1.1); /* Escala la imagen en un 10% */
     transition: transform 0.2s ease-in-out; /* Controla la velocidad y suavidad de la animación */
   }
-
-  
-  
   .color-blue {
     background-color: #172052;
     color: white;
@@ -174,6 +170,9 @@ import Footer from "../components/Footer.astro";
   .content-index-buttons {
     display: flex;
     gap: 100px;
+  }
+  .content-index img{
+    width: 400px;
   }
   .content-index {
     position: relative;

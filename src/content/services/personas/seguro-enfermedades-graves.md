@@ -19,8 +19,7 @@ prestaciones:
   - Traumatismo mayor de cabeza
   - Válvula del corazón  
   - Ree​mplazo total de válvula del corazón
-  - Tumor cerebral Benigno  
-  - Tumor cerebral benigno
+  - Tumor cerebral Benigno
   - Esclerosis                             
   - Esclerosis lateral amiotrófica
   - Enfermedad de Alzheimer

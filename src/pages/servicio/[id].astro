@@ -85,7 +85,7 @@ const servicioSelected = descripciones.filter(
         </div>
       )
     }
-    {
+    <!-- {
       service.data.usoServicio && (
         <div class="uso-seguro">
           <h1 class="title">¿Como hacer uso de mi seguro</h1>
@@ -119,8 +119,13 @@ const servicioSelected = descripciones.filter(
           </div>
         </div>
       )
-    }
-    <FooterAzul />
+    } -->
+      {service.data.conjuntoServicios?
+<FooterAzul />
+:
+
+<Footer />
+      }
   </main>
 </Layout>
 

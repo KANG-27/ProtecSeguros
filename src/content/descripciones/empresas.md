@@ -88,8 +88,20 @@ servicios:
         descripcion: En un mundo cada vez más conectado, proteger tu negocio de acciones maliciosas de ciberdelincuentes es fundamental para que no ponga en riesgo su patrimonio y sus actividades se lleven a cabo de manera segura. 
         imagen: ""
 imagenes:
-  - src: ../public/enfermeros.png
+  - src: /enfermeros.png
+    alt: "imagen1"
+  - src: /empresas.png
+    alt: "imagen2"
+  - src: /camiones.png
     alt: "imagen3"
-  - src: ../public/PATINETAS.png
+  - src: /celular.png
+    alt: "imagen4"
+  - src: /edificio.png
     alt: "imagen5"
+  - src: /camion-solo.png
+    alt: "imagen6"
+  - src: /empresas-personas.png
+    alt: "imagen7"
+  - src: /camion-descarga.png
+    alt: "imagen8"
 ---

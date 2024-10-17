@@ -117,9 +117,21 @@ servicios:
 imagenes:
   - src: ../public/saludDos.png
     alt: "imagen1"
-  - src: ../public/familia.png
+  - src: ../public/pension.png
     alt: "imagen2"
   - src: ../public/familia2.png
+    alt: "imagen4"
+  - src: ../public/autos-familia.png
+    alt: "imagen4"
+  - src: ../public/doctor-personas.png
+    alt: "imagen4"
+  - src: ../public/familia3.png
+    alt: "imagen4"
+  - src: ../public/personas-mano.png
+    alt: "imagen4"
+  - src: ../public/adultos-moto.png
+    alt: "imagen4"
+  - src: ../public/viaje.png
     alt: "imagen4"
 
 ---

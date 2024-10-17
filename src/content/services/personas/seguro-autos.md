@@ -8,7 +8,7 @@ prestaciones:
   - Conductor profesional​ cuando no puedas manejar por una enfermedad imprevista
   - Te informamos sobre el estado de las vías
   - Asesoría jurídica vía telefónica o en el sitio del accidente
-  - Acompañamiento ante el trá nsito o centro de conciliación
+  - Acompañamiento ante el tránsito o centro de conciliación
   - Servicio de grúa en caso de varada o accidente
   - Taller móvil y cerrajería
   - Conductor elegido ​​
