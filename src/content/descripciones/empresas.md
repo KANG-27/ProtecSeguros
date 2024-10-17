@@ -7,25 +7,25 @@ servicios:
       - nombre: Protección legal
         referencia: proteccion-legal
         descripcion: Las empresas pueden enfrentarse a inconvenientes jurídicos con clientes, empleados, proveedores o el Estado; en estos casos es importante contar con un acompañamiento especializado.​​​​​
-        imagen: ""
+        imagen: "/legal.png"
       - nombre: Sostenibilidad legal
         referencia: sostenibilidad-legal
         descripcion: ¿Quisieras tener tu empresa protegida frente a eventuales riesgos en materia legal? Descubre cómo te podemos acompañar.
-        imagen: ""
+        imagen: "/sostenibilidad-legal.png"
       - nombre: RC Derivada decumplimiento
         referencia: rc-derivada-cumplimiento
-        descripcion: Ejecute los contratos sin preocuparse por las afectaciones que puede generarles a ​terceros durante el proceso. En SURA lo respaldamos con nuestra experiencia.​​​
-        imagen: ""
+        descripcion: Ejecute los contratos sin preocuparse por las afectaciones que puede generarles a ​terceros durante el proceso. En Protec Seguros lo respaldamos con nuestra experiencia.​​​
+        imagen: "/derivada-cumplimiento.png"
       - nombre: Cumplimiento
         referencia: cumplimiento
         descripcion: Disposiciones Legales, Empresas de Servicios Públicos Domiciliarios, Entidades Estatales, Entidades públicas con Régimen Privado de Contratación, Grandes Beneficiarios, Particulares, Caución Judicial
-        imagen: ""
+        imagen: "/cumplimiento.png"
   - nombre: Protec Modelo Operativo
     subcategoria:
       - nombre: Transporte
         referencia: transporte
         descripcion: Ofrecemos seguros diseñados para proteger cargas y mercancías en tránsito, ya sea por vía terrestre, marítima o aérea. Nuestro servicio garantiza la cobertura ante daños, pérdidas o robos, minimizando riesgos y asegurando que tu negocio siga operando sin interrupciones.
-        imagen: ""
+        imagen: "/transporte-empresas.png"
       - nombre: Bienes y patrimonio
         referencia: bienes-patrimonio
         descripcion: Protege los activos esenciales de tu empresa o negocio con nuestras pólizas personalizadas. Aseguramos tus instalaciones, equipos y propiedades ante riesgos como incendios, robos o desastres naturales, para que puedas enfocarte en crecer sin preocupaciones.
@@ -71,7 +71,7 @@ servicios:
         imagen: ""
       - nombre: Pensión
         referencia: pension
-        descripcion: Que sus empleados adquieran una cultura de ahorro y aseguren los ingresos que complementarán su pensión, está en sus manos, gracias al Seguro de​ Pensión que ofrece SURA.
+        descripcion: Que sus empleados adquieran una cultura de ahorro y aseguren los ingresos que complementarán su pensión, está en sus manos, gracias al Seguro de​ Pensión que ofrece Protec Seguros.
         imagen: ""
       - nombre: Previsional de invalidez y sobrevivencia
         referencia: previsional-invalidez-sobrevivencia

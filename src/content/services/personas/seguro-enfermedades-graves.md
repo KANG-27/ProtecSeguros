@@ -33,9 +33,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 imagenes:
   - https://i.ytimg.com/vi/zfexD9aWkOs/maxresdefault.jpg
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
+  - /saludDos.png
+  - /saludDos.png
+  - /saludDos.png
 categoria: salud
 subcategoria: personas
 

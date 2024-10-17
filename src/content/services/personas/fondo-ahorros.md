@@ -18,10 +18,10 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - https://www.segurossura.com.co/images/novedades/plan-muevete-libre.png
-  - ../../public/familia.png
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
+  - /finanzas.png
+  - /familia.png
+  - /saludDos.png
+  - /saludDos.png
 categoria: Protec movilidad
 subcategoria: personas
 ---

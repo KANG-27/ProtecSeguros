@@ -5,7 +5,7 @@ descripcion: Sabemos el impacto económico que te generan los gastos que vienen 
 
 necesito: Contar con un seguro es una decisión fundamental en el mundo actual. La vida puede sorprenderte con imprevistos, y estar preparado para afrontarlos es crucial para tu tranquilidad. Este seguro está diseñado para proteger tu bienestar y el de tus seres queridos. Desde la cobertura de tu hogar y bienes personales hasta la salud y responsabilidad civil, cada aspecto está pensado para ofrecerte seguridad. En momentos de crisis, tener un respaldo económico puede marcar la diferencia, permitiéndote recuperarte más rápidamente. Elegir este seguro es un paso proactivo hacia un futuro más seguro y estable, asegurando que tú y tu familia estén protegidos frente a cualquier eventualidad.
 
-prestaciones: 
+prestaciones:
   - Recibir una indemnización diaria en caso de hospitalización, cirugía ambulatoria o parto.
   - Contar con un respaldo adicional al que te brinda el POS o un plan complementario de salud.
   - Cuidar tus finanzas personales por los ingresos que dejarás de percibir mientras estés hospitalizado o en recuperación.
@@ -19,10 +19,10 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - https://www.segurossura.com.co/images/novedades/plan-muevete-libre.png
-  - ../../public/familia.png
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
+  - https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/caa0fde4-11c7-41d0-80c1-55c8d11e66b2/Educativo-2001.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-caa0fde4-11c7-41d0-80c1-55c8d11e66b2-oWR4dRq
+  - /familia.png
+  - /saludDos.png
+  - /saludDos.png
 categoria: Protec movilidad
 subcategoria: personas
 ---

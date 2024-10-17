@@ -1,7 +1,7 @@
 ---
 id: salud-colectiva
 titulo: Seguro colectivo de salud
-descripcion: Con un seguro de salud colectivo de SURA, sus empleados pueden estar tranquilos porque disfrutan ​de atenciones exclusivas en salud, como consultar directamente a un médico especialista sin necesidad de esperar una autorización por parte del médico general, gracias al amplio directorio médico en el que puede escoger al profesional de su preferencia y la institución en la que quiere ser atendido él o su grupo familiar. Contar con un plan colectivo de salud garantiza el pago de una tarifa estable a lo largo de la vida laboral de sus empleados sin altos incrementos en el valor de la prima. Si ellos cuentan con una póliza de salud o Medicina Prepagada en otra compañía, conservamos su antigüedad para que pueda disfrutar de los beneficios de la póliza de salud de SURA.​​​
+descripcion: Con un seguro de salud colectivo de Protec Seguros, sus empleados pueden estar tranquilos porque disfrutan ​de atenciones exclusivas en salud, como consultar directamente a un médico especialista sin necesidad de esperar una autorización por parte del médico general, gracias al amplio directorio médico en el que puede escoger al profesional de su preferencia y la institución en la que quiere ser atendido él o su grupo familiar. Contar con un plan colectivo de salud garantiza el pago de una tarifa estable a lo largo de la vida laboral de sus empleados sin altos incrementos en el valor de la prima. Si ellos cuentan con una póliza de salud o Medicina Prepagada en otra compañía, conservamos su antigüedad para que pueda disfrutar de los beneficios de la póliza de salud de Protec Seguros.​​​
 
 necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.
 prestaciones: 
@@ -35,9 +35,9 @@ usoServicio:
 
 imagenes:
   - ""
-  - ../../public/familia.png
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
+  - /familia.png
+  - /saludDos.png
+  - /saludDos.png
 categoria: Protec Legal
 subcategoria: empresas
 ---

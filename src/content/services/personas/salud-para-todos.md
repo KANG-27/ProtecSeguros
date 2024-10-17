@@ -17,9 +17,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 imagenes:
   - https://www.susegurosb.com/wp-content/uploads/2024/04/salud_para_todos_sura.png
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
+  - /saludDos.png
+  - /saludDos.png
+  - /saludDos.png
 categoria: salud
 subcategoria: personas
 

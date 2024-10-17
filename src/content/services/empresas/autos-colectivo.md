@@ -1,7 +1,7 @@
 ---
 id: autos-colectivo
 titulo: Seguro Colectivo ​de Vehículos
-descripcion: Cuando se tiene un vehículo se busca seguridad y protección. Con el Seguro de Autos de SURA le ofrecemos un acompañamiento continuo y permanente no solo en caso de accidentes o hurto, sino también en prevención y comodidad para su día a día. Gracias al Seguro de Autos de SURA, usted podrá asegurar, en unas condiciones más competitivas, los vehículos de sus empleados y su flota propia, independiente si son de uso particular o utilitario. En Seguros SURA le ofrecemos una completa protección a sus vehículos y a los de sus empleados, respaldamos su patrimonio y cubrimos los daños ocasionados por los accidentes ocurridos en estos, tanto los propios como los de los terceros afectados si se tiene responsabilidad en el evento. Da la posibilidad de acceder a tarifas preferenciales y fraccionamiento del seguro en cuotas sin pagar intereses por financiación.​​​
+descripcion: Cuando se tiene un vehículo se busca seguridad y protección. Con el Seguro de Autos de Protec Seguros le ofrecemos un acompañamiento continuo y permanente no solo en caso de accidentes o hurto, sino también en prevención y comodidad para su día a día. Gracias al Seguro de Autos de Protec Seguros, usted podrá asegurar, en unas condiciones más competitivas, los vehículos de sus empleados y su flota propia, independiente si son de uso particular o utilitario. En Seguros Protec Seguros le ofrecemos una completa protección a sus vehículos y a los de sus empleados, respaldamos su patrimonio y cubrimos los daños ocasionados por los accidentes ocurridos en estos, tanto los propios como los de los terceros afectados si se tiene responsabilidad en el evento. Da la posibilidad de acceder a tarifas preferenciales y fraccionamiento del seguro en cuotas sin pagar intereses por financiación.​​​
 necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.
 prestaciones: 
   - Respaldo en caso de causar daños a terceros.
@@ -16,9 +16,9 @@ usoServicio:
 
 imagenes:
   - ""
-  - ../../public/familia.png
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
+  - /familia.png
+  - /saludDos.png
+  - /saludDos.png
 categoria: Protec Legal
 subcategoria: empresas
 ---

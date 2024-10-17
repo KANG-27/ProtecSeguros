@@ -14,10 +14,9 @@ usoServicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - ""
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
-  - ../../public/saludDos.png
+  - /sostenibilidad-legal.png
+  - /saludDos.png
+  - /saludDos.png
 categoria: Protec movilidad
 subcategoria: empresas
 
