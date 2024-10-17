@@ -66,7 +66,10 @@ const { data, type } = Astro.props;
                       <a>AXA Colpatria</a>
                     </li>
                     <li class="buton-exquial">
-                      <a>Mapfre Exquial</a>
+                      <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublicoMSE.jsf">Mapfre Exquial</a>
+                    </li>
+                    <li class="buton-finesa">
+                      <a href="https://pagos.finesa.com.co/autenticacion">FINESA</a>
                     </li>
                   </ul>
                 </div>
@@ -348,6 +351,9 @@ const { data, type } = Astro.props;
 
   .buton-sura::marker {
     color: #001aff; /* Cambia el color de los puntos */
+  }
+  .buton-finesa::marker {
+    color: #00a2ff; /* Cambia el color de los puntos */
   }
   .buton-mapre::marker {
     color: #ff0000; /* Cambia el color de los puntos */

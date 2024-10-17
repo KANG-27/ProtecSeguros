@@ -31,7 +31,7 @@ const servicioSelected = descripciones.filter(
   <main>
     <Header data={servicioSelected[0].data} type={service.slug.split("/")[0]} />
     <div class="categoria">
-      <img src={service.data.imagenes[0]} alt="" />
+      <img src={service.data?.imagenes?.[0]} alt="" />
       <div class="content-service">
         <h1 transition:name={service.data.id} class="title">
           {service.data.titulo}
@@ -129,7 +129,7 @@ const servicioSelected = descripciones.filter(
   </main>
 </Layout>
 
-<script type="text/javascript">
+<script is:inline type="text/javascript">
   document.addEventListener("click", function (event) {
     // Verifica si el clic ocurrió en un elemento <li> con la clase 'title-descripcion'
     if (event.target && event.target.classList.contains("title-descripcion")) {

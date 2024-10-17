@@ -47,7 +47,7 @@ for (let i = 0; i < data.length; i += 3) {
   </div>
 </div>
 
-<script type="text/javascript">
+<script is:inline type="text/javascript">
   let currentIndexConjuntoServicios = 0;
   const totalIndexConjuntoServicios = document
     .querySelector(".carousel-conjuntoServicios")
@@ -80,9 +80,9 @@ for (let i = 0; i < data.length; i += 3) {
     });
   }
 
-  function nextSlideConjuntoServicios() {
-    showSlideConjuntoServicios(currentIndexConjuntoServicios + 1);
-  }
+  // function nextSlideConjuntoServicios() {
+  //   showSlideConjuntoServicios(currentIndexConjuntoServicios + 1);
+  // }
 
   // Movimiento automático (opcional)
   //   setInterval(nextSlideConjuntoServicios, 5000); // Cambia cada 5 segundos

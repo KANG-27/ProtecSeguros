@@ -15,7 +15,7 @@ const totalItems = data.length; // Calcula el número total de imágenes
   </div>
   <div class="carousel-dots-imagesHome">
     {
-      data.map((x: string, index: number) => (
+      data.map((element: string, index: number) => (
         <span
           class="dot-imagesHome"
           onclick={`showSlideimagesHome(${index})`}
@@ -25,7 +25,7 @@ const totalItems = data.length; // Calcula el número total de imágenes
   </div>
 </div>
 
-<script type="text/javascript">
+<script is:inline type="text/javascript">
 
 let carousel = document.querySelector(".carousel-imagesHome");
 let totalIndexCarrousel = carousel.getAttribute("data-content")
