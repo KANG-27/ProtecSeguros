@@ -55,11 +55,11 @@ servicios:
       - nombre: Mascotas
         referencia: mascotas
         descripcion: Sabemos que tus mascotas son una parte fundamental de tu Familia. Con esta solución Protec Seguros te respalda protegiendo tu patrimonio, en caso de que este se vea afectado por cualquier evento relacionado con tus perros o gatos, y te acompaña satisfaciendo tus necesidades y las de tus mascotas, a través de la prestación de diferentes servicios, para que puedas cuidarlos, atenderlos y consentirlos como se lo merecen.​​​​​​​​​​
-        imagen: /mascotasDos.png
+        imagen: /mascotas-tres.png
       - nombre: RC Familiar
         referencia: rc-familiar
         descripcion: En la vida diaria estás expuesto a un sin número de riesgos que no pu​edes evitar, si en alguno de ellos tú o tu familia ocasionan daños a terceras personas, puedes ver afectado tu patrimonio y tranquilidad, pues es necesario indemnizar a la persona involucrada, ya sea por un daño físico o moral, a una propiedad u objeto.​
-        imagen: /personas3.png
+        imagen: /familia-uno.png
       - nombre: RC Profesional
         referencia: rc-profesional
         descripcion: Cuando ejerces una profesión eres responsable por los daños que puedan sufrir los terceros como consecuencia de errores u omisiones que cometas en la prestación del servicio, sin importar la profesión que tengas.

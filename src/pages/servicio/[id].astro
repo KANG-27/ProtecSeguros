@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   const descripciones = await getCollection("descripciones");
   const services = await getCollection("services");
 
-  return services.map((service) => ({
+  return services.map((service:any) => ({
     params: {
       id: `${service.slug.split("/").pop()}`, // Agregamos la categoría al ID
     },
@@ -60,15 +60,19 @@ const servicioSelected = descripciones.filter(
                 <div class="necesito">
                   <div class="content-necesito">
                     <h1 class="title">¿Por qué contar con este respaldo?</h1>
-                    <p class="descripcion">Contar con un seguro es una decisión fundamental en el mundo actual. La vida puede sorprenderte con imprevistos, y estar preparado para afrontarlos es crucial para tu tranquilidad. Este seguro está diseñado para proteger tu bienestar y el de tus seres queridos. Desde la cobertura de tu hogar y bienes personales hasta la salud y responsabilidad civil, cada aspecto está pensado para ofrecerte seguridad. En momentos de crisis, tener un respaldo económico puede marcar la diferencia, permitiéndote recuperarte más rápidamente. Elegir este seguro es un paso proactivo hacia un futuro más seguro y estable, asegurando que tú y tu familia estén protegidos frente a cualquier eventualidad.</p>
+                    <p class="descripcion">Imagina tener la certeza de que, pase lo que pase, siempre habrá alguien que te respalde. Los imprevistos no avisan: un accidente, una enfermedad, un daño inesperado… En esos momentos, tener presente los riesgos marca la diferencia entre la incertidumbre y la tranquilidad. <br> Un seguro no es solo un contrato; es la promesa de que no estarás solo cuando más lo necesites. Es la tranquilidad de saber que tu familia, tus sueños y todo lo que has construido están protegidos. Es un acto de amor hacia el futuro, porque cuidar lo que más importa hoy, es garantizar el bienestar del mañana.<br> Asesorarte para elegir un seguro es vivir confiados, en la seguridad de que siempre tendrás una solución a la mano, sin importar el reto.</p>
                   </div>
-                    <img src="/familia.png" alt="" />
+                    <img src="/logosintexto.png" alt="" />
                 </div>
                 :
                 <div class="necesito">
                   <div class="content-necesito">
                     <h1 class="title">¿Por qué es esencial para tu empresa?</h1>
-                    <p class="descripcion">Contar con un seguro es vital para proteger tu negocio en un entorno incierto. Este respaldo te ayuda a enfrentar imprevistos y a mantener la continuidad de tus operaciones. Además, invertir en un seguro demuestra a tus clientes y socios que valoras la seguridad y estabilidad de tu empresa. Con la protección adecuada, podrás concentrarte en hacer crecer tu negocio con confianza y tranquilidad.</p>
+                    <p class="descripcion">Tu empresa es el fruto de esfuerzo, visión y dedicación. Pero en un mundo lleno de incertidumbre, los imprevistos pueden aparecer en cualquier momento. Contar con un seguro no es solo una medida preventiva: es la clave para mantener el rumbo incluso ante desafíos inesperados.
+
+<br>Proteger tu negocio significa garantizar que, pase lo que pase, podrás seguir adelante. Un seguro adecuado no solo salvaguarda tus operaciones, sino que también refuerza la confianza de tus clientes y socios al demostrar que tu empresa prioriza la seguridad y la estabilidad.
+
+<br>Con este respaldo, puedes enfocarte plenamente en lo que mejor sabes hacer: hacer crecer tu negocio. Sin miedos, sin distracciones, con la certeza de que, ante cualquier eventualidad, tendrás la tranquilidad necesaria para seguir avanzando.</p>
                   </div>
                     <img src="/enfermeros.png" alt="" />
                 </div>
@@ -123,7 +127,6 @@ const servicioSelected = descripciones.filter(
       {service.data.conjuntoServicios?
 <FooterAzul />
 :
-
 <Footer />
       }
   </main>

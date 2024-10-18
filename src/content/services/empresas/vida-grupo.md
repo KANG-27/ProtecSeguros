@@ -15,8 +15,7 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - ""
-  - /familia.png
+  - /vida-grupo.png
   - /saludDos.png
   - /saludDos.png
 categoria: Protec Legal
