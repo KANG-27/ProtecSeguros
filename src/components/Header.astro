@@ -1,6 +1,30 @@
 ---
 import NavMobile from "./NavMobile.astro";
 
+interface Props {
+  data: Descripcion | null | undefined;
+  type: string | null | undefined;
+}
+interface Descripcion {
+  titulo: string;
+  descripcion: string;
+  servicios: Service[];
+  imagenes: Imagen[];
+}
+interface Service {
+  nombre: string;
+  subcategoria: Subcategoria[];
+}
+interface Imagen {
+  src: string;
+  alt: string;
+}
+interface Subcategoria {
+  nombre: string;
+  referencia: string;
+  descripcion: string;
+  imagen: string;
+}
 const { data, type } = Astro.props;
 ---
 
@@ -46,7 +70,6 @@ const { data, type } = Astro.props;
                   </div>
                 </li>
               )}
-
               <li class="list-nav-content-style titulo-pagos">
                 <a class="">Paga tu póliza</a>
                 <div class="modal-payment" id="Pagos-modal-id">
@@ -66,10 +89,14 @@ const { data, type } = Astro.props;
                       <a>AXA Colpatria</a>
                     </li>
                     <li class="buton-exquial">
-                      <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublicoMSE.jsf">Mapfre Exquial</a>
+                      <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublicoMSE.jsf">
+                        Mapfre Exquial
+                      </a>
                     </li>
                     <li class="buton-finesa">
-                      <a href="https://pagos.finesa.com.co/autenticacion">FINESA</a>
+                      <a href="https://pagos.finesa.com.co/autenticacion">
+                        FINESA
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -128,7 +155,6 @@ const { data, type } = Astro.props;
   .text-butons-selection-section {
     width: 150px;
   }
-
   .butons-selection-section-empresas {
     font-size: larger;
     color: white;
@@ -149,7 +175,6 @@ const { data, type } = Astro.props;
     left: 5%;
     z-index: 5;
   }
-
   .butons-selection-section {
     font-size: larger;
     color: white;
@@ -160,7 +185,6 @@ const { data, type } = Astro.props;
     border-radius: 0px 0px 20px 20px;
     cursor: pointer;
   }
-
   .categoria-services:hover a {
     color: #5abeaa;
   }
@@ -177,13 +201,11 @@ const { data, type } = Astro.props;
     display: flex;
     flex-direction: column;
   }
-
   ul.list-service {
     list-style-type: none; /* Elimina los puntos */
     padding-left: 0; /* Elimina el padding izquierdo predeterminado */
     margin-left: 0; /* Opcional, para eliminar márgenes */
   }
-
   .services-list li {
     list-style: none; /* Eliminar puntos predeterminados */
     position: relative; /* Permitir posicionamiento relativo */
@@ -193,7 +215,6 @@ const { data, type } = Astro.props;
     background-repeat: no-repeat; /* No repetir la imagen */
     background-position: left center; /* Posicionar la imagen a la izquierda y centrada verticalmente */
   }
-
   .titulo-servicios:hover .modal {
     visibility: visible;
     opacity: 1; /* Hacerlo visible */
@@ -204,27 +225,22 @@ const { data, type } = Astro.props;
     opacity: 1; /* Hacerlo visible */
     transform: translateY(0); /* Restablecer la posición */
   }
-
   .titulo-servicios:not(:hover) .modal,
   .titulo-pagos:not(:hover) .modal-payment {
     transition:
       opacity 0.3s ease,
       visibility 0.3s ease,
       transform 0.3s ease;
-
     opacity: 0; /* Hacerlo invisible */
     visibility: hidden; /* Ocultar el modal */
     transform: translateY(-10px); /* Mover hacia arriba */
   }
-
   .titulo-pagos:hover .modal-payment {
     display: block;
   }
-
   .modal-payment:hover {
     display: block;
   }
-
   header {
     position: sticky;
     background-color: white;
@@ -232,26 +248,21 @@ const { data, type } = Astro.props;
     z-index: 50;
     border-bottom: #172052;
   }
-
   .content-contact {
     display: block;
   }
-
   .bar-navegation {
     height: 100%;
   }
-
   .bar-navegation-descktop {
     grid-column: 3 / 8;
     height: 100%;
   }
-
   .list-service {
     margin: 2% 5% 5% 5%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-
   .title-services {
     color: #172052;
     font-size: 22px;
@@ -260,20 +271,17 @@ const { data, type } = Astro.props;
     margin: 0;
     margin-bottom: 10px;
   }
-
   .list-nav-content-style {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
-
   .section-header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
   }
-
   .list-nav-style {
     display: flex;
     justify-content: center;
@@ -281,7 +289,6 @@ const { data, type } = Astro.props;
     height: 100%;
     margin: 0%;
   }
-
   .list-nav-style a {
     font-size: 22px;
     text-decoration: none;
@@ -289,17 +296,14 @@ const { data, type } = Astro.props;
     color: #172052;
     cursor: pointer;
   }
-
   .list-nav-select {
     margin: 0 10px;
     font-weight: 700;
     text-decoration-line: underline !important;
   }
-
   .content-contact {
     grid-column: 10 / 12;
   }
-
   .button-contact {
     font-size: larger;
     color: white;
@@ -310,7 +314,6 @@ const { data, type } = Astro.props;
     border-radius: 30px;
     cursor: pointer;
   }
-
   .modal-payment ul {
     list-style-type: disc;
   }
@@ -331,7 +334,6 @@ const { data, type } = Astro.props;
     padding: 0% 2% 2% 2%;
     z-index: 200;
   }
-
   .modal {
     position: absolute;
     top: 100%;
@@ -348,7 +350,6 @@ const { data, type } = Astro.props;
     transform: translateY(-10px); /* Desplazamiento inicial hacia arriba */
     z-index: 200;
   }
-
   .buton-sura::marker {
     color: #001aff; /* Cambia el color de los puntos */
   }
@@ -364,7 +365,6 @@ const { data, type } = Astro.props;
   .buton-exquial::marker {
     color: #ff00e6; /* Cambia el color de los puntos */
   }
-
   @media (max-width: 1024px) {
     .list-service {
       margin: 2% 0% 5% 0%;
@@ -374,7 +374,6 @@ const { data, type } = Astro.props;
       left: 50%;
     }
   }
-
   @media (max-width: 768px) {
     .content-butons-selection-section {
       display: none;

@@ -1,4 +1,13 @@
 ---
+interface Props {
+  data: Description[];
+}
+interface Description {
+  nombreConjunto: string;
+  descripcionConjunto: string;
+  imagen: string;
+}
+
 const { data } = Astro.props;
 
 // Agrupa los servicios en grupos de tres
@@ -71,7 +80,7 @@ for (let i = 0; i < data.length; i += 3) {
 
     const offsetConjuntoServicios = -currentIndexConjuntoServicios * 100;
     slidesConjuntoServicios.style.transform = `translateX(${offsetConjuntoServicios}%)`;
-    scrollAnchor.scrollIntoView({ behavior: 'smooth', block: "start" });
+    scrollAnchor.scrollIntoView({ behavior: "smooth", block: "start" });
 
     // Actualiza los puntos de navegación
     const dots = document.querySelectorAll(".dot-conjuntoServicios");
@@ -79,13 +88,6 @@ for (let i = 0; i < data.length; i += 3) {
       dot.classList.toggle("active", idx === currentIndexConjuntoServicios);
     });
   }
-
-  // function nextSlideConjuntoServicios() {
-  //   showSlideConjuntoServicios(currentIndexConjuntoServicios + 1);
-  // }
-
-  // Movimiento automático (opcional)
-  //   setInterval(nextSlideConjuntoServicios, 5000); // Cambia cada 5 segundos
 </script>
 
 <style>
@@ -143,7 +145,6 @@ for (let i = 0; i < data.length; i += 3) {
     width: 400px;
     margin-right: 2%;
     border-radius: 30px 0px 0px 30px;
-
   }
   .carousel-item-conjuntoServicios {
     display: flex;
@@ -151,7 +152,6 @@ for (let i = 0; i < data.length; i += 3) {
     padding-right: 2%;
     text-align: center;
     border-radius: 30px;
-    /* border: 1px solid #ddd; */
     box-shadow: 10px 10px 10px rgb(188, 186, 186);
     margin: 0% 5%;
   }
@@ -220,5 +220,4 @@ for (let i = 0; i < data.length; i += 3) {
       width: 100%;
     }
   }
-
 </style>

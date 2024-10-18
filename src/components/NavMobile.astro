@@ -1,4 +1,18 @@
 ---
+interface Props{
+  data:Service[] | undefined;
+}
+
+interface Service {
+  nombre: string;
+  subcategoria: Subcategoria[];
+}
+interface Subcategoria {
+  nombre: string;
+  referencia: string;
+  descripcion: string;
+  imagen: string;
+}
 const { data } = Astro.props;
 ---
 
@@ -35,13 +49,13 @@ const { data } = Astro.props;
               <hr />
               <!-- Modal servicios -->
               <div class="modal-mobile" id="Services-modal-id-mobile">
-                {data?.map((element: any) => (
+                {data?.map((element) => (
                     <ul class="services-contet">
                       <li class="content-servis" onclick={'openService('+element.nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "")+')'}>
                         <h2 class="title-services-mobile">{element.nombre}</h2>
                       </li>
                       <div id={element.nombre.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "")} class="service-content" style="display: none;">
-                        {element.subcategoria.map((categorias:any)=>(
+                        {element.subcategoria.map((categorias)=>(
                           <ul class="list-person-mobile" >
                               <li>
                                   <a href={`/servicio/${categorias.referencia}`}>{categorias.nombre}</a>
@@ -96,8 +110,6 @@ const { data } = Astro.props;
     </div>
   </div>
 </div>
-
-
 
 <script is:inline type="text/javascript">
   function openService(id){

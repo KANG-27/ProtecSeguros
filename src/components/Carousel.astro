@@ -1,39 +1,58 @@
 ---
-const {data, type}= Astro.props
-
+interface Props {
+  data: Description[] | string[];
+  type: string;
+}
+interface Description {
+  nombre: string;
+  referencia: string;
+  descripcion: string;
+  imagen: string;
+}
+const { data, type } = Astro.props;
 ---
 
-<div class="carousel" data-content={`{"tipo": "${type}", "tamaño": "${data?.length}"}`}>
+<div
+  class="carousel"
+  data-content={`{"tipo": "${type}", "tamaño": "${data?.length}"}`}
+>
   <div class="carousel-inner">
-    {type === "servicios" &&
-      data.map((element:any)=>(
-      <div class="card-services">
-          <img class="imagen-card-services" src={element.imagen} alt="imagen"/>
-          <div class="content-card-services">
-            <h3 class="protec-card">Protec</h3>
-            <h3>{element.nombre}</h3>
-            <p class="description-card-services">{element.descripcion}</p>
-            <a href={`/servicio/${element.referencia.trim()
+    {
+      type === "servicios" &&
+        data.map((element: any) => (
+          <div class="card-services">
+            <img
+              class="imagen-card-services"
+              src={element.imagen}
+              alt="imagen"
+            />
+            <div class="content-card-services">
+              <h3 class="protec-card">Protec</h3>
+              <h3>{element.nombre}</h3>
+              <p class="description-card-services">{element.descripcion}</p>
+              <a
+                href={`/servicio/${element.referencia
+                  .trim()
                   .normalize("NFD")
                   .replace(/[\u0300-\u036f]/g, "")
-                  .replace(/\s+/g, "-")}`}>
-              <div class="content-contact">
-                <button class="button-contact-more">Conoce más</button>
-              </div>
-            </a>
-
+                  .replace(/\s+/g, "-")}`}
+              >
+                <div class="content-contact">
+                  <button class="button-contact-more">Conoce más</button>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-      ))
-    } 
-    {type=="aliados" &&
-      data.map((image:string) => (
-        <div class="carousel-item">
-          <img src={image} alt="Carousel image" />
-        </div>
-      ))
-    } 
-   
+        ))
+    }
+    {
+      type == "aliados" &&
+        (data as string[]).map((image) => (
+          <div class="carousel-item">
+            <img src={image} alt="Carousel image" />
+          </div>
+        ))
+    }
   </div>
   <div class="carousel-controls">
     <span class="arrow material-symbols-outlined prev"> arrow_back </span>
@@ -42,7 +61,7 @@ const {data, type}= Astro.props
 </div>
 
 <script is:inline type="text/javascript">
-  document.addEventListener("astro:page-load", function() {
+  document.addEventListener("astro:page-load", function () {
     const carousels = document.querySelectorAll(".carousel");
 
     carousels.forEach((carousel) => {
@@ -52,7 +71,12 @@ const {data, type}= Astro.props
       // Función para obtener la cantidad de ítems visibles en función del tamaño del viewport
       function getVisibleItems() {
         const carouselWidth = carousel.offsetWidth;
-        const itemWidth = carouselData.tipo == "servicios" ? window.screen.width <= 425 ? 350: 520 : 350; // Ancho de cada tarjeta
+        const itemWidth =
+          carouselData.tipo == "servicios"
+            ? window.screen.width <= 425
+              ? 350
+              : 520
+            : 350; // Ancho de cada tarjeta
         // const itemWidth = 520; // Ancho de cada tarjeta
         return Math.floor(carouselWidth / itemWidth);
       }
@@ -67,14 +91,26 @@ const {data, type}= Astro.props
 
         if (index < 0) {
           currentIndex = totalSlides; // Evitar ir antes del primer ítem
-        } else if (index > (totalSlides-visibleItems == 0? totalSlides-visibleItems+1:totalSlides-visibleItems)) {
+        } else if (
+          index >
+          (totalSlides - visibleItems == 0
+            ? totalSlides - visibleItems + 1
+            : totalSlides - visibleItems)
+        ) {
           currentIndex = 0; // Evitar mostrar más allá del último ítem visible
         } else {
           currentIndex = index;
         }
 
         // Calcular el desplazamiento (offset) en función del índice actual y el número de ítems visibles
-        const offset = -currentIndex * ( (carouselData.tipo == "servicios" ? window.screen.width <= 425 ? 350: 520:350) + 50); // 350px de ancho + 20px de gap (ajusta el gap si es necesario)
+        const offset =
+          -currentIndex *
+          ((carouselData.tipo == "servicios"
+            ? window.screen.width <= 425
+              ? 350
+              : 520
+            : 350) +
+            50); // 350px de ancho + 20px de gap (ajusta el gap si es necesario)
         slides.style.transform = `translateX(${offset}px)`;
       }
 
@@ -99,12 +135,8 @@ const {data, type}= Astro.props
       // Actualizar el carrusel al cambiar el tamaño de la ventana
       window.addEventListener("resize", () => showSlide(currentIndex));
     });
-});
-
+  });
 </script>
-
-
-
 
 <style>
   .arrow {
@@ -116,32 +148,32 @@ const {data, type}= Astro.props
     -ms-user-select: none;
     background-color: white;
     border-radius: 100%;
-    color:#5abeaa;
+    color: #5abeaa;
   }
-  .protec-card{
-    color:#5abeaa
+  .protec-card {
+    color: #5abeaa;
   }
-  .description-card-services{
-      width: 100%; /* Ancho fijo */
-      display: -webkit-box;
-      -webkit-line-clamp: 3; /* Límite de líneas */
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
+  .description-card-services {
+    width: 100%; /* Ancho fijo */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Límite de líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .content-card-services a {
     text-decoration: none;
   }
-  .content-card-services h3{
+  .content-card-services h3 {
     margin: 0%;
   }
-  .content-card-services{
+  .content-card-services {
     margin: 2% 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .content-contact{
+  .content-contact {
     margin-top: 5%;
     display: flex;
     justify-content: center;
@@ -157,7 +189,7 @@ const {data, type}= Astro.props
     margin: 2%;
     cursor: pointer;
   }
-  .card-services{
+  .card-services {
     box-sizing: border-box;
     margin: 5px;
     box-shadow: 3px 3px 3px 3px grey;
@@ -197,7 +229,7 @@ const {data, type}= Astro.props
   .carousel .card-services img {
     border-radius: 20px 20px 0px 0px;
     width: 100% !important;
-    height: 280px ;
+    height: 280px;
   }
   .carousel img {
     width: 60%;
@@ -224,14 +256,13 @@ const {data, type}= Astro.props
     .card-services {
       width: 350px; /* Mostrar 1 imagen en pantallas pequeñas */
     }
-    
   }
 
   @media (max-width: 768px) {
     .carousel-item {
       min-width: 90%; /* Mostrar 1 imagen en pantallas pequeñas */
     }
-    .arrow{
+    .arrow {
       font-size: 35px;
     }
   }

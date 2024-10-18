@@ -1,4 +1,13 @@
 ---
+interface Props {
+  data: Item[];
+}
+
+interface Item {
+  src: string;
+  alt: string;
+}
+
 const { data } = Astro.props;
 const totalItems = data.length; // Calcula el número total de imágenes
 ---
@@ -6,7 +15,7 @@ const totalItems = data.length; // Calcula el número total de imágenes
 <div class="carousel-imagesHome" data-content={totalItems}>
   <div class="carousel-inner-imagesHome">
     {
-      data.map((image: any) => (
+      data.map((image) => (
         <div class="carousel-item-imagesHome">
           <img src={image.src} alt={image.alt} />
         </div>
@@ -15,7 +24,7 @@ const totalItems = data.length; // Calcula el número total de imágenes
   </div>
   <div class="carousel-dots-imagesHome">
     {
-      data.map((element: string, index: number) => (
+      data.map((element, index: number) => (
         <span
           class="dot-imagesHome"
           onclick={`showSlideimagesHome(${index})`}
@@ -26,22 +35,17 @@ const totalItems = data.length; // Calcula el número total de imágenes
 </div>
 
 <script is:inline type="text/javascript">
+  let carousel = document.querySelector(".carousel-imagesHome");
+  let totalIndexCarrousel = carousel.getAttribute("data-content");
 
-let carousel = document.querySelector(".carousel-imagesHome");
-let totalIndexCarrousel = carousel.getAttribute("data-content")
-
-
-  document.addEventListener('astro:after-swap', () => {
+  document.addEventListener("astro:after-swap", () => {
     carousel = document.querySelector(".carousel-imagesHome");
-    totalIndexCarrousel = carousel.getAttribute("data-content")
-  })
-
-
-
+    totalIndexCarrousel = carousel.getAttribute("data-content");
+  });
 
   let currentIndeximagesHome = 0;
 
-   // Astro pasará aquí el valor del total de imágenes
+  // Astro pasará aquí el valor del total de imágenes
   function showSlideimagesHome(index) {
     const slidesimagesHome = document.querySelector(
       ".carousel-inner-imagesHome"

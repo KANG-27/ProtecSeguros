@@ -1,16 +1,18 @@
 ---
+interface Props {
+  data: string[];
+}
 const { data } = Astro.props;
 ---
 
 <section class="carousel" data-content={data.length}>
   <div class="carousel-inner">
     {
-      data.map((element: any, index: number) => (
+      data.map((element, index: number) => (
         <div class="content-carrousel">
           <h2 class="number">{index + 1}</h2>
           <div class="descripcion">
             <span>{element}</span>
-
           </div>
         </div>
       ))
@@ -48,15 +50,11 @@ const { data } = Astro.props;
       function prevSlide() {
         showSlide(currentIndex - 1);
       }
-
       showSlide(0);
-
       const nextButton = carousel.querySelector(".next");
       const prevButton = carousel.querySelector(".prev");
-
       nextButton.addEventListener("click", nextSlide);
       prevButton.addEventListener("click", prevSlide);
-
       window.addEventListener("resize", () => showSlide(currentIndex));
     });
   });
@@ -75,17 +73,16 @@ const { data } = Astro.props;
   .arrow {
     color: #5abeaa;
   }
-  .descripcion{
+  .descripcion {
     max-width: 50%;
   }
   .number {
     font-size: 50px;
   }
-  .descripcion{
+  .descripcion {
     font-size: 25px;
   }
   .carousel {
-    /* padding: 0% 20%; */
     position: relative;
     width: 90%;
     overflow: hidden; /* Ocultar los ítems que no están en la vista */
@@ -131,30 +128,30 @@ const { data } = Astro.props;
     background: rgba(255, 255, 255, 0.9);
   }
 
-  @media(max-width:768px){
-    .descripcion{
-        font-size: 25px;
+  @media (max-width: 768px) {
+    .descripcion {
+      font-size: 25px;
     }
-    .content-carrousel{
-        gap: 113px;
+    .content-carrousel {
+      gap: 113px;
     }
-    .arrow{
-        font-size: 40px;
+    .arrow {
+      font-size: 40px;
     }
   }
 
-  @media(max-width:425px){
-    .descripcion{
-        font-size: 15px;
+  @media (max-width: 425px) {
+    .descripcion {
+      font-size: 15px;
     }
-    .content-carrousel{
-        gap: 60px;
+    .content-carrousel {
+      gap: 60px;
     }
-    .carousel{
-        width: 100%;
+    .carousel {
+      width: 100%;
     }
-    .arrow{
-        font-size: 30px;
+    .arrow {
+      font-size: 30px;
     }
   }
 </style>

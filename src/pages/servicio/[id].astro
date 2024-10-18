@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   const descripciones = await getCollection("descripciones");
   const services = await getCollection("services");
 
-  return services.map((service:any) => ({
+  return services.map((service) => ({
     params: {
       id: `${service.slug.split("/").pop()}`, // Agregamos la categoría al ID
     },
@@ -24,7 +24,6 @@ const { service, descripciones } = Astro.props;
 const servicioSelected = descripciones.filter(
   (element) => service.slug.split("/")[0] === element.slug
 );
-
 ---
 
 <Layout title="Protec Seguros">
@@ -39,8 +38,7 @@ const servicioSelected = descripciones.filter(
         <p class="descripcion">{service.data.descripcion}</p>
         <div class="space-content-contact">
           <a href="/contactanos" class="content-contact">
-            <button class="button-contact-more"
-              >Contactanos y adquierelo</button
+            <button class="button-contact-more">Contactanos y adquierelo</button
             >
           </a>
         </div>
@@ -49,86 +47,84 @@ const servicioSelected = descripciones.filter(
     <!-- Carrousel cuando es multiple servicio -->
 
     {
-      service.data.conjuntoServicios ?
-      <div id="scroll-anchor" class="espacio" style="height: 150px; visibility: hidden;" > </div>
-        <div class="conjunto-servicios">
-          <h2 class="">Nuestros servicios</h2>
-          <CarouselConjuntoServices data={service.data.conjuntoServicios} />
-        </div>:
+      service.data.conjuntoServicios ? (
         <>
-            {service.slug.split("/")[0] == "personas"?
-                <div class="necesito">
-                  <div class="content-necesito">
-                    <h1 class="title">¿Por qué contar con este respaldo?</h1>
-                    <p class="descripcion">Imagina tener la certeza de que, pase lo que pase, siempre habrá alguien que te respalde. Los imprevistos no avisan: un accidente, una enfermedad, un daño inesperado… En esos momentos, tener presente los riesgos marca la diferencia entre la incertidumbre y la tranquilidad. <br> Un seguro no es solo un contrato; es la promesa de que no estarás solo cuando más lo necesites. Es la tranquilidad de saber que tu familia, tus sueños y todo lo que has construido están protegidos. Es un acto de amor hacia el futuro, porque cuidar lo que más importa hoy, es garantizar el bienestar del mañana.<br> Asesorarte para elegir un seguro es vivir confiados, en la seguridad de que siempre tendrás una solución a la mano, sin importar el reto.</p>
-                  </div>
-                    <img src="/logosintexto.png" alt="" />
-                </div>
-                :
-                <div class="necesito">
-                  <div class="content-necesito">
-                    <h1 class="title">¿Por qué es esencial para tu empresa?</h1>
-                    <p class="descripcion">Tu empresa es el fruto de esfuerzo, visión y dedicación. Pero en un mundo lleno de incertidumbre, los imprevistos pueden aparecer en cualquier momento. Contar con un seguro no es solo una medida preventiva: es la clave para mantener el rumbo incluso ante desafíos inesperados.
-
-<br>Proteger tu negocio significa garantizar que, pase lo que pase, podrás seguir adelante. Un seguro adecuado no solo salvaguarda tus operaciones, sino que también refuerza la confianza de tus clientes y socios al demostrar que tu empresa prioriza la seguridad y la estabilidad.
-
-<br>Con este respaldo, puedes enfocarte plenamente en lo que mejor sabes hacer: hacer crecer tu negocio. Sin miedos, sin distracciones, con la certeza de que, ante cualquier eventualidad, tendrás la tranquilidad necesaria para seguir avanzando.</p>
-                  </div>
-                    <img src="/enfermeros.png" alt="" />
-                </div>
-            }
+          <div
+            id="scroll-anchor"
+            class="espacio"
+            style="height: 150px; visibility: hidden;"
+          />
+          <div class="conjunto-servicios">
+            <h2>Nuestros servicios</h2>
+            <CarouselConjuntoServices data={service.data.conjuntoServicios} />
+          </div>
         </>
+      ) : service.slug.split("/")[0] === "personas" ? (
+        <div class="necesito">
+          <div class="content-necesito">
+            <h1 class="title">¿Por qué contar con este respaldo?</h1>
+            <p class="descripcion">
+              Imagina tener la certeza de que, pase lo que pase, siempre habrá
+              alguien que te respalde. Los imprevistos no avisan: un accidente,
+              una enfermedad, un daño inesperado… En esos momentos, tener
+              presente los riesgos marca la diferencia entre la incertidumbre y
+              la tranquilidad.
+              <br />
+              Un seguro no es solo un contrato; es la promesa de que no estarás
+              solo cuando más lo necesites. Es la tranquilidad de saber que tu
+              familia, tus sueños y todo lo que has construido están protegidos.
+              Es un acto de amor hacia el futuro, porque cuidar lo que más
+              importa hoy, es garantizar el bienestar del mañana.
+              <br />
+              Asesorarte para elegir un seguro es vivir confiados, en la
+              seguridad de que siempre tendrás una solución a la mano, sin
+              importar el reto.
+            </p>
+          </div>
+          <img src="/logosintexto.png" alt="" />
+        </div>
+      ) : (
+        <div class="necesito">
+          <div class="content-necesito">
+            <h1 class="title">¿Por qué es esencial para tu empresa?</h1>
+            <p class="descripcion">
+              Tu empresa es el fruto de esfuerzo, visión y dedicación. Pero en
+              un mundo lleno de incertidumbre, los imprevistos pueden aparecer
+              en cualquier momento. Contar con un seguro no es solo una medida
+              preventiva: es la clave para mantener el rumbo incluso ante
+              desafíos inesperados.
+              <br />
+              Proteger tu negocio significa garantizar que, pase lo que pase,
+              podrás seguir adelante. Un seguro adecuado no solo salvaguarda tus
+              operaciones, sino que también refuerza la confianza de tus
+              clientes y socios al demostrar que tu empresa prioriza la
+              seguridad y la estabilidad.
+              <br />
+              Con este respaldo, puedes enfocarte plenamente en lo que mejor
+              sabes hacer: hacer crecer tu negocio. Sin miedos, sin
+              distracciones, con la certeza de que, ante cualquier eventualidad,
+              tendrás la tranquilidad necesaria para seguir avanzando.
+            </p>
+          </div>
+          <img src="/enfermeros.png" alt="" />
+        </div>
+      )
     }
 
     {
       service.data.prestaciones && (
         <div class="cubrimos">
           <h1 class="title">¿Que cubrimos?</h1>
-          <p class="descripcion">Nos preocupamos por ti. Por eso, te mostramos las coberturas de cada servicio, asegurando que todo lo que importa esté siempre protegido. A continuación, descubre en detalle lo que incluye este servicio.</p>
+          <p class="descripcion">
+            Nos preocupamos por ti. Por eso, te mostramos las coberturas de cada
+            servicio, asegurando que todo lo que importa esté siempre protegido.
+            A continuación, descubre en detalle lo que incluye este servicio.
+          </p>
           <CarrouselCubrimos data={service.data.prestaciones} />
         </div>
       )
     }
-    <!-- {
-      service.data.usoServicio && (
-        <div class="uso-seguro">
-          <h1 class="title">¿Como hacer uso de mi seguro</h1>
-          <p class="descripcion">
-            Hacer una reclamación de seguro implica seguir un proceso específico
-            para garantizar que recibas la cobertura adecuada. Aquí te explico
-            los pasos generales:
-          </p>
-          <div class="content-uso-seguro">
-            <div class="content-paso">
-              <ol>
-                {service.data.usoServicio.map((element, index) => (
-                  <li class="title-descripcion" id={`paso-${index + 1}`}>
-                    {element.paso}
-                  </li>
-                ))}
-              </ol>
-            </div>
-            <div class="content-absolute-descripcion">
-              {service.data.usoServicio.map((element, index) => (
-                <div
-                  class="content-descripcion"
-                  id={`paso-${index + 1}`}
-                  style={index != 1 ? "" : "display: none;"}
-                >
-                  <h2>{element.paso}</h2>
-                  <p>{element.descripcion}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )
-    } -->
-      {service.data.conjuntoServicios?
-<FooterAzul />
-:
-<Footer />
-      }
+    {service.data.conjuntoServicios ? <FooterAzul /> : <Footer />}
   </main>
 </Layout>
 
@@ -155,7 +151,7 @@ const servicioSelected = descripciones.filter(
 </script>
 
 <style>
-  .space-content-contact{
+  .space-content-contact {
     margin-top: 5%;
   }
   .button-contact-more {
@@ -173,7 +169,7 @@ const servicioSelected = descripciones.filter(
   .content-necesito {
     width: 50%;
   }
-  .cubrimos p{
+  .cubrimos p {
     text-align: center;
     margin: 2% 0%;
     font-weight: 400;
@@ -293,9 +289,8 @@ const servicioSelected = descripciones.filter(
     }
   }
   @media (max-width: 768px) {
-
-    .descripcion{
-      font-size: 15px; 
+    .descripcion {
+      font-size: 15px;
     }
     .espacio {
       height: 0% !important;
@@ -320,10 +315,10 @@ const servicioSelected = descripciones.filter(
     }
   }
   @media (max-width: 468px) {
-    .cubrimos p{
+    .cubrimos p {
       width: 80%;
     }
-    .content-necesito{
+    .content-necesito {
       width: 80% !important;
     }
     .necesito {
