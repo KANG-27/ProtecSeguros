@@ -24,7 +24,7 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /mascotasDos.png
+  - /mascotas-tres.png
   - /saludDos.png
   - /saludDos.png
 categoria: Protec movilidad

@@ -25,7 +25,7 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /personas3.png
+  - /familia-uno.png
   - /saludDos.png
   - /saludDos.png
 categoria: Protec movilidad
