@@ -112,37 +112,38 @@ const { data, type } = Astro.props;
       <button class="button-contact">¡Contáctanos!</button>
     </a>
   </section>
+  {
+    type && (
+      <div class="content-butons-selection-section">
+        <a class="buton-content" href="/inicio/personas">
+          <button
+            class={`${
+              Astro.url.pathname.split("/").pop() === "personas" ||
+              type == "personas"
+                ? "butons-selection-section"
+                : "butons-selection-section-empresas"
+            }`}
+          >
+            <p class="text-butons-selection-section">Personas</p>
+          </button>
+        </a>
+        <a class="buton-content" href="/inicio/empresas">
+          <button
+            class={`${
+              Astro.url.pathname.split("/").pop() === "empresas" ||
+              type == "empresas"
+                ? "butons-selection-section"
+                : "butons-selection-section-empresas"
+            }`}
+          >
+            <p class="text-butons-selection-section-empresas">Empresas</p>
+          </button>
+        </a>
+      </div>
+    )
+  }
 </header>
-{
-  type && (
-    <div class="content-butons-selection-section">
-      <a class="buton-content" href="/inicio/personas">
-        <button
-          class={`${
-            Astro.url.pathname.split("/").pop() === "personas" ||
-            type == "personas"
-              ? "butons-selection-section"
-              : "butons-selection-section-empresas"
-          }`}
-        >
-          <p class="text-butons-selection-section">Personas</p>
-        </button>
-      </a>
-      <a class="buton-content" href="/inicio/empresas">
-        <button
-          class={`${
-            Astro.url.pathname.split("/").pop() === "empresas" ||
-            type == "empresas"
-              ? "butons-selection-section"
-              : "butons-selection-section-empresas"
-          }`}
-        >
-          <p class="text-butons-selection-section-empresas">Empresas</p>
-        </button>
-      </a>
-    </div>
-  )
-}
+
 
 <style>
   header {
