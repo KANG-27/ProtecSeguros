@@ -23,6 +23,7 @@ const images = [
   "https://www.elempleo.com/co/sitio-empresarial/CompanySites/axa-colpatria/resources/images/logo-social.png",
   "https://seeklogo.com/images/A/aseguradora-solidario-de-colombia-logo-0285B0DF5D-seeklogo.com.png",
 ];
+console.log(Astro.url.pathname.split("/").pop())
 ---
 
 <Layout title="Protec Seguros">
@@ -342,13 +343,22 @@ const images = [
     }
   }
 
+  @media (max-width: 425px) {
+    .content-butons {
+      margin: 0%;
+    }
+    .content-services {
+      margin: 0%;
+      width: 100%;
+    }
+    .card-services{
+      width: 370px!important;
+    }
+  }
   @media (max-width: 768px) {
     .content-butons {
       gap: 0px;
     }
-  }
-
-  @media (max-width: 768px) {
     .aliados {
       padding-top: 20%;
       padding-bottom: 20%;

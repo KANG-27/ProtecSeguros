@@ -75,10 +75,12 @@ const { data, type } = Astro.props;
         const carouselWidth = carousel.offsetWidth;
         const itemWidth =
           carouselData.tipo == "servicios"
-            ? window.screen.width <= 425
-              ? 350
-              : 520
-            : 350; // Ancho de cada tarjeta
+            ? window.screen.width <= 375
+              ? 322
+              : window.screen.width <= 425
+                ? 375
+                : 520
+            : 375; // Ancho de cada tarjeta
         // const itemWidth = 520; // Ancho de cada tarjeta
         return Math.floor(carouselWidth / itemWidth);
       }
@@ -108,11 +110,13 @@ const { data, type } = Astro.props;
         const offset =
           -currentIndex *
           ((carouselData.tipo == "servicios"
-            ? window.screen.width <= 425
-              ? 350
-              : 520
-            : 350) +
-            50); // 350px de ancho + 20px de gap (ajusta el gap si es necesario)
+            ? window.screen.width <= 375
+              ? 322
+              : window.screen.width <= 425
+                ? 375
+                : 520
+            : 375) +
+            50); // 375px de ancho + 20px de gap (ajusta el gap si es necesario)
         slides.style.transform = `translateX(${offset}px)`;
       }
 
@@ -197,7 +201,7 @@ const { data, type } = Astro.props;
     margin: 5px;
     box-shadow: 3px 3px 3px 3px grey;
     width: 520px;
-    height: 500px;
+    height: max-content;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -257,7 +261,22 @@ const { data, type } = Astro.props;
 
   @media (max-width: 425px) {
     .card-services {
-      width: 350px; /* Mostrar 1 imagen en pantallas pequeñas */
+      width: 370px; /* Mostrar 1 imagen en pantallas pequeñas */
+      height: 435px;
+      margin-left: 17px;
+    }
+    .carousel-inner {
+      gap: 34px;
+    }
+  }
+  @media (max-width: 375px) {
+    .card-services {
+      width: 330px; /* Mostrar 1 imagen en pantallas pequeñas */
+      margin-left: 17px;
+      height: max-content;
+    }
+    .carousel-inner {
+      gap: 20px;
     }
   }
 

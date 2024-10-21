@@ -86,16 +86,27 @@ const { data } = Astro.props;
                 <h2 class="title-services-mobile">Formas de pago</h2>
                 <ul class="list-payment">
                   <li class="buton-sura">
-                    <a>Sura</a>
+                    <a href="https://www.segurossura.com.co/paginas/pago-express.aspx#/Pagos">
+                      Sura
+                    </a>
                   </li>
-                  <li class="buton-maphre">
-                    <a>Maphre</a>
+                  <li class="buton-mapre">
+                    <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublico.jsf">
+                      Mapfre
+                    </a>
                   </li>
                   <li class="buton-axa">
                     <a>AXA Colpatria</a>
                   </li>
                   <li class="buton-exquial">
-                    <a>Maphre exquial</a>
+                    <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublicoMSE.jsf">
+                      Mapfre Exquial
+                    </a>
+                  </li>
+                  <li class="buton-finesa">
+                    <a href="https://pagos.finesa.com.co/autenticacion">
+                      FINESA
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -375,11 +386,13 @@ const { data } = Astro.props;
   .bar-navegation-mobile-content {
     background-color: white;
   }
-
+  .buton-finesa::marker {
+    color: #00a2ff; /* Cambia el color de los puntos */
+  }
   .buton-sura::marker {
     color: #001aff !important; /* Cambia el color de los puntos */
   }
-  .buton-maphre::marker {
+  .buton-mapre::marker {
     color: #ff0000 !important; /* Cambia el color de los puntos */
   }
   .buton-axa::marker {
