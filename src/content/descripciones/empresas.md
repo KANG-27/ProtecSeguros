@@ -4,24 +4,31 @@ descripcion: Esta categoría está diseñada para proteger y garantizar el biene
 servicios:
   - nombre: Protec Legal
     subcategoria:
-      - nombre: Protección legal
-        referencia: proteccion-legal
-        descripcion: Las empresas pueden enfrentarse a inconvenientes jurídicos con clientes, empleados, proveedores o el Estado; en estos casos es importante contar con un acompañamiento especializado.​​​​​
-        imagen: "/legal.png"
-      - nombre: Sostenibilidad legal
-        referencia: sostenibilidad-legal
-        descripcion: ¿Quisieras tener tu empresa protegida frente a eventuales riesgos en materia legal? Descubre cómo te podemos acompañar.
-        imagen: "/sostenibilidad-legal.png"
-      - nombre: RC Derivada decumplimiento
-        referencia: rc-derivada-cumplimiento
-        descripcion: Ejecute los contratos sin preocuparse por las afectaciones que puede generarles a ​terceros durante el proceso. En Protec Seguros lo respaldamos con nuestra experiencia.​​​
-        imagen: "/derivada-cumplimiento.png"
       - nombre: Cumplimiento
         referencia: cumplimiento
         descripcion: Disposiciones Legales, Empresas de Servicios Públicos Domiciliarios, Entidades Estatales, Entidades públicas con Régimen Privado de Contratación, Grandes Beneficiarios, Particulares, Caución Judicial
         imagen: "/cumplimiento.png"
+
+      - nombre: RC Derivada decumplimiento
+        referencia: rc-derivada-cumplimiento
+        descripcion: Ejecute los contratos sin preocuparse por las afectaciones que puede generarles a ​terceros durante el proceso. En Protec Seguros lo respaldamos con nuestra experiencia.​​​
+        imagen: "/derivada-cumplimiento.png"
+      - nombre: Sostenibilidad legal
+        referencia: sostenibilidad-legal
+        descripcion: ¿Quisieras tener tu empresa protegida frente a eventuales riesgos en materia legal? Descubre cómo te podemos acompañar.
+        imagen: "/sostenibilidad-legal.png"
+
+      - nombre: Protección legal
+        referencia: proteccion-legal
+        descripcion: Las empresas pueden enfrentarse a inconvenientes jurídicos con clientes, empleados, proveedores o el Estado; en estos casos es importante contar con un acompañamiento especializado.​​​​​
+        imagen: "/legal.png"
+
   - nombre: Protec Modelo Operativo
     subcategoria:
+      - nombre: Responsabilidad Civil
+        referencia: responsabilidad-civil
+        descripcion: Protege a tu empresa frente a reclamaciones por daños a terceros. Nuestras pólizas de responsabilidad civil cubren incidentes que puedan afectar a personas o propiedades durante la operación de tu negocio, reduciendo riesgos financieros y legales.
+        imagen: "/responsabilidad-civil-empresas.png"
       - nombre: Transporte
         referencia: transporte
         descripcion: Ofrecemos seguros diseñados para proteger cargas y mercancías en tránsito, ya sea por vía terrestre, marítima o aérea. Nuestro servicio garantiza la cobertura ante daños, pérdidas o robos, minimizando riesgos y asegurando que tu negocio siga operando sin interrupciones.
@@ -34,14 +41,11 @@ servicios:
         referencia: ingenieria
         descripcion: Aseguramos proyectos de construcción y obras civiles en todas sus fases. Nuestras coberturas incluyen desde riesgos durante la construcción hasta equipos de maquinaria, garantizando la protección necesaria para evitar pérdidas económicas imprevistas.
         imagen: "/ingenieria.png"
-      - nombre: Cumplimiento
+      - nombre: Cumplimiento Operativo
         referencia: cumplimiento-operativo
         descripcion: Ofrecemos seguros de cumplimiento que garantizan la ejecución de contratos públicos y privados. Cubrimos posibles incumplimientos por parte de contratistas o proveedores, brindando tranquilidad tanto a las empresas contratantes como a las contratadas.
         imagen: "/cumplimiento-operativo.png"
-      - nombre: Responsabilidad Civil
-        referencia: responsabilidad-civil
-        descripcion: Protege a tu empresa frente a reclamaciones por daños a terceros. Nuestras pólizas de responsabilidad civil cubren incidentes que puedan afectar a personas o propiedades durante la operación de tu negocio, reduciendo riesgos financieros y legales.
-        imagen: "/responsabilidad-civil-empresas.png"
+
 
   - nombre: Protec Talento humano
     subcategoria:
@@ -59,7 +63,7 @@ servicios:
         imagen: "/hogar-colectiva.png"
       - nombre: Vida Grupo
         referencia: vida-grupo
-        descripcion: Ofrezca a sus empleados la oportunidad de contar con un seguro de vida que les permita tener bienestar y tranquilidad. 
+        descripcion: Ofrezca a sus empleados la oportunidad de contar con un seguro de vida que les permita tener bienestar y tranquilidad.
         imagen: "/vida-grupo.png"
       - nombre: Autos Colectivo
         referencia: autos-colectivo
@@ -85,7 +89,7 @@ servicios:
     subcategoria:
       - nombre: Seguro de Protección Digital
         referencia: seguro-proteccion-digital
-        descripcion: En un mundo cada vez más conectado, proteger tu negocio de acciones maliciosas de ciberdelincuentes es fundamental para que no ponga en riesgo su patrimonio y sus actividades se lleven a cabo de manera segura. 
+        descripcion: En un mundo cada vez más conectado, proteger tu negocio de acciones maliciosas de ciberdelincuentes es fundamental para que no ponga en riesgo su patrimonio y sus actividades se lleven a cabo de manera segura.
         imagen: "/equipo-electronico.png"
 imagenes:
   - src: /enfermeros.png

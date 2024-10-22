@@ -69,55 +69,51 @@ const { data, type } = Astro.props;
     carousels.forEach((carousel) => {
       const carouselData = JSON.parse(carousel.getAttribute("data-content"));
       let currentIndex = 0;
+      let isDragging = false;
+      let startX = 0;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+      let animationID;
 
-      // Función para obtener la cantidad de ítems visibles en función del tamaño del viewport
       function getVisibleItems() {
         const carouselWidth = carousel.offsetWidth;
         const itemWidth =
-          carouselData.tipo == "servicios"
+          carouselData.tipo === "servicios"
             ? window.screen.width <= 375
               ? 322
               : window.screen.width <= 425
                 ? 375
                 : 520
-            : 375; // Ancho de cada tarjeta
-        // const itemWidth = 520; // Ancho de cada tarjeta
+            : 375;
         return Math.floor(carouselWidth / itemWidth);
       }
 
-      // Función para mostrar un slide específico
       function showSlide(index) {
         const slides = carousel.querySelector(".carousel-inner");
         const totalSlides = carouselData.tamaño;
-        const visibleItems = getVisibleItems(); // Obtener el número de ítems visibles según el ancho del contenedor
-
-        // Limitar el índice para no pasar más allá del último set de ítems
+        const visibleItems = getVisibleItems();
 
         if (index < 0) {
-          currentIndex = totalSlides; // Evitar ir antes del primer ítem
-        } else if (
-          index >
-          (totalSlides - visibleItems == 0
-            ? totalSlides - visibleItems + 1
-            : totalSlides - visibleItems)
-        ) {
-          currentIndex = 0; // Evitar mostrar más allá del último ítem visible
+          currentIndex = totalSlides - visibleItems;
+        } else if (index >= totalSlides) {
+          currentIndex = 0;
         } else {
           currentIndex = index;
         }
 
-        // Calcular el desplazamiento (offset) en función del índice actual y el número de ítems visibles
         const offset =
           -currentIndex *
-          ((carouselData.tipo == "servicios"
+          ((carouselData.tipo === "servicios"
             ? window.screen.width <= 375
               ? 322
               : window.screen.width <= 425
                 ? 375
                 : 520
             : 375) +
-            50); // 375px de ancho + 20px de gap (ajusta el gap si es necesario)
+            50);
+
         slides.style.transform = `translateX(${offset}px)`;
+        prevTranslate = offset;
       }
 
       function nextSlide() {
@@ -128,18 +124,63 @@ const { data, type } = Astro.props;
         showSlide(currentIndex - 1);
       }
 
-      // Inicializar el carrusel al cargar la página
       showSlide(0);
 
-      // Añadir los eventos a los botones de control
       const nextButton = carousel.querySelector(".next");
       const prevButton = carousel.querySelector(".prev");
 
       nextButton.addEventListener("click", nextSlide);
       prevButton.addEventListener("click", prevSlide);
 
-      // Actualizar el carrusel al cambiar el tamaño de la ventana
       window.addEventListener("resize", () => showSlide(currentIndex));
+
+      // Agregar funcionalidad de arrastre y swipe
+      const slides = carousel.querySelector(".carousel-inner");
+
+      slides.addEventListener("mousedown", dragStart);
+      slides.addEventListener("mouseup", dragEnd);
+      slides.addEventListener("mouseleave", dragEnd);
+      slides.addEventListener("mousemove", dragMove);
+
+      slides.addEventListener("touchstart", dragStart);
+      slides.addEventListener("touchend", dragEnd);
+      slides.addEventListener("touchmove", dragMove);
+
+      function dragStart(event) {
+        isDragging = true;
+        startX = getPositionX(event);
+        animationID = requestAnimationFrame(animation);
+      }
+
+      function dragEnd() {
+        cancelAnimationFrame(animationID);
+        isDragging = false;
+
+        const movedBy = currentTranslate - prevTranslate;
+
+        if (movedBy < -50) nextSlide();
+        if (movedBy > 50) prevSlide();
+
+        currentTranslate = prevTranslate; // Resetear posición
+      }
+
+      function dragMove(event) {
+        if (isDragging) {
+          const currentPosition = getPositionX(event);
+          currentTranslate = prevTranslate + currentPosition - startX;
+        }
+      }
+
+      function getPositionX(event) {
+        return event.type.includes("mouse")
+          ? event.pageX
+          : event.touches[0].clientX;
+      }
+
+      function animation() {
+        slides.style.transform = `translateX(${currentTranslate}px)`;
+        if (isDragging) requestAnimationFrame(animation);
+      }
     });
   });
 </script>
@@ -262,7 +303,7 @@ const { data, type } = Astro.props;
   @media (max-width: 425px) {
     .card-services {
       width: 370px; /* Mostrar 1 imagen en pantallas pequeñas */
-      height: 435px;
+      height: max-content;
       margin-left: 17px;
     }
     .carousel-inner {

@@ -31,7 +31,7 @@ usoServicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - https://i.ytimg.com/vi/xdp7eJWOPBY/maxresdefault.jpg
+  - /autos-colectiva.png
   - /saludDos.png
   - /saludDos.png
   - /saludDos.png

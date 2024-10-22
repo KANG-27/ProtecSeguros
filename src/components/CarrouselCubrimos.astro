@@ -1,4 +1,5 @@
 ---
+// Componente con la interfaz y los datos del carrusel
 interface Props {
   data: string[];
 }
@@ -7,20 +8,18 @@ const { data } = Astro.props;
 
 <section class="carousel" data-content={data.length}>
   <div class="carousel-inner">
-    {
-      data.map((element, index: number) => (
-        <div class="content-carrousel">
-          <h2 class="number">{index + 1}</h2>
-          <div class="descripcion">
-            <span>{element}</span>
-          </div>
+    {data.map((element, index: number) => (
+      <div class="content-carrousel">
+        <h2 class="number">{index + 1}</h2>
+        <div class="descripcion">
+          <span>{element}</span>
         </div>
-      ))
-    }
+      </div>
+    ))}
   </div>
   <div class="carousel-controls">
-    <span class="arrow material-symbols-outlined prev"> arrow_back </span>
-    <span class="arrow material-symbols-outlined next"> arrow_forward </span>
+    <span class="arrow material-symbols-outlined prev">arrow_back</span>
+    <span class="arrow material-symbols-outlined next">arrow_forward</span>
   </div>
 </section>
 
@@ -30,17 +29,22 @@ const { data } = Astro.props;
 
     carousels.forEach((carousel) => {
       const totalItems = parseInt(carousel.getAttribute("data-content"));
+      const slides = carousel.querySelector(".carousel-inner");
+      const nextButton = carousel.querySelector(".next");
+      const prevButton = carousel.querySelector(".prev");
+
       let currentIndex = 0;
+      let startX = 0;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+      let isDragging = false;
 
+      // Mostrar el slide actual basado en el índice
       function showSlide(index) {
-        const slides = carousel.querySelector(".carousel-inner");
         const carouselWidth = carousel.offsetWidth;
-
-        // Limitar el índice dentro del rango
         currentIndex = (index + totalItems) % totalItems;
-
-        const offset = -currentIndex * carouselWidth;
-        slides.style.transform = `translateX(${offset}px)`;
+        currentTranslate = -currentIndex * carouselWidth;
+        slides.style.transform = `translateX(${currentTranslate}px)`;
       }
 
       function nextSlide() {
@@ -50,12 +54,61 @@ const { data } = Astro.props;
       function prevSlide() {
         showSlide(currentIndex - 1);
       }
-      showSlide(0);
-      const nextButton = carousel.querySelector(".next");
-      const prevButton = carousel.querySelector(".prev");
+
+      // Manejar el inicio del arrastre
+      function dragStart(e) {
+        isDragging = true;
+        startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+        prevTranslate = currentTranslate;
+        slides.style.transition = "none"; // Quitar transición durante el arrastre
+      }
+
+      // Manejar el movimiento durante el arrastre
+      function dragMove(e) {
+        if (!isDragging) return;
+
+        const currentX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+        const deltaX = currentX - startX;
+        currentTranslate = prevTranslate + deltaX;
+        slides.style.transform = `translateX(${currentTranslate}px)`;
+
+        e.preventDefault(); // Prevenir scroll
+      }
+
+      // Manejar el final del arrastre
+      function dragEnd() {
+        isDragging = false;
+        const movedBy = currentTranslate - prevTranslate;
+
+        if (movedBy < -100) nextSlide();
+        else if (movedBy > 100) prevSlide();
+        else showSlide(currentIndex);
+
+        slides.style.transition = "transform 0.5s ease"; // Restaurar transición
+      }
+
+      // Asignar eventos de arrastre al contenedor principal
+      carousel.addEventListener("mousedown", dragStart);
+      carousel.addEventListener("mousemove", dragMove);
+      carousel.addEventListener("mouseup", dragEnd);
+      carousel.addEventListener("mouseleave", dragEnd);
+      carousel.addEventListener("touchstart", dragStart);
+      carousel.addEventListener("touchmove", dragMove);
+      carousel.addEventListener("touchend", dragEnd);
+
+      // Prevenir que los hijos bloqueen el arrastre
+      const elements = carousel.querySelectorAll(".content-carrousel *");
+      elements.forEach((el) => {
+        el.addEventListener("mousedown", (e) => e.stopPropagation());
+        el.addEventListener("touchstart", (e) => e.stopPropagation());
+      });
+
+      // Botones de navegación
       nextButton.addEventListener("click", nextSlide);
       prevButton.addEventListener("click", prevSlide);
+
       window.addEventListener("resize", () => showSlide(currentIndex));
+      showSlide(0);
     });
   });
 </script>
@@ -65,9 +118,6 @@ const { data } = Astro.props;
     font-size: 70px;
     cursor: pointer;
     user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
   }
   .number,
   .arrow {
@@ -75,37 +125,31 @@ const { data } = Astro.props;
   }
   .descripcion {
     max-width: 50%;
+    font-size: 25px;
   }
   .number {
     font-size: 50px;
   }
-  .descripcion {
-    font-size: 25px;
-  }
   .carousel {
     position: relative;
     width: 90%;
-    overflow: hidden; /* Ocultar los ítems que no están en la vista */
+    overflow: hidden;
   }
-
   .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
     width: 100%;
   }
-
   .content-carrousel {
-    min-width: 100%; /* Asegurar que cada ítem ocupe el 100% del carrusel */
+    min-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 200px;
     padding: 20px;
-    padding-top: 0px;
     box-sizing: border-box;
     height: 300px;
   }
-
   .carousel-controls {
     position: absolute;
     top: 50%;
@@ -114,20 +158,6 @@ const { data } = Astro.props;
     justify-content: space-between;
     transform: translateY(-50%);
   }
-
-  .control {
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 50%;
-  }
-
-  .control:hover {
-    background: rgba(255, 255, 255, 0.9);
-  }
-
   @media (max-width: 768px) {
     .descripcion {
       font-size: 25px;
@@ -139,16 +169,12 @@ const { data } = Astro.props;
       font-size: 40px;
     }
   }
-
   @media (max-width: 425px) {
     .descripcion {
       font-size: 15px;
     }
     .content-carrousel {
       gap: 60px;
-    }
-    .carousel {
-      width: 100%;
     }
     .arrow {
       font-size: 30px;

@@ -31,81 +31,98 @@ const { data, type } = Astro.props;
 <header>
   <section class="section-header">
     <a href="/">
-      <img src="/logo.png" class="logo" alt="logo" width="230px" />
+      <img src="/logo.png" class="logo" alt="logo" width="200px" />
     </a>
-    {
-      data && (
-        <div class="bar-navegation-descktop">
-          <nav class="bar-navegation">
-            <ul class="list-nav-style">
-              <li class="list-nav-content-style">
-                <a class="list-nav-select" href="/inicio/personas">
-                  Inicio
-                </a>
-              </li>
-              {data.servicios && (
-                <li class="list-nav-content-style titulo-servicios">
-                  <a>Servicios</a>
-                  <div class="modal" id="Services-modal-id">
-                    <div class="list-service">
-                      {data?.servicios.map((element: any, index: number) => (
-                        <ul
-                          class={`list-service-content ${index === data.servicios.length - 1 ? "" : "list-service-content-line"}`}
-                        >
-                          <li class="content-servis">
-                            <h1 class="title-services">{element.nombre}</h1>
-                            {element.subcategoria.map((categoria: any) => (
-                              <ul class="services-list">
-                                <li class="categoria-services">
-                                  <a href={`/servicio/${categoria.referencia}`}>
-                                    {categoria.nombre}
-                                  </a>
-                                </li>
-                              </ul>
-                            ))}
-                          </li>
-                        </ul>
-                      ))}
-                    </div>
+
+    <div class="bar-navegation-descktop">
+      <nav class="bar-navegation">
+        <ul class="list-nav-style">
+          <li class="list-nav-content-style">
+            <a class={Astro.url.pathname.split("/")[1]=="inicio"?"list-nav-select":""} href="/inicio/personas"> Inicio </a>
+          </li>
+          {
+            data?.servicios && (
+              <li class="list-nav-content-style titulo-servicios">
+                <a class={Astro.url.pathname.split("/")[1]=="servicio"?"list-nav-select":""}>Servicios</a>
+                <div class="modal" id="Services-modal-id">
+                  <div class="list-service">
+                    {data?.servicios.map((element: any, index: number) => (
+                      <ul
+                        class={`list-service-content ${index === data.servicios.length - 1 ? "" : "list-service-content-line"}`}
+                      >
+                        <li class="content-servis">
+                          <h1 class="title-services">{element.nombre}</h1>
+                          {element.subcategoria.map((categoria: any) => (
+                            <ul class="services-list">
+                              <li class="categoria-services">
+                                <a href={`/servicio/${categoria.referencia}`}>
+                                  {categoria.nombre}
+                                </a>
+                              </li>
+                            </ul>
+                          ))}
+                        </li>
+                      </ul>
+                    ))}
                   </div>
-                </li>
-              )}
-              <li class="list-nav-content-style titulo-pagos">
-                <a class="">Paga tu póliza</a>
-                <div class="modal-payment" id="Pagos-modal-id">
-                  <h2 class="title-pagos">Botones de pago</h2>
-                  <ul class="list-payment">
-                    <li class="buton-sura">
-                      <a href="https://www.segurossura.com.co/paginas/pago-express.aspx#/Pagos">
-                        Sura
-                      </a>
-                    </li>
-                    <li class="buton-mapre">
-                      <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublico.jsf">
-                        Mapfre
-                      </a>
-                    </li>
-                    <li class="buton-axa">
-                      <a>AXA Colpatria</a>
-                    </li>
-                    <li class="buton-exquial">
-                      <a href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublicoMSE.jsf">
-                        Mapfre Exquial
-                      </a>
-                    </li>
-                    <li class="buton-finesa">
-                      <a href="https://pagos.finesa.com.co/autenticacion">
-                        FINESA
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </li>
-            </ul>
-          </nav>
-        </div>
-      )
-    }
+            )
+          }
+          <li class="list-nav-content-style titulo-pagos">
+            <a class="">Paga tu póliza</a>
+            <div class="modal-payment" id="Pagos-modal-id">
+              <h2 class="title-pagos">Botones de pago</h2>
+              <ul class="list-payment">
+                <li class="buton-sura">
+                  <a
+                    href="https://www.segurossura.com.co/paginas/pago-express.aspx#/Pagos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Seguros sura
+                  </a>
+                </li>
+                <li class="buton-mapre">
+                  <a
+                    href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublico.jsf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Mapfre seguros
+                  </a>
+                </li>
+                <li class="buton-axa">
+                  <a
+                    href="https://www.axacolpatria.co/pagosenlinea/opcionespago"
+                    target="_blank"
+                    rel="noopener noreferrer">AXA Colpatria</a
+                  >
+                </li>
+                <li class="buton-exquial">
+                  <a
+                    href="https://cotiza.mapfre.com.co/pagosWeb/vista/paginas/noFilterIniPagosPublicoMSE.jsf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Mapfre Exquial
+                  </a>
+                </li>
+                <li class="buton-finesa">
+                  <a
+                    href="https://pagos.finesa.com.co/autenticacion"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Pago aliado Finesa
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <NavMobile data={data?.servicios} />
     <a href="/contactanos" class="content-contact">
@@ -143,7 +160,6 @@ const { data, type } = Astro.props;
     )
   }
 </header>
-
 
 <style>
   header {

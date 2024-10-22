@@ -19,6 +19,7 @@ import Layout from "../layouts/Layout.astro";
       </p>
       <h2>Más de 35 años de experiencia</h2>
     </div>
+    <img src="/logo-verde-no-fondo.png" alt="">
   </div>
   <div class="nosotros-mision-vision">
     <div class="nosotros-content-card">
@@ -49,23 +50,21 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="title-logro">+35</h2>
         <h2 class="second-title-logro">Años de historia</h2>
         <p class="descripcion-logro">
-          Asegurandonos de darte binestar y dandote seguridad por medio de
-          serivicio seguro
+          Atraves de los años se ha ido ofreciendo soluciones, garantizando la proteccion de sus familias y patrimonio
         </p>
       </div>
       <div class="content-unico-logro">
         <h2 class="title-logro">+1.000</h2>
         <h2 class="second-title-logro">Cliestes satisfechos</h2>
         <p class="descripcion-logro">
-          Asegurandonos de darte binestar y dandote seguridad por medio de
-          serivicio seguro
+          Siempre atentos, encaminados en orientar profesionalmente en el sector asegurador a nuestros clientes brindandoles la mejor asesoria en el respaldo de sus riesgos
         </p>
       </div>
       <div class="content-unico-logro">
         <h2 class="title-logro">+50</h2>
         <h2 class="second-title-logro">soluciones para su tranquilidad</h2>
         <p class="descripcion-logro">
-          acompañamos tu desicion por medio de soluciones y servicios que impulsan tus metas, que generan bienestar para que puedas enfocarte en seguir alimentando tu futuro
+          acompañamos tu desicion por medio de soluciones y servicios que impulsen y acompañen tus metas, generando bienestar para que puedas enfocarte en seguir alimentando tu futuro
         </p>
       </div>
     </div>
@@ -105,6 +104,10 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
     background-color: #172052;
     color: white;
+  }
+  .nosotros-quienes-somos img{
+    width: 60%;
+    height: 600px;
   }
   .nosotros-quienes-somos {
     display: flex;
@@ -154,12 +157,13 @@ import Layout from "../layouts/Layout.astro";
   @media (max-width: 425px) {
     .content-logros {
       display: flex;
-      flex-direction: column;
+      flex-direction: column !important;
       gap: 60px;
     }
     .content-unico-logro {
-      width: 80%;
+      width: 100%;
     }
+    
   }
   @media (max-width: 768px) {
     .title {
@@ -177,6 +181,10 @@ import Layout from "../layouts/Layout.astro";
     .content-quienes-somos {
       margin: 5% 0%;
     }
+    .nosotros-quienes-somos img{
+    width: 100%;
+    height: auto;
+  }
     .nosotros-mision-vision,
     .nosotros-quienes-somos {
       display: flex;

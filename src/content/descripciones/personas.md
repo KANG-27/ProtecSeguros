@@ -4,10 +4,6 @@ descripcion: Esta categoría está diseñada para proteger y garantizar el biene
 servicios:
   - nombre: Protec movilidad
     subcategoria:
-      - nombre: Plan Muévete Libre
-        referencia: plan-muevete-libre
-        descripcion: No importa cómo te muevas. Muévete como más te guste con el respaldo de un seguro que te permite sentirte acompañado y ahorrar tiempo y dinero.
-        imagen: https://www.segurossura.com.co/images/novedades/plan-muevete-libre.png
       - nombre: Plan Utilitarios y Pesados
         referencia: plan-utilitarios-pesados
         descripcion: ​Si usas tu vehículo como una fuente de ingresos y transportas productos o personas, te recomendamos tener el Plan Utilitarios y Pesados. Te proteges frente a los daños que se puedan generar en carretera o mientras desarrollas tu actividad económica.
@@ -15,19 +11,23 @@ servicios:
       - nombre: Seguro de Autos
         referencia: seguro-autos
         descripcion: Por medio de tu movilidad realizas las actividades de tu vida cotidiana. Por eso, estamos contigo para que te desplaces de forma segura sintiéndote acompañado y ahorrando tiempo y dinero.
-        imagen: https://i.ytimg.com/vi/xdp7eJWOPBY/maxresdefault.jpg
-      - nombre: Seguro de Bicis y Patinetas
-        referencia: seguro-bicis-patinetas
-        descripcion: Te acompañamos si tu bici o patineta tiene una pérdida total por robo o daños y si tienes un incidente o sufres un accidente estando solo contra un objeto o persona. Para ello, activamos las asistencias que tenemos a tu disposición.
-        imagen: https://roams.es/images/post/es_ES_insurance/aseguradoras-mapfre-seguro-bicicleta.jpg
+        imagen: /autos-colectiva.png
       - nombre: Seguro de Motos
         referencia: seguro-motos
         descripcion: Aseguramos motos de alto cilindraje (mayor a 250 c.c) y bajo cilindraje (menor o igual a 250 c.c.). Para cuidar la tuya, cuentas con tres revisiones preventivas gratis al año y las asesorías que necesites con un mecánico experto.
         imagen: https://www.comparaonline.cl/blog-statics/cl/uploads/2011/02/cuanto-vale-el-soap-de-moto-442x280.jpg
+      - nombre: Seguro de Bicis y Patinetas
+        referencia: seguro-bicis-patinetas
+        descripcion: Te acompañamos si tu bici o patineta tiene una pérdida total por robo o daños y si tienes un incidente o sufres un accidente estando solo contra un objeto o persona. Para ello, activamos las asistencias que tenemos a tu disposición.
+        imagen: https://roams.es/images/post/es_ES_insurance/aseguradoras-mapfre-seguro-bicicleta.jpg
       - nombre: Seguro de Viaje
         referencia: seguro-viaje
         descripcion: Te acompañamos si durante tu viaje tienes un accidente o una enfermedad, coordinando los servicios médicos que requieras. Si no te sientes bien, recibe atención médica por medio de llamada telefónica desde donde estés para ser atendido por un experto y, de acuerdo con tu estado de salud, te orientamos de la mejor manera.
         imagen: https://sfestaticos.blob.core.windows.net/regional/assets/1103x711_BN_principal_21d83d7966.png
+      - nombre: Plan Muévete Libre
+        referencia: plan-muevete-libre
+        descripcion: No importa cómo te muevas. Muévete como más te guste con el respaldo de un seguro que te permite sentirte acompañado y ahorrar tiempo y dinero.
+        imagen: https://www.segurossura.com.co/images/novedades/plan-muevete-libre.png
   - nombre: Protec salud
     subcategoria:
       - nombre: Póliza de Salud
@@ -48,14 +48,33 @@ servicios:
         imagen: https://www.susegurosb.com/wp-content/uploads/2024/04/salud_para_todos_sura.png
   - nombre: Protec personas
     subcategoria:
-      - nombre: Fondo de Ahorros
-        referencia: fondo-ahorros
-        descripcion: Respaldamos tu vida y protegemos tu libertad y autonomía. Asimismo, te damos opciones para que ahorres con nosotros y hagas realidad tus sueños por medio de la consolidación de un patrimonio sólido.
-        imagen: /finanzas.png
+      - nombre: Seguro de Vida
+        referencia: seguro-vida
+        descripcion: Obtener y conservar tu independencia económica ante cualquier imprevisto es importante para ti​, al igual que contar con un ahorro para cumplir tus sueños ​​​y los de tus seres queridos.​
+        imagen: /vida.png
+      - nombre: Seguro de Renta Vitalicia
+        referencia: seguro-renta-vitalicia
+        descripcion: Sabemos lo importante que ​es tu calidad de vida y la de tus seres queridos, por eso contamos con diferentes alternativas para acompañarte cuando culmines tu etapa laboral o en la realización de tus sueños en cualquier momento​. Ingresa a cada ​plan que te ofrecemos y escoge el que más se acomode a tus necesidades y metas.​​
+        imagen: /rentaVitalicia.png
+      - nombre: Seguro de Educación
+        referencia: seguro-educacion
+        descripcion: Con el Seguro de Educación estructuras un plan de pagos para construir un capital con el que puedas cubrir los costos del plan educativo q​ue quieras asegurar para ti o para tus seres queridos en el futuro.
+        imagen: /educacion.png
+      - nombre: Seguro de Pensión
+        referencia: seguro-pension
+        descripcion: Con este seguro adquieres una cultura de planeación financiera y al mismo tiempo aseguras los ingresos que en unos años complementarán tu pensión.​ Queremos garantizarte un capital de respaldo para que tus seres queridos y tú disfruten de calidad de vida en el futuro.
+        imagen: /pensionDos.png
+      - nombre: Seguro de Accidentes
+        referencia: seguro-accidentes
+        descripcion: Sabemos que el riesgo está e​​n todas partes y tenemos un seguro con el que te sentirás más protegido, sea porque te gusta salir en tu bicicleta, conduces tu carro con frecuencia o caminas tranquilo por un parque.
+        imagen: /accidentesPersonales.png
       - nombre: Mascotas
         referencia: mascotas
         descripcion: Sabemos que tus mascotas son una parte fundamental de tu Familia. Con esta solución Protec Seguros te respalda protegiendo tu patrimonio, en caso de que este se vea afectado por cualquier evento relacionado con tus perros o gatos, y te acompaña satisfaciendo tus necesidades y las de tus mascotas, a través de la prestación de diferentes servicios, para que puedas cuidarlos, atenderlos y consentirlos como se lo merecen.​​​​​​​​​​
         imagen: /mascotas-tres.png
+      
+
+
       - nombre: RC Familiar
         referencia: rc-familiar
         descripcion: En la vida diaria estás expuesto a un sin número de riesgos que no pu​edes evitar, si en alguno de ellos tú o tu familia ocasionan daños a terceras personas, puedes ver afectado tu patrimonio y tranquilidad, pues es necesario indemnizar a la persona involucrada, ya sea por un daño físico o moral, a una propiedad u objeto.​
@@ -72,34 +91,22 @@ servicios:
         referencia: rc-profesionales-veterinarios
         descripcion: ¡El concepto de familia ha cambiado y ahora las mascotas juegan un papel más importante en nuestras vidas !Somos conscientes de los riesgos a los que estás expuesto como médico, por eso contamos con el Seguro de Responsabilidad Civil Profesional para Veterinarios, con el que buscamos proteger tu patrimonio. Así podrás ejercer tu profesión con tranquilidad.​​​​​
         imagen: /veterinario.png
-      - nombre: Seguro de Accidentes
-        referencia: seguro-accidentes
-        descripcion: Sabemos que el riesgo está e​​n todas partes y tenemos un seguro con el que te sentirás más protegido, sea porque te gusta salir en tu bicicleta, conduces tu carro con frecuencia o caminas tranquilo por un parque.
-        imagen: /accidentesPersonales.png
+
       - nombre: Seguro Colectivo de Vida
         referencia: seguro-colectivo-vida
         descripcion: Con un Seguro de Vida puedes conservar el bienestar y la tranquilidad tuya y de tu familia, además te brindamos un respaldo ecnonómico inmediato frente a las situaciones inesperadas cubiertas por este seguro. 
         imagen: /colectivo-vida.png
-      - nombre: Seguro de Educación
-        referencia: seguro-educacion
-        descripcion: Con el Seguro de Educación estructuras un plan de pagos para construir un capital con el que puedas cubrir los costos del plan educativo q​ue quieras asegurar para ti o para tus seres queridos en el futuro.
-        imagen: /educacion.png
+
       - nombre: Seguro de Exequias
         referencia: seguro-exequias
         descripcion: El fallecimiento de un ser querido es una situación difícil en la que contar con el mejor apoyo hace la diferencia. En caso de ser tú el que muera, imagínate lo que significa para tus familiares y amigos tener el respaldo que el Seguro de Exequias de Protec Seguros les brinda.
         imagen: /exequias.png
-      - nombre: Seguro de Pensión
-        referencia: seguro-pension
-        descripcion: Con este seguro adquieres una cultura de planeación financiera y al mismo tiempo aseguras los ingresos que en unos años complementarán tu pensión.​ Queremos garantizarte un capital de respaldo para que tus seres queridos y tú disfruten de calidad de vida en el futuro.
-        imagen: /pensionDos.png
-      - nombre: Seguro de Renta Vitalicia
-        referencia: seguro-renta-vitalicia
-        descripcion: Sabemos lo importante que ​es tu calidad de vida y la de tus seres queridos, por eso contamos con diferentes alternativas para acompañarte cuando culmines tu etapa laboral o en la realización de tus sueños en cualquier momento​. Ingresa a cada ​plan que te ofrecemos y escoge el que más se acomode a tus necesidades y metas.​​
-        imagen: /rentaVitalicia.png
-      - nombre: Seguro de Vida
-        referencia: seguro-vida
-        descripcion: Obtener y conservar tu independencia económica ante cualquier imprevisto es importante para ti​, al igual que contar con un ahorro para cumplir tus sueños ​​​y los de tus seres queridos.​
-        imagen: /vida.png
+
+      - nombre: Fondo de Ahorros
+        referencia: fondo-ahorros
+        descripcion: Respaldamos tu vida y protegemos tu libertad y autonomía. Asimismo, te damos opciones para que ahorres con nosotros y hagas realidad tus sueños por medio de la consolidación de un patrimonio sólido.
+        imagen: /finanzas.png
+
   - nombre: Protec patrimonio
     subcategoria:
       - nombre: Seguro de Hogar

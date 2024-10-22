@@ -1,7 +1,7 @@
 ---
 id: rc-familiar
 titulo: Responsabilidad Civil Familiar
-descripcion: En la vida diaria estás expuesto a un sin número de riesgos que no pu​edes evitar, si en alguno de ellos tú o tu familia ocasionan daños a terceras personas, puedes ver afectado tu patrimonio y tranquilidad, pues es necesario indemnizar a la persona involucrada, ya sea por un daño físico o moral, a una propiedad u objeto.​ ​El Seguro de Responsabilidad Civil Familiar de Protec Seguros, fue creado pensando en ti y en tu familia, para protegerte en situaciones cotidianas y ofrecerte un r​espaldo de defensa judicial y gastos médicos de urgencia para situaciones en las que más lo necesites.
+descripcion: En la vida diaria estás expuesto a un sin número de riesgos que no pu​edes evitar, si en alguno de ellos tú o tu familia ocasionan daños a terceras personas, puedes ver afectado tu patrimonio y tranquilidad, pues es necesario indemnizar a la persona involucrada, ya sea por un daño físico o moral, a una propiedad u objeto.​ ​El Seguro de Responsabilidad Civil Familiar, fue creado pensando en ti y en tu familia, para protegerte en situaciones cotidianas y ofrecerte un r​espaldo de defensa judicial y gastos médicos de urgencia para situaciones en las que más lo necesites.
 
 necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.
 prestaciones: 

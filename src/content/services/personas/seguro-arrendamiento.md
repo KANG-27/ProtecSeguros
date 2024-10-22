@@ -1,7 +1,7 @@
 ---
 id: seguro-arrendamiento
 titulo: Seguro de Arrendamiento
-descripcion: Sabemos la tranquilidad que te genera saber que cada mes cuentas con el dinero que te pagan los inquilinos de tu propiedad, pero cuando no sea así, ¡no te preocupes! Tenemos la solución para que nunca dejes de recibir tus ingresos.​​​​​​​​​​.
+descripcion: Sabemos la tranquilidad que te genera saber que cada mes cuentas con el dinero que te pagan los inquilinos de tu propiedad, pero cuando no sea así, ¡no te preocupes! Tenemos la solución para que nunca dejes de recibir tus ingresos.​​​​​​​​​​
 
 
 necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.

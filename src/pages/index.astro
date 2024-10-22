@@ -30,7 +30,7 @@ import Footer from "../components/Footer.astro";
       </div>
       <div class="color-content" id="color-content-id"></div>
       <div class="content-index-text">
-        <h1 class="title">Te damos la bienvenida a Protec Seguros</h1>
+        <h1 class="title">Te damos la bienvenida a <br> Protec Seguros</h1>
         <div class="content-contact">
           <a class="buton-content" href="./inicio/personas">
             <button
@@ -154,7 +154,7 @@ import Footer from "../components/Footer.astro";
   .title {
     color: white;
     text-align: center;
-    width: 40%;
+    width: 100%;
   }
   .content-index-text {
     position: absolute;
@@ -172,7 +172,7 @@ import Footer from "../components/Footer.astro";
     gap: 100px;
   }
   .content-index img{
-    width: 400px;
+    width: 300px;
   }
   .content-index {
     position: relative;
@@ -203,13 +203,13 @@ import Footer from "../components/Footer.astro";
     width: 80%;
     height: 90%;
   }
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
     .imagenUno,
     .imagenDos {
       width: 100%;
       height: 100%;
     }
-  }
+  } */
   @media (max-width: 768px) {
     .title{
       font-size: 35px;
@@ -219,7 +219,7 @@ import Footer from "../components/Footer.astro";
       padding: 0px 20px;
     }
   }
-  @media (max-width: 425px) {
+  @media (max-width: 700px) {
     .title{
       font-size: 35px;
       width: 100%;

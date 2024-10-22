@@ -9,62 +9,55 @@ interface Item {
 }
 
 const { data } = Astro.props;
-const totalItems = data.length; // Calcula el número total de imágenes
+const totalItems = data.length; // Número total de imágenes
 ---
 
 <div class="carousel-imagesHome" data-content={totalItems}>
   <div class="carousel-inner-imagesHome">
-    {
-      data.map((image) => (
-        <div class="carousel-item-imagesHome">
-          <img src={image.src} alt={image.alt} />
-        </div>
-      ))
-    }
+    {data.map((image) => (
+      <div class="carousel-item-imagesHome">
+        <img src={image.src} alt={image.alt} />
+      </div>
+    ))}
   </div>
   <div class="carousel-dots-imagesHome">
-    {
-      data.map((element, index: number) => (
-        <span
-          class="dot-imagesHome"
-          onclick={`showSlideimagesHome(${index})`}
-        />
-      ))
-    }
+    {data.map((_, index: number) => (
+      <span
+        class="dot-imagesHome"
+        onclick={`showSlideimagesHome(${index})`}
+      />
+    ))}
   </div>
 </div>
 
 <script is:inline type="text/javascript">
   let carousel = document.querySelector(".carousel-imagesHome");
   let totalIndexCarrousel = carousel.getAttribute("data-content");
+  let currentIndeximagesHome = 0;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
 
   document.addEventListener("astro:after-swap", () => {
     carousel = document.querySelector(".carousel-imagesHome");
     totalIndexCarrousel = carousel.getAttribute("data-content");
   });
 
-  let currentIndeximagesHome = 0;
-
-  // Astro pasará aquí el valor del total de imágenes
   function showSlideimagesHome(index) {
-    const slidesimagesHome = document.querySelector(
-      ".carousel-inner-imagesHome"
-    );
-    const visibleItemsimagesHome = 1;
+    const slides = document.querySelector(".carousel-inner-imagesHome");
 
     if (index < 0) {
-      currentIndeximagesHome = totalIndexCarrousel + visibleItemsimagesHome;
+      currentIndeximagesHome = totalIndexCarrousel - 1;
     } else if (index >= totalIndexCarrousel) {
       currentIndeximagesHome = 0;
     } else {
       currentIndeximagesHome = index;
     }
 
-    const offsetimagesHome =
-      -currentIndeximagesHome * (100 / visibleItemsimagesHome);
-    slidesimagesHome.style.transform = `translateX(${offsetimagesHome}%)`;
+    const offset = -currentIndeximagesHome * 100;
+    slides.style.transform = `translateX(${offset}%)`;
 
-    // Actualiza los puntos de navegación
     const dots = document.querySelectorAll(".dot-imagesHome");
     dots.forEach((dot, idx) => {
       dot.classList.toggle("active", idx === currentIndeximagesHome);
@@ -75,8 +68,51 @@ const totalItems = data.length; // Calcula el número total de imágenes
     showSlideimagesHome(currentIndeximagesHome + 1);
   }
 
-  // Movimiento automático
-  setInterval(nextSlideimagesHome, 3000); // Cambia cada 3 segundos
+  // Manejo del arrastre
+  function dragStart(e) {
+    isDragging = true;
+    startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+    prevTranslate = currentTranslate;
+    carousel.style.transition = "none";
+  }
+
+  function dragMove(e) {
+    if (!isDragging) return;
+    const currentX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+    const deltaX = currentX - startX;
+    currentTranslate = prevTranslate + deltaX;
+    const slides = document.querySelector(".carousel-inner-imagesHome");
+    slides.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function dragEnd() {
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -50) nextSlideimagesHome();
+    else if (movedBy > 50) showSlideimagesHome(currentIndeximagesHome - 1);
+    else showSlideimagesHome(currentIndeximagesHome);
+
+    carousel.style.transition = "transform 0.5s ease";
+  }
+
+  // Asignar eventos de arrastre
+  carousel.addEventListener("mousedown", dragStart);
+  carousel.addEventListener("mousemove", dragMove);
+  carousel.addEventListener("mouseup", dragEnd);
+  carousel.addEventListener("mouseleave", dragEnd);
+  carousel.addEventListener("touchstart", dragStart);
+  carousel.addEventListener("touchmove", dragMove);
+  carousel.addEventListener("touchend", dragEnd);
+
+  // Cambiar de imagen al hacer clic en los puntos
+  const dots = document.querySelectorAll(".dot-imagesHome");
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => showSlideimagesHome(index));
+  });
+
+  // Cambio automático cada 3 segundos
+  setInterval(nextSlideimagesHome, 3000);
 </script>
 
 <style>
@@ -99,13 +135,13 @@ const totalItems = data.length; // Calcula el número total de imágenes
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Puedes ajustar esta altura */
-    min-width: 100%; /* Asegúrate de que cada imagen ocupe el 100% */
+    height: 100%;
+    min-width: 100%;
   }
 
   .carousel-imagesHome img {
     width: 60%;
-    height: auto; /* Permite que la altura sea automática */
+    height: auto;
   }
 
   .carousel-dots-imagesHome {
@@ -128,23 +164,8 @@ const totalItems = data.length; // Calcula el número total de imágenes
   }
 
   @media (max-width: 768px) {
-    .carousel-item-imagesHome {
-      min-width: 100%; /* Mostrar 1 imagen en pantallas pequeñas */
-    }
     .carousel-imagesHome img {
       width: 100%;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .carousel-item-imagesHome {
-      min-width: 100%; /* Mostrar 1 imagen en pantallas medianas */
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .carousel-item-imagesHome {
-      min-width: 100%; /* Mostrar 1 imagen en pantallas grandes */
     }
   }
 </style>
