@@ -31,10 +31,10 @@ usoServicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - /autos-colectiva.png
-  - /saludDos.png
-  - /saludDos.png
-  - /saludDos.png
+  - /autos-colectiva.webp
+  - /saludDos.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 

@@ -23,9 +23,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /hogar-colectiva.png
-  - /saludDos.png
-  - /saludDos.png
+  - /hogar-colectiva.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

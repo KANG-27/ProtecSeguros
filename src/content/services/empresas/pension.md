@@ -17,9 +17,9 @@ usoServicio:
 
 imagenes:
   - ""
-  - /familia.png
-  - /saludDos.png
-  - /saludDos.png
+  - /familia.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

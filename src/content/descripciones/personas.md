@@ -11,7 +11,7 @@ servicios:
       - nombre: Seguro de Autos
         referencia: seguro-autos
         descripcion: Por medio de tu movilidad realizas las actividades de tu vida cotidiana. Por eso, estamos contigo para que te desplaces de forma segura sintiéndote acompañado y ahorrando tiempo y dinero.
-        imagen: /autos-colectiva.png
+        imagen: /autos-colectiva.webp
       - nombre: Seguro de Motos
         referencia: seguro-motos
         descripcion: Aseguramos motos de alto cilindraje (mayor a 250 c.c) y bajo cilindraje (menor o igual a 250 c.c.). Para cuidar la tuya, cuentas con tres revisiones preventivas gratis al año y las asesorías que necesites con un mecánico experto.
@@ -33,7 +33,7 @@ servicios:
       - nombre: Póliza de Salud
         referencia: poliza-salud
         descripcion: Con un Seguro de Salud permaneces tranquilo porque sabes que tienes acceso ilimitado a servicios que no solo complementan tu Plan Obligatorio, s​​ino que además te permiten disfrutar de atenciones exclusivas
-        imagen: /doctores-caminando.png
+        imagen: /doctores-caminando.webp
       - nombre: Póliza de Enfermedades Graves
         referencia: seguro-enfermedades-graves
         descripcion: ​Adquiere este respaldo por el valor que elijas y a​​segura también a tu grupo familiar para que obtengas un descuento por incluir a tu pareja, padres e hijos.
@@ -51,94 +51,94 @@ servicios:
       - nombre: Seguro de Vida
         referencia: seguro-vida
         descripcion: Obtener y conservar tu independencia económica ante cualquier imprevisto es importante para ti​, al igual que contar con un ahorro para cumplir tus sueños ​​​y los de tus seres queridos.​
-        imagen: /vida.png
+        imagen: /vida.webp
       - nombre: Seguro de Renta Vitalicia
         referencia: seguro-renta-vitalicia
         descripcion: Sabemos lo importante que ​es tu calidad de vida y la de tus seres queridos, por eso contamos con diferentes alternativas para acompañarte cuando culmines tu etapa laboral o en la realización de tus sueños en cualquier momento​. Ingresa a cada ​plan que te ofrecemos y escoge el que más se acomode a tus necesidades y metas.​​
-        imagen: /rentaVitalicia.png
+        imagen: /rentaVitalicia.webp
       - nombre: Seguro de Educación
         referencia: seguro-educacion
         descripcion: Con el Seguro de Educación estructuras un plan de pagos para construir un capital con el que puedas cubrir los costos del plan educativo q​ue quieras asegurar para ti o para tus seres queridos en el futuro.
-        imagen: /educacion.png
+        imagen: /educacion.webp
       - nombre: Seguro de Pensión
         referencia: seguro-pension
         descripcion: Con este seguro adquieres una cultura de planeación financiera y al mismo tiempo aseguras los ingresos que en unos años complementarán tu pensión.​ Queremos garantizarte un capital de respaldo para que tus seres queridos y tú disfruten de calidad de vida en el futuro.
-        imagen: /pensionDos.png
+        imagen: /pensionDos.webp
       - nombre: Seguro de Accidentes
         referencia: seguro-accidentes
         descripcion: Sabemos que el riesgo está e​​n todas partes y tenemos un seguro con el que te sentirás más protegido, sea porque te gusta salir en tu bicicleta, conduces tu carro con frecuencia o caminas tranquilo por un parque.
-        imagen: /accidentesPersonales.png
+        imagen: /accidentesPersonales.webp
       - nombre: Mascotas
         referencia: mascotas
         descripcion: Sabemos que tus mascotas son una parte fundamental de tu Familia. Con esta solución Protec Seguros te respalda protegiendo tu patrimonio, en caso de que este se vea afectado por cualquier evento relacionado con tus perros o gatos, y te acompaña satisfaciendo tus necesidades y las de tus mascotas, a través de la prestación de diferentes servicios, para que puedas cuidarlos, atenderlos y consentirlos como se lo merecen.​​​​​​​​​​
-        imagen: /mascotas-tres.png
+        imagen: /mascotas-tres.webp
       
 
 
       - nombre: RC Familiar
         referencia: rc-familiar
         descripcion: En la vida diaria estás expuesto a un sin número de riesgos que no pu​edes evitar, si en alguno de ellos tú o tu familia ocasionan daños a terceras personas, puedes ver afectado tu patrimonio y tranquilidad, pues es necesario indemnizar a la persona involucrada, ya sea por un daño físico o moral, a una propiedad u objeto.​
-        imagen: /familia-uno.png
+        imagen: /familia-uno.webp
       - nombre: RC Profesional
         referencia: rc-profesional
         descripcion: Cuando ejerces una profesión eres responsable por los daños que puedan sufrir los terceros como consecuencia de errores u omisiones que cometas en la prestación del servicio, sin importar la profesión que tengas.
-        imagen: /profecionales.png
+        imagen: /profecionales.webp
       - nombre: RC Profesionales de la Salud
         referencia: rc-profesionales-salud
         descripcion: Cuando ejerces tu profesión estás obligado a preservar los derechos de tus pacientes como la vida, la salud, las buenas condiciones físicas o mentales y la integridad corporal. Cuando vulneras alguno de estos derechos, tu paciente o los afectados pueden reclamar una indemnización.
-        imagen: /enfermeros.png
+        imagen: /enfermeros.webp
       - nombre: RC Profesionales Veterinarios
         referencia: rc-profesionales-veterinarios
         descripcion: ¡El concepto de familia ha cambiado y ahora las mascotas juegan un papel más importante en nuestras vidas !Somos conscientes de los riesgos a los que estás expuesto como médico, por eso contamos con el Seguro de Responsabilidad Civil Profesional para Veterinarios, con el que buscamos proteger tu patrimonio. Así podrás ejercer tu profesión con tranquilidad.​​​​​
-        imagen: /veterinario.png
+        imagen: /veterinario.webp
 
       - nombre: Seguro Colectivo de Vida
         referencia: seguro-colectivo-vida
         descripcion: Con un Seguro de Vida puedes conservar el bienestar y la tranquilidad tuya y de tu familia, además te brindamos un respaldo ecnonómico inmediato frente a las situaciones inesperadas cubiertas por este seguro. 
-        imagen: /colectivo-vida.png
+        imagen: /colectivo-vida.webp
 
       - nombre: Seguro de Exequias
         referencia: seguro-exequias
         descripcion: El fallecimiento de un ser querido es una situación difícil en la que contar con el mejor apoyo hace la diferencia. En caso de ser tú el que muera, imagínate lo que significa para tus familiares y amigos tener el respaldo que el Seguro de Exequias de Protec Seguros les brinda.
-        imagen: /exequias.png
+        imagen: /exequias.webp
 
       - nombre: Fondo de Ahorros
         referencia: fondo-ahorros
         descripcion: Respaldamos tu vida y protegemos tu libertad y autonomía. Asimismo, te damos opciones para que ahorres con nosotros y hagas realidad tus sueños por medio de la consolidación de un patrimonio sólido.
-        imagen: /finanzas.png
+        imagen: /finanzas.webp
 
   - nombre: Protec patrimonio
     subcategoria:
       - nombre: Seguro de Hogar
         referencia: seguro-hogar
         descripcion: Cuando tienes un seguro de hogar sabes que, pase lo que pase, conservas el patrimonio que has construido con los años o que estás iniciando, así proteges el lugar en el que vives, los electrodomésticos y muebles, tus elementos personales, las prendas de vestir que usas todos los días y hasta los elementos asociados al negocio que tienes en tu vivienda.
-        imagen: /hogar.png
+        imagen: /hogar.webp
       - nombre: Seguro de Arrendamiento
         referencia: seguro-arrendamiento
         descripcion: Sabemos la tranquilidad que te genera saber que cada mes cuentas con el dinero que te pagan los inquilinos de tu propiedad, pero cuando no sea así, ¡no te preocupes! Tenemos la solución para que nunca dejes de recibir tus ingresos.
-        imagen: /arrendamiento.png
+        imagen: /arrendamiento.webp
       - nombre: Plan Inversión Protegida
         referencia: plan-inversion-protegida
         descripcion: Sabemos que tener vivienda propia es uno de tus sueños y, en Protec Seguros, nos encargamos de cuidar la inversión que hagas para hacerlo realidad. De esa manera no te preocupas por las diferentes eventualidades que pongan en riesgo tu patrimonio y tu esfuerzo.
-        imagen: /invercion-protegida.png
+        imagen: /invercion-protegida.webp
 imagenes:
-  - src: /saludDos.png
+  - src: /saludDos.webp
     alt: "imagen1"
-  - src: /pension.png
+  - src: /pension.webp
     alt: "imagen2"
-  - src: /familia2.png
+  - src: /familia2.webp
     alt: "imagen4"
-  - src: /autos-familia.png
+  - src: /autos-familia.webp
     alt: "imagen4"
-  - src: /doctor-personas.png
+  - src: /doctor-personas.webp
     alt: "imagen4"
-  - src: /familia3.png
+  - src: /familia3.webp
     alt: "imagen4"
-  - src: /personas-mano.png
+  - src: /personas-mano.webp
     alt: "imagen4"
-  - src: /adultos-moto.png
+  - src: /adultos-moto.webp
     alt: "imagen4"
-  - src: /viaje.png
+  - src: /viaje.webp
     alt: "imagen4"
 
 ---

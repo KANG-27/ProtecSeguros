@@ -30,9 +30,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /equipo-electronico.png
-  - /saludDos.png
-  - /saludDos.png
+  - /equipo-electronico.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

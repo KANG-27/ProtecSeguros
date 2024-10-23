@@ -6,36 +6,36 @@ descripcion: Nuestro seguro de transporte está diseñado para brindar protecci�
 conjuntoServicios:
   - nombreConjunto: Seguro de Transporte para Agentes de Carga
     descripcionConjunto: Su compañía, como agente de carga, es responsable del transporte de los bienes de sus clientes y, por ende, de pérdidas y daños materiales que se pueden producir por diferentes eventos. Gestione sus riesgos con responsabilidad para no afectar su patrimonio. Seguros Protec Seguros le ofrece una solución integral para respaldar los daños o pérdidas materiales que sufran los bienes asegurados con ocasión de su transporte, de esta forma tendrá total tranquilidad en caso de que algo inesperado ocurra. Brindarles confianza a sus clientes es fundamental para el éxito de sus actividades productivas. Con nuestros más de 70 años de experiencia y liderazgo en el mercado, no solo lo logrará, sino que contará con un aliado permanente para cuidar y fomentar el crecimiento de su patrimonio.
-    imagen: /agentes-carga.png 
+    imagen: /agentes-carga.webp 
   - nombreConjunto: Seguro para Carga de Proyecto​​
     descripcionConjunto: Las pérdidas y daños causados a equipos de proyectos tienen un efecto grave sobre los resultados finales, especialmente en la fecha estimada de inicio de operaciones. Seguros Protec Seguros ofrece el Seguro para Carga de Proyectos , una modalidad de seguro de transporte altamente especializada y acorde con estándares internacionales, diseñada para proyectos de escala. Con esta solución su empresa está cubierta ante las pérdidas o daños materiales que ocurran durante la movilización de equipos o bienes críticos para un proyecto, desde el lugar de fabricación hasta el sitio final del proyecto. Igualmente, protegerá la pérdida Anticipada de Utilidad (ALOP – DSU), orientada a cubrir las pérdidas financieras que se pueden generar a razón de la interrupción de los negocios, causada por una pérdida o daño físico de un equipo crítico para el proyecto durante su transporte. Además, Seguros Protec Seguros le brinda a su empresa un amplio soporte y asesoría para la administración y control de riesgos durante todo el proceso de transporte.
-    imagen: /carga-proyectos.png
+    imagen: /carga-proyectos.webp
   - nombreConjunto: Seguro de Embarcaciones Comerciales
     descripcionConjunto: ​Cuando asegura aquello que le da sustento económico a su negocio, puede respirar tranquilo. Hay muchos factores que podrían causarle dolores de cabeza y trastocar gravemente el ingreso de su empresa, al punto de detener por completo su actividad productiva y poner en riesgo su continuidad. Con nuestro Seguro de Embarcaciones Comerciales no solo respaldará su patrimonio representado en las embarcaciones mismas, sino que también se blindará frente a afectaciones patrimoniales por daños o perjuicios causados a terceros, o al medio ambiente durante el desarrollo de sus labores. Tome hoy la decisión de contar con Seguros Protec Seguros para gestionar sus riesgos. Tener el control de lo que puede ocurrirle a su negocio, estar listo para lo imprevisto, es una decisión responsable y comprometida con sus clientes y empleados, con usted mismo y el futuro. ¡Permítanos asesorarlo! ​​​​
-    imagen: /embarcacniones-comerciales.png
+    imagen: /embarcacniones-comerciales.webp
   - nombreConjunto: Seguro de Embarcaciones de Recreo​
     descripcionConjunto: Las embarcaciones de recreo, como yates, lanchas y catamaranes, están expuestas a una serie de riesgos que en caso de materializarse pueden llevar a su pérdida parcial o total. Protec Seguros le ofrece una solución integral para proteger su patrimonio Durante la navegación, ya sea en aguas interiores o en el mar, es posible causar daños a terceros, siendo necesario indemnizar monetariamente a la persona afectada, ya sea por un daño físico o moral, a una propiedad u objeto. Es por esto que si su empresa cuenta con embarcaciones de recreo, Protec Seguros lo acompaña para que usted pueda estar tranquilo en caso de que algo ocurra. ​
-    imagen: /embarcaciones-recreo.png
+    imagen: /embarcaciones-recreo.webp
   - nombreConjunto: Plan Utilitarios y Pesados​
     descripcionConjunto: Si tu empresa usa vehículos para transportar productos o personas debes contar con el Seguro para Vehículos Utilitarios y Pesados de Protec Seguros. Diseñado para utilitarios livianos (capacidad de carga inferior a 2.5 toneladas) y utilitarios pesados (capacidad de carga superior a 2.5 toneladas), te protege frente a los eventos en los cuales tus vehículos pueden involucrarse mientras operan en carretera o en la ciudad, apoyando la productividad y competitividad de la empresa y aportando a que tu cadena de abastecimiento opere en forma eficiente y oportuna. Con nosotros recibes un acompañamiento permanente, no solo en caso de accidentes o robos, sino también en asistencia y prevención, facilitando la operación en el día a día y ahorrando tiempo y dinero.​​
-    imagen: /camiones.png
+    imagen: /camiones.webp
   - nombreConjunto: Seguro de Transportadores Terrestres de Carga​
     descripcionConjunto: Su empresa transportadora tiene la responsabilidad de trasladar de forma segura los productos de sus clientes. No dude en respaldar ese compromiso con nuestro apoyo. ¡Le apostamos a su tranquilidad y al crecimiento de su organización! Con Seguros Protec Seguros, su empresa tendrá una solución integral que responda por los daños a la mercancía que movilice por medio terrestre, es decir con camiones pequeños de carga, mulas, tractomulas y otros vehículos que se dirijan a cualquier zona del país. El Seguro de Transportadores Terrestres de Carga Protec Seguros es sinónimo de protección.​
-    imagen: /terrestre-carga.png
+    imagen: /terrestre-carga.webp
   - nombreConjunto: Seguro de Transporte de Mercancías Automático
     descripcionConjunto: ​El hurto, extravío, accidentes del vehículo transportador, daños durante las operaciones de cargue y descargue, derrumbes, inundaciones, incendios, entre otros, son riesgos comunes a los que están expuestas sus mercancías durante movilizaciones urbanas, nacionales, importaciones o exportaciones en los diferentes modos de transporte (aéreo, marítimo, terrestre, férreo o fluvial). El Seguro de Transporte de Mercancías Automático Protec Seguros es una solución sólida que le permite proteger los envíos de sus mercancías de forma automática, es decir que no requieren un reporte previo de cada despacho que su empresa realice para gozar de protección. Este seguro tiene una estructura todo riesgo, así que se amparan todos los factores que pueden afectar sus traslados, excepto los excluidos en el condicionado general.​​
-    imagen: /mercancia-automatica.png
+    imagen: /mercancia-automatica.webp
   - nombreConjunto: Seguro de Transporte de Mercancías Específico​
     descripcionConjunto: ​El hurto, extravío, accidentes del vehículo tran​​​​​​​​​​s​​portador, daños durante las operaciones de cargue y descargue, derrumbes, inundación, incendio, entre otros hechos, son riesgos comunes a los que están expuestas sus mercancías durante movilizaciones urbanas, nacionales, importaciones o exportaciones en diferentes modos de transporte (aéreo, marítimo, terrestre, férreo o fluvial). El Seguro de Transporte de Mercancías Específico Protec Seguros es una solución sólida que le permite proteger un envío de mercancías en particular, es decir que esta solución solo opera para un despacho y, por lo tanto, deberá ser tomada con anticipación a dicho envío. Si posteriormente su empresa realiza otras movilizaciones, deberá tomar un seguro adicional para cada una de ellas. Este seguro tiene una estructura todo riesgo, es decir que se amparan todos los riesgos excepto aquellos excluidos en el condicionado general.​
-    imagen: /empresas.png
+    imagen: /empresas.webp
   - nombreConjunto: Seguro de Transporte de Valores
     descripcionConjunto: ​​El transporte de efectivo y títulos valores es una actividad que implica un alto riesgo. Si su empresa moviliza este tipo de bienes, el Seguro de Transporte de Valores Protec Seguros le brinda protección contra el hurto calificado y los daños que estos elementos puedan sufrir con ocasión del transporte. Este seguro fue diseñado como una solución todo riesgo, es decir que cubre cualquier causa de siniestro siempre y cuando no esté excluida en las condiciones generales. Permítanos apoyarlo para ​que el patrimonio de su organización esté siempre respaldado. Su tranquilidad es nuestra prioridad. 
-    imagen: /transporte-valores.png
+    imagen: /transporte-valores.webp
 
 imagenes:
-  - /transporte-empresas.png
-  - /saludDos.png
-  - /saludDos.png
+  - /transporte-empresas.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

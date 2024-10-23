@@ -19,9 +19,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /rentaVitalicia.png
-  - /saludDos.png
-  - /saludDos.png
+  - /rentaVitalicia.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

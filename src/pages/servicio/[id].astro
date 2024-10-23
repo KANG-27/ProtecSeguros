@@ -30,7 +30,7 @@ const servicioSelected = descripciones.filter(
   <main>
     <Header data={servicioSelected[0].data} type={service.slug.split("/")[0]} />
     <div class="categoria">
-      <img src={service.data?.imagenes?.[0]} alt="" />
+      <img src={service.data?.imagenes?.[0]} loading="lazy" alt="" />
       <div class="content-service">
         <h1 transition:name={service.data.id} class="title">
           {service.data.titulo}
@@ -81,7 +81,7 @@ const servicioSelected = descripciones.filter(
               importar el reto.
             </p>
           </div>
-          <img src="/logosintexto.png" alt="" />
+          <img src="/logosintexto.webp" loading="lazy" alt="" />
         </div>
       ) : (
         <div class="necesito">
@@ -106,7 +106,7 @@ const servicioSelected = descripciones.filter(
               tendrás la tranquilidad necesaria para seguir avanzando.
             </p>
           </div>
-          <img src="/logosintexto.png" alt="" />
+          <img src="/logosintexto.webp" loading="lazy" alt="" />
         </div>
       )
     }

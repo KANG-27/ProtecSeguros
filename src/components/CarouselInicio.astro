@@ -16,7 +16,7 @@ const totalItems = data.length; // Número total de imágenes
   <div class="carousel-inner-imagesHome">
     {data.map((image) => (
       <div class="carousel-item-imagesHome">
-        <img src={image.src} alt={image.alt} />
+        <img src={image.src} loading="lazy" alt={image.alt} />
       </div>
     ))}
   </div>

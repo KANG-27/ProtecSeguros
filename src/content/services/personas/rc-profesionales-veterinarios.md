@@ -15,9 +15,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /veterinario.png
-  - /saludDos.png
-  - /saludDos.png
+  - /veterinario.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

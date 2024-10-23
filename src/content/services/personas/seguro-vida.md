@@ -15,9 +15,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /vida.png
-  - /saludDos.png
-  - /saludDos.png
+  - /vida.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

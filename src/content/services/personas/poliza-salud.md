@@ -56,10 +56,10 @@ usoServicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - /doctores-caminando.png
-  - /saludDos.png
-  - /saludDos.png
-  - /saludDos.png
+  - /doctores-caminando.webp
+  - /saludDos.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: salud
 subcategoria: personas
 

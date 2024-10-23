@@ -18,9 +18,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /talento.png
-  - /saludDos.png
-  - /saludDos.png
+  - /talento.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

@@ -16,9 +16,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 imagenes:
   - https://sfestaticos.blob.core.windows.net/regional/assets/1103x711_BN_principal_21d83d7966.png
-  - /saludDos.png
-  - /saludDos.png
-  - /saludDos.png
+  - /saludDos.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 

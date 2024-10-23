@@ -18,10 +18,10 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /finanzas.png
-  - /familia.png
-  - /saludDos.png
-  - /saludDos.png
+  - /finanzas.webp
+  - /familia.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

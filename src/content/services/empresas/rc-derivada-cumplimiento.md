@@ -17,9 +17,9 @@ usoServicio:
   - paso: Título del paso 2
     descripcion: Descripción detallada del paso.
 imagenes:
-  - /derivada-cumplimiento.png
-  - /saludDos.png
-  - /saludDos.png
+  - /derivada-cumplimiento.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec movilidad
 subcategoria: empresas
 

@@ -22,6 +22,7 @@ const { data, type } = Astro.props;
         data.map((element: any) => (
           <div class="card-services">
             <img
+              loading="lazy"
               class="imagen-card-services"
               src={element.imagen}
               alt="imagen"
@@ -51,7 +52,7 @@ const { data, type } = Astro.props;
       type == "aliados" &&
         (data as string[]).map((image) => (
           <div class="carousel-item">
-            <img src={image} alt="Carousel image" />
+            <img src={image} loading="lazy" alt="Carousel image" />
           </div>
         ))
     }

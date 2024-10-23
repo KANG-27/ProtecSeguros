@@ -21,9 +21,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /invercion-protegida.png
-  - /saludDos.png
-  - /saludDos.png
+  - /invercion-protegida.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

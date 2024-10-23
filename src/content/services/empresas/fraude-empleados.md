@@ -16,9 +16,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /fraude-empleados.png
-  - /saludDos.png
-  - /saludDos.png
+  - /fraude-empleados.webp
+  - /saludDos.webp
+  - /saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---
