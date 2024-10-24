@@ -24,9 +24,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 imagenes:
   - https://integraldesegurosejecafetero.com/wp-content/uploads/2018/08/seguros-para-vehiculos-de-carga.jpg
-  - /saludDos.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 

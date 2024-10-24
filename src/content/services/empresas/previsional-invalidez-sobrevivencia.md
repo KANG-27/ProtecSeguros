@@ -19,9 +19,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /invalidez.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/invalidez.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

@@ -20,9 +20,9 @@ usoServicio:
 
 imagenes:
   - https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/caa0fde4-11c7-41d0-80c1-55c8d11e66b2/Educativo-2001.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-caa0fde4-11c7-41d0-80c1-55c8d11e66b2-oWR4dRq
-  - /familia.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/familia.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

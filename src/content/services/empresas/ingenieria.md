@@ -27,9 +27,9 @@ conjuntoServicios:
     imagen: /vivienda-segura.webp
 
 imagenes:
-  - /ingenieria.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/ingenieria.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

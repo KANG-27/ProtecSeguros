@@ -42,9 +42,9 @@ conjuntoServicios:
     imagen: /responsabilidad-civil.webp
 
 imagenes:
-  - /responsabilidad-civil-empresas.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/responsabilidad-empleador.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

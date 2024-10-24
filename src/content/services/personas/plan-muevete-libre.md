@@ -21,9 +21,9 @@ usoServicio:
 
 imagenes:
   - https://www.segurossura.com.co/images/novedades/plan-muevete-libre.png
-  - /familia.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/familia.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

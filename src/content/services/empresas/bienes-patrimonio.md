@@ -30,9 +30,9 @@ conjuntoServicios:
     imagen: /protegido.webp
 
 imagenes:
-  - /derivada-cumplimiento.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/derivada-cumplimiento.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

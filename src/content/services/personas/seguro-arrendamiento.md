@@ -21,9 +21,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /arrendamiento.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/arrendamiento.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

@@ -16,9 +16,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /renta-empresas.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/renta-empresas.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

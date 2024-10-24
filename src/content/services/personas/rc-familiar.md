@@ -25,9 +25,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /familia-uno.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/familia-uno.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec movilidad
 subcategoria: personas
 ---

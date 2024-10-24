@@ -15,9 +15,9 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - /autos-colectiva.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/autos-colectiva.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

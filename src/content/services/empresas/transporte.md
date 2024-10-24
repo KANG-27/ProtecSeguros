@@ -33,9 +33,9 @@ conjuntoServicios:
     imagen: /transporte-valores.webp
 
 imagenes:
-  - /transporte-empresas.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/transporte-empresas.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---

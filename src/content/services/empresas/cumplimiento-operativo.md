@@ -16,9 +16,9 @@ conjuntoServicios:
     imagen: /eficiencia-energetica.webp
 
 imagenes:
-  - /cumplimiento-operativo.webp
-  - /saludDos.webp
-  - /saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/cumplimiento-operativo.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---
