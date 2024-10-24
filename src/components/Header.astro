@@ -33,15 +33,13 @@ const { data, type } = Astro.props;
     <a href="/">
       <img src="https://protecsegurosltda.com/imagenes.pagina/logo.webp" loading="lazy" class="logo" alt="logo" width="200px" />
     </a>
-
     <div class="bar-navegation-descktop">
       <nav class="bar-navegation">
         <ul class="list-nav-style">
           <li class="list-nav-content-style">
             <a class={Astro.url.pathname.split("/")[1]=="inicio"?"list-nav-select":""} href="/inicio/personas"> Inicio </a>
           </li>
-          {
-            data?.servicios && (
+          {data?.servicios && (
               <li class="list-nav-content-style titulo-servicios">
                 <a class={Astro.url.pathname.split("/")[1]=="servicio"?"list-nav-select":""}>Servicios</a>
                 <div class="modal" id="Services-modal-id">
@@ -105,7 +103,7 @@ const { data, type } = Astro.props;
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Mapfre Exquial
+                    Mapfre Exequial
                   </a>
                 </li>
                 <li class="buton-finesa">
@@ -129,36 +127,35 @@ const { data, type } = Astro.props;
       <button class="button-contact">¡Contáctanos!</button>
     </a>
   </section>
-  {
-    type && (
-      <div class="content-butons-selection-section">
-        <a class="buton-content" href="/inicio/personas">
-          <button
-            class={`${
-              Astro.url.pathname.split("/").pop() === "personas" ||
-              type == "personas"
-                ? "butons-selection-section"
-                : "butons-selection-section-empresas"
-            }`}
-          >
-            <p class="text-butons-selection-section">Personas</p>
-          </button>
-        </a>
-        <a class="buton-content" href="/inicio/empresas">
-          <button
-            class={`${
-              Astro.url.pathname.split("/").pop() === "empresas" ||
-              type == "empresas"
-                ? "butons-selection-section"
-                : "butons-selection-section-empresas"
-            }`}
-          >
-            <p class="text-butons-selection-section-empresas">Empresas</p>
-          </button>
-        </a>
-      </div>
-    )
-  }
+  {type && (
+    <div class="content-butons-selection-section">
+      <a class="buton-content" href="/inicio/personas">
+        <button
+          class={`${
+            Astro.url.pathname.split("/").pop() === "personas" ||
+            type == "personas"
+              ? "butons-selection-section"
+              : "butons-selection-section-empresas"
+          }`}
+        >
+          <p class="text-butons-selection-section">Personas</p>
+        </button>
+      </a>
+      <a class="buton-content" href="/inicio/empresas">
+        <button
+          class={`${
+            Astro.url.pathname.split("/").pop() === "empresas" ||
+            type == "empresas"
+              ? "butons-selection-section"
+              : "butons-selection-section-empresas"
+          }`}
+        >
+          <p class="text-butons-selection-section-empresas">Empresas</p>
+        </button>
+      </a>
+    </div>
+  )
+}
 </header>
 
 <style>

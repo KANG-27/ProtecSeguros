@@ -2,50 +2,25 @@
 titulo: Personas
 descripcion: Esta categoría está diseñada para proteger y garantizar el bienestar individual y familiar ante imprevistos que puedan afectar tu salud, seguridad o futuro financiero.
 servicios:
-  - nombre: Protec movilidad
-    subcategoria:
-      - nombre: Plan Utilitarios y Pesados
-        referencia: plan-utilitarios-pesados
-        descripcion: ​Si usas tu vehículo como una fuente de ingresos y transportas productos o personas, te recomendamos tener el Plan Utilitarios y Pesados. Te proteges frente a los daños que se puedan generar en carretera o mientras desarrollas tu actividad económica.
-        imagen: https://integraldesegurosejecafetero.com/wp-content/uploads/2018/08/seguros-para-vehiculos-de-carga.jpg
-      - nombre: Seguro de Autos
-        referencia: seguro-autos
-        descripcion: Por medio de tu movilidad realizas las actividades de tu vida cotidiana. Por eso, estamos contigo para que te desplaces de forma segura sintiéndote acompañado y ahorrando tiempo y dinero.
-        imagen: https://protecsegurosltda.com/imagenes.pagina/autos-colectiva.webp
-      - nombre: Seguro de Motos
-        referencia: seguro-motos
-        descripcion: Aseguramos motos de alto cilindraje (mayor a 250 c.c) y bajo cilindraje (menor o igual a 250 c.c.). Para cuidar la tuya, cuentas con tres revisiones preventivas gratis al año y las asesorías que necesites con un mecánico experto.
-        imagen: https://www.comparaonline.cl/blog-statics/cl/uploads/2011/02/cuanto-vale-el-soap-de-moto-442x280.jpg
-      - nombre: Seguro de Bicis y Patinetas
-        referencia: seguro-bicis-patinetas
-        descripcion: Te acompañamos si tu bici o patineta tiene una pérdida total por robo o daños y si tienes un incidente o sufres un accidente estando solo contra un objeto o persona. Para ello, activamos las asistencias que tenemos a tu disposición.
-        imagen: https://roams.es/images/post/es_ES_insurance/aseguradoras-mapfre-seguro-bicicleta.jpg
-      - nombre: Seguro de Viaje
-        referencia: seguro-viaje
-        descripcion: Te acompañamos si durante tu viaje tienes un accidente o una enfermedad, coordinando los servicios médicos que requieras. Si no te sientes bien, recibe atención médica por medio de llamada telefónica desde donde estés para ser atendido por un experto y, de acuerdo con tu estado de salud, te orientamos de la mejor manera.
-        imagen: https://sfestaticos.blob.core.windows.net/regional/assets/1103x711_BN_principal_21d83d7966.png
-      - nombre: Plan Muévete Libre
-        referencia: plan-muevete-libre
-        descripcion: No importa cómo te muevas. Muévete como más te guste con el respaldo de un seguro que te permite sentirte acompañado y ahorrar tiempo y dinero.
-        imagen: https://www.segurossura.com.co/images/novedades/plan-muevete-libre.png
+  
   - nombre: Protec salud
     subcategoria:
-      - nombre: Póliza de Salud
-        referencia: poliza-salud
-        descripcion: Con un Seguro de Salud permaneces tranquilo porque sabes que tienes acceso ilimitado a servicios que no solo complementan tu Plan Obligatorio, s​​ino que además te permiten disfrutar de atenciones exclusivas
-        imagen: https://protecsegurosltda.com/imagenes.pagina/doctores-caminando.webp
-      - nombre: Póliza de Enfermedades Graves
-        referencia: seguro-enfermedades-graves
-        descripcion: ​Adquiere este respaldo por el valor que elijas y a​​segura también a tu grupo familiar para que obtengas un descuento por incluir a tu pareja, padres e hijos.
-        imagen: https://i.ytimg.com/vi/zfexD9aWkOs/maxresdefault.jpg
-      - nombre: Póliza Plan Renta Diaria
-        referencia: poliza-plan-renta-diaria
-        descripcion: Sabemos el impacto económico que te generan los gastos que vienen con una hospitalización. Transporte de familiares, alimentación de visitantes, gastos médicos, entre otros, por eso te ofrecemos un plan que te permitirá recuperar total o parcialmente los ingresos que dejas de recibir en ese período.​
-        imagen: https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/caa0fde4-11c7-41d0-80c1-55c8d11e66b2/Educativo-2001.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-caa0fde4-11c7-41d0-80c1-55c8d11e66b2-oWR4dRq
-      - nombre: Salud Para Todos
-        referencia: salud-para-todos
-        descripcion: Es un seguro de salud que cuenta con diferentes planes que puedes elegir según tus necesidades y capacidad de pago. De acuerdo al que elijas podrás o no compartirlo con quien prefieras y acceder a diferentes coberturas y beneficios.
-        imagen: https://www.susegurosb.com/wp-content/uploads/2024/04/salud_para_todos_sura.png
+    - nombre: Póliza de Salud
+      referencia: poliza-salud
+      descripcion: Con un Seguro de Salud permaneces tranquilo porque sabes que tienes acceso ilimitado a servicios que no solo complementan tu Plan Obligatorio, s​​ino que además te permiten disfrutar de atenciones exclusivas
+      imagen: https://protecsegurosltda.com/imagenes.pagina/doctores-caminando.webp
+    - nombre: Póliza de Enfermedades Graves
+      referencia: seguro-enfermedades-graves
+      descripcion: ​Adquiere este respaldo por el valor que elijas y a​​segura también a tu grupo familiar para que obtengas un descuento por incluir a tu pareja, padres e hijos.
+      imagen: https://i.ytimg.com/vi/zfexD9aWkOs/maxresdefault.jpg
+    - nombre: Póliza Plan Renta Diaria
+      referencia: poliza-plan-renta-diaria
+      descripcion: Sabemos el impacto económico que te generan los gastos que vienen con una hospitalización. Transporte de familiares, alimentación de visitantes, gastos médicos, entre otros, por eso te ofrecemos un plan que te permitirá recuperar total o parcialmente los ingresos que dejas de recibir en ese período.​
+      imagen: https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/caa0fde4-11c7-41d0-80c1-55c8d11e66b2/Educativo-2001.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-caa0fde4-11c7-41d0-80c1-55c8d11e66b2-oWR4dRq
+    - nombre: Salud Para Todos
+      referencia: salud-para-todos
+      descripcion: Es un seguro de salud que cuenta con diferentes planes que puedes elegir según tus necesidades y capacidad de pago. De acuerdo al que elijas podrás o no compartirlo con quien prefieras y acceder a diferentes coberturas y beneficios.
+      imagen: https://www.susegurosb.com/wp-content/uploads/2024/04/salud_para_todos_sura.png
   - nombre: Protec personas
     subcategoria:
       - nombre: Seguro de Vida
@@ -72,8 +47,48 @@ servicios:
         referencia: mascotas
         descripcion: Sabemos que tus mascotas son una parte fundamental de tu Familia. Con esta solución Protec Seguros te respalda protegiendo tu patrimonio, en caso de que este se vea afectado por cualquier evento relacionado con tus perros o gatos, y te acompaña satisfaciendo tus necesidades y las de tus mascotas, a través de la prestación de diferentes servicios, para que puedas cuidarlos, atenderlos y consentirlos como se lo merecen.​​​​​​​​​​
         imagen: https://protecsegurosltda.com/imagenes.pagina/mascotas-tres.webp
-      
-
+      - nombre: Póliza de Salud
+        referencia: poliza-salud
+        descripcion: Con un Seguro de Salud permaneces tranquilo porque sabes que tienes acceso ilimitado a servicios que no solo complementan tu Plan Obligatorio, s​​ino que además te permiten disfrutar de atenciones exclusivas
+        imagen: https://protecsegurosltda.com/imagenes.pagina/doctores-caminando.webp
+      - nombre: Póliza de Enfermedades Graves
+        referencia: seguro-enfermedades-graves
+        descripcion: ​Adquiere este respaldo por el valor que elijas y a​​segura también a tu grupo familiar para que obtengas un descuento por incluir a tu pareja, padres e hijos.
+        imagen: https://i.ytimg.com/vi/zfexD9aWkOs/maxresdefault.jpg
+      - nombre: Póliza Plan Renta Diaria
+        referencia: poliza-plan-renta-diaria
+        descripcion: Sabemos el impacto económico que te generan los gastos que vienen con una hospitalización. Transporte de familiares, alimentación de visitantes, gastos médicos, entre otros, por eso te ofrecemos un plan que te permitirá recuperar total o parcialmente los ingresos que dejas de recibir en ese período.​
+        imagen: https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/caa0fde4-11c7-41d0-80c1-55c8d11e66b2/Educativo-2001.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P86O40QTNS9EAE1S47-caa0fde4-11c7-41d0-80c1-55c8d11e66b2-oWR4dRq
+      - nombre: Salud Para Todos
+        referencia: salud-para-todos
+        descripcion: Es un seguro de salud que cuenta con diferentes planes que puedes elegir según tus necesidades y capacidad de pago. De acuerdo al que elijas podrás o no compartirlo con quien prefieras y acceder a diferentes coberturas y beneficios.
+        imagen: https://www.susegurosb.com/wp-content/uploads/2024/04/salud_para_todos_sura.png
+  - nombre: Protec movilidad
+    subcategoria:
+      - nombre: Plan Utilitarios y Pesados
+        referencia: plan-utilitarios-pesados
+        descripcion: ​Si usas tu vehículo como una fuente de ingresos y transportas productos o personas, te recomendamos tener el Plan Utilitarios y Pesados. Te proteges frente a los daños que se puedan generar en carretera o mientras desarrollas tu actividad económica.
+        imagen: https://integraldesegurosejecafetero.com/wp-content/uploads/2018/08/seguros-para-vehiculos-de-carga.jpg
+      - nombre: Seguro de Autos
+        referencia: seguro-autos
+        descripcion: Por medio de tu movilidad realizas las actividades de tu vida cotidiana. Por eso, estamos contigo para que te desplaces de forma segura sintiéndote acompañado y ahorrando tiempo y dinero.
+        imagen: https://protecsegurosltda.com/imagenes.pagina/autos-colectiva.webp
+      - nombre: Seguro de Motos
+        referencia: seguro-motos
+        descripcion: Aseguramos motos de alto cilindraje (mayor a 250 c.c) y bajo cilindraje (menor o igual a 250 c.c.). Para cuidar la tuya, cuentas con tres revisiones preventivas gratis al año y las asesorías que necesites con un mecánico experto.
+        imagen: https://www.comparaonline.cl/blog-statics/cl/uploads/2011/02/cuanto-vale-el-soap-de-moto-442x280.jpg
+      - nombre: Seguro de Bicis y Patinetas
+        referencia: seguro-bicis-patinetas
+        descripcion: Te acompañamos si tu bici o patineta tiene una pérdida total por robo o daños y si tienes un incidente o sufres un accidente estando solo contra un objeto o persona. Para ello, activamos las asistencias que tenemos a tu disposición.
+        imagen: https://roams.es/images/post/es_ES_insurance/aseguradoras-mapfre-seguro-bicicleta.jpg
+      - nombre: Seguro de Viaje
+        referencia: seguro-viaje
+        descripcion: Te acompañamos si durante tu viaje tienes un accidente o una enfermedad, coordinando los servicios médicos que requieras. Si no te sientes bien, recibe atención médica por medio de llamada telefónica desde donde estés para ser atendido por un experto y, de acuerdo con tu estado de salud, te orientamos de la mejor manera.
+        imagen: https://sfestaticos.blob.core.windows.net/regional/assets/1103x711_BN_principal_21d83d7966.png
+      - nombre: Plan Muévete Libre
+        referencia: plan-muevete-libre
+        descripcion: No importa cómo te muevas. Muévete como más te guste con el respaldo de un seguro que te permite sentirte acompañado y ahorrar tiempo y dinero.
+        imagen: https://www.segurossura.com.co/images/novedades/plan-muevete-libre.png
 
       - nombre: RC Familiar
         referencia: rc-familiar

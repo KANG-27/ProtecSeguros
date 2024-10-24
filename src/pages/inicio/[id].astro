@@ -6,6 +6,7 @@ import Footer from "../../components/Footer.astro";
 import CarouselInicio from "../../components/CarouselInicio.astro";
 import Layout from "../../layouts/Layout.astro";
 
+
 export async function getStaticPaths() {
   // const servicios = await getCollection("services");
   const descripciones = await getCollection("descripciones");
@@ -23,7 +24,8 @@ const images = [
   "https://www.elempleo.com/co/sitio-empresarial/CompanySites/axa-colpatria/resources/images/logo-social.png",
   "https://seeklogo.com/images/A/aseguradora-solidario-de-colombia-logo-0285B0DF5D-seeklogo.com.png",
 ];
-console.log(Astro.url.pathname.split("/").pop());
+
+
 ---
 
 <Layout title="Protec Seguros">
@@ -72,7 +74,7 @@ console.log(Astro.url.pathname.split("/").pop());
       <div class="content-services">
         <div class="content-butons">
           {
-            data.servicios.map((element, index: number) => (
+            data.servicios.map((element:any, index: number) => (
               <button
                 class={index == 0 ? "selected" : ""}
                 id={`button-${element.nombre
@@ -216,7 +218,7 @@ console.log(Astro.url.pathname.split("/").pop());
   }
   .imagenes-carrusel {
     width: 50%;
-    height: 100%;
+    height: auto;
     margin: 0% 5%;
   }
   .nosotros-content {
@@ -304,9 +306,10 @@ console.log(Astro.url.pathname.split("/").pop());
     display: flex;
     background-color: #172052;
     color: white;
-    height: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    height: 85vh;
+    align-items: center;
+    /* padding-top: 5%;
+    padding-bottom: 5%; */
     width: 100%;
   }
   .servicios {
@@ -315,7 +318,11 @@ console.log(Astro.url.pathname.split("/").pop());
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5% 0%;
+    /* margin: 5% 0%; */ 
+    height: 86vh;
+  }
+  .servicios h1{
+    margin: 0% 0% 2% 0%;
   }
   .aliados {
     display: flex;

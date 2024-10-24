@@ -2,51 +2,6 @@
 titulo: Empresas
 descripcion: Esta categoría está diseñada para proteger y garantizar el bienestar individual y familiar ante imprevistos que puedan afectar tu salud, seguridad o futuro financiero.
 servicios:
-  - nombre: Protec Legal
-    subcategoria:
-      - nombre: Cumplimiento
-        referencia: cumplimiento
-        descripcion: Disposiciones Legales, Empresas de Servicios Públicos Domiciliarios, Entidades Estatales, Entidades públicas con Régimen Privado de Contratación, Grandes Beneficiarios, Particulares, Caución Judicial
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/cumplimiento.webp"
-
-      - nombre: RC Derivada decumplimiento
-        referencia: rc-derivada-cumplimiento
-        descripcion: Ejecute los contratos sin preocuparse por las afectaciones que puede generarles a ​terceros durante el proceso. En Protec Seguros lo respaldamos con nuestra experiencia.​​​
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/derivada-cumplimiento.webp"
-      - nombre: Sostenibilidad legal
-        referencia: sostenibilidad-legal
-        descripcion: ¿Quisieras tener tu empresa protegida frente a eventuales riesgos en materia legal? Descubre cómo te podemos acompañar.
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/sostenibilidad-legal.webp"
-
-      - nombre: Protección legal
-        referencia: proteccion-legal
-        descripcion: Las empresas pueden enfrentarse a inconvenientes jurídicos con clientes, empleados, proveedores o el Estado; en estos casos es importante contar con un acompañamiento especializado.​​​​​
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/legal.webp"
-
-  - nombre: Protec Modelo Operativo
-    subcategoria:
-      - nombre: Responsabilidad Civil
-        referencia: responsabilidad-civil
-        descripcion: Protege a tu empresa frente a reclamaciones por daños a terceros. Nuestras pólizas de responsabilidad civil cubren incidentes que puedan afectar a personas o propiedades durante la operación de tu negocio, reduciendo riesgos financieros y legales.
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/responsabilidad-empleador.webp"
-      - nombre: Transporte
-        referencia: transporte
-        descripcion: Ofrecemos seguros diseñados para proteger cargas y mercancías en tránsito, ya sea por vía terrestre, marítima o aérea. Nuestro servicio garantiza la cobertura ante daños, pérdidas o robos, minimizando riesgos y asegurando que tu negocio siga operando sin interrupciones.
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/transporte-empresas.webp"
-      - nombre: Bienes y patrimonio
-        referencia: bienes-patrimonio
-        descripcion: Protege los activos esenciales de tu empresa o negocio con nuestras pólizas personalizadas. Aseguramos tus instalaciones, equipos y propiedades ante riesgos como incendios, robos o desastres naturales, para que puedas enfocarte en crecer sin preocupaciones.
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/derivada-cumplimiento.webp"
-      - nombre: Ingenieria
-        referencia: ingenieria
-        descripcion: Aseguramos proyectos de construcción y obras civiles en todas sus fases. Nuestras coberturas incluyen desde riesgos durante la construcción hasta equipos de maquinaria, garantizando la protección necesaria para evitar pérdidas económicas imprevistas.
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/ingenieria.webp"
-      - nombre: Cumplimiento Operativo
-        referencia: cumplimiento-operativo
-        descripcion: Ofrecemos seguros de cumplimiento que garantizan la ejecución de contratos públicos y privados. Cubrimos posibles incumplimientos por parte de contratistas o proveedores, brindando tranquilidad tanto a las empresas contratantes como a las contratadas.
-        imagen: "https://protecsegurosltda.com/imagenes.pagina/cumplimiento-operativo.webp"
-
-
   - nombre: Protec Talento humano
     subcategoria:
       - nombre: Asegura tu talento
@@ -85,6 +40,50 @@ servicios:
         referencia: renta
         descripcion: Bríndeles a sus colaboradores la posibilidad de contar con una suma de dinero mensual desde el momento en que se pensionen (de acuerdo con las condiciones que elijan o les apliquen) para que, pase lo que pase, siempre vivan con la certeza de bienestar para ellos y sus familias.​​
         imagen: "https://protecsegurosltda.com/imagenes.pagina/renta-empresas.webp"
+
+  - nombre: Protec Modelo Operativo
+    subcategoria:
+      - nombre: Responsabilidad Civil
+        referencia: responsabilidad-civil
+        descripcion: Protege a tu empresa frente a reclamaciones por daños a terceros. Nuestras pólizas de responsabilidad civil cubren incidentes que puedan afectar a personas o propiedades durante la operación de tu negocio, reduciendo riesgos financieros y legales.
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/responsabilidad-empleador.webp"
+      - nombre: Transporte
+        referencia: transporte
+        descripcion: Ofrecemos seguros diseñados para proteger cargas y mercancías en tránsito, ya sea por vía terrestre, marítima o aérea. Nuestro servicio garantiza la cobertura ante daños, pérdidas o robos, minimizando riesgos y asegurando que tu negocio siga operando sin interrupciones.
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/transporte-empresas.webp"
+      - nombre: Bienes y patrimonio
+        referencia: bienes-patrimonio
+        descripcion: Protege los activos esenciales de tu empresa o negocio con nuestras pólizas personalizadas. Aseguramos tus instalaciones, equipos y propiedades ante riesgos como incendios, robos o desastres naturales, para que puedas enfocarte en crecer sin preocupaciones.
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/derivada-cumplimiento.webp"
+      - nombre: Ingenieria
+        referencia: ingenieria
+        descripcion: Aseguramos proyectos de construcción y obras civiles en todas sus fases. Nuestras coberturas incluyen desde riesgos durante la construcción hasta equipos de maquinaria, garantizando la protección necesaria para evitar pérdidas económicas imprevistas.
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/ingenieria.webp"
+      - nombre: Cumplimiento Operativo
+        referencia: cumplimiento-operativo
+        descripcion: Ofrecemos seguros de cumplimiento que garantizan la ejecución de contratos públicos y privados. Cubrimos posibles incumplimientos por parte de contratistas o proveedores, brindando tranquilidad tanto a las empresas contratantes como a las contratadas.
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/cumplimiento-operativo.webp"
+
+  - nombre: Protec Legal
+    subcategoria:
+      - nombre: Cumplimiento
+        referencia: cumplimiento
+        descripcion: Disposiciones Legales, Empresas de Servicios Públicos Domiciliarios, Entidades Estatales, Entidades públicas con Régimen Privado de Contratación, Grandes Beneficiarios, Particulares, Caución Judicial
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/cumplimiento.webp"
+
+      - nombre: RC Derivada decumplimiento
+        referencia: rc-derivada-cumplimiento
+        descripcion: Ejecute los contratos sin preocuparse por las afectaciones que puede generarles a ​terceros durante el proceso. En Protec Seguros lo respaldamos con nuestra experiencia.​​​
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/derivada-cumplimiento.webp"
+      - nombre: Sostenibilidad legal
+        referencia: sostenibilidad-legal
+        descripcion: ¿Quisieras tener tu empresa protegida frente a eventuales riesgos en materia legal? Descubre cómo te podemos acompañar.
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/sostenibilidad-legal.webp"
+
+      - nombre: Protección legal
+        referencia: proteccion-legal
+        descripcion: Las empresas pueden enfrentarse a inconvenientes jurídicos con clientes, empleados, proveedores o el Estado; en estos casos es importante contar con un acompañamiento especializado.​​​​​
+        imagen: "https://protecsegurosltda.com/imagenes.pagina/legal.webp"
   - nombre: Protec Tecnología
     subcategoria:
       - nombre: Seguro de Protección Digital
