@@ -1,5 +1,19 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  // Otras configuraciones de Astro
+  vite: {
+    server: {
+      // Habilitar cacheo para imágenes en la carpeta public
+      middleware: {
+        async handler(req, res) {
+          // Verificar si la URL es una imagen
+          if (req.url.match(/\.(jpg|jpeg|png|gif|webp)$/)) {
+            res.setHeader('Cache-Control', 'public, max-age=31536000'); // Cache por 1 año
+          }
+          return await next(req, res);
+        },
+      },
+    },
+  },
+});
