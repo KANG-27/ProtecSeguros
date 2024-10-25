@@ -16,10 +16,7 @@ usoServicio:
     descripcion: Descripción detallada del paso.
 
 imagenes:
-  - ""
-  - https://protecsegurosltda.com/imagenes.pagina/familia.webp
-  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
-  - https://protecsegurosltda.com/imagenes.pagina/saludDos.webp
+  - https://protecsegurosltda.com/imagenes.pagina/pensionDos.webp
 categoria: Protec Legal
 subcategoria: empresas
 ---
