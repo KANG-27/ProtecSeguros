@@ -5,9 +5,17 @@ descripcion: Obtener y conservar tu independencia económica ante cualquier impr
 
 necesito: Sabemos la importancia de cuidar de ti y tu familia, es por ello que, te brindamos las mejores opciones que te permitirán disfrutar de los momentos más especiales de tu vida con tranquilidad.
 prestaciones: 
-  - Posibilidad de ahorro.
-  - Darles a tus beneficiarios un respaldo económico en caso de que mueras.
-  - Devolución de dinero si en algún momento decides no continuar con el seguro.
+  - Ofrecer un bono por hospitalización.	
+  - Respaldo económico en caso de que seas diagnosticado con enfermedades graves.	
+  - Respaldo económico en caso de que seas diagnosticado con cáncer.	
+  - Le damos a tus familiares un auxilio de exequias.	
+  - Posibilidad de ahorro.		
+  - Devolución de dinero si decides cancelar el seguro en algún momento.		
+  - Posibilidad de asegurarte de por vida mediante un único pago.		
+  - Darles a tus beneficiarios un dinero adicional en caso de muerte accidental.		
+  - Darte dinero en caso de invalidez y desmembramiento por accidente.		
+  - Entregar dinero en caso de invalidez y desmembramiento por enfermedad.		
+  - Te reembolsamos los gastos médicos derivados de accidentes (ideal si no tienes EPS).
 usoServicio:
   - paso: Título del paso 1
     descripcion: Descripción detallada del paso.
