@@ -82,7 +82,7 @@ const { data, type } = Astro.props;
           carouselData.tipo === "servicios"
             ? window.screen.width <= 375
               ? 322
-              : window.screen.width <= 425
+              : window.screen.width <= 450
                 ? 375
                 : 520
             : 375;
@@ -107,7 +107,7 @@ const { data, type } = Astro.props;
           ((carouselData.tipo === "servicios"
             ? window.screen.width <= 375
               ? 322
-              : window.screen.width <= 425
+              : window.screen.width <= 450
                 ? 375
                 : 520
             : 375) +
@@ -196,10 +196,10 @@ const { data, type } = Astro.props;
     -ms-user-select: none;
     background-color: white;
     border-radius: 100%;
-    color: #5abeaa;
+    color: #1f54bc;
   }
   .protec-card {
-    color: #5abeaa;
+    color: #1f54bc;
   }
   .description-card-services {
     width: 100%; /* Ancho fijo */
@@ -231,7 +231,7 @@ const { data, type } = Astro.props;
     font-size: larger;
     color: white;
     border: 0;
-    background-color: #5abeaa;
+    background-color: #1f54bc;
     width: 90%;
     height: 50px;
     border-radius: 30px;
@@ -301,9 +301,9 @@ const { data, type } = Astro.props;
     cursor: pointer;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 450px) {
     .card-services {
-      width: 370px; /* Mostrar 1 imagen en pantallas pequeñas */
+      width: 370px !important; /* Mostrar 1 imagen en pantallas pequeñas */
       height: max-content;
       margin-left: 17px;
     }

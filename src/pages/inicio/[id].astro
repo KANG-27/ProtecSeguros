@@ -183,22 +183,22 @@ const images = [
     margin-top: 5%;
   }
   .selected {
-    color: #5abeaa !important;
-    border-bottom: 2px solid #5abeaa !important; /* Añade la línea debajo del botón */
+    color: #1f54bc !important;
+    border-bottom: 2px solid #1f54bc !important; /* Añade la línea debajo del botón */
   }
   .content-butons button:hover {
-    color: #5abeaa;
+    color: #1f54bc;
   }
   .content-butons button {
     font-size: larger;
-    background-color: #5abeaa00;
+    background-color: #1f54bc00;
     border: 0;
-    color: #172052;
+    color: black;
     width: max-content;
     cursor: pointer;
   }
   .content-butons button:hover {
-    color: #5abeaa;
+    color: #1f54bc;
   }
 
   .content-butons {
@@ -252,7 +252,7 @@ const images = [
   .service-card:hover .card-hover {
     opacity: 1; /* Se vuelve visible */
     transform: translateY(0); /* Se desliza hacia su posición original */
-    background-color: #5abeaa;
+    background-color: #1f54bc;
     cursor: pointer;
   }
 
@@ -292,7 +292,7 @@ const images = [
     font-size: larger;
     color: white;
     border: 0;
-    background-color: #5abeaa;
+    background-color: #1f54bc;
     width: 50%;
     height: 50px;
     border-radius: 30px;
@@ -304,7 +304,7 @@ const images = [
   .nosotros {
     justify-content: space-between;
     display: flex;
-    background-color: #172052;
+    background-color: #008eff;
     color: white;
     height: 85vh;
     align-items: center;
@@ -313,12 +313,11 @@ const images = [
     width: 100%;
   }
   .servicios {
-    color: #172052;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: 5% 0%; */ 
     height: 86vh;
   }
   .servicios h1{
@@ -329,7 +328,7 @@ const images = [
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #172052;
+    background-color: #008eff;
     color: white;
     padding: 5% 0%;
     padding-bottom: 10%;
@@ -415,6 +414,7 @@ const images = [
       align-items: center;
     }
     .nosotros-content {
+      margin-top: 10%;
       width: 80%;
     }
     .button-contact-more {
@@ -422,6 +422,17 @@ const images = [
     }
   }
 
+  @media (max-height: 1024px) {
+    .servicios{
+      height: auto;
+      margin: 2% 0%; 
+
+    }
+    .nosotros{
+      height: auto;
+      padding: 1% 0%;
+    }
+  }
   @media (min-width: 1024px) and (max-width: 1240px) {
     .content-services {
       grid-template-columns: repeat(2, 1fr);

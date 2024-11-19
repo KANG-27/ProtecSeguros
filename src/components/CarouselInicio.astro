@@ -160,12 +160,17 @@ const totalItems = data.length; // Número total de imágenes
   }
 
   .dot-imagesHome.active {
-    background-color: #5abeaa;
+    background-color: #1f54bc;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .carousel-imagesHome img {
       width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    .carousel-imagesHome img {
+      width: 50%;
     }
   }
 </style>
