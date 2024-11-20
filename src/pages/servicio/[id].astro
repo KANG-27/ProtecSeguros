@@ -158,9 +158,10 @@ const servicioSelected = descripciones.filter(
     font-size: larger;
     color: white;
     border: 0;
-    background-color: #1f54bc;
-    width: 50%;
+    background-color: var(--second-color);
+    width: max-content;
     height: 50px;
+    padding: 0% 10%;
     border-radius: 30px;
     margin-top: 2%;
     margin-bottom: 10%;
@@ -192,7 +193,7 @@ const servicioSelected = descripciones.filter(
     width: 100%;
     height: 100%;
     text-align: start;
-    background-color: #008eff;
+    background-color: var(--primary-color);
     border-radius: 30px;
     padding: 5%;
     color: white;
@@ -224,8 +225,8 @@ const servicioSelected = descripciones.filter(
     gap: 10px;
     justify-content: center;
     /* padding: 2%; */
-    height: 80vh;
-    background-color: #008eff;
+    height: 85vh;
+    background-color: var(--primary-color);
     color: white;
   }
   .necesito img {
@@ -234,7 +235,7 @@ const servicioSelected = descripciones.filter(
   .content-pasos {
     width: 40%;
     padding-right: 3%;
-    border-right: solid 0.4rem #1f54bc;
+    border-right: solid 0.4rem var(--second-color);
     height: 300px;
   }
   .necesito {
@@ -244,7 +245,7 @@ const servicioSelected = descripciones.filter(
     justify-content: center;
     justify-content: center;
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     color: black;
   }
   .necesito h1{
@@ -259,7 +260,7 @@ const servicioSelected = descripciones.filter(
   .content-service {
     width: 40%;
     padding-left: 3%;
-    border-left: solid 0.4rem #1f54bc;
+    border-left: solid 0.4rem var(--second-color);
   }
   .descripcion-servicio {
     width: 50%;
@@ -271,8 +272,8 @@ const servicioSelected = descripciones.filter(
     gap: 100px;
     justify-content: center;
     padding: 0% ;
-    height: 85vh;
-    background-color: #008eff;
+    height: 87vh;
+    background-color: var(--primary-color);
     color: white;
   }
   .section-services {
@@ -281,6 +282,11 @@ const servicioSelected = descripciones.filter(
     justify-content: center;
     align-items: center;
     margin-top: 2%;
+  }
+  @media (max-height: 800px) {
+    .categoria, .necesito, .cubrimos{
+      height: auto;
+    }
   }
   @media (max-width: 1024px) {
     .categoria img {
@@ -295,7 +301,7 @@ const servicioSelected = descripciones.filter(
       align-items: center;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     .descripcion {
       font-size: 15px;
     }
@@ -321,7 +327,7 @@ const servicioSelected = descripciones.filter(
       font-size: 15px;
     }
   }
-  @media (max-width: 468px) {
+  @media (max-width: 600px) {
     .cubrimos p {
       width: 80%;
     }
@@ -340,11 +346,13 @@ const servicioSelected = descripciones.filter(
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
+      width: 100%;
     }
     .content-service,
     .content-necesito {
       text-align: center;
-      width: 100%;
+      width: auto;
+      margin: 15% 5% 0% 5%;
       border: none;
     }
     .content-necesito {
@@ -355,4 +363,12 @@ const servicioSelected = descripciones.filter(
       width: 90%;
     }
   }
+  @media (max-width: 600px) {
+    .categoria, .necesito, .cubrimos{
+      height: auto;
+      padding-bottom: 5%;
+    }
+
+  }
+
 </style>

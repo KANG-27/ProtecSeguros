@@ -31,7 +31,7 @@ const { data, type } = Astro.props;
 <header>
   <section class="section-header">
     <a href="/">
-      <img src="https://protecsegurosltda.com/imagenes.pagina/logo.webp" loading="lazy" class="logo" alt="logo" width="200px" />
+      <img src="../../public/logoDos.png" loading="lazy" class="logo" alt="logo" width="200px" />
     </a>
     <div class="bar-navegation-descktop">
       <nav class="bar-navegation">
@@ -172,11 +172,11 @@ const { data, type } = Astro.props;
   .butons-selection-section-empresas {
     font-size: larger;
     color: white;
-    background-color: #008eff;
+    background-color: var(--primary-color);
     border-color: white;
     border-width: 2px;
     border-style: solid;
-    border-top-color: #008eff;
+    border-top-color: var(--primary-color);
     width: 100%;
     height: 40px;
     border-radius: 0px 0px 20px 20px;
@@ -193,23 +193,23 @@ const { data, type } = Astro.props;
     font-size: larger;
     color: white;
     border: 0;
-    background-color: #1f54bc;
+    background-color: var(--second-color);
     width: 100%;
     height: 40px;
     border-radius: 0px 0px 20px 20px;
     cursor: pointer;
   }
   .categoria-services:hover a {
-    color: #1f54bc;
+    color: var(--second-color);
   }
   .list-service-content {
     margin: 0% 5%;
   }
   .list-service-content-line {
-    border-right: 1.5px solid #008eff;
+    border-right: 1.5px solid var(--primary-color);
   }
   .title-services {
-    color: #008eff;
+    color: var(--primary-color);
   }
   .content-servis {
     display: flex;
@@ -260,7 +260,7 @@ const { data, type } = Astro.props;
     background-color: white;
     top: 0px;
     z-index: 50;
-    border-bottom: #008eff;
+    border-bottom: var(--primary-color);
   }
   .content-contact {
     display: block;
@@ -278,7 +278,7 @@ const { data, type } = Astro.props;
     grid-template-columns: repeat(4, 1fr);
   }
   .title-services {
-    color: #008eff;
+    color: var(--primary-color);
     font-size: 22px;
     font-weight: 700;
     line-height: normal;
@@ -322,7 +322,7 @@ const { data, type } = Astro.props;
     font-size: larger;
     color: white;
     border: 0;
-    background-color: #1f54bc;
+    background-color: var(--second-color);
     width: 100%;
     height: 50px;
     border-radius: 30px;

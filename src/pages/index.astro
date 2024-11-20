@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-
 ---
 
 <Layout title="Protec Seguros">
@@ -128,13 +127,13 @@ import Footer from "../components/Footer.astro";
     transition: transform 0.2s ease-in-out; /* Controla la velocidad y suavidad de la animación */
   }
   .color-blue {
-    background-color: #008eff;
+    background-color: var(--primary-color);
     color: white;
     font-weight: 700;
   }
   .color-white {
     font-weight: 700;
-    color: #008eff;
+    color: var(--primary-color);
   }
   .content-contact {
     display: flex;
@@ -184,7 +183,7 @@ import Footer from "../components/Footer.astro";
   .content-imagenUno {
     display: flex;
     justify-content: center;
-    background-color: #1f54bc;
+    background-color: var(--second-color);
     width: 50%;
     border-radius: 7%;
     padding: 5% 0%;
@@ -193,7 +192,7 @@ import Footer from "../components/Footer.astro";
     padding: 5% 0%;
     display: flex;
     justify-content: center;
-    background-color: #008eff;
+    background-color: var(--primary-color);
     width: 50%;
     border-radius: 7%;
   }
