@@ -138,39 +138,40 @@ const { data, type } = Astro.props;
       // Agregar funcionalidad de arrastre y swipe
       const slides = carousel.querySelector(".carousel-inner");
 
-      slides.addEventListener("mousedown", dragStart);
-      slides.addEventListener("mouseup", dragEnd);
-      slides.addEventListener("mouseleave", dragEnd);
-      slides.addEventListener("mousemove", dragMove);
+      // if (window.innerWidth <= 768) {
+      //   slides.addEventListener("mousedown", dragStart);
+      //   slides.addEventListener("mouseup", dragEnd);
+      //   slides.addEventListener("mouseleave", dragEnd);
+      //   slides.addEventListener("mousemove", dragMove);
 
-      slides.addEventListener("touchstart", dragStart);
-      slides.addEventListener("touchend", dragEnd);
-      slides.addEventListener("touchmove", dragMove);
+      //   slides.addEventListener("touchstart", dragStart);
+      //   slides.addEventListener("touchend", dragEnd);
+      //   slides.addEventListener("touchmove", dragMove);
+      // }
+      // function dragStart(event) {
+      //   isDragging = true;
+      //   startX = getPositionX(event);
+      //   animationID = requestAnimationFrame(animation);
+      // }
 
-      function dragStart(event) {
-        isDragging = true;
-        startX = getPositionX(event);
-        animationID = requestAnimationFrame(animation);
-      }
+      // function dragEnd() {
+      //   cancelAnimationFrame(animationID);
+      //   isDragging = false;
 
-      function dragEnd() {
-        cancelAnimationFrame(animationID);
-        isDragging = false;
+      //   const movedBy = currentTranslate - prevTranslate;
 
-        const movedBy = currentTranslate - prevTranslate;
+      //   if (movedBy < -50) nextSlide();
+      //   if (movedBy > 50) prevSlide();
 
-        if (movedBy < -50) nextSlide();
-        if (movedBy > 50) prevSlide();
+      //   currentTranslate = prevTranslate; // Resetear posición
+      // }
 
-        currentTranslate = prevTranslate; // Resetear posición
-      }
-
-      function dragMove(event) {
-        if (isDragging) {
-          const currentPosition = getPositionX(event);
-          currentTranslate = prevTranslate + currentPosition - startX;
-        }
-      }
+      // function dragMove(event) {
+      //   if (isDragging) {
+      //     const currentPosition = getPositionX(event);
+      //     currentTranslate = prevTranslate + currentPosition - startX;
+      //   }
+      // }
 
       function getPositionX(event) {
         return event.type.includes("mouse")

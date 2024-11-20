@@ -366,18 +366,7 @@ const images = [
     }
   }
 
-  @media (max-width: 425px) {
-    .content-butons {
-      margin: 0%;
-    }
-    .content-services {
-      margin: 0%;
-      width: 100%;
-    }
-    .card-services {
-      width: 370px !important;
-    }
-  }
+  
   @media (max-width: 768px) {
     .content-butons {
       gap: 0px;
@@ -437,6 +426,15 @@ const images = [
       padding: 1% 0%;
     }
   }
+  @media (max-width: 1024px) {
+    .title{
+      font-size: 50px;
+    }
+    .imagenes-carrusel{
+      margin: 0% 2%;
+      width: 40%;
+    }
+  }
   @media (min-width: 1024px) and (max-width: 1240px) {
     .content-services {
       grid-template-columns: repeat(2, 1fr);
@@ -444,6 +442,21 @@ const images = [
     }
     .service-card {
       width: 70%;
+    }
+  }
+  @media (max-width: 425px) {
+    .title{
+      font-size: 30px ;
+    }
+    .content-butons {
+      margin: 0%;
+    }
+    .content-services {
+      margin: 0%;
+      width: 100%;
+    }
+    .card-services {
+      width: 370px !important;
     }
   }
 </style>

@@ -31,17 +31,39 @@ const { data, type } = Astro.props;
 <header>
   <section class="section-header">
     <a href="/">
-      <img src="https://protecsegurosltda.com/imagenes.pagina/logoDos.png" loading="lazy" class="logo" alt="logo" width="200px" />
+      <img
+        src="https://protecsegurosltda.com/imagenes.pagina/logoDos.png"
+        loading="lazy"
+        class="logo"
+        alt="logo"
+        width="200px"
+      />
     </a>
     <div class="bar-navegation-descktop">
       <nav class="bar-navegation">
         <ul class="list-nav-style">
           <li class="list-nav-content-style">
-            <a class={Astro.url.pathname.split("/")[1]=="inicio"?"list-nav-select":""} href="/inicio/personas"> Inicio </a>
+            <a
+              class={Astro.url.pathname.split("/")[1] == "inicio"
+                ? "list-nav-select"
+                : ""}
+              href="/inicio/personas"
+            >
+              Inicio
+            </a>
           </li>
-          {data?.servicios && (
+          {
+            data?.servicios && (
               <li class="list-nav-content-style titulo-servicios">
-                <a class={Astro.url.pathname.split("/")[1]=="servicio"?"list-nav-select":""}>Servicios</a>
+                <a
+                  class={
+                    Astro.url.pathname.split("/")[1] == "servicio"
+                      ? "list-nav-select"
+                      : ""
+                  }
+                >
+                  Servicios
+                </a>
                 <div class="modal" id="Services-modal-id">
                   <div class="list-service">
                     {data?.servicios.map((element: Service, index: number) => (
@@ -50,15 +72,17 @@ const { data, type } = Astro.props;
                       >
                         <li class="content-servis">
                           <h1 class="title-services">{element.nombre}</h1>
-                          {element.subcategoria.map((categoria: Subcategoria) => (
-                            <ul class="services-list">
-                              <li class="categoria-services">
-                                <a href={`/servicio/${categoria.referencia}`}>
-                                  {categoria.nombre}
-                                </a>
-                              </li>
-                            </ul>
-                          ))}
+                          {element.subcategoria.map(
+                            (categoria: Subcategoria) => (
+                              <ul class="services-list">
+                                <li class="categoria-services">
+                                  <a href={`/servicio/${categoria.referencia}`}>
+                                    {categoria.nombre}
+                                  </a>
+                                </li>
+                              </ul>
+                            )
+                          )}
                         </li>
                       </ul>
                     ))}
@@ -68,7 +92,7 @@ const { data, type } = Astro.props;
             )
           }
           <li class="list-nav-content-style titulo-pagos">
-            <a class="">Paga tu póliza</a>
+            <a class="text-conten-list-nav">Paga tu póliza</a>
             <div class="modal-payment" id="Pagos-modal-id">
               <h2 class="title-pagos">Botones de pago</h2>
               <ul class="list-payment">
@@ -127,38 +151,42 @@ const { data, type } = Astro.props;
       <button class="button-contact">¡Contáctanos!</button>
     </a>
   </section>
-  {type && (
-    <div class="content-butons-selection-section">
-      <a class="buton-content" href="/inicio/personas">
-        <button
-          class={`${
-            Astro.url.pathname.split("/").pop() === "personas" ||
-            type == "personas"
-              ? "butons-selection-section"
-              : "butons-selection-section-empresas"
-          }`}
-        >
-          <p class="text-butons-selection-section">Personas</p>
-        </button>
-      </a>
-      <a class="buton-content" href="/inicio/empresas">
-        <button
-          class={`${
-            Astro.url.pathname.split("/").pop() === "empresas" ||
-            type == "empresas"
-              ? "butons-selection-section"
-              : "butons-selection-section-empresas"
-          }`}
-        >
-          <p class="text-butons-selection-section-empresas">Empresas</p>
-        </button>
-      </a>
-    </div>
-  )
-}
+  {
+    type && (
+      <div class="content-butons-selection-section">
+        <a class="buton-content" href="/inicio/personas">
+          <button
+            class={`${
+              Astro.url.pathname.split("/").pop() === "personas" ||
+              type == "personas"
+                ? "butons-selection-section"
+                : "butons-selection-section-empresas"
+            }`}
+          >
+            <p class="text-butons-selection-section">Personas</p>
+          </button>
+        </a>
+        <a class="buton-content" href="/inicio/empresas">
+          <button
+            class={`${
+              Astro.url.pathname.split("/").pop() === "empresas" ||
+              type == "empresas"
+                ? "butons-selection-section"
+                : "butons-selection-section-empresas"
+            }`}
+          >
+            <p class="text-butons-selection-section-empresas">Empresas</p>
+          </button>
+        </a>
+      </div>
+    )
+  }
 </header>
 
 <style>
+  .text-conten-list-nav {
+    width: max-content;
+  }
   header {
     position: fixed;
   }
@@ -204,6 +232,7 @@ const { data, type } = Astro.props;
   }
   .list-service-content {
     margin: 0% 5%;
+    height: max-content;
   }
   .list-service-content-line {
     border-right: 1.5px solid var(--primary-color);
@@ -323,7 +352,8 @@ const { data, type } = Astro.props;
     color: white;
     border: 0;
     background-color: var(--second-color);
-    width: 100%;
+    width: max-content;
+    padding: 0% 20%;
     height: 50px;
     border-radius: 30px;
     cursor: pointer;
@@ -380,12 +410,22 @@ const { data, type } = Astro.props;
     color: #ff00e6; /* Cambia el color de los puntos */
   }
   @media (max-width: 1024px) {
-    .list-service {
+    /* .list-service {
       margin: 2% 0% 5% 0%;
-    }
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: min-content;
+      border: 1px solid #ccc;
+      overflow-y: scroll;
+
+    } */
     .modal-payment {
       width: 40%;
       left: 50%;
+    }
+  }
+  @media (max-width: 850px) {
+    .button-contact {
+      padding: 0% 10%;
     }
   }
   @media (max-width: 768px) {
