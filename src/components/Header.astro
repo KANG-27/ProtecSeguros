@@ -31,7 +31,7 @@ const { data, type } = Astro.props;
 <header>
   <section class="section-header">
     <a href="/">
-      <img src="../../public/logoDos.png" loading="lazy" class="logo" alt="logo" width="200px" />
+      <img src="https://protecsegurosltda.com/imagenes.pagina/logoDos.png" loading="lazy" class="logo" alt="logo" width="200px" />
     </a>
     <div class="bar-navegation-descktop">
       <nav class="bar-navegation">
@@ -44,13 +44,13 @@ const { data, type } = Astro.props;
                 <a class={Astro.url.pathname.split("/")[1]=="servicio"?"list-nav-select":""}>Servicios</a>
                 <div class="modal" id="Services-modal-id">
                   <div class="list-service">
-                    {data?.servicios.map((element: any, index: number) => (
+                    {data?.servicios.map((element: Service, index: number) => (
                       <ul
                         class={`list-service-content ${index === data.servicios.length - 1 ? "" : "list-service-content-line"}`}
                       >
                         <li class="content-servis">
                           <h1 class="title-services">{element.nombre}</h1>
-                          {element.subcategoria.map((categoria: any) => (
+                          {element.subcategoria.map((categoria: Subcategoria) => (
                             <ul class="services-list">
                               <li class="categoria-services">
                                 <a href={`/servicio/${categoria.referencia}`}>
@@ -224,7 +224,7 @@ const { data, type } = Astro.props;
     list-style: none; /* Eliminar puntos predeterminados */
     position: relative; /* Permitir posicionamiento relativo */
     padding-left: 25px; /* Espacio a la izquierda para el ícono */
-    background-image: url("https://protecsegurosltda.com/imagenes.pagina/logosintexto.webp");
+    background-image: url("https://protecsegurosltda.com/imagenes.pagina/logo.png");
     background-size: 30px 25px;
     background-repeat: no-repeat; /* No repetir la imagen */
     background-position: left center; /* Posicionar la imagen a la izquierda y centrada verticalmente */
