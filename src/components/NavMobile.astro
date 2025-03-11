@@ -108,6 +108,15 @@ const { data } = Astro.props;
                       FINESA
                     </a>
                   </li>
+                  <li class="buton-pague-estado">
+                    <a
+                      href="https://www.psepagos.co/PSEHostingUI/DatabaseTicketOffice.aspx?ID=2909"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Pague estado
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -401,6 +410,9 @@ const { data } = Astro.props;
   .buton-exquial::marker {
     color: #ff00e6 !important; /* Cambia el color de los puntos */
   }
+  .buton-pague-estado::marker {
+    color: #ff8000 !important;/* Cambia el color de los puntos */
+  }
   .bar-navegation-mobile-content {
     display: none;
   }
@@ -592,12 +604,30 @@ const { data } = Astro.props;
       grid-column: 10 / 12;
       z-index: 100;
     }
+    .list-payment li a{
+      font-size: 20px;
+    }
+    .list-payment li{
+      font-size: 25px;
+    }
   }
   @media (max-width: 425px) {
     .service-content{
-    grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav-mobile {
+      padding: 0%;
+      padding-top: 10%;
 
     }
+    .content-contact{
+      padding: 0% 5%;
+    }
+    .bar-navegation-mobile{
+      padding: 0% 5%;
+    }
+
     .modal-mobile,
     .modal-payment {
       margin-left: 0%;
@@ -605,5 +635,31 @@ const { data } = Astro.props;
     .list-person-mobile {
       grid-template-columns: repeat(1, 1fr);
     }
+    .list-payment{
+      display: flex;
+      flex-direction: column;
+      gap:15px
+    }
+
+    @keyframes nav-mobile {
+    0% {
+      width: 50%;
+      opacity: 0;
+    }
+    100% {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes nav-mobile-close {
+    0% {
+      width: 100%;
+      opacity: 1;
+    }
+    100% {
+      width: 50%;
+      opacity: 0;
+    }
+  }
   }
 </style>
