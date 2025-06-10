@@ -148,6 +148,15 @@ const { data, type } = Astro.props;
                     Pague estado
                   </a>
                 </li>
+                <li class="buton-seguro-estado">
+                  <a
+                    href="https://portaldepago.segurosdelestado.com/pago-agil"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Seguros estado
+                  </a>
+                </li>
               </ul>
             </div>
           </li>
@@ -428,6 +437,9 @@ const { data, type } = Astro.props;
   }
   .buton-pague-estado::marker {
     color: #ff8000 !important; /* Cambia el color de los puntos */
+  }
+  .buton-seguro-estado::marker {
+    color: #00ff55 !important; /* Cambia el color de los puntos */
   }
 
   .list-payment {
