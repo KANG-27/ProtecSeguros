@@ -117,6 +117,24 @@ const { data } = Astro.props;
                       Pague estado
                     </a>
                   </li>
+                  <li class="buton-seguro-estado">
+                  <a
+                    href="https://portaldepago.segurosdelestado.com/pago-agil"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Seguros estado
+                  </a>
+                </li>
+                <li class="buton-seguro-bolivar">
+                  <a
+                    href="https://www.segurosbolivar.com/RecaudosElectronicos/faces/muestrapagos.jspx/pages/layout/consultUser.action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Seguros Bolivar
+                  </a>
+                </li>
                 </ul>
               </div>
             </div>
@@ -412,6 +430,12 @@ const { data } = Astro.props;
   }
   .buton-pague-estado::marker {
     color: #ff8000 !important;/* Cambia el color de los puntos */
+  }
+  .buton-seguro-estado::marker {
+    color: #00ff55 !important; /* Cambia el color de los puntos */
+  }
+  .buton-seguro-bolivar::marker {
+    color: #009714 !important; /* Cambia el color de los puntos */
   }
   .bar-navegation-mobile-content {
     display: none;
