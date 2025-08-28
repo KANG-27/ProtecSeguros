@@ -230,7 +230,7 @@ const { data } = Astro.props;
         document
           .getElementById("toggle-content")
           .classList.add("content-animation-revert");
-        document.body.style.overflow = "hidden";
+        // document.body.style.overflow = "hidden";
 
         navMobile.style.display = "flex";
       } else {
@@ -642,14 +642,16 @@ const { data } = Astro.props;
 
     .nav-mobile {
       padding: 0%;
-      padding-top: 10%;
+      margin-top: 10%;
 
     }
     .content-contact{
       padding: 0% 5%;
+      background: white;
     }
     .bar-navegation-mobile{
       padding: 0% 5%;
+      background-color: white;
     }
 
     .modal-mobile,
